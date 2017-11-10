@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html class="theme-resume " lang="zh-Hans">
+<head>
+<title>简单、强大的swig.js | notebook</title>
+<!-- META -->
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="theme-color" content="#222" />
+
+<!-- LINK -->
+
+<!-- STYLE -->
+<link href="/css/normalize.css" rel="stylesheet" type="text/css" />
+<link href="/css/basic.css" rel="stylesheet" type="text/css" />
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+
+<!-- SCRIPT -->
+<script type="text/javascript" src="/js/jQuery.js"></script>
+
+<!-- END -->
+
+</head>
+
+<body>
+  <div class="window">
+    <div class="window-content">
+      <div class="main-wrap">
+        <header class="header" id="header">
+          <div class="site-title-wrap"><a href="/" class="site-title">notebook</a></div>
+        </header>
+        <main class="mainbox" id="mainbox">
+
+          <div class="post-wrap" id="post-wrap">
+            <article class="post-body">
+              <div class="post-meta">
+                <div class="post-title-wrap"><span class="post-title">简单、强大的swig.js</span></div>
+              </div>
+              <div class="post-content" id="post-content"><h2 id="Swig-js"><a href="#Swig-js" class="headerlink" title="Swig.js"></a>Swig.js</h2><p>A simple, powerful, and extendable JavaScript Template Engine。</p>
+<p>简单概括：JS模板引擎。</p>
+<h2 id="Why-to-use"><a href="#Why-to-use" class="headerlink" title="Why to use"></a>Why to use</h2><ul>
+<li>根据路劲渲染页面</li>
+<li>面向对象的模板继承，页面更复用</li>
+<li>动态页面</li>
+<li>快速上手</li>
+<li>功能强大</li>
+<li>Others</li>
+</ul>
+<h2 id="How-to-use"><a href="#How-to-use" class="headerlink" title="How to use"></a>How to use</h2><p>参见<a href="http://paularmstrong.github.io/swig/" target="_blank" rel="external">swig.js</a>官网</p>
+<h3 id="项目实例"><a href="#项目实例" class="headerlink" title="项目实例"></a>项目实例</h3><h4 id="页面复用"><a href="#页面复用" class="headerlink" title="页面复用"></a>页面复用</h4><p>大部分页面都有header 和 footer区域，可以通过继承页面实现复用，具体如下：<br>layout.html</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">  &lt;div class=&quot;header-container&quot;&gt;</div><div class="line">  ...</div><div class="line">  &lt;/div&gt;</div><div class="line"></div><div class="line">  &#123;% block content %&#125;&#123;% endblock %&#125;</div><div class="line"></div><div class="line">  &lt;div class=&quot;footer-container&quot;&gt;</div><div class="line">  ...</div><div class="line">  &lt;/div&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;123456789101112131415</div></pre></td></tr></table></figure>
+<p>welcome.html</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">// 依据实际目录填写</div><div class="line">&#123;% extends &apos;../layout.html&apos; %&#125;</div><div class="line">&#123;% block content %&#125;</div><div class="line">&lt;div class=&quot;content-container&quot;&gt;</div><div class="line">  &lt;h1&gt;hello swig.js&lt;/h1&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&#123;% endblock %&#125;1234567</div></pre></td></tr></table></figure>
+<h4 id="信息、功能函数配置化"><a href="#信息、功能函数配置化" class="headerlink" title="信息、功能函数配置化"></a>信息、功能函数配置化</h4><p>企业信息、所有权、工商注册号等信息，可将这些信息存在在system-params.json中，还可以添加实时计算函数，然后通过swig.js显示和调用：<br>system-params.json:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"isDevMode"</span>: <span class="string">"true"</span>,</div><div class="line">  <span class="attr">"corporation"</span>: <span class="string">"CCCCCCCC"</span>,</div><div class="line">  <span class="attr">"ICPNumber"</span>: <span class="string">"沪ICP备xxxxxxxx号"</span>,</div><div class="line">  ...</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>app.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> systemParams = <span class="built_in">require</span>(<span class="string">'./config/system-params.json'</span>),</div><div class="line">    swig = <span class="built_in">require</span>(<span class="string">'swig'</span>);</div><div class="line">swig.setDefaults(&#123;</div><div class="line">  cache: !systemParams.isDevMode,</div><div class="line">  locals: &#123;</div><div class="line">    now: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line">    &#125;,</div><div class="line">    systemParams: systemParams</div><div class="line">  &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>layout.html</p>
+<figure class="highlight django"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;html&gt;</div><div class="line">...</div><div class="line">&lt;body&gt;</div><div class="line">  <span class="template-tag">&#123;% <span class="name"><span class="name">block</span></span> content %&#125;</span><span class="template-tag">&#123;% <span class="name"><span class="name">endblock</span></span> %&#125;</span></div><div class="line"></div><div class="line">  &lt;div class="footer-container"&gt;</div><div class="line">    &lt;p class="text-center"&gt;</div><div class="line">      &lt;span&gt;Copyright © <span class="template-variable">&#123;&#123;now() | date('Y')&#125;&#125;</span>&lt;/span&gt;</div><div class="line">      &lt;span&gt;<span class="template-variable">&#123;&#123;systemParams.corporation&#125;&#125;</span>&lt;/span&gt;</div><div class="line">      &lt;span&gt;<span class="template-variable">&#123;&#123;systemParams.ICPNumber&#125;&#125;</span>&lt;/span&gt;</div><div class="line">    &lt;/p&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<h4 id="Express-js-和-Require-js整合"><a href="#Express-js-和-Require-js整合" class="headerlink" title="Express.js 和 Require.js整合"></a>Express.js 和 Require.js整合</h4><p>在Express.js中通过swig.js路劲渲染页面，页面中使用require.js的require(deps, callback)形式加载页面需要的js：<br>app.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">app.engine(<span class="string">'html'</span>, swig.renderFile);</div><div class="line">app.set(<span class="string">'view engine'</span>, <span class="string">'html'</span>);</div><div class="line">app.set(<span class="string">'views'</span>, __dirname + <span class="string">'/views'</span>);</div></pre></td></tr></table></figure>
+<p>routers.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = [&#123;</div><div class="line">  path: <span class="string">'/'</span>,</div><div class="line">  view: <span class="string">'default/welcome'</span>,</div><div class="line">  data: &#123;</div><div class="line">    title: <span class="string">'welcome'</span>,</div><div class="line">    requireScripts: [</div><div class="line">      <span class="string">'controllers/default/welcome-controller'</span></div><div class="line">    ],</div><div class="line">    styles: [</div><div class="line">      <span class="string">'default/welcome.css'</span></div><div class="line">    ]</div><div class="line">  &#125;</div><div class="line">&#125;];</div></pre></td></tr></table></figure>
+<p>config-routers.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> routers = <span class="built_in">require</span>(<span class="string">'./routers'</span>);</div><div class="line">...</div><div class="line"><span class="keyword">for</span> ... &#123;</div><div class="line">  ...</div><div class="line"></div><div class="line">  router.get(routers[i].path, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</div><div class="line">    res.render(routers[i].view, routers[i].data, routers[i].callback);</div><div class="line">  &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>layout.html</p>
+<figure class="highlight django"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">  ...</div><div class="line"></div><div class="line">  <span class="template-tag">&#123;% <span class="name"><span class="name">if</span></span> styles %&#125;</span></div><div class="line">    <span class="template-tag">&#123;% <span class="name"><span class="name">for</span></span> style <span class="keyword">in</span> styles %&#125;</span></div><div class="line">      &lt;link rel="stylesheet" href="<span class="template-variable">&#123;&#123;style&#125;&#125;</span>" /&gt;</div><div class="line">    <span class="template-tag">&#123;% <span class="name"><span class="name">endfor</span></span> %&#125;</span></div><div class="line">  <span class="template-tag">&#123;% <span class="name"><span class="name">endif</span></span> %&#125;</span></div><div class="line"></div><div class="line">  ...</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">  ...</div><div class="line"></div><div class="line">  &lt;script type="text/javascript"&gt;</div><div class="line">    var GlobalConfig = &#123;</div><div class="line">      requireScripts: []</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    // add require scripts by page config</div><div class="line">    <span class="template-tag">&#123;% <span class="name"><span class="name">if</span></span> requireScripts %&#125;</span></div><div class="line">      <span class="template-tag">&#123;% <span class="name"><span class="name">for</span></span> script <span class="keyword">in</span> requireScripts %&#125;</span></div><div class="line">      GlobalConfig.requireScripts.push('<span class="template-variable">&#123;&#123; script &#125;&#125;</span>');</div><div class="line">      <span class="template-tag">&#123;% <span class="name"><span class="name">endfor</span></span> %&#125;</span></div><div class="line">    <span class="template-tag">&#123;% <span class="name"><span class="name">endif</span></span> %&#125;</span></div><div class="line">  &lt;/script&gt;</div><div class="line"></div><div class="line">  &lt;script src="/lib/require/require.js"&gt;&lt;/script&gt;</div><div class="line">  &lt;!-- require.js配置信息 --&gt;</div><div class="line">  &lt;script src="/main.js"&gt;&lt;/script&gt;</div><div class="line">  &lt;!-- require(deps, callback)加载页面依赖js --&gt;</div><div class="line">  &lt;script src="/bootstrap.js"&gt;&lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<p>bootstrap.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// add others js</span></div><div class="line">GlobalConfig.requireScripts.push(<span class="string">'...'</span>);</div><div class="line"></div><div class="line">requirejs(GlobalConfig.requireScripts, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="comment">// todo</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="Others"><a href="#Others" class="headerlink" title="Others"></a>Others</h4><p>Super Quick Start:<br><a href="http://paularmstrong.github.io/swig/docs/" target="_blank" rel="external">Swig.js docs</a></p>
+<p>版权声明：本文为博主原创文章，未经博主允许不得转载。</p>
+</div>
+            </article>
+          </div>
+
+        </main>
+        <aside class="sidebar" id="sidebar">
+
+          <div class="catpostlist-wrap">
+
+            <div class="catpostlist-body">
+              <div class="catpostlist-meta"><div class="catpostlist-title-wrap"><span class="catpostlist-title">Word Lists</span></div></div>
+              <nav class="catpostlist-content">
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-1/">Word-List-1</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-5/">Word-List-5</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-6/">Word-List-6</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-7/">Word-List-7</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-2/">Word-List-2</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-4/">Word-List-4</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-8/">Word-List-8</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-3/">Word-List-3</a></span>
+              </nav>
+            </div>
+
+            <div class="catpostlist-body">
+              <div class="catpostlist-meta"><div class="catpostlist-title-wrap"><span class="catpostlist-title">forwarded</span></div></div>
+              <nav class="catpostlist-content">
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/nodejs前端模板引擎swig入门/">nodejs前端模板引擎swig入门</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/nodejs读写json文件/">nodejs读写json文件</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/如何画好断线图标/">如何画好断线图标？我总结了这4个规律</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/崩坏3米哈游卡通渲染/">《崩坏3》画面效果为何惊艳？看米哈游怎么做卡通渲染的你就明白了</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/简单-强大的swig-js/">简单、强大的swig.js</a></span>
+              </nav>
+            </div>
+
+            <div class="catpostlist-body">
+              <div class="catpostlist-meta"><div class="catpostlist-title-wrap"><span class="catpostlist-title">ACG</span></div></div>
+              <nav class="catpostlist-content">
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/崩坏3米哈游卡通渲染/">《崩坏3》画面效果为何惊艳？看米哈游怎么做卡通渲染的你就明白了</a></span>
+              </nav>
+            </div>
+
+
+          </div>
+
+        </aside>
+        <footer class="footer" id="footer"></footer>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
