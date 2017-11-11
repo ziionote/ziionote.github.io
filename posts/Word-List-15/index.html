@@ -97,7 +97,7 @@
         <ul class="word_meaning-list">
           <li class="word_meaning"><span class="word_meaning_pos">adj.</span><span class="word_meaning_meaning">乡村的（rural, unsophisticated）</span></li>
         </ul>
-        <ul class="word_remember-lise">
+        <ul class="word_remember-list">
           <li class="word-remember">rust（乡村）＋ic</li>
         </ul>
       </div>
@@ -117,7 +117,7 @@
         <ul class="word_meaning-list">
           <li class="word_meaning"><span class="word_meaning_pos">n.</span><span class="word_meaning_meaning">社区；社会；公社</span></li>
         </ul>
-        <ul class="word_remember-lise">
+        <ul class="word_remember-list">
           <li class="word-remember">commune（公共的）＋ity→公共状态→社会，社区</li>
         </ul>
         <ul class="word_example-list">
@@ -157,7 +157,7 @@
         <ul class="word_meaning-list">
           <li class="word_meaning"><span class="word_meaning_pos">adj.</span><span class="word_meaning_meaning">外来的；有异国风味的（unusual, foreign）</span></li>
         </ul>
-        <ul class="word_remember-lise">
+        <ul class="word_remember-list">
           <li class="word-remember">exo（外面）＋tic→外来的</li>
         </ul>
         <ul class="word_example-list">
@@ -314,7 +314,7 @@
         <ul class="word_meaning-list">
           <li class="word_meaning"><span class="word_meaning_pos">n.</span><span class="word_meaning_meaning">伦理学</span></li>
         </ul>
-        <ul class="word_remember-lise">
+        <ul class="word_remember-list">
           <li class="word-remember">eth＝ethn（种族）＋ics→种族规范→伦理学</li>
         </ul>
       </div>
@@ -334,7 +334,7 @@
         <ul class="word_meaning-list">
           <li class="word_meaning"><span class="word_meaning_pos">adj.</span><span class="word_meaning_meaning">上流社会的（well-bred, courteous）</span></li>
         </ul>
-        <ul class="word_remember-lise">
+        <ul class="word_remember-list">
           <li class="word-remember">比较gentle（温柔）</li>
         </ul>
       </div>
@@ -354,7 +354,7 @@
         <ul class="word_meaning-list">
           <li class="word_meaning"><span class="word_meaning_pos">adj.</span><span class="word_meaning_meaning">婚姻的（wedded, conjugal）</span></li>
         </ul>
-        <ul class="word_remember-lise">
+        <ul class="word_remember-list">
           <li class="word-remember">比较marriage（结婚）</li>
         </ul>
       </div>
@@ -391,16 +391,33 @@
 #post-content .list_title-wrap{width:100%;padding:0.5em 0;margin:0.5em 0;}
 #post-content .list_title{font-size:2em;font-weight:bold;}
 #post-content .word-card-wrap{display:inline-block;width:48.6%;vertical-align:middle;}
-#post-content .word-card{display:inline-block;width:100%;border:1px solid #eee;background:#fafafa;border-radius:4px;margin:1em 0;height:16em;overflow:scroll;}
+#post-content .word-card{position:relative;display:inline-block;width:100%;border:1px solid #eee;background:#fafafa;border-radius:4px;margin:1em 0;height:16em;overflow:scroll;}
 #post-content .word_title-wrap,.word_meta{width:100%;text-align:center;}
 #post-content .word_title{margin:0.5em 0 0;font-size:1.6em;font-weight:bold;}
 #post-content .word_ipa{margin:0 0 0.5em;font-size:1em;opacity:0.6;}
 #post-content .word_detail{background:#fff;height:8em;overflow:scroll;}
 #post-content .word_source,.word_listtitle,.word_listid,.word_sublistid{display:none;}
-#post-content .word_sublisttitle{font-size:0.6em;opacity:0.4;}
+#post-content .word_sublisttitle{font-size:0.6em;opacity:0.4;position:absolute;right:4px;top:4px;line-height:1em;}
 #post-content .word-card .hide{opacity:0}
 #post-content .word-card .word_ipa.hide{font-size:0.01rem;height:1px;}
 #post-content .word-card .word_detail .hide{font-size:0.01rem;height:1px;}
+
+#post-content .word_meaning-list,
+#post-content .word_remember-list,
+#post-content .word_example-list{margin:1rem;font-size:1.4rem;list-style-type:none;padding-left:1em;vertical-align:middle;}
+
+#post-content .word_meaning-list li,
+#post-content .word_remember-list li,
+#post-content .word_example-list li{line-height:1.6rem;vertical-align:middle;}
+
+#post-content .word_meaning-list li:before,
+#post-content .word_remember-list li:before,
+#post-content .word_example-list li:before{display:inline-block;width:1.4em;height:1.4em;text-align:center;vertical-align:middle;font-size:1.4rem;border-radius:50%;background:#eee;color:#666;margin-right:0.5em;}
+
+#post-content .word_meaning-list li:before{content:'意';}
+#post-content .word_remember-list li:before{content:'记';}
+#post-content .word_example-list li:before{content:'例';}
+
 @media screen and (max-width: 720px){
   #post-content .word-card-wrap{width:100%;}
 }
@@ -440,6 +457,9 @@ $(document).ready(function(){
     d = $(s).find(".word_detail");
     d.toggleClass("hide");
   });
+  $(".word_detail").click(function(){
+    w = $(this).parent().find(".word_title-wrap").toggleClass("hide");
+  });
 });
 </script>
 
@@ -455,28 +475,28 @@ $(document).ready(function(){
             <div class="catpostlist-body">
               <div class="catpostlist-meta"><div class="catpostlist-title-wrap"><span class="catpostlist-title">Word Lists</span></div></div>
               <nav class="catpostlist-content">
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-10/">Word-List-10：考古学</a></span>
                 <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-1/">Word-List-1：地理</a></span>
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-13/">Word-List-13：人类学</a></span>
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-15/">Word-List-15：社会学</a></span>
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-16/">Word-List-16：生物学</a></span>
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-12/">Word-List-12：气象</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-10/">Word-List-10：考古学</a></span>
                 <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-11/">Word-List-11：农业</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-15/">Word-List-15：社会学</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-12/">Word-List-12：气象</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-13/">Word-List-13：人类学</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-16/">Word-List-16：生物学</a></span>
                 <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-18/">Word-List-18：天文</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-22/">Word-List-22：音乐</a></span>
                 <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-2/">Word-List-2：地质</a></span>
                 <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-17/">Word-List-17：数学</a></span>
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-20/">Word-List-20：医学</a></span>
                 <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-21/">Word-List-21：艺术</a></span>
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-22/">Word-List-22：音乐</a></span>
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-23/">Word-List-23：语言学</a></span>
                 <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-26/">Word-List-26：自然</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-20/">Word-List-20：医学</a></span>
                 <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-25/">Word-List-25：植物学</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-23/">Word-List-23：语言学</a></span>
                 <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-27/">Word-List-27：宗教</a></span>
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-24/">Word-List-24：政治</a></span>
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-6/">Word-List-6：环境</a></span>
                 <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-7/">Word-List-7：教育</a></span>
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-9/">Word-List-9：军事</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-6/">Word-List-6：环境</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-24/">Word-List-24：政治</a></span>
                 <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-5/">Word-List-5：化学</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-9/">Word-List-9：军事</a></span>
                 <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-14/">Word-List-14：人物</a></span>
                 <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-19/">Word-List-19：物理</a></span>
                 <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-3/">Word-List-3：动物学</a></span>
@@ -496,8 +516,8 @@ $(document).ready(function(){
             <div class="catpostlist-body">
               <div class="catpostlist-meta"><div class="catpostlist-title-wrap"><span class="catpostlist-title">forwarded</span></div></div>
               <nav class="catpostlist-content">
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/nodejs前端模板引擎swig入门/">nodejs前端模板引擎swig入门</a></span>
                 <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/nodejs读写json文件/">nodejs读写json文件</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/nodejs前端模板引擎swig入门/">nodejs前端模板引擎swig入门</a></span>
                 <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/如何画好断线图标/">如何画好断线图标？我总结了这4个规律</a></span>
                 <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/简单-强大的swig-js/">简单、强大的swig.js</a></span>
                 <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/崩坏3米哈游卡通渲染/">《崩坏3》画面效果为何惊艳？看米哈游怎么做卡通渲染的你就明白了</a></span>
