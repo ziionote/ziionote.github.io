@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html class="theme-resume " lang="zh-Hans">
+<head>
+<title>小米4c变砖解救 | notebook</title>
+<!-- META -->
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="theme-color" content="#222" />
+
+<!-- LINK -->
+
+<!-- STYLE -->
+<link href="/css/normalize.css" rel="stylesheet" type="text/css" />
+<link href="/css/basic.css" rel="stylesheet" type="text/css" />
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+
+<!-- SCRIPT -->
+<script type="text/javascript" src="/js/jQuery.js"></script>
+
+<!-- END -->
+
+</head>
+
+<body>
+  <div class="window">
+    <div class="window-content">
+      <div class="main-wrap">
+        <header class="header" id="header">
+          <div class="site-title-wrap"><a href="/" class="site-title">notebook</a></div>
+        </header>
+        <main class="mainbox" id="mainbox">
+
+          <div class="post-wrap" id="post-wrap">
+            <article class="post-body">
+              <div class="post-meta">
+                <div class="post-title-wrap"><span class="post-title">小米4c变砖解救</span></div>
+                <div class="post-meta-detial-wrap"><span class="post-date">2017-11-17</span><span class="post-time">12:37:32</span></div>
+              </div>
+              <div class="post-content" id="post-content"><h1 id="小米4c变砖解救教程-不需要解锁"><a href="#小米4c变砖解救教程-不需要解锁" class="headerlink" title="小米4c变砖解救教程,(不需要解锁)"></a>小米4c变砖解救教程,(不需要解锁)</h1><p>发表在 <a href="http://bbs.xiaomi.cn/f-353-0-0-0-871" target="_blank" rel="external">晒机评测    </a>2016-05-23 22:30:23 来自PC复制链接手机看帖<strong>15</strong>30996</p>
+<p>1.方案(高通9008刷机)</p>
+<p>2.具体情况.</p>
+<p>我帮我姐买的手机(小米4c),她说充电冲着冲着就变砖了(我估计是她点击了自动升级,网上看见有人自动升级变砖的).开机只能显示mi标志.不能关机只能等电池用完.</p>
+<p>然后:</p>
+<p>(1)我用官网的线刷–有bl锁(失败).</p>
+<p>(2)我按照官方提示的方式申请解锁(5月17日14:47分申请 到现在 5月23日22:07分 经过6天4小时20分钟 没有收到任何提示 ).</p>
+<p>(3)联系在线客服说 耐心等待……</p>
+<p>(4)周六去了小米之家 售后中心(下雨 路上还淋雨了)说要提前预约,没给修理..</p>
+<p>(5)升级售后,寄修(两次 我在上海 买手机的时候邮寄到成都的 第一次选择的回寄地址为成都(我在上海 我姐在成都 手机现在在我手上))然后看见官网说要邮寄回成都修理我就取消了(因为网上说小米售后维修点都是第三方的乱收费,刷机说是主板坏了收费800),第二次 我选择回寄地址为”上海”维修地址还是”成都” 也就是说第一次你在哪儿买的就只能寄回哪儿修理?小米是市内联保吗?</p>
+<p>(6)然后自己找教程然后解锁了….</p>
+<p>(7)小米的售后是垃圾啊………</p>
+<p><a href="http://bbs.xiaomi.cn/t-12948304" target="_blank" rel="external">小米4c变砖解救教程,(不需要解锁)</a></p>
+<p>废话不说,说说怎么解决的非常简单..</p>
+<p><a href="http://bbs.xiaomi.cn/t-12697763-2-o1#comment_top" target="_blank" rel="external">小米4C 未解锁可降级救砖教程</a></p>
+<p><a href="http://bbs.xiaomi.cn/t-12700804" target="_blank" rel="external">高通9008模式强制降级教程（适用于所有加BL锁的小米手机）</a></p>
+<p>主要参考了这两篇帖子</p>
+<p>1.查看pc操作系统是 64还是32的(64位系统要开启 “测试模式” 操作方式见第二篇帖子里面的连接 重启电脑)</p>
+<p>2.手机进入 fastboot(音量减 + 开机键 ),插上usb 连接电脑.</p>
+<p>3.电脑安装 小米助手 启动</p>
+<p> 小米助手回提示升级(不要选择 没有解锁是升级不成功的),</p>
+<p> 看见升级提示就说嘛小米助手装好驱动了</p>
+<p>4.下载第一片帖子里面的 fastboot.zip 工具 </p>
+<p>5.按照第一篇帖子的方法 解压 fastboot.zip 到c:\  c:\fastboot 目录应该有 5个文件</p>
+<p>6.运行 cmd </p>
+<p>然后 </p>
+<p>   cd C:\fastboot<br>   fastboot devices<br>  fastboot oem edl</p>
+<p>参考第一篇帖子的截图,可以在pc 系统 设备管理器 中 端口 下面 看见  </p>
+<p>qualcomm hs-usb qdloader 9008 (com 数字)</p>
+<p>具体截图参考那个帖子</p>
+<p>我第一次没有成功,第二次安装了小米助手 开启了测试模式后 成功了.</p>
+<p>7.下载一个线刷包 (局说所有的版本都可以 我是百度 “小米4c 6.1.7 线刷包” 据说这个版本没有锁,是一个开发板)</p>
+<blockquote>
+<p>大家好</p>
+<p>目前，rom.xiaomi.cn已经无法下载到旧版的刷机包了。很多小米4C的用户和我一样，可能目前还在用着无锁的ROM，不少朋友的Recovery都是第三方的，未来某一天想回到官方ROM，但又不想用最新的，需要用到旧版的线刷包和卡刷包。或者有朋友想要通过非官方途径解锁BL，需要用到旧版的线刷包。基于此，我通过各种搜索技巧，整理了MIUI7 开发版6.1.7和稳定版7.0、7.1、7.2、7.3最后一版的线刷包和卡刷包，希望可以帮到同用4C的朋友们。</p>
+<p>开发版6.1.7线刷包：<a href="http://bigota.d.miui.com/6.1.7/libra_images_6.1.7_20151221.0000.11_5.1_cn_b09dac70a0.tgz" target="_blank" rel="external">http://bigota.d.miui.com/6.1.7/l … 1_cn_b09dac70a0.tgz</a></p>
+</blockquote>
+<p>   解压到一个非中文目录</p>
+<p>8.下载第一个帖子提供的 </p>
+<p><a href="http://bbs.xiaomi.cn/attachment/download/aid/13683339/token/210fc85c74a53f608002ffe64e4bcdcddc539881" target="_blank" rel="external">MiPhone20150327.zip</a><br>按照帖子说明进行线刷我刷机用来100多秒,成功后,开机<br>9.第一次开机 回在第一个界面(上面是”mi”标志 下面的 “Android” 标志一直在滚动)停留很久 我都以为没有刷机成功,我大概停留了5分钟(感觉具体多久忘记了).然后就进入系统了..<br>最后吐槽 小米售后真垃圾 我就是要一个解锁码就能解决还搞这么多障碍.最关键的是自己设置的一个锁居然没有什么x用…既没有起到锁定的作用还故意设置障碍.</p>
+<h1 id="小米4C-未解锁可降级救砖教程"><a href="#小米4C-未解锁可降级救砖教程" class="headerlink" title="小米4C 未解锁可降级救砖教程"></a>小米4C 未解锁可降级救砖教程</h1><p>发表在 <a href="http://bbs.xiaomi.cn/f-353-0-0-0-871" target="_blank" rel="external">晒机评测    </a>2016-03-17 12:30:26 来自PC复制链接手机看帖<strong>72</strong>44278</p>
+<p>你还在为降级而纠结吗？ 你还在为刷机时出现下图一样而悲剧吗？   只要你跟着下面的教程走保证没错</p>
+<p> <img src="http://cdn.fds.api.xiaomi.com/b2c-bbs/cn/attachment/T11md_BTJv1RXrhCrK.jpg" alt="img"></p>
+<p>​                                                         救砖教程 </p>
+<p>本教程只针对不能进桌面有效</p>
+<p>此fastboot只对开发板6.3.10有效   本人对稳定版7.0.16测试过无效</p>
+<p>只要是进了高通9008模式可刷任何MIUI官方版本 不管是稳定还是开发版（其他ROM未测试）</p>
+<p>下载附件<a href="http://bbs.xiaomi.cn/attachment/download/aid/13683307/token/1ebf09b67c39234ce4da4d48756ddacad37ca431" target="_blank" rel="external">fastboot.zip</a>( 864.36 KB )</p>
+<p>1 在C盘根目录下创建fastboot文件夹<br>2 把fastboot.zip中的文件解压到fastboot文件夹（adb.exe AdbWinApi.dll AdbWinUsbApi.dll fastboot.exe）四个文件</p>
+<p><img src="http://cdn.fds.api.xiaomi.com/b2c-bbs/cn/attachment/T1J1h_B5Jv1RXrhCrK.jpg" alt="img"></p>
+<p>3 按音量下+开机进入fastboot模式  连接手机<br>4 按“win+R”键输入cmd</p>
+<p><img src="http://cdn.fds.api.xiaomi.com/b2c-bbs/cn/attachment/T1l6C_BmWv1RXrhCrK.jpg" alt="img"></p>
+<p>5 输入命令 </p>
+<p>   1: cd C:\fastboot<br>   2: fastboot devices<br>   3: fastboot oem edl</p>
+<p>注：如果红色框内为空白就是没有连接到电脑 或者是驱动没有安装  </p>
+<p>​       执行第三条命令后正常情况下手机会黑屏（表示已进入9008模式）</p>
+<p><img src="http://cdn.fds.api.xiaomi.com/b2c-bbs/cn/attachment/T1e_DjBsKT1RXrhCrK.jpg" alt="img"></p>
+<p>手机黑屏后查看下设备管理器  出现红色框内的东东表示连接成功  接不上可多试几次</p>
+<p><img src="http://cdn.fds.api.xiaomi.com/b2c-bbs/cn/attachment/T1z5W_Bvbv1RXrhCrK.jpg" alt="img"></p>
+<p>开刷</p>
+<p>下载附件<a href="http://bbs.xiaomi.cn/attachment/download/aid/13683339/token/210fc85c74a53f608002ffe64e4bcdcddc539881" target="_blank" rel="external">MiPhone20150327.zip</a>( 25.95 MB )</p>
+<p>安装miflash2015.03.27.0版本    怎么安装就不用写了吧 </p>
+<p>选择刷机包  </p>
+<p><img src="http://cdn.fds.api.xiaomi.com/b2c-bbs/cn/attachment/T1yAx_BQWv1RXrhCrK.jpg" alt="img"></p>
+<p><img src="http://cdn.fds.api.xiaomi.com/b2c-bbs/cn/attachment/T1kPA_BTEv1RXrhCrK.jpg" alt="img"></p>
+<p>开刷</p>
+<p><img src="http://cdn.fds.api.xiaomi.com/b2c-bbs/cn/attachment/T1lID_Bjdv1RXrhCrK.jpg" alt="img"></p>
+<p>刷机成功   </p>
+<p><img src="http://cdn.fds.api.xiaomi.com/b2c-bbs/cn/attachment/T1t1LvBKWv1RXrhCrK.jpg" alt="img"></p>
+<p>刷机完成后不会自动重启     按开机键不放直至屏幕显示MI方可</p>
+<p>是不是很简单</p>
+<p>​                                                                                  </p>
+<p>​                                                                       降级</p>
+<p>本教程只针对能进桌面 </p>
+<p>下载附件<a href="http://bbs.xiaomi.cn/attachment/download/aid/13683367/token/6b01f0b5cef3b9944c5996bbf06d561bab2801d7" target="_blank" rel="external">adb.zip</a>( 631.4 KB )</p>
+<p>1 手机打开USB调试</p>
+<p>2  连接电脑</p>
+<p>3  解压adb.zip 后双击cmd.exe</p>
+<p>4  输入命令adb reboot edl     </p>
+<p>5  手机黑屏后查看设备管理器是否连接上  （同上教程）</p>
+<p>6  刷机 （同上教程）</p>
+<h1 id="高通9008模式强制降级教程（适用于所有加BL锁的小米手机）"><a href="#高通9008模式强制降级教程（适用于所有加BL锁的小米手机）" class="headerlink" title="高通9008模式强制降级教程（适用于所有加BL锁的小米手机）"></a>高通9008模式强制降级教程（适用于所有加BL锁的小米手机）</h1><p>发表在 <a href="http://bbs.xiaomi.cn/f-353-0-0-0-873" target="_blank" rel="external">玩机教程    </a>2016-03-18 08:20:53 来自PC复制链接手机看帖<strong>136</strong>344342</p>
+<p>为什么要降级，这里以4C 解锁为例子；<br>4C 在miui开发板6.1.7以上和稳定版7.1以上的版本中加入了BL锁，这样刷第三方RE就不允许了。有一个官方的办法就是申请解锁：<a href="http://www.miui.com/unlock/" target="_blank" rel="external">http://www.miui.com/unlock/</a><br>此外，还有一个非官方办法：高通9008模式刷机降回到旧版本（无锁的旧版本）；<br>刷机步骤<br>第一步：4C为例子，首先准备东西：<br>1.第一：一个无锁的线刷包，群里提供6.1.7的线刷包（这个版本是无锁的）。网上也可以找到。<br>2.第二：一个米4刷windows10用的fmilash（用这个版本是因为这个版本内置了高通9008驱动）；下载地址：<a href="http://bigota.d.miui.com/tools/MiFlash20150601_win10.exe" target="_blank" rel="external">http://bigota.d.miui.com/tools/MiFlash20150601_win10.exe</a><br>3.下载小米助手并且安装；<a href="http://zhushou.xiaomi.com/" target="_blank" rel="external">http://zhushou.xiaomi.com/</a><br><img src="http://cdn.fds.api.xiaomi.com/b2c-bbs/cn/attachment/d084b9d8e309ebdcc3418ad95cb93670e6e3ffc9.jpg?_v=1458260448" alt="img"><br>4.第三：一台电脑（要清楚地知道自己当前系统是多少位的系统），XP一般都是32位。Win7的画看图判断：<br><img src="http://cdn.fds.api.xiaomi.com/b2c-bbs/cn/attachment/e3fc08eca78abd1736662cfb3f4e140ed6c1b5da.jpg?_v=1458260448" alt="img"><br>如果是64位就需要进去测试模式：参考百度经验<br><a href="http://jingyan.baidu.com/article/acf728fd21c3e7f8e510a3ef.html（win7" target="_blank" rel="external">http://jingyan.baidu.com/article/acf728fd21c3e7f8e510a3ef.html（win7</a> ，win10通用）；<br>如果是32位则不需要进去测试模式，直接进去下列步骤;<br>第二步：安装好miflash，并且打开miflash坐在的安装目录；<br><img src="http://cdn.fds.api.xiaomi.com/b2c-bbs/cn/attachment/9eba7e1069af40cc6b9ac4a40768544d2955cb07.jpg?_v=1458260449" alt="img"><br><img src="http://cdn.fds.api.xiaomi.com/b2c-bbs/cn/attachment/9a98ce5710c9b0a37fd3c9ea73b63c76697e9971.jpg?_v=1458260450" alt="img"><br><img src="http://cdn.fds.api.xiaomi.com/b2c-bbs/cn/attachment/deb83b981f9bd26e03fc2ba653c1c4db4ca009a1.jpg?_v=1458260450" alt="img"><br><img src="http://cdn.fds.api.xiaomi.com/b2c-bbs/cn/attachment/6a9f1d20391a5448aba2937e960f9a606c825f1c.jpg?_v=1458260450" alt="img"><br><img src="http://cdn.fds.api.xiaomi.com/b2c-bbs/cn/attachment/1d244049da8c715d705c03c8933aada99bbb3045.jpg?_v=1458260451" alt="img"><br><img src="http://cdn.fds.api.xiaomi.com/b2c-bbs/cn/attachment/13ff61997be935d1f4a115d5c2b7d121df2134c2.jpg?_v=1458260451" alt="img"><br>第四步：连接手机，在命令符窗口输入进去高通模式的命令并且回车，显示如图即可成功。（之前小米助手下载并且安装了的话应该是没问题的）：adb reboot edl（最后边那是一个字母L的小写）。<br><img src="http://cdn.fds.api.xiaomi.com/b2c-bbs/cn/attachment/d7c3fcb608d01416d9a4e7f4a3cc0147af1ae37b.jpg?_v=1458260451" alt="img"><br>第五步：解压你准备好的线刷包。如图，路径中尽量不要有中文，防止出现别的问题。<br><img src="http://cdn.fds.api.xiaomi.com/b2c-bbs/cn/attachment/ccf4d87a1191d12bc0d1ccb6cf578ef0b4d9641d.jpg?_v=1458260452" alt="img"><br><img src="http://cdn.fds.api.xiaomi.com/b2c-bbs/cn/attachment/99ecce089a7dbff9c4374841b1bb178b0b0b0d5c.jpg?_v=1458260452" alt="img"><br>第六步：打开miflash刷机助手。<br><img src="http://cdn.fds.api.xiaomi.com/b2c-bbs/cn/attachment/7702bb78e13c98453a3d22cd2bf0f41e6dcf8fd7.jpg?_v=1458260452" alt="img"><br>等待进度条走完，刷机也就完成了。手动长按开机键知道米logo出现即可开机。</p>
+<p>友情提示：刷机有风险，请大家谨慎操作！</p>
+</div>
+                <div class="post-meta-footer-wrap"></div>
+            </article>
+          </div>
+
+        </main>
+        <aside class="sidebar" id="sidebar">
+
+          <div class="catpostlist-wrap">
+
+            <div class="catpostlist-body">
+              <div class="catpostlist-meta"><div class="catpostlist-title-wrap"><span class="catpostlist-title">forwarded</span></div></div>
+              <nav class="catpostlist-content">
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/css-quotes/">CSS quotes 属性</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/如何画好断线图标/">如何画好断线图标？我总结了这4个规律</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/nodejs前端模板引擎swig入门/">nodejs前端模板引擎swig入门</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/小米4c变砖解救/">小米4c变砖解救</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/nodejs读写json文件/">nodejs读写json文件</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/简单-强大的swig-js/">简单、强大的swig.js</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/崩坏3米哈游卡通渲染/">《崩坏3》画面效果为何惊艳？看米哈游怎么做卡通渲染的你就明白了</a></span>
+              </nav>
+            </div>
+
+            <div class="catpostlist-body">
+              <div class="catpostlist-meta"><div class="catpostlist-title-wrap"><span class="catpostlist-title">Word Lists</span></div></div>
+              <nav class="catpostlist-content">
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-1/">Word-List-1：地理</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-13/">Word-List-13：人类学</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-11/">Word-List-11：农业</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-10/">Word-List-10：考古学</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-12/">Word-List-12：气象</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-15/">Word-List-15：社会学</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-16/">Word-List-16：生物学</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-17/">Word-List-17：数学</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-18/">Word-List-18：天文</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-21/">Word-List-21：艺术</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-2/">Word-List-2：地质</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-22/">Word-List-22：音乐</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-23/">Word-List-23：语言学</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-20/">Word-List-20：医学</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-26/">Word-List-26：自然</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-27/">Word-List-27：宗教</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-6/">Word-List-6：环境</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-7/">Word-List-7：教育</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-25/">Word-List-25：植物学</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-24/">Word-List-24：政治</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-9/">Word-List-9：军事</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-5/">Word-List-5：化学</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-19/">Word-List-19：物理</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-14/">Word-List-14：人物</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-3/">Word-List-3：动物学</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-8/">Word-List-8：经济</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-4/">Word-List-4：法律</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-33/">Word-List-33：语言</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-28/">Word-List-28：品质</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-31/">Word-List-31：心理</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-29/">Word-List-29：事物</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-35/">Word-List-35：状态</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-30/">Word-List-30：现实</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-34/">Word-List-34：属性</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-32/">Word-List-32：行为</a></span>
+              </nav>
+            </div>
+
+            <div class="catpostlist-body">
+              <div class="catpostlist-meta"><div class="catpostlist-title-wrap"><span class="catpostlist-title">ACG</span></div></div>
+              <nav class="catpostlist-content">
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/崩坏3米哈游卡通渲染/">《崩坏3》画面效果为何惊艳？看米哈游怎么做卡通渲染的你就明白了</a></span>
+              </nav>
+            </div>
+
+
+          </div>
+
+        </aside>
+        <footer class="footer" id="footer">
+
+<script>
+  $("a").click(function(){
+    var _this = $(this);
+    $("body").css({"background-color":"#fff","opacity":"0"}).fadeOut(100,function(){window.location.href = _this.attr("href");})
+    return false;
+  })
+</script>
+
+
+        </footer>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
