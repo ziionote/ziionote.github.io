@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+
+<html class="theme-resume " lang="zh-Hans">
+<head>
+<title>《缺氧》复制人属性及特性存档修改方法教程 | notebook</title>
+<!-- META -->
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="theme-color" content="#222" />
+
+<!-- LINK -->
+
+<!-- STYLE -->
+<link href="/css/normalize.css" rel="stylesheet" type="text/css" />
+<link href="/css/basic.css" rel="stylesheet" type="text/css" />
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+
+<!-- SCRIPT -->
+<script type="text/javascript" src="/js/jQuery.js"></script>
+
+<!-- END -->
+
+</head>
+
+<body>
+  <div class="window">
+    <div class="window-content">
+      <div class="main-wrap">
+        <header class="header" id="header">
+          <div class="site-title-wrap"><a href="/" class="site-title">notebook</a></div>
+        </header>
+        <main class="mainbox" id="mainbox">
+
+          <div class="post-wrap" id="post-wrap">
+            <article class="post-body">
+              <div class="post-meta">
+                <div class="post-title-wrap"><span class="post-title">《缺氧》复制人属性及特性存档修改方法教程</span></div>
+                <div class="post-meta-detial-wrap"><span class="post-date">2017-11-26</span><span class="post-time">14:21:12</span></div>
+              </div>
+              <div class="post-content" id="post-content"><blockquote>
+<p>转自：<a href="https://tieba.baidu.com/p/5054973048" target="_blank" rel="external">贴吧</a>、<a href="http://gl.ali213.net/html/2017-4/161573.html" target="_blank" rel="external">游侠</a>，有删改<br>初见：2017-04-04 03:03</p>
+<p>适用条件：《缺氧》208689版，此方法得到的存档最新版已不在支持。</p>
+</blockquote>
+<h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><h4 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h4><ul>
+<li>UltraEdit文本编辑器</li>
+<li>进制转换器，方便十进制和十六进制之间的转换。</li>
+</ul>
+<h4 id="开局"><a href="#开局" class="headerlink" title="开局"></a>开局</h4><p>开局尽量选择装饰期待值装饰期待值-20以下和呕吐的小人儿，进入游戏，立马存盘。推荐创世编号：339090353。</p>
+<h3 id="初探"><a href="#初探" class="headerlink" title="初探"></a>初探</h3><p>用UltraEdit打开XXXX.SAV文档（位置：<code>C:\Users\admin\Documents\Klei\OxygenNotIncluded\save_files\auto_save</code>，<code>C:\Users\你的用户名\Documents\Klei\OxygenNotIncluded\save_files</code>），一堆乱码+英文，XXXX.SAV文件之所以几乎无法修改是因为它是游戏的编程存储方式有关，少有类同。但总是有迹可循的，缺氧是一个加拿大华裔小子开发的，所以不是俄语不是德语更不是铬星人语言，而是英语。</p>
+<p>查找Traits能找到4条相关（随机复制人一条，无法修改；剩下3个就是你的小人儿了，你有多少小人儿，存档就能搜到几条），如下图所示：</p>
+<p><img src="http://image.9game.cn/2017/4/6/16458196.jpg" alt="01"></p>
+<p>如图1看到的，Traits之后那一串十六进制数字，其中44 69 4E 61 72 63 6F 6C 65 70 73 79表示就是Narcolepsy（昏睡），其他单词类同（DiversLung，肺活量大；StressVomiter，呕吐），那么剩下的就是我们今天要研究的。</p>
+<h3 id="摸索"><a href="#摸索" class="headerlink" title="摸索"></a>摸索</h3><p>其中关键字符串我已经重点标识出来了，分别是35，2D，03，0A，0A，0D，暂时看不出有什么奥秘，再看下图2：</p>
+<p><img src="http://image.9game.cn/2017/4/6/16458199.jpg" alt="02"></p>
+<p>咦？Narcolepsy貌似还是0A 00 00 00，图2关键字符串是34，2C，03，0A，09，0D。其中与图1比较，03和0D是相同的，那么就说明0A就是Narcolepsy，0D就是StressVomiter，有点门道了吧？但还是不够，以上是3特性小人儿存档，继续上图：</p>
+<p><img src="http://image.9game.cn/2017/4/6/16458201.jpg" alt="03"></p>
+<p>关键字符串是43，38，04，0D，08，09，0D</p>
+<p>继续上4小人儿存档图：</p>
+<p><img src="http://image.9game.cn/2017/4/6/16458202.jpg" alt="《缺氧》复制人属性及特性存档修改方法教程"></p>
+<p>关键字符串：3D，35，04，08，0A，09，0A</p>
+<p>看出来什么？3特性图1 和图2都有字符串03，4特性图3和图4都有字符串04，但这似乎是凑巧，说服力不足，继续上5特性的图：</p>
+<p><img src="http://image.9game.cn/2017/4/6/16458203.jpg" alt="《缺氧》复制人属性及特性存档修改方法教程"></p>
+<p>关键字符串：4F，47，05，0E，09，09，09，0A</p>
+<p><img src="http://image.9game.cn/2017/4/6/16458206.jpg" alt="《缺氧》复制人属性及特性存档修改方法教程"></p>
+<p>关键字符串：49，41，05，0A，0A，08，07，0A</p>
+<p>这下终于确定了，第三个关键字符串就是小人儿的特性个数值。但是还是无法修改，一修改完进入游戏读档就跑出个小人儿，冲着你大喊“遭遇黑洞啦”。这时便开始使用进制转换器！</p>
+<p>拿图1和图2为例，</p>
+<p>图1：35，2D，03，0A，0A，0D分别是53，45，03，10，10，13</p>
+<p>图2：34，2C，03，0A，09，0D分别是52，44，03，10，09，13</p>
+<p>其中53，45，10分别少了1，有猫腻啊，于是加了3特性的数字和，10+10+13=33，10+09+13=32，53-45=8，52-44=8，45-33=12，44-32=12，啊哈，门道来了!</p>
+<p>继续验证图3和图4，</p>
+<p>图3：67，59，13+8+9+13=43，67-59=8，59-43=16；</p>
+<p>图4：61，53，8+10+9+10=37，61-53=8，53-37=16</p>
+<p>……为什么变成16了啊？</p>
+<p>强忍沮丧继续验证图5和图6，</p>
+<p>图5：79，71，14+9+9+9+10=51，79-71=8，71-51=20；</p>
+<p>图6：73，65，10+10+8+7+10=45，73-65=8，65-45=20</p>
+<p>……又变成20啦！疯了……</p>
+<p>等等，发现了什么？16-12=4，20-16=4，每增加一个特性，数字就增加4，开始3特性是12，也就是说每一个特性值是4！变量出来了，字符串①-字符串②=8，字符串③是特性个数，字符串②-特性总和=字符串③X4。</p>
+<table>
+<thead>
+<tr>
+<th>例</th>
+<th>关键字符串</th>
+<th>特性标记</th>
+<th>基准值</th>
+<th>特性数</th>
+<th>字符2</th>
+<th>字符1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>字符1，字符2，特性数；</td>
+<td>每个特性的字符数</td>
+<td>M=特性标记求和</td>
+<td>N</td>
+<td>S2=M+Nx4</td>
+<td>S1=S2+8</td>
+</tr>
+<tr>
+<td>1</td>
+<td>35，2D，<code>03</code>；</td>
+<td>0A，0A，0D</td>
+<td></td>
+<td></td>
+<td>2D</td>
+<td>35</td>
+</tr>
+<tr>
+<td></td>
+<td>53，45，<code>03</code>；</td>
+<td>（10+10+13=<code>33</code>）</td>
+<td>33</td>
+<td>3</td>
+<td>45=33+12</td>
+<td>+8=53</td>
+</tr>
+<tr>
+<td>2</td>
+<td>34，2C，<code>03</code>；</td>
+<td>0A，09，0D</td>
+<td></td>
+<td></td>
+<td>2C</td>
+<td>34</td>
+</tr>
+<tr>
+<td></td>
+<td>52，44，<code>03</code>；</td>
+<td>（10+09+13=<code>32</code>）</td>
+<td>32</td>
+<td>3</td>
+<td>44=32+12</td>
+<td>+8=52</td>
+</tr>
+<tr>
+<td>3</td>
+<td>43，38，<code>04</code>；</td>
+<td>0D，08，09，0D</td>
+<td></td>
+<td></td>
+<td>38</td>
+<td>43</td>
+</tr>
+<tr>
+<td></td>
+<td>67，59，<code>04</code>；</td>
+<td>（13+8+9+13=<code>43</code>）</td>
+<td>43</td>
+<td>4</td>
+<td>59=43+16</td>
+<td>+8=67</td>
+</tr>
+<tr>
+<td>4</td>
+<td>3D，35，<code>04</code>；</td>
+<td>08，0A，09，0A</td>
+<td></td>
+<td></td>
+<td>35</td>
+<td>3D</td>
+</tr>
+<tr>
+<td></td>
+<td>61，53，<code>04</code>；</td>
+<td>（8+10+9+10=<code>37</code>）</td>
+<td>37</td>
+<td>4</td>
+<td>53=37+16</td>
+<td>+8=61</td>
+</tr>
+<tr>
+<td>5</td>
+<td>4F，47，<code>05</code>；</td>
+<td>0E，09，09，09，0A</td>
+<td></td>
+<td></td>
+<td>47</td>
+<td>4F</td>
+</tr>
+<tr>
+<td></td>
+<td>79，71，<code>05</code>；</td>
+<td>（14+9+9+9+10=<code>51</code>）</td>
+<td>51</td>
+<td>5</td>
+<td>71=51+20</td>
+<td>+8=79</td>
+</tr>
+<tr>
+<td>6</td>
+<td>49，41，<code>05</code>；</td>
+<td>0A，0A，08，07，0A</td>
+<td></td>
+<td></td>
+<td>41</td>
+<td>49</td>
+</tr>
+<tr>
+<td></td>
+<td>73，65，<code>05</code>；</td>
+<td>（10+10+8+7+10=<code>45</code>）</td>
+<td>45</td>
+<td>5</td>
+<td>65=45+20</td>
+<td>+8=73</td>
+</tr>
+</tbody>
+</table>
+<p>据此修改特性：</p>
+<p><img src="http://image.9game.cn/2017/4/6/16458209.jpg" alt="《缺氧》复制人属性及特性存档修改方法教程"></p>
+<p>完成！</p>
+<table>
+<thead>
+<tr>
+<th>例</th>
+<th>关键字符串</th>
+<th>特性标记</th>
+<th>基准值</th>
+<th>特性数</th>
+<th>字符2</th>
+<th>字符1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>字符1，字符2，特性数；</td>
+<td>每个特性的字符数</td>
+<td>M=特性标记求和</td>
+<td>N</td>
+<td>S2=M+Nx4</td>
+<td>S1=S2+8</td>
+</tr>
+<tr>
+<td>7</td>
+<td>C6，BE，<code>0D</code>；</td>
+<td>0A，0A，0A，0A，0B，0B，0C，07，08，09，09，12，0D</td>
+<td></td>
+<td>0D</td>
+<td>BE</td>
+<td>C6</td>
+</tr>
+<tr>
+<td></td>
+<td>198，190，<code>13</code>；</td>
+<td>（10+10+10+10+11+11+12+7+8+9+9+18+13=<code>138</code>）</td>
+<td>138</td>
+<td>13</td>
+<td>190=138+52</td>
+<td>+8=198</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>07，08，09，09，0A，0A，0B，0C，0C，12</td>
+<td></td>
+<td>0A</td>
+<td>92</td>
+<td>9A</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>（7+8+9+9+10+10+11+12+12+18=<code>106</code>）</td>
+<td>106</td>
+<td>10</td>
+<td>146=106+40</td>
+<td>154</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>为什么是ScaredyCat(胆小鬼)啊？因为胆小鬼不敢打怪升级……缺氧里的野生生物可是好东西啊，不能浪费，要圈养。</p>
+<p>进游戏看看：</p>
+<p><img src="http://image.9game.cn/2017/4/6/16458211.jpg" alt="《缺氧》复制人属性及特性存档修改方法教程"></p>
+<p>不过有一点，特性要手动一个一个的改，每一个小人儿都要亲自改。</p>
+<h3 id="AttributeLevels"><a href="#AttributeLevels" class="headerlink" title="AttributeLevels"></a>AttributeLevels</h3><p>至于属性，紧接着Traits(特性)就是AttributeLevels(属性等级)，如图：</p>
+<p><img src="http://image.9game.cn/2017/4/6/16458213.jpg" alt="《缺氧》复制人属性及特性存档修改方法教程"></p>
+<p>黄色部分就是Traits指令行，后面的蓝色部分就是AttributeLevels了。</p>
+<p>重点是各属性单词后面的十六进制字符串，如果这个小人儿没有这个属性，那么该属性后面的字符串是00 00 00 00 00 00 00 00，如果是1级，就是00 00 00 00 01 00 00 00，2级就是00 00 00 00 02 00 00 00，以此类推。</p>
+<p>如果你想弄个200级，就用进制转换器转换成C8，也就是00 00 00 00 C8 00 00 00，就这么简单。</p>
+<p>（完）</p>
+<h3 id="附：小人特质一览-TRAITS"><a href="#附：小人特质一览-TRAITS" class="headerlink" title="附：小人特质一览-TRAITS"></a>附：小人特质一览-TRAITS</h3><table>
+<thead>
+<tr>
+<th>字符串</th>
+<th>十六位</th>
+<th>插入数</th>
+<th>字符数</th>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>利弊</td>
+<td></td>
+</tr>
+<tr>
+<td>Yokel</td>
+<td>05</td>
+<td>9</td>
+<td>5</td>
+<td>乡巴佬</td>
+<td>Yokel</td>
+</tr>
+<tr>
+<td>Flatulence</td>
+<td>0A</td>
+<td>14</td>
+<td>10</td>
+<td>全能主义者</td>
+<td>Flatulence</td>
+</tr>
+<tr>
+<td>ScaredyCat</td>
+<td>0A</td>
+<td>14</td>
+<td>10</td>
+<td>胆小如鼠</td>
+<td>Scaredy-Cat</td>
+</tr>
+<tr>
+<td>Uncultured</td>
+<td>0A</td>
+<td>14</td>
+<td>10</td>
+<td>无知者无畏</td>
+<td>Uncultured</td>
+</tr>
+<tr>
+<td>Narcoleptic</td>
+<td>0B</td>
+<td>15</td>
+<td>11</td>
+<td>昏睡症</td>
+<td>Narcoleptic</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>难说</td>
+<td></td>
+</tr>
+<tr>
+<td>InteriorDecorator</td>
+<td>11</td>
+<td>21</td>
+<td>17</td>
+<td>室内装饰达人</td>
+<td>Interior Decorator</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>优点</td>
+<td></td>
+</tr>
+<tr>
+<td>IronGut</td>
+<td>07</td>
+<td>11</td>
+<td>7</td>
+<td>钢铁消化</td>
+<td>Iron Gut</td>
+</tr>
+<tr>
+<td>NightOwl</td>
+<td>08</td>
+<td>12</td>
+<td>8</td>
+<td>夜猫子</td>
+<td>Night Owl</td>
+</tr>
+<tr>
+<td>EarlyBird</td>
+<td>09</td>
+<td>13</td>
+<td>9</td>
+<td>早起的鸟儿</td>
+<td>Early Bird</td>
+</tr>
+<tr>
+<td>MoleHands</td>
+<td>09</td>
+<td>13</td>
+<td>9</td>
+<td>鼹鼠之爪</td>
+<td>Mole Hands</td>
+</tr>
+<tr>
+<td>Amphibious</td>
+<td>0A</td>
+<td>14</td>
+<td>10</td>
+<td>两栖生物</td>
+<td>Amphibious</td>
+</tr>
+<tr>
+<td>DiversLung</td>
+<td>0A</td>
+<td>14</td>
+<td>10</td>
+<td>潜水员的肺</td>
+<td>Diver’s Lung</td>
+</tr>
+<tr>
+<td>Twinkletoes</td>
+<td>0B</td>
+<td>15</td>
+<td>11</td>
+<td>凌波微步</td>
+<td>Twinkletoes</td>
+</tr>
+<tr>
+<td>QuickLearner</td>
+<td>0C</td>
+<td>16</td>
+<td>12</td>
+<td>学霸</td>
+<td>Quick Learner</td>
+</tr>
+<tr>
+<td>GreaseMonkey</td>
+<td>0C</td>
+<td>16</td>
+<td>12</td>
+<td>油滑的猴子</td>
+<td>Grease Monkey</td>
+</tr>
+<tr>
+<td><del>NaturallyRobust</del></td>
+<td>0F</td>
+<td>19</td>
+<td>15</td>
+<td><del>天生强壮</del></td>
+<td>Naturally Robust</td>
+</tr>
+<tr>
+<td>StrongImmuneSystem</td>
+<td>12</td>
+<td>22</td>
+<td>18</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>转自<a href="http://www.k73.com/glzq/226794.html" target="_blank" rel="external">这里</a>。</p>
+<p>字母表顺序。可能不完整，有待补充。特质中的数值影响，在属性中已经显示出来了，并不会叠加。</p>
+</blockquote>
+<h4 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h4><ul>
+<li>Anemic 贫血<ul>
+<li>This Duplicant is the exact opposite of athletic.</li>
+<li>这个复制人相当不擅长运动。</li>
+</ul>
+</li>
+<li>Biohazard 生物危险<ul>
+<li>All the Vitamin C in space can’t stop this Duplicant from getting sick. Translated by LianMin.</li>
+<li>再多的维生素C也不能阻止这个复制人生病</li>
+</ul>
+</li>
+<li>Gastrophobia 幽闭恐惧症<ul>
+<li>This Duplicant has an unshakable fear of kitchens and the culinary arts. Can not perform job: Cook</li>
+<li>这个复制人非常恐惧厨房和烹饪作品。不能胜任烹饪相关工作。</li>
+</ul>
+</li>
+<li>Irritable Bowel 泌尿过敏<ul>
+<li>This Duplicant takes a little longer than usual to “do their business”. Bladder Efficiency: -0.50</li>
+<li>这个复制人比其他人更频繁的“解决个人问题”。膀胱效率-0.50</li>
+</ul>
+</li>
+<li>Loud Sleeper 呼噜大王<ul>
+<li>In space, everyone can hear you snore.</li>
+<li>这个空间站里所有人都能听见你打鼾。</li>
+</ul>
+</li>
+<li>Mouth Breather 靠嘴呼吸<ul>
+<li>This Duplicant sucks up way more than their fair share of Oxygen. Air Consumption Rate: +100.0 g/s</li>
+<li>这个复制人呼吸着过多的氧气，超出了本应公平的份额。空气消耗率+100 克/秒</li>
+</ul>
+</li>
+<li>Bottomless Stomach 四次元大胃<ul>
+<li>This Duplicant might actually be several blackholes in a trenchcoat. Calories Burn Rate: -.8 kcal/s</li>
+<li>这个复制人的风衣下面实际上藏着一个黑洞。卡路里燃烧率-0.8千卡/秒</li>
+</ul>
+</li>
+<li>Slow Learner 学渣<ul>
+<li>This Duplicant is a little slow on the uptake, but gosh do they try.</li>
+<li>这个复制人虽然学得慢，但是你知道他有多努力吗</li>
+</ul>
+</li>
+<li>Small Bladder 超小膀胱<ul>
+<li>This Duplicant has a tiny, pea-sized bladder. Adorable! Bladder Change: +0.2 %/s</li>
+<li>这个复制人有着和豌豆一样小的膀胱，超级可爱!膀胱每秒变化：+0.2%</li>
+</ul>
+</li>
+</ul>
+<p>。</p>
+<h4 id="利弊"><a href="#利弊" class="headerlink" title="利弊"></a>利弊</h4><ul>
+<li>Flatulence 自视甚高(2017年2月18日 19:09 更新：科研所里有同学提出这个应该是指的是“全能主义者”，暂时保留意见)<ul>
+<li>Some Duplicants are just full of it</li>
+<li>一些复制人总是爱惹麻烦</li>
+</ul>
+</li>
+<li>Narcoleptic 昏睡症<ul>
+<li>This Duplicant can and will fall asleep anytime, anyplace.</li>
+<li>这个复制人能够也将会在任何时间、任何地点睡着。</li>
+</ul>
+</li>
+<li>Scaredy-Cat 胆小如鼠<ul>
+<li>This Duplicant is afraid of violence. Can not perform job: Combat</li>
+<li>这个复制人惧怕暴力。不能胜任战斗相关的工作。</li>
+</ul>
+</li>
+<li>Uncultured 无知者无畏<ul>
+<li>This Duplicant has no appreciation for the finer things. Decor Expectation: -20.00 , Refuses to do job: Art</li>
+<li>这个复制人没有鉴赏艺术的能力。装修期望值-20.00，不能胜任艺术相关的工作。</li>
+</ul>
+</li>
+<li>Yokel 乡巴佬<ul>
+<li>This Duplicant isn’t the brightest star in the sky. Can not perform job: Research</li>
+<li>这个复制人并不是天空中最闪亮的明星。不能胜任科研相关的工作。</li>
+</ul>
+</li>
+</ul>
+<p>。</p>
+<h4 id="难说"><a href="#难说" class="headerlink" title="难说"></a>难说</h4><ul>
+<li>Interior Decorator 室内装饰达人<ul>
+<li>Just a little more to the left… Creativity: +5.00 , Decor Expectation: +5.00</li>
+<li>总感觉左边还需要点什么东西…… 创造+5.00，装修期望值+5.00</li>
+</ul>
+</li>
+<li>Grease Monkey 油滑的猴子<ul>
+<li>This Duplicant likes to throw a wrench into the colony’s plans… in a good way</li>
+<li>这个复制人喜欢阻挠殖民地的计划……说干就干!</li>
+</ul>
+</li>
+</ul>
+<p>。</p>
+<h4 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h4><ul>
+<li>Mole Hands 鼹鼠之爪<ul>
+<li>These hands are great for tunneling, but finding gloves is a nightmare.</li>
+<li>这双手很擅长打洞，但是对手套而言是个噩梦。</li>
+</ul>
+</li>
+<li>Amphibious 两栖生物<ul>
+<li>This Duplicant moves as quickly underwater as they do on land</li>
+<li>这个复制人在水里的行动速度就像在岸上一样快!</li>
+</ul>
+</li>
+<li>Diver’s Lungs 潜水员的肺<ul>
+<li>This Duplicant may have been a talented opera singer in another life. Air Consumption Rate: -25.0 g/s</li>
+<li>这个复制人可能有着唱歌剧的天赋。空气消耗率-25.0克/秒</li>
+</ul>
+</li>
+<li>Early Bird 早起的鸟儿<ul>
+<li>This Duplicant wakes up felling fresh and efficient! In the first part of the day, adds +2 to all skills.</li>
+<li>这个复制人醒来后感到自己充满了决心!在每日伊始，所有技能+2。</li>
+</ul>
+</li>
+<li>Iron Gut 钢铁消化<ul>
+<li>This Duplicant can eat just about anything without getting sick!</li>
+<li>这个复制人能够吃掉所有东西还不生病!</li>
+</ul>
+</li>
+<li>Naturally Robust 天生强壮<ul>
+<li>This Duplicant’s hardy immune system repels most common illnesses.</li>
+<li>这个复制人强大的免疫力能够帮助他抵抗大多数疾病。</li>
+</ul>
+</li>
+<li>Night Owl 夜猫子<ul>
+<li>This Duplicant does their best work when they ought to be sleeping</li>
+<li>在他们应该睡觉时，这个复制人会尽他的最大努力工作。</li>
+</ul>
+</li>
+<li>Quick Learner 学霸<ul>
+<li>This Duplicant’s sharp as a tack and picks up new skills with amazing speed.</li>
+<li>这个复制人有着使用惊人速度来学习新技能的有效方法。</li>
+</ul>
+</li>
+<li>Twinkletoes 凌波微步<ul>
+<li>This Duplicant is light as a feather on their feet.</li>
+<li>这个复制人的身体轻盈如羽</li>
+</ul>
+</li>
+</ul>
+<p>。</p>
+</div>
+                <div class="post-meta-footer-wrap"></div>
+            </article>
+          </div>
+
+        </main>
+        <aside class="sidebar" id="sidebar">
+
+          <div class="catpostlist-wrap">
+
+            <div class="catpostlist-body">
+              <div class="catpostlist-meta"><div class="catpostlist-title-wrap"><span class="catpostlist-title">forwarded</span></div></div>
+              <nav class="catpostlist-content">
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/css-quotes/">CSS quotes 属性</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/nodejs前端模板引擎swig入门/">nodejs前端模板引擎swig入门</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/如何画好断线图标/">如何画好断线图标？我总结了这4个规律</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/nodejs读写json文件/">nodejs读写json文件</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/小米4c变砖解救/">小米4c变砖解救</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/崩坏3米哈游卡通渲染/">《崩坏3》画面效果为何惊艳？看米哈游怎么做卡通渲染的你就明白了</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/简单-强大的swig-js/">简单、强大的swig.js</a></span>
+              </nav>
+            </div>
+
+            <div class="catpostlist-body">
+              <div class="catpostlist-meta"><div class="catpostlist-title-wrap"><span class="catpostlist-title">Word Lists</span></div></div>
+              <nav class="catpostlist-content">
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-11/">Word-List-11：农业</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-1/">Word-List-1：地理</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-10/">Word-List-10：考古学</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-13/">Word-List-13：人类学</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-15/">Word-List-15：社会学</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-12/">Word-List-12：气象</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-16/">Word-List-16：生物学</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-18/">Word-List-18：天文</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-22/">Word-List-22：音乐</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-20/">Word-List-20：医学</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-21/">Word-List-21：艺术</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-2/">Word-List-2：地质</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-17/">Word-List-17：数学</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-26/">Word-List-26：自然</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-23/">Word-List-23：语言学</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-25/">Word-List-25：植物学</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-24/">Word-List-24：政治</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-27/">Word-List-27：宗教</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-6/">Word-List-6：环境</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-5/">Word-List-5：化学</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-9/">Word-List-9：军事</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-7/">Word-List-7：教育</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-14/">Word-List-14：人物</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-19/">Word-List-19：物理</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-3/">Word-List-3：动物学</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-4/">Word-List-4：法律</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-8/">Word-List-8：经济</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-33/">Word-List-33：语言</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-28/">Word-List-28：品质</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-31/">Word-List-31：心理</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-29/">Word-List-29：事物</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-35/">Word-List-35：状态</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-30/">Word-List-30：现实</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-34/">Word-List-34：属性</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-32/">Word-List-32：行为</a></span>
+              </nav>
+            </div>
+
+            <div class="catpostlist-body">
+              <div class="catpostlist-meta"><div class="catpostlist-title-wrap"><span class="catpostlist-title">backup</span></div></div>
+              <nav class="catpostlist-content">
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/reading_list_backup/">reading_list_backup</a></span>
+              </nav>
+            </div>
+
+            <div class="catpostlist-body">
+              <div class="catpostlist-meta"><div class="catpostlist-title-wrap"><span class="catpostlist-title">ACG</span></div></div>
+              <nav class="catpostlist-content">
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/崩坏3米哈游卡通渲染/">《崩坏3》画面效果为何惊艳？看米哈游怎么做卡通渲染的你就明白了</a></span>
+              </nav>
+            </div>
+
+            <div class="catpostlist-body">
+              <div class="catpostlist-meta"><div class="catpostlist-title-wrap"><span class="catpostlist-title">play</span></div></div>
+              <nav class="catpostlist-content">
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/缺氧/缺氧复制人属性及特性存档修改方法教程/">《缺氧》复制人属性及特性存档修改方法教程</a></span>
+              </nav>
+            </div>
+
+
+          </div>
+
+        </aside>
+        <footer class="footer" id="footer">
+
+<script>
+  $("a").click(function(){
+    var _this = $(this);
+    $("body").css({"background-color":"#fff","opacity":"0"}).fadeOut(100,function(){window.location.href = _this.attr("href");})
+    return false;
+  })
+</script>
+
+
+        </footer>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
