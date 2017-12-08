@@ -39,18 +39,23 @@
                 <div class="post-meta-detial-wrap"><span class="post-date">2017-11-08</span><span class="post-time">22:06:21</span></div>
               </div>
               <div class="post-content" id="post-content"><blockquote>
-<p>转自：<a href="http://www.jianshu.com/p/f0bffc42c1ce" target="_blank" rel="external">http://www.jianshu.com/p/f0bffc42c1ce</a><br><img src="http://upload.jianshu.io/users/upload_avatars/1784147/f248002e-86a7-46d0-95e1-ed9a645920ca.png?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96"><br><a href="http://www.jianshu.com/u/522bfa9e6a0c" target="_blank" rel="external">程序鱼</a></p>
+<p>转自：<a href="http://www.jianshu.com/p/f0bffc42c1ce" target="_blank" rel="external">http://www.jianshu.com/p/f0bffc42c1ce</a><br>
+<img src="http://upload.jianshu.io/users/upload_avatars/1784147/f248002e-86a7-46d0-95e1-ed9a645920ca.png?imageMogr2/auto-orient/strip%7CimageView2/1/w/96/h/96" alt="96"><br>
+<a href="http://www.jianshu.com/u/522bfa9e6a0c" target="_blank" rel="external">程序鱼</a></p>
 <p>2017.01.24 11:00 字数 950 阅读 2610评论 1喜欢 18</p>
 </blockquote>
 <p>相对于jade，我还是更喜欢swig前端模板引擎，jade虽然语法简练高效了不少，但是在我这最大的问题是</p>
 <p><strong>他没有一个html该有的样子。。。</strong></p>
-<p>所以我还是决定使用swig，页面结构，样子都是熟悉的样子，使用起来顺手了许多。<br>很多朋友也在纠结二者的优缺点，这个根据需求因人而异吧</p>
+<p>所以我还是决定使用swig，页面结构，样子都是熟悉的样子，使用起来顺手了许多。<br>
+很多朋友也在纠结二者的优缺点，这个根据需求因人而异吧</p>
 <blockquote>
-<p>这是两者的比较<br><a href="http://vschart.com/compare/swig-template-engine/vs/jade-template-engin" target="_blank" rel="external">http://vschart.com/compare/swig-template-engine/vs/jade-template-engin</a></p>
+<p>这是两者的比较<br>
+<a href="http://vschart.com/compare/swig-template-engine/vs/jade-template-engin" target="_blank" rel="external">http://vschart.com/compare/swig-template-engine/vs/jade-template-engin</a></p>
 </blockquote>
 <hr>
 <p>下面我们一起学习下swig这个前端模板引擎</p>
-<h2 id="swig的简单介绍"><a href="#swig的简单介绍" class="headerlink" title="swig的简单介绍"></a>swig的简单介绍</h2><blockquote>
+<h2 id="swig的简单介绍"><a class="markdownIt-Anchor" href="#swig的简单介绍"></a> swig的简单介绍</h2>
+<blockquote>
 <p>swig是JS模板引擎，它有如下特点：</p>
 <ul>
 <li>支持大多数主流浏览器。</li>
@@ -63,8 +68,10 @@
 <li>可扩展、可定制。</li>
 </ul>
 </blockquote>
-<h2 id="一-swig的安装"><a href="#一-swig的安装" class="headerlink" title="一. swig的安装"></a>一. swig的安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install swig --save</div></pre></td></tr></table></figure>
-<h2 id="二-和express框架集成"><a href="#二-和express框架集成" class="headerlink" title="二.和express框架集成"></a>二.和express框架集成</h2><p>app.js</p>
+<h2 id="一-swig的安装"><a class="markdownIt-Anchor" href="#一-swig的安装"></a> 一. swig的安装</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install swig --save</div></pre></td></tr></table></figure>
+<h2 id="二和express框架集成"><a class="markdownIt-Anchor" href="#二和express框架集成"></a> 二.和express框架集成</h2>
+<p>app.js</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">var express = require(&apos;express&apos;);</div><div class="line">var swig = require(&apos;swig&apos;);</div><div class="line">var path = require(&apos;path&apos;)</div><div class="line"></div><div class="line">var app = express();</div><div class="line">var port = process.env.PORT || 4000</div><div class="line"></div><div class="line">//设置swig页面不缓存</div><div class="line">swig.setDefaults(&#123;</div><div class="line">  cache: false</div><div class="line">&#125;)</div><div class="line">app.set(&apos;view cache&apos;, false);</div><div class="line"></div><div class="line">app.set(&apos;views&apos;,&apos;./views/pages/&apos;);</div><div class="line">app.set(&apos;view engine&apos;,&apos;html&apos;);</div><div class="line">app.engine(&apos;html&apos;, swig.renderFile);</div><div class="line"></div><div class="line"></div><div class="line">app.listen(port);</div><div class="line"></div><div class="line">console.log(&apos;server is started at http://localhost:&apos;+port);</div><div class="line"></div><div class="line">//index page</div><div class="line">app.get(&apos;/&apos;,function(req, res)&#123;</div><div class="line">    res.render(&apos;index&apos;,&#123;</div><div class="line">        title:&apos;首页 &apos;,</div><div class="line">        content: &apos;hello swig&apos;</div><div class="line">    &#125;)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p>index.html</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=&quot;en&quot;&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">    &lt;title&gt;&#123;&#123; title &#125;&#125;&lt;/title&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">    &#123;&#123; content &#125;&#125;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
@@ -72,26 +79,34 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">node app.js</div></pre></td></tr></table></figure>
 <p>在浏览器输入：<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000</a>, 执行效果如下</p>
 <p>浏览器运行.png</p>
-<h2 id="三-基本用法"><a href="#三-基本用法" class="headerlink" title="三.基本用法"></a>三.基本用法</h2><h4 id="1-变量"><a href="#1-变量" class="headerlink" title="1.变量"></a>1.变量</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;&#123; name &#125;&#125;</div></pre></td></tr></table></figure>
+<h2 id="三基本用法"><a class="markdownIt-Anchor" href="#三基本用法"></a> 三.基本用法</h2>
+<h4 id="1变量"><a class="markdownIt-Anchor" href="#1变量"></a> 1.变量</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;&#123; name &#125;&#125;</div></pre></td></tr></table></figure>
 <p>这里需要注意的是前后两端都要有空格，这样写就会报错</p>
-<h4 id="2-属性"><a href="#2-属性" class="headerlink" title="2.属性"></a>2.属性</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;&#123; student.name &#125;&#125;</div></pre></td></tr></table></figure>
-<h4 id="3-模板继承"><a href="#3-模板继承" class="headerlink" title="3.模板继承"></a>3.模板继承</h4><blockquote>
-<p>Swig 使用 extends 和 block 来实现模板继承 layout.html </p>
+<h4 id="2属性"><a class="markdownIt-Anchor" href="#2属性"></a> 2.属性</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;&#123; student.name &#125;&#125;</div></pre></td></tr></table></figure>
+<h4 id="3模板继承"><a class="markdownIt-Anchor" href="#3模板继承"></a> 3.模板继承</h4>
+<blockquote>
+<p>Swig 使用 extends 和 block 来实现模板继承 layout.html</p>
 </blockquote>
 <p>首先我们定义一个模板</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=&quot;en&quot;&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">    &lt;title&gt;&#123;% block title %&#125;&#123;% endblock  %&#125;&lt;/title&gt;</div><div class="line">    &#123;% block head %&#125;&#123;% endblock  %&#125;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">    &#123;% block content %&#125;&#123;% endblock  %&#125;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
 <p>这个模板里面我们定义了三个block块，子模板可以对这三个block继承</p>
 <p>然后我们写一个index.html继承这个模板</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&#123;% extends &apos;./layout.html&apos; %&#125;</div><div class="line">&#123;% block title %&#125; index &#123;% endblock %&#125;</div><div class="line">&#123;% block content %&#125;</div><div class="line">    &lt;div&gt;</div><div class="line">            &lt;h1&gt;hello swig&lt;/h1&gt;</div><div class="line">     &lt;div&gt;</div><div class="line">&#123;% endblock %&#125;</div></pre></td></tr></table></figure>
-<p>注意我这里并没有复写<strong></strong>这个块</p>
+<p>注意我这里并没有复写****这个块</p>
 <blockquote>
-<p>也就是说我们可以在layout.html模板页面里面定义很多block，而子页面可以有选择性的实现。 </p>
+<p>也就是说我们可以在layout.html模板页面里面定义很多block，而子页面可以有选择性的实现。</p>
 </blockquote>
-<h4 id="4-include模板"><a href="#4-include模板" class="headerlink" title="4.include模板"></a>4.include模板</h4><p>包含一个模板到当前位置，这个模板将使用当前上下文</p>
+<h4 id="4include模板"><a class="markdownIt-Anchor" href="#4include模板"></a> 4.include模板</h4>
+<p>包含一个模板到当前位置，这个模板将使用当前上下文</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=&quot;en&quot;&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">    &lt;title&gt;&#123;% block title %&#125;&#123;% endblock  %&#125;&lt;/title&gt;</div><div class="line">    &#123;% include &quot;./includes/head.html&quot; %&#125;</div><div class="line">    &#123;% block head %&#125;&#123;% endblock  %&#125;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">    &#123;% include &quot;./includes/header.html&quot; %&#125;</div><div class="line">    &#123;% block content %&#125;&#123;% endblock  %&#125;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
-<h4 id="5-if判断"><a href="#5-if判断" class="headerlink" title="5.if判断"></a>5.if判断</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123; % if name === &apos;郭靖&apos; % &#125;</div><div class="line">  hello 靖哥哥</div><div class="line">&#123; % endif % &#125;</div></pre></td></tr></table></figure>
-<h4 id="6-if-else判断"><a href="#6-if-else判断" class="headerlink" title="6.if-else判断"></a>6.if-else判断</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&#123; % if name === &apos;郭靖&apos; % &#125;</div><div class="line">  hello 靖哥哥</div><div class="line">&#123; % elseif name === &apos;黄蓉&apos; % &#125;</div><div class="line">  hello 蓉妹妹</div><div class="line">&#123; % else % &#125;</div><div class="line">  hello 欧阳峰</div><div class="line">&#123; % endif % &#125;</div></pre></td></tr></table></figure>
-<h4 id="7-for循环"><a href="#7-for循环" class="headerlink" title="7.for循环"></a>7.for循环</h4><p>先上栗子：</p>
+<h4 id="5if判断"><a class="markdownIt-Anchor" href="#5if判断"></a> 5.if判断</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123; % if name === &apos;郭靖&apos; % &#125;</div><div class="line">  hello 靖哥哥</div><div class="line">&#123; % endif % &#125;</div></pre></td></tr></table></figure>
+<h4 id="6if-else判断"><a class="markdownIt-Anchor" href="#6if-else判断"></a> 6.if-else判断</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&#123; % if name === &apos;郭靖&apos; % &#125;</div><div class="line">  hello 靖哥哥</div><div class="line">&#123; % elseif name === &apos;黄蓉&apos; % &#125;</div><div class="line">  hello 蓉妹妹</div><div class="line">&#123; % else % &#125;</div><div class="line">  hello 欧阳峰</div><div class="line">&#123; % endif % &#125;</div></pre></td></tr></table></figure>
+<h4 id="7for循环"><a class="markdownIt-Anchor" href="#7for循环"></a> 7.for循环</h4>
+<p>先上栗子：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">// arr = [1, 2, 3]</div><div class="line">&#123; % for key, val in arr % &#125;</div><div class="line">  &lt;p&gt;&#123; &#123; key &#125; &#125; -- &#123; &#123; val &#125; &#125;&lt;/p&gt;</div><div class="line">&#123; % endfor % &#125;</div></pre></td></tr></table></figure>
 <p>for循环内置变量：</p>
 <blockquote>
@@ -103,12 +118,13 @@
 <li>loop.key：如果迭代是对象，是当前循环的键，否则同 loop.index</li>
 <li>loop.first：如果是第一个值返回 true</li>
 <li>loop.last：如果是最后一个值返回 true</li>
-<li>loop.cycle：一个帮助函数，以指定的参数作为周期 </li>
+<li>loop.cycle：一个帮助函数，以指定的参数作为周期</li>
 </ul>
 </blockquote>
 <p>使用方法：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">// arr = [1, 2, 3]</div><div class="line">&#123; % for key, val in arr % &#125;</div><div class="line">  &lt;p&gt;&#123;&#123; loop.index &#125;&#125; -- &#123;&#123; key &#125;&#125; -- &#123;&#123; val &#125;&#125;&lt;/p&gt;</div><div class="line">&#123; % endfor % &#125;</div></pre></td></tr></table></figure>
-<h4 id="8-强大的内置过滤器"><a href="#8-强大的内置过滤器" class="headerlink" title="8.强大的内置过滤器"></a>8.强大的内置过滤器</h4><blockquote>
+<h4 id="8强大的内置过滤器"><a class="markdownIt-Anchor" href="#8强大的内置过滤器"></a> 8.强大的内置过滤器</h4>
+<blockquote>
 <ul>
 <li>add(value)：使变量与value相加，可以转换为数值字符串会自动转换为数值。</li>
 <li>addslashes：用 \ 转义字符串</li>
@@ -118,8 +134,8 @@
 <li>tzOffset：时区</li>
 <li>default(value)：默认值（如果变量为undefined，null，false）</li>
 <li>escape([type])：转义字符</li>
-<li>默认： &amp;, &lt;, &gt;, “, ‘</li>
-<li>js: &amp;, &lt;, &gt;, “, ‘, =, -, ;</li>
+<li>默认： &amp;, &lt;, &gt;, &quot;, ’</li>
+<li>js: &amp;, &lt;, &gt;, &quot;, ', =, -, ;</li>
 <li>first：返回数组第一个值</li>
 <li>join(glue)：同[].join</li>
 <li>json_encode([indent])：类似JSON.stringify, indent为缩进空格数</li>
@@ -134,18 +150,22 @@
 <li>uniq：数组去重</li>
 <li>upper：同’’.toUpperCase</li>
 <li>url_encode：同encodeURIComponent</li>
-<li>url_decode：同decodeURIComponemt </li>
+<li>url_decode：同decodeURIComponemt</li>
 </ul>
 </blockquote>
-<p>使用方法：<br>例如我们要格式化一个时间，使用方法和linux上的管道命令非常像</p>
+<p>使用方法：<br>
+例如我们要格式化一个时间，使用方法和linux上的管道命令非常像</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;&#123; birthday|date(&apos;Y-m-d&apos;) &#125;&#125;</div></pre></td></tr></table></figure>
 <p>大写首字母</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;&#123; name|title &#125;&#125;</div></pre></td></tr></table></figure>
-<h4 id="9-set命令"><a href="#9-set命令" class="headerlink" title="9.set命令"></a>9.set命令</h4><p>用来设置一个变量，在当前上下文中复用</p>
+<h4 id="9set命令"><a class="markdownIt-Anchor" href="#9set命令"></a> 9.set命令</h4>
+<p>用来设置一个变量，在当前上下文中复用</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;% set foo = [0, 1, 2, 3, 4, 5] %&#125;</div><div class="line"> &#123;% for num in foo %&#125;</div><div class="line">    &lt;li&gt;&#123;&#123; num &#125;&#125;&lt;/li&gt;</div><div class="line">&#123;% endfor %&#125;</div></pre></td></tr></table></figure>
 <hr>
 <blockquote>
-<p>参考文献<br><a href="http://www.iqianduan.net/blog/how_to_use_swig" target="_blank" rel="external">http://www.iqianduan.net/blog/how_to_use_swig</a><br><a href="http://jinfang.oschina.io/posts/124966c9/" target="_blank" rel="external">http://jinfang.oschina.io/posts/124966c9/</a></p>
+<p>参考文献<br>
+<a href="http://www.iqianduan.net/blog/how_to_use_swig" target="_blank" rel="external">http://www.iqianduan.net/blog/how_to_use_swig</a><br>
+<a href="http://jinfang.oschina.io/posts/124966c9/" target="_blank" rel="external">http://jinfang.oschina.io/posts/124966c9/</a></p>
 </blockquote>
 </div>
                 <div class="post-meta-footer-wrap"><ul class="post-tag-list"><li class="post-tag-list-item"><a class="post-tag-list-link" href="/tags/lang-node-js/">lang:node.js</a></li><li class="post-tag-list-item"><a class="post-tag-list-link" href="/tags/package-swig-js/">package:swig.js</a></li></ul></div>
@@ -162,8 +182,8 @@
               <nav class="catpostlist-content">
                 <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/css-quotes/">CSS quotes 属性</a></span>
                 <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/nodejs前端模板引擎swig入门/">nodejs前端模板引擎swig入门</a></span>
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/如何画好断线图标/">如何画好断线图标？我总结了这4个规律</a></span>
                 <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/nodejs读写json文件/">nodejs读写json文件</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/如何画好断线图标/">如何画好断线图标？我总结了这4个规律</a></span>
                 <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/小米4c变砖解救/">小米4c变砖解救</a></span>
                 <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/崩坏3米哈游卡通渲染/">《崩坏3》画面效果为何惊艳？看米哈游怎么做卡通渲染的你就明白了</a></span>
                 <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/简单-强大的swig-js/">简单、强大的swig.js</a></span>
@@ -173,38 +193,38 @@
             <div class="catpostlist-body">
               <div class="catpostlist-meta"><div class="catpostlist-title-wrap"><span class="catpostlist-title">Word Lists</span></div></div>
               <nav class="catpostlist-content">
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-11/">Word-List-11：农业</a></span>
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-1/">Word-List-1：地理</a></span>
                 <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-10/">Word-List-10：考古学</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-1/">Word-List-1：地理</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-12/">Word-List-12：气象</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-11/">Word-List-11：农业</a></span>
                 <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-13/">Word-List-13：人类学</a></span>
                 <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-15/">Word-List-15：社会学</a></span>
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-12/">Word-List-12：气象</a></span>
                 <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-16/">Word-List-16：生物学</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-17/">Word-List-17：数学</a></span>
                 <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-18/">Word-List-18：天文</a></span>
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-22/">Word-List-22：音乐</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-2/">Word-List-2：地质</a></span>
                 <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-20/">Word-List-20：医学</a></span>
                 <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-21/">Word-List-21：艺术</a></span>
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-2/">Word-List-2：地质</a></span>
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-17/">Word-List-17：数学</a></span>
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-26/">Word-List-26：自然</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-22/">Word-List-22：音乐</a></span>
                 <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-23/">Word-List-23：语言学</a></span>
                 <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-25/">Word-List-25：植物学</a></span>
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-24/">Word-List-24：政治</a></span>
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-27/">Word-List-27：宗教</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-26/">Word-List-26：自然</a></span>
                 <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-6/">Word-List-6：环境</a></span>
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-5/">Word-List-5：化学</a></span>
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-9/">Word-List-9：军事</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-27/">Word-List-27：宗教</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-24/">Word-List-24：政治</a></span>
                 <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-7/">Word-List-7：教育</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-9/">Word-List-9：军事</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-5/">Word-List-5：化学</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-4/">Word-List-4：法律</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-3/">Word-List-3：动物学</a></span>
                 <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-14/">Word-List-14：人物</a></span>
                 <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-19/">Word-List-19：物理</a></span>
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-3/">Word-List-3：动物学</a></span>
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-4/">Word-List-4：法律</a></span>
                 <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-8/">Word-List-8：经济</a></span>
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-33/">Word-List-33：语言</a></span>
                 <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-28/">Word-List-28：品质</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-33/">Word-List-33：语言</a></span>
                 <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-31/">Word-List-31：心理</a></span>
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-29/">Word-List-29：事物</a></span>
                 <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-35/">Word-List-35：状态</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-29/">Word-List-29：事物</a></span>
                 <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-30/">Word-List-30：现实</a></span>
                 <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-34/">Word-List-34：属性</a></span>
                 <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Word-List-32/">Word-List-32：行为</a></span>
@@ -212,16 +232,16 @@
             </div>
 
             <div class="catpostlist-body">
-              <div class="catpostlist-meta"><div class="catpostlist-title-wrap"><span class="catpostlist-title">backup</span></div></div>
+              <div class="catpostlist-meta"><div class="catpostlist-title-wrap"><span class="catpostlist-title">ACG</span></div></div>
               <nav class="catpostlist-content">
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/reading_list_backup/">reading_list_backup</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/崩坏3米哈游卡通渲染/">《崩坏3》画面效果为何惊艳？看米哈游怎么做卡通渲染的你就明白了</a></span>
               </nav>
             </div>
 
             <div class="catpostlist-body">
-              <div class="catpostlist-meta"><div class="catpostlist-title-wrap"><span class="catpostlist-title">ACG</span></div></div>
+              <div class="catpostlist-meta"><div class="catpostlist-title-wrap"><span class="catpostlist-title">backup</span></div></div>
               <nav class="catpostlist-content">
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/崩坏3米哈游卡通渲染/">《崩坏3》画面效果为何惊艳？看米哈游怎么做卡通渲染的你就明白了</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/reading_list_backup/">reading_list_backup</a></span>
               </nav>
             </div>
 
