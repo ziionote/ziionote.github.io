@@ -1415,7 +1415,7 @@ msgstr "水泵必须浸入液体才能运行"
 #. STRINGS.BUILDING.STATUSITEMS.NOLOGICWIRECONNECTED.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.NOLOGICWIRECONNECTED.NAME"
 msgid "No Automation Wire Connected"
-msgstr "未连接任何自动化电线"
+msgstr "未连接任何自动化线缆"
 
 #. STRINGS.BUILDING.STATUSITEMS.NOLOGICWIRECONNECTED.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.NOLOGICWIRECONNECTED.TOOLTIP"
@@ -4344,7 +4344,7 @@ msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICWIRE.DESC"
 msgid ""
 "Automation wire is used to connect electronic components to the inputs of "
 "automation gates."
-msgstr "自动化电线用于将电子元件连接到自动门的输入端。"
+msgstr "自动化线缆用于将电子元件连接到自动门的输入端。"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICWIRE.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICWIRE.EFFECT"
@@ -4361,7 +4361,7 @@ msgstr ""
 #. STRINGS.BUILDINGS.PREFABS.LOGICWIRE.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICWIRE.NAME"
 msgid "Automation Wire"
-msgstr "自动化电线"
+msgstr "自动化线缆"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICWIREBRIDGE.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICWIREBRIDGE.DESC"
@@ -4377,14 +4377,14 @@ msgid ""
 "\n"
 "Can be run through tiles."
 msgstr ""
-"一条自动化电线可以越过另一条自动化电线，而不用连接到一起。\n"
+"可以让一条自动化线缆越过另一条自动化线缆，而不用连接到一起。\n"
 "\n"
 "可穿过砖块。"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICWIREBRIDGE.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICWIREBRIDGE.NAME"
 msgid "Automation Wire Bridge"
-msgstr "自动化电线桥"
+msgstr "自动化线缆桥"
 
 #. STRINGS.BUILDINGS.PREFABS.LUXURYBED.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.LUXURYBED.DESC"
@@ -5777,7 +5777,7 @@ msgctxt "STRINGS.CREATURES.SPECIES.BASICFORAGEPLANTPLANTED.DESC"
 msgid ""
 "Muckroots are incapable of propagating but can be harvested for a single "
 "<style=\"food\">Food</style> serving."
-msgstr "红草不能繁殖，但可以采集一次用作<style=\"food\">食物</style>。"
+msgstr "红草不能繁殖，但可以采集一次用作<style=\"food\">食物</style>，是游戏初期重要的食物来源。"
 
 #. STRINGS.CREATURES.SPECIES.BASICFORAGEPLANTPLANTED.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.BASICFORAGEPLANTPLANTED.NAME"
@@ -5796,7 +5796,7 @@ msgstr ""
 #. STRINGS.CREATURES.SPECIES.BASICSINGLEHARVESTPLANT.DOMESTICATEDDESC
 msgctxt "STRINGS.CREATURES.SPECIES.BASICSINGLEHARVESTPLANT.DOMESTICATEDDESC"
 msgid "This plant produces edible <style=\"food\">Meal Lice</style>."
-msgstr "该植物会产出可作为食物的<style=\"food\">食用虱</style>。"
+msgstr "该植物会产出可作为食物的<style=\"food\">食用虱</style>，是游戏初期重要的食物来源。"
 
 #. STRINGS.CREATURES.SPECIES.BASICSINGLEHARVESTPLANT.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.BASICSINGLEHARVESTPLANT.NAME"
@@ -5891,14 +5891,14 @@ msgstr ""
 #. STRINGS.CREATURES.SPECIES.GEYSER.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.NAME"
 msgid "Steam Geyser"
-msgstr "蒸汽喷泉"
+msgstr "蒸汽间歇泉"
 
 #. STRINGS.CREATURES.SPECIES.GLOM.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.GLOM.DESC"
 msgid ""
 "Morbs are attracted to decomposing corpses and frequently excrete bursts of "
 "<style=\"gas\">Polluted Oxygen</style>."
-msgstr "小鬼喜欢腐烂的尸体，并经常呼出<style=\"gas\">污染氧</style>。"
+msgstr "小鬼（又称莫比），喜欢腐烂的尸体，并经常呼出<style=\"gas\">污染氧</style>。"
 
 #. STRINGS.CREATURES.SPECIES.GLOM.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.GLOM.NAME"
@@ -5921,7 +5921,7 @@ msgid ""
 "Hatches excrete solid <style=\"solid\">Coal</style> as waste and may be "
 "uncovered by digging up Buried Objects."
 msgstr ""
-"夜行饕餮的排泄物可以作为<style=\"solid\">燃料</style>，挖掘掩埋物时可能会发现"
+"夜行饕餮（又称哈奇），其排泄物可以作为<style=\"solid\">燃料</style>，挖掘掩埋物时可能会发现"
 "它们。"
 
 #. STRINGS.CREATURES.SPECIES.HATCH.NAME
@@ -5935,13 +5935,13 @@ msgid ""
 "An uncanny being that sprinkles dark thoughts on Duplicants at night. Fears "
 "<style=\"light\">Light</style>, craves shadow."
 msgstr ""
-"一种会在夜里向复制人散播可怕思想的奇怪存在，惧<style=\"light\">光</style>喜"
+"梦魇是一种会在夜里向复制人散播可怕思想的奇怪存在，惧<style=\"light\">光</style>喜"
 "暗。"
 
 #. STRINGS.CREATURES.SPECIES.HAUNT.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.HAUNT.NAME"
 msgid "Haunt"
-msgstr "出没"
+msgstr "梦魇"
 
 #. STRINGS.CREATURES.SPECIES.HEATBULB.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.HEATBULB.DESC"
@@ -6049,7 +6049,7 @@ msgid ""
 "Slicksters are slimy creatures that consume <style=\"gas\">Carbon Dioxide</"
 "style> and exude <style=\"misc\">Crude Oil</style>."
 msgstr ""
-"小滑头是一种黏糊糊的生物，它们消耗<style=\"gas\">二氧化碳</style>，流出"
+"小滑头（又称滑滑怪），是一种黏糊糊的生物，它们消耗<style=\"gas\">二氧化碳</style>，流出"
 "<style=\"misc\">原油</style>。"
 
 #. STRINGS.CREATURES.SPECIES.OIL_FLOATER.NAME
@@ -6134,7 +6134,7 @@ msgid ""
 "Pufts are non-aggressive creatures that excrete lumps of <style=\"solid"
 "\">Slime</style> with each breath."
 msgstr ""
-"阿噗是一种温和的动物，会在呼吸时排出一坨坨<style=\"solid\">粘液</style>。"
+"阿噗（又称飞鱼），是一种温和的动物，会在呼吸时排出一坨坨<style=\"solid\">粘液</style>。"
 
 #. STRINGS.CREATURES.SPECIES.PUFT.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.PUFT.NAME"
@@ -8060,7 +8060,7 @@ msgstr "建造"
 #. STRINGS.DUPLICANTS.CHOREGROUPS.COMBAT.DESC
 msgctxt "STRINGS.DUPLICANTS.CHOREGROUPS.COMBAT.DESC"
 msgid "Fight wild creatures."
-msgstr "与野生动物作战。"
+msgstr "与野生动物作战（当前版本用处不大，可完全关闭）。"
 
 #. STRINGS.DUPLICANTS.CHOREGROUPS.COMBAT.NAME
 msgctxt "STRINGS.DUPLICANTS.CHOREGROUPS.COMBAT.NAME"
@@ -8125,7 +8125,7 @@ msgstr "操作人力发电机来生产电力。"
 #. STRINGS.DUPLICANTS.CHOREGROUPS.GENERATEPOWER.NAME
 msgctxt "STRINGS.DUPLICANTS.CHOREGROUPS.GENERATEPOWER.NAME"
 msgid "Power"
-msgstr "Power"
+msgstr "发电"
 
 #. STRINGS.DUPLICANTS.CHOREGROUPS.HARVEST.DESC
 msgctxt "STRINGS.DUPLICANTS.CHOREGROUPS.HARVEST.DESC"
@@ -12470,7 +12470,7 @@ msgstr "这名复制人正在补充卡路里"
 #. STRINGS.DUPLICANTS.STATUSITEMS.EMITTINGCO2.NAME
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.EMITTINGCO2.NAME"
 msgid "Exhaling {EmittingRate} CO<sub>2</sub>"
-msgstr "呼出{EmittingRate} CO<sub>2</sub>"
+msgstr "正在呼出{EmittingRate} CO<sub>2</sub>"
 
 #. STRINGS.DUPLICANTS.STATUSITEMS.EMITTINGCO2.TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.EMITTINGCO2.TOOLTIP"
@@ -12500,12 +12500,12 @@ msgstr "这名复制人正在将材料运送至{Target}"
 #. STRINGS.DUPLICANTS.STATUSITEMS.ENTOMBEDCHORE.NAME
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.ENTOMBEDCHORE.NAME"
 msgid "Entombed"
-msgstr "掩埋"
+msgstr "被掩埋"
 
 #. STRINGS.DUPLICANTS.STATUSITEMS.ENTOMBEDCHORE.NOTIFICATION_NAME
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.ENTOMBEDCHORE.NOTIFICATION_NAME"
 msgid "Entombed"
-msgstr "掩埋"
+msgstr "被掩埋"
 
 #. STRINGS.DUPLICANTS.STATUSITEMS.ENTOMBEDCHORE.NOTIFICATION_TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.ENTOMBEDCHORE.NOTIFICATION_TOOLTIP"
@@ -12570,7 +12570,7 @@ msgstr "战斗！"
 #. STRINGS.DUPLICANTS.STATUSITEMS.FIGHTING.NOTIFICATION_TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.FIGHTING.NOTIFICATION_TOOLTIP"
 msgid "These Duplicants have engaged a creature in combat:"
-msgstr "这些复制人陷入了与一种生物的战斗中："
+msgstr "这些复制人正在与某种生物战斗："
 
 #. STRINGS.DUPLICANTS.STATUSITEMS.FIGHTING.TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.FIGHTING.TOOLTIP"
@@ -13877,7 +13877,7 @@ msgstr "缺点：降低 工作效率"
 #. STRINGS.DUPLICANTS.TRAITS.ANEMIC.NAME
 msgctxt "STRINGS.DUPLICANTS.TRAITS.ANEMIC.NAME"
 msgid "Anemic"
-msgstr "无精打采 <color=#AA00AA>缺点</color>"
+msgstr "无精打采 <color=#AA0000>糟糕</color>"
 
 #. STRINGS.DUPLICANTS.TRAITS.ANXIOUS.DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.ANXIOUS.DESC"
@@ -14036,7 +14036,7 @@ msgstr "缺点：会放屁，很糟糕"
 #. STRINGS.DUPLICANTS.TRAITS.FLATULENCE.NAME
 msgctxt "STRINGS.DUPLICANTS.TRAITS.FLATULENCE.NAME"
 msgid "Flatulent"
-msgstr "喜欢放屁 <color=#AA00AA>缺点</color>"
+msgstr "喜欢放屁 <color=#AA0000>糟糕</color>"
 
 #. STRINGS.DUPLICANTS.TRAITS.FUSSY.DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.FUSSY.DESC"
@@ -14289,7 +14289,7 @@ msgstr "缺点：无法执行 战斗 工作"
 #. STRINGS.DUPLICANTS.TRAITS.SCAREDYCAT.NAME
 msgctxt "STRINGS.DUPLICANTS.TRAITS.SCAREDYCAT.NAME"
 msgid "Pacifist"
-msgstr "和平主义 <color=#AA00AA>缺点</color>"
+msgstr "和平主义 <color=#AA00AA>还好</color>"
 
 #. STRINGS.DUPLICANTS.TRAITS.SLOWLEARNER.DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.SLOWLEARNER.DESC"
@@ -14319,7 +14319,7 @@ msgstr "缺点：打扰其他复制人睡眠"
 #. STRINGS.DUPLICANTS.TRAITS.SNORER.NAME
 msgctxt "STRINGS.DUPLICANTS.TRAITS.SNORER.NAME"
 msgid "Loud Sleeper"
-msgstr "鼾声如雷 <color=#AA00AA>缺点</color>"
+msgstr "鼾声如雷 <color=#AA0000>糟糕</color>"
 
 #. STRINGS.DUPLICANTS.TRAITS.STRESSVOMITER.DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STRESSVOMITER.DESC"
@@ -16069,17 +16069,17 @@ msgstr "丙烷"
 #. STRINGS.ELEMENTS.STATE.GAS
 msgctxt "STRINGS.ELEMENTS.STATE.GAS"
 msgid "Gas"
-msgstr "气体"
+msgstr "气态"
 
 #. STRINGS.ELEMENTS.STATE.LIQUID
 msgctxt "STRINGS.ELEMENTS.STATE.LIQUID"
 msgid "Liquid"
-msgstr "液体"
+msgstr "液态"
 
 #. STRINGS.ELEMENTS.STATE.SOLID
 msgctxt "STRINGS.ELEMENTS.STATE.SOLID"
 msgid "Solid"
-msgstr "固体"
+msgstr "固态"
 
 #. STRINGS.ELEMENTS.STATE.VACUUM
 msgctxt "STRINGS.ELEMENTS.STATE.VACUUM"
@@ -21155,7 +21155,7 @@ msgstr "莎拉"
 #. STRINGS.NAMEGEN.DUPLICANT.NAME.FEMALE.SIMONE
 msgctxt "STRINGS.NAMEGEN.DUPLICANT.NAME.FEMALE.SIMONE"
 msgid "Simone"
-msgstr "茜蒙"
+msgstr "茜萌"
 
 #. STRINGS.NAMEGEN.DUPLICANT.NAME.FEMALE.TONI
 msgctxt "STRINGS.NAMEGEN.DUPLICANT.NAME.FEMALE.TONI"
@@ -23077,7 +23077,7 @@ msgstr "基地{0}"
 #. STRINGS.UI.BUILDCATEGORIES.AUTOMATION.NAME
 msgctxt "STRINGS.UI.BUILDCATEGORIES.AUTOMATION.NAME"
 msgid "Automation"
-msgstr "自动化"
+msgstr "自动"
 
 #. STRINGS.UI.BUILDCATEGORIES.AUTOMATION.TOOLTIP
 msgctxt "STRINGS.UI.BUILDCATEGORIES.AUTOMATION.TOOLTIP"
@@ -24149,7 +24149,7 @@ msgstr "切换<b>新复制人</b>的所有食物权限"
 #. STRINGS.UI.CONSUMABLESSCREEN.STRESS
 msgctxt "STRINGS.UI.CONSUMABLESSCREEN.STRESS"
 msgid "Stress"
-msgstr "压力"
+msgstr "压力值"
 
 #. STRINGS.UI.CONSUMABLESSCREEN.STRESS_TOOLTIP
 msgctxt "STRINGS.UI.CONSUMABLESSCREEN.STRESS_TOOLTIP"
@@ -24158,7 +24158,7 @@ msgid ""
 "------------------\n"
 "{0} of a possible 100%"
 msgstr ""
-"压力\n"
+"压力值\n"
 "------------------\n"
 "100%可能性中的{0}"
 
@@ -27865,7 +27865,7 @@ msgstr "无法测量"
 #. STRINGS.UI.OVERLAYS.CROP.BUTTON
 msgctxt "STRINGS.UI.OVERLAYS.CROP.BUTTON"
 msgid "Farming Overlay"
-msgstr "耕作概览"
+msgstr "农耕概览"
 
 #. STRINGS.UI.OVERLAYS.CROP.FULLY_GROWN
 msgctxt "STRINGS.UI.OVERLAYS.CROP.FULLY_GROWN"
@@ -27885,7 +27885,7 @@ msgstr "生长停滞"
 #. STRINGS.UI.OVERLAYS.CROP.NAME
 msgctxt "STRINGS.UI.OVERLAYS.CROP.NAME"
 msgid "FARMING OVERLAY"
-msgstr "耕作概览"
+msgstr "农耕概览"
 
 #. STRINGS.UI.OVERLAYS.CROP.TOOLTIPS.FULLY_GROWN
 msgctxt "STRINGS.UI.OVERLAYS.CROP.TOOLTIPS.FULLY_GROWN"
@@ -27923,12 +27923,12 @@ msgstr ""
 #. STRINGS.UI.OVERLAYS.CROPS.BUTTON
 msgctxt "STRINGS.UI.OVERLAYS.CROPS.BUTTON"
 msgid "Farming Overlay"
-msgstr "耕作概览"
+msgstr "农耕概览"
 
 #. STRINGS.UI.OVERLAYS.CROPS.NAME
 msgctxt "STRINGS.UI.OVERLAYS.CROPS.NAME"
 msgid "FARMING OVERLAY"
-msgstr "耕作概览"
+msgstr "农耕概览"
 
 #. STRINGS.UI.OVERLAYS.DECOR.BUTTON
 msgctxt "STRINGS.UI.OVERLAYS.DECOR.BUTTON"
@@ -29279,7 +29279,7 @@ msgstr "拾起：{0} {1}"
 #. STRINGS.UI.PLACEINRECEPTACLE
 msgctxt "STRINGS.UI.PLACEINRECEPTACLE"
 msgid "Plant"
-msgstr "植物"
+msgstr "种植"
 
 #. STRINGS.UI.POSITIVE_FORMAT
 msgctxt "STRINGS.UI.POSITIVE_FORMAT"
