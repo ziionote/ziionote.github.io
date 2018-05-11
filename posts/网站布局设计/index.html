@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html class="theme-docapp" lang="zh-Hans">
+<head>
+<title> | notebook</title>
+<!-- META -->
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="theme-color" content="#fff" />
+
+<!-- STYLE -->
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+
+<!-- SCRIPT -->
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+
+<!-- END -->
+
+</head>
+<body>
+<div class="l-viewport" id="l-viewport">
+  <div class="l-side" :class="sideClassObject" id="l-side">
+
+    <aside class="b-sidebar">
+      <div class="m-namecard">
+        <div class="p-avatar"><img src="" alt=""/></div>
+        <div class="p-name"><a href="">SunCH</a></div>
+        <div class="p-desc"><p>个人notebook</p></div>
+      </div>
+      <nav class="m-nav">
+        <div class="p-homenav"></div>
+        <div class="p-content"></div>
+      </nav>
+      <div class="m-info">
+        <div class="p-social"></div>
+        <div class="p-power"></div>
+      </div>
+    </aside>
+
+  </div>
+  <div class="l-pagewrap" :class="pageClassObject" v-on:click="doCloseAside" id="l-pagewrap">
+
+    <div class="b-titlebar" :class="titlebarClassObject">
+      <div class="m-titlebar">
+        <a class="p-logoarea" href="/"><img class="u-logo" src="/logo.svg" alt="notebook"><span class="u-sitename">notebook</span></a>
+      </div>
+    </div>
+
+
+    <main class="b-printarea">
+      <header class="m-header"></header>
+      <article class="m-article">
+        <div class="p-meta">
+          <span class="u-post-title"></span>
+          <span class="u-post-date">2018-05-03</span>
+          <span class="u-post-time">10:53:16</span>
+        </div>
+        <div class="p-write" id="post-content"><p>网站布局设计</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">.l-layout</div><div class="line">.b-block</div><div class="line">.m-moudle</div><div class="line">.p-part</div><div class="line">.u-unit</div><div class="line">.g-grid</div><div class="line">.f-function</div><div class="line">.s-style</div><div class="line">.z-status</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">.l-viewport</div><div class="line">  .l-side(.z-open)</div><div class="line">    aside.b-sidebar</div><div class="line">      .m-namecard</div><div class="line">        .p-avatar</div><div class="line">        .p-name</div><div class="line">        .p-desc</div><div class="line">      nav.m-nav</div><div class="line">        .p-homenav</div><div class="line">        .p-content</div><div class="line">      .m-info</div><div class="line">        .p-social</div><div class="line">        .p-power</div><div class="line">  .l-pagewrap(.z-moved)</div><div class="line">    .b-titlebar</div><div class="line">      .m-titlebar</div><div class="line">        .p-logoarea</div><div class="line">    main.b-printarea</div><div class="line">      header.m-header</div><div class="line">      article.m-article</div><div class="line">        .p-meta</div><div class="line">        .p-write</div><div class="line">        .p-state</div><div class="line">      .m-pagination</div><div class="line">      .m-share</div><div class="line">      .m-comment</div><div class="line">      .m-related</div><div class="line">      footer.m-footer</div><div class="line">  .l-ctrl(.hidden)</div><div class="line">    .b-ctrl</div><div class="line">      .m-ctrl</div></pre></td></tr></table></figure>
+</div>
+        <div class="p-state"></div>
+        <div class="p-tails">
+          <div class="post-meta-footer-wrap"></div>
+        </div>
+      </article>
+      <div class="m-pagination"></div>
+      <div class="m-share"></div>
+      <div class="m-comment">
+          <div class="comments-wrap tabs" id="commenttabs">
+            <ul class="nav-tabs">
+              <li class="tab"><a href="#welcomcomments_wrap">欢迎评论！</a></li>
+              <li class="tab active"><a href="#valinecomments_wrap">Valine评论</a></li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane" id="welcomcomments_wrap"><div id="welcomcomments"><p>欢迎进行评论😆。</p></div></div>
+              <div class="tab-pane active" id="valinecomments_wrap"><div id="valinecomments"></div></div>
+            </div>
+          </div>
+        </div>
+      <div class="m-related"></div>
+      <footer class="m-footer"></footer>
+    </main>
+
+  </div>
+  <div class="l-ctrl" :class="ctrlClassObject" v-on:click="doOpenAside" id="l-ctrl">
+
+    <div class="b-ctrl">
+      <div class="m-ctrl"></div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+
+const app = new Vue({
+  delimiters: ['${', '}'],
+  el: '#l-viewport',
+  data: function () {
+    return {
+      asideIsOpen: false,
+      scrollAfterTop: false,
+      scrolledDown: false,
+      scrolledUp: false,
+    }
+  },
+  computed: {
+    sideClassObject: function () {
+      return {
+        'z-open': this.asideIsOpen,
+      }
+    },
+    pageClassObject: function () {
+      return {
+        'z-moved': this.asideIsOpen,
+      }
+    },
+    ctrlClassObject: function () {
+      return {
+        'z-hidden': this.asideIsOpen,
+      }
+    },
+    titlebarClassObject: function () {
+      return {
+        'z-nottop': this.scrollAfterTop,
+        'z-show': this.scrolledDown,
+      }
+    }
+  },
+  methods: {
+    doCloseAside: function (event) {
+      this.asideIsOpen = false;
+    },
+    doOpenAside: function (event) {
+      this.asideIsOpen = (this.asideIsOpen)?false:true;
+    },
+    handleScroll () {
+      var scrollTop = document.querySelector('.l-pagewrap').scrollTop
+      var offsetTop = document.querySelector('.b-printarea').offsetTop
+      if (scrollTop > offsetTop) {
+        this.scrollAfterTop = true
+      } else {
+        this.scrollAfterTop = false
+      }
+      if (this.lastScroll && scrollTop > this.lastScroll) {
+        this.scrolledDown = false
+        this.scrolledUp = true
+        // console.log('scrolling up');
+      } else if (this.lastScroll && scrollTop < this.lastScroll) {
+        this.scrolledDown = true
+        this.scrolledUp = false
+        // console.log('scrolling down');
+      }
+      this.lastScroll = scrollTop
+    }
+  },
+  mounted () {
+    document.querySelector('.l-pagewrap').addEventListener('scroll', this.handleScroll)
+  },
+  destroyed () {
+    document.querySelector('.l-pagewrap').removeEventListener('scroll', this.handleScroll)
+  }
+})
+
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

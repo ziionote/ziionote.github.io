@@ -1,0 +1,87 @@
+.m-header {
+  display: none;
+  margin: 2rem 0;
+  min-height: 2rem;
+  width: 100%;
+  background: #ff0;
+}
+.m-article {
+  margin: 2rem 0;
+  min-height: 2rem;
+  width: 100%;
+  padding: 1rem;
+  background: #fff;
+}
+.m-article .p-meta {
+  margin: 2rem 0;
+  min-height: 2rem;
+  width: 100%;
+  background: #faf;
+}
+.m-article .p-meta .u-post-title {
+  display: block;
+  font-size: 2em;
+}
+.m-article .p-meta:after {
+  content: "~";
+  display: block;
+  margin: 0.5rem 0 0 0;
+  width: 8rem;
+  height: 0;
+  overflow: hidden;
+  border-bottom: 0.5rem solid #fd0;
+}
+.m-article .p-write {
+  margin: 2rem 0;
+  min-height: 2rem;
+  width: 100%;
+  border: 1px dotted #000;
+}
+.m-article .p-state {
+  margin: 2rem 0;
+  min-height: 2rem;
+  width: 100%;
+  background: #f0f;
+}
+.m-article .p-state:before {
+  content: attr(class);
+}
+.m-article .p-tails {
+  margin: 2rem 0;
+  min-height: 2rem;
+  width: 100%;
+  background: #f0f;
+}
+.m-article .p-tails:before {
+  content: attr(class);
+}
+.m-pagination {
+  margin: 2rem 0;
+  min-height: 2rem;
+  width: 100%;
+  background: #ff0;
+}
+.m-share {
+  margin: 2rem 0;
+  min-height: 2rem;
+  width: 100%;
+  background: #ff0;
+}
+.m-comment {
+  margin: 2rem 0;
+  min-height: 2rem;
+  width: 100%;
+  background: #ff0;
+}
+.m-related {
+  margin: 2rem 0;
+  min-height: 2rem;
+  width: 100%;
+  background: #ff0;
+}
+.m-footer {
+  margin: 2rem 0;
+  min-height: 2rem;
+  width: 100%;
+  background: #ff0;
+}
