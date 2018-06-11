@@ -30,7 +30,9 @@
       </div>
       <nav class="m-nav">
         <div class="p-homenav"></div>
-        <div class="p-content"></div>
+        <div class="p-content">
+          <!-- toc -->
+        </div>
       </nav>
       <div class="m-info">
         <div class="p-social"></div>
@@ -72,7 +74,7 @@
 </blockquote>
 <hr>
 <p>下面我们一起学习下swig这个前端模板引擎</p>
-<h2 id="swig的简单介绍"><a class="markdownIt-Anchor" href="#swig的简单介绍"></a> swig的简单介绍</h2>
+<h2><span id="swig的简单介绍"> swig的简单介绍</span></h2>
 <blockquote>
 <p>swig是JS模板引擎，它有如下特点：</p>
 <ul>
@@ -86,9 +88,9 @@
 <li>可扩展、可定制。</li>
 </ul>
 </blockquote>
-<h2 id="一-swig的安装"><a class="markdownIt-Anchor" href="#一-swig的安装"></a> 一. swig的安装</h2>
+<h2><span id="一-swig的安装"> 一. swig的安装</span></h2>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install swig --save</div></pre></td></tr></table></figure>
-<h2 id="二和express框架集成"><a class="markdownIt-Anchor" href="#二和express框架集成"></a> 二.和express框架集成</h2>
+<h2><span id="二和express框架集成"> 二.和express框架集成</span></h2>
 <p>app.js</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">var express = require(&apos;express&apos;);</div><div class="line">var swig = require(&apos;swig&apos;);</div><div class="line">var path = require(&apos;path&apos;)</div><div class="line"></div><div class="line">var app = express();</div><div class="line">var port = process.env.PORT || 4000</div><div class="line"></div><div class="line">//设置swig页面不缓存</div><div class="line">swig.setDefaults(&#123;</div><div class="line">  cache: false</div><div class="line">&#125;)</div><div class="line">app.set(&apos;view cache&apos;, false);</div><div class="line"></div><div class="line">app.set(&apos;views&apos;,&apos;./views/pages/&apos;);</div><div class="line">app.set(&apos;view engine&apos;,&apos;html&apos;);</div><div class="line">app.engine(&apos;html&apos;, swig.renderFile);</div><div class="line"></div><div class="line"></div><div class="line">app.listen(port);</div><div class="line"></div><div class="line">console.log(&apos;server is started at http://localhost:&apos;+port);</div><div class="line"></div><div class="line">//index page</div><div class="line">app.get(&apos;/&apos;,function(req, res)&#123;</div><div class="line">    res.render(&apos;index&apos;,&#123;</div><div class="line">        title:&apos;首页 &apos;,</div><div class="line">        content: &apos;hello swig&apos;</div><div class="line">    &#125;)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p>index.html</p>
@@ -97,13 +99,13 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">node app.js</div></pre></td></tr></table></figure>
 <p>在浏览器输入：<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000</a>, 执行效果如下</p>
 <p>浏览器运行.png</p>
-<h2 id="三基本用法"><a class="markdownIt-Anchor" href="#三基本用法"></a> 三.基本用法</h2>
-<h4 id="1变量"><a class="markdownIt-Anchor" href="#1变量"></a> 1.变量</h4>
+<h2><span id="三基本用法"> 三.基本用法</span></h2>
+<h4><span id="1变量"> 1.变量</span></h4>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;&#123; name &#125;&#125;</div></pre></td></tr></table></figure>
 <p>这里需要注意的是前后两端都要有空格，这样写就会报错</p>
-<h4 id="2属性"><a class="markdownIt-Anchor" href="#2属性"></a> 2.属性</h4>
+<h4><span id="2属性"> 2.属性</span></h4>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;&#123; student.name &#125;&#125;</div></pre></td></tr></table></figure>
-<h4 id="3模板继承"><a class="markdownIt-Anchor" href="#3模板继承"></a> 3.模板继承</h4>
+<h4><span id="3模板继承"> 3.模板继承</span></h4>
 <blockquote>
 <p>Swig 使用 extends 和 block 来实现模板继承 layout.html</p>
 </blockquote>
@@ -116,14 +118,14 @@
 <blockquote>
 <p>也就是说我们可以在layout.html模板页面里面定义很多block，而子页面可以有选择性的实现。</p>
 </blockquote>
-<h4 id="4include模板"><a class="markdownIt-Anchor" href="#4include模板"></a> 4.include模板</h4>
+<h4><span id="4include模板"> 4.include模板</span></h4>
 <p>包含一个模板到当前位置，这个模板将使用当前上下文</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=&quot;en&quot;&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">    &lt;title&gt;&#123;% block title %&#125;&#123;% endblock  %&#125;&lt;/title&gt;</div><div class="line">    &#123;% include &quot;./includes/head.html&quot; %&#125;</div><div class="line">    &#123;% block head %&#125;&#123;% endblock  %&#125;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">    &#123;% include &quot;./includes/header.html&quot; %&#125;</div><div class="line">    &#123;% block content %&#125;&#123;% endblock  %&#125;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
-<h4 id="5if判断"><a class="markdownIt-Anchor" href="#5if判断"></a> 5.if判断</h4>
+<h4><span id="5if判断"> 5.if判断</span></h4>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123; % if name === &apos;郭靖&apos; % &#125;</div><div class="line">  hello 靖哥哥</div><div class="line">&#123; % endif % &#125;</div></pre></td></tr></table></figure>
-<h4 id="6if-else判断"><a class="markdownIt-Anchor" href="#6if-else判断"></a> 6.if-else判断</h4>
+<h4><span id="6if-else判断"> 6.if-else判断</span></h4>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&#123; % if name === &apos;郭靖&apos; % &#125;</div><div class="line">  hello 靖哥哥</div><div class="line">&#123; % elseif name === &apos;黄蓉&apos; % &#125;</div><div class="line">  hello 蓉妹妹</div><div class="line">&#123; % else % &#125;</div><div class="line">  hello 欧阳峰</div><div class="line">&#123; % endif % &#125;</div></pre></td></tr></table></figure>
-<h4 id="7for循环"><a class="markdownIt-Anchor" href="#7for循环"></a> 7.for循环</h4>
+<h4><span id="7for循环"> 7.for循环</span></h4>
 <p>先上栗子：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">// arr = [1, 2, 3]</div><div class="line">&#123; % for key, val in arr % &#125;</div><div class="line">  &lt;p&gt;&#123; &#123; key &#125; &#125; -- &#123; &#123; val &#125; &#125;&lt;/p&gt;</div><div class="line">&#123; % endfor % &#125;</div></pre></td></tr></table></figure>
 <p>for循环内置变量：</p>
@@ -141,7 +143,7 @@
 </blockquote>
 <p>使用方法：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">// arr = [1, 2, 3]</div><div class="line">&#123; % for key, val in arr % &#125;</div><div class="line">  &lt;p&gt;&#123;&#123; loop.index &#125;&#125; -- &#123;&#123; key &#125;&#125; -- &#123;&#123; val &#125;&#125;&lt;/p&gt;</div><div class="line">&#123; % endfor % &#125;</div></pre></td></tr></table></figure>
-<h4 id="8强大的内置过滤器"><a class="markdownIt-Anchor" href="#8强大的内置过滤器"></a> 8.强大的内置过滤器</h4>
+<h4><span id="8强大的内置过滤器"> 8.强大的内置过滤器</span></h4>
 <blockquote>
 <ul>
 <li>add(value)：使变量与value相加，可以转换为数值字符串会自动转换为数值。</li>
@@ -176,7 +178,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;&#123; birthday|date(&apos;Y-m-d&apos;) &#125;&#125;</div></pre></td></tr></table></figure>
 <p>大写首字母</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;&#123; name|title &#125;&#125;</div></pre></td></tr></table></figure>
-<h4 id="9set命令"><a class="markdownIt-Anchor" href="#9set命令"></a> 9.set命令</h4>
+<h4><span id="9set命令"> 9.set命令</span></h4>
 <p>用来设置一个变量，在当前上下文中复用</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;% set foo = [0, 1, 2, 3, 4, 5] %&#125;</div><div class="line"> &#123;% for num in foo %&#125;</div><div class="line">    &lt;li&gt;&#123;&#123; num &#125;&#125;&lt;/li&gt;</div><div class="line">&#123;% endfor %&#125;</div></pre></td></tr></table></figure>
 <hr>
