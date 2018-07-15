@@ -694,7 +694,7 @@ table {
   right: 0;
   height: 100%;
   overflow: auto;
-  background: #fff url("/image/bg.png");
+  background: #fff;
 }
 .l-pagewrap {
   position: fixed;
@@ -706,16 +706,8 @@ table {
   margin: 0 0 0 24rem;
   overflow: auto;
   height: 100%;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255,170,170,0.1);
   transition: margin 0.4s cubic-bezier(0.4, 0, 0, 1), background 1.4s cubic-bezier(0.4, 0, 0, 1);
-}
-@media screen and (max-width: 640px) {
-  .l-pagewrap {
-    background: #fff;
-  }
-  .l-pagewrap.z-moved {
-    margin: 0 -80% 0 80%;
-  }
 }
 @media screen and (max-width: 940px) {
   .l-pagewrap {
@@ -739,22 +731,22 @@ table {
   position: fixed;
   top: 0;
   left: 0;
+  bottom: 0;
   z-index: 20;
   width: 24rem;
   max-width: 90%;
   height: 100%;
-  background: rgba(255,255,255,0.6);
+  background: #26f;
   backdrop-filter: blur(2rem);
+  overflow: auto;
   transition: all 0.4s cubic-bezier(0.4, 0, 0, 1), background 2.4s cubic-bezier(0.4, 0, 0, 1);
 }
 @media screen and (max-width: 940px) {
   .l-side {
     transform: translate(-24rem, 0);
-    background: #fff;
   }
   .l-side.z-open {
     transform: translate(0, 0);
-    box-shadow: 0 0 36rem 96rem rgba(0,0,0,0.5);
     transition: all 0.4s cubic-bezier(0.4, 0, 0, 1);
   }
 }
@@ -929,22 +921,25 @@ table {
   width: 100%;
   background: #ff0;
 }
+.m-searchbar {
+  height: 2.2em;
+  line-height: 2em;
+  background: #f00;
+  transition: all 1s cubic-bezier(0.4, 0, 0, 1);
+  font-size: 3.25rem;
+}
+.m-temp {
+  word-break: break-all;
+  font-size: 50px;
+}
 .m-namecard,
 .m-nav,
 .m-info {
   margin: 1rem;
   border-radius: 0.5rem;
-  border: 1px solid #eee;
-  background: transparent;
+  border: 1px solid #e60;
+  background: #e60;
   transition: all 1s cubic-bezier(0.4, 0, 0, 1);
-}
-@media screen and (max-width: 940px) {
-  .m-namecard,
-  .m-nav,
-  .m-info {
-    border: 1px solid transparent;
-    background: transparent;
-  }
 }
 .m-namecard .p-avatar {
   margin: 1rem auto;
@@ -977,23 +972,17 @@ table {
   transition: all 0.4s cubic-bezier(0.4, 0, 0, 1);
 }
 .b-titlebar.z-nottop {
-  transform: translate(0, -30rem);
+  transform: translate(0, -6rem);
 }
 .b-titlebar.z-nottop.z-show {
   transform: translate(0, 0);
 }
 .b-titlebar.z-nottop.z-show .m-titlebar {
-  -webkit-backdrop-filter: blur(0.5rem);
   box-shadow: 0 0 0.5rem rgba(0,0,0,0.1);
 }
 @media screen and (max-width: 940px) {
   .b-titlebar {
     left: 0;
-  }
-}
-@media screen and (max-width: 640px) {
-  .b-titlebar.z-nottop.z-show .m-titlebar {
-    -webkit-backdrop-filter: none;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1013,7 +1002,7 @@ table {
   width: 640px;
   height: auto;
   text-align: center;
-  background: rgba(255,255,255,0.9);
+  background: #fff;
   border-radius: 0 0 1rem 1rem;
   transition: all 0.4s cubic-bezier(0.4, 0, 0, 1);
 }
@@ -1051,10 +1040,6 @@ table {
   }
 }
 @media screen and (max-width: 640px) {
-  .m-titlebar {
-    border-bottom: 1px solid rgba(238,238,238,0.5);
-    background: #fff;
-  }
   .m-titlebar .p-logoarea {
     font-size: 2.25rem;
   }
