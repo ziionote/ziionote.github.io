@@ -28,18 +28,10 @@
   .l-pagewrap {
     margin: 0 0 0 0;
   }
-  .l-pagewrap.z-moved {
-    margin: 0 -24rem 0 24rem;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .l-pagewrap {
-    margin: 0 0 0 32rem;
-  }
 }
 @media screen and (min-width: 1600px) {
   .l-pagewrap {
-    margin: 0 0 0 36rem;
+    margin: 0 0 0 32rem;
   }
 }
 .l-side {
@@ -51,7 +43,8 @@
   width: 24rem;
   max-width: 90%;
   height: 100%;
-  background: #26f;
+  background: #333;
+  color: #eee;
   backdrop-filter: blur(2rem);
   overflow: auto;
   transition: all 0.4s cubic-bezier(0.4, 0, 0, 1), background 2.4s cubic-bezier(0.4, 0, 0, 1);
@@ -70,14 +63,9 @@
     width: 80%;
   }
 }
-@media screen and (min-width: 1200px) {
-  .l-side {
-    width: 32rem;
-  }
-}
 @media screen and (min-width: 1600px) {
   .l-side {
-    width: 36rem;
+    width: 32rem;
   }
 }
 .l-ctrl {
@@ -142,6 +130,7 @@
 @media screen and (min-width: 1600px) {
   .b-printarea {
     width: 1000px;
+    font-size: 1.4em;
   }
 }
 @media screen and (max-width: 940px) {
@@ -236,17 +225,6 @@
   width: 100%;
   background: #ff0;
 }
-.m-searchbar {
-  height: 2.2em;
-  line-height: 2em;
-  background: #f00;
-  transition: all 1s cubic-bezier(0.4, 0, 0, 1);
-  font-size: 3.25rem;
-}
-.m-temp {
-  word-break: break-all;
-  font-size: 50px;
-}
 .m-namecard,
 .m-nav,
 .m-info {
@@ -287,7 +265,7 @@
   transition: all 0.4s cubic-bezier(0.4, 0, 0, 1);
 }
 .b-titlebar.z-nottop {
-  transform: translate(0, -6rem);
+  transform: translate(0, -10rem);
 }
 .b-titlebar.z-nottop.z-show {
   transform: translate(0, 0);
@@ -300,14 +278,9 @@
     left: 0;
   }
 }
-@media screen and (min-width: 1200px) {
-  .b-titlebar {
-    left: 32rem;
-  }
-}
 @media screen and (min-width: 1600px) {
   .b-titlebar {
-    left: 36rem;
+    left: 32rem;
   }
 }
 .m-titlebar {
@@ -373,4 +346,66 @@
   .l-pagewrap.z-moved .p-logoarea {
     opacity: 0;
   }
+}
+.m-logoandsearch {
+  text-align: center;
+  background: #faa;
+  padding: 1px;
+}
+.m-logoandsearch .p-logoarea {
+  display: inline-block;
+  margin: 2rem 1rem 1rem;
+  padding: 1rem;
+  vertical-align: middle;
+  font-size: 4rem;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0, 1), background 0.2s;
+}
+.m-logoandsearch .p-logoarea:hover {
+  background: rgba(255,255,255,0.2);
+}
+.m-logoandsearch .p-logoarea .u-logo {
+  background: rgba(238,238,238,0.5);
+  display: inline-block;
+  margin: 0 0.5em 0 0;
+  max-width: 1em;
+  height: 1em;
+  line-height: 1em;
+  vertical-align: middle;
+}
+.m-logoandsearch .p-logoarea .u-sitename {
+  display: inline-block;
+  height: 1em;
+  line-height: 1em;
+  vertical-align: middle;
+  color: #282828;
+}
+.m-logoandsearch .p-searchbox {
+  background: transparent;
+  height: 1em;
+  margin: 1rem;
+  font-size: 3rem;
+}
+.m-logoandsearch .p-searchbox .u-searchform {
+  height: 100%;
+  width: 100%;
+  border-radius: 1em;
+  vertical-align: middle;
+  font-size: 1.2rem;
+}
+.m-logoandsearch .p-searchbox .u-searchbox {
+  height: 100%;
+  width: 100%;
+  vertical-align: middle;
+  overflow: hidden;
+  padding: 0 1em;
+  border: none;
+  border-radius: 10em;
+  outline: none;
+  opacity: 0.5;
+  transition: all 0.5s;
+}
+.m-logoandsearch .p-searchbox .u-searchbox:focus {
+  opacity: 1;
+  outline: none;
+  box-shadow: 0px 0px 2px rgba(255,85,85,0.5) inset, 0px 0px 2rem rgba(255,85,85,0.6);
 }

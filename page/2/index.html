@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="theme-docapp" lang="zh-Hans">
 <head>
-<title>notebook</title>
+<title>语宙心星</title>
 <!-- META -->
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -23,16 +23,60 @@
   <div class="l-side" :class="sideClassObject" id="l-side">
 
     <aside class="b-sidebar">
-      <div class="m-searchbar">
-        <div class="p-searchbox"></div>
+      <div class="m-logoandsearch">
+        <a class="p-logoarea" href="/"><img class="u-logo" src="/logo.svg" alt="语宙心星"><span class="u-sitename">语宙心星</span></a>
+        <div class="p-searchbox" role="search">
+          <form id="u-searchform" class="u-searchform" action="http://www.baidu.com/s?ie=utf-8" method="get" target="_blank">
+            <input id="u-searchbox" class="u-searchbox" type="text" name="q" placeholder="Search">
+            <input type="hidden" name="check_keywords" value="yes">
+            <input type="hidden" name="area" value="default">
+          </form>
+        </div>
       </div>
-      <div class="m-namecard">
-        <div class="p-avatar"><img src="" alt=""/></div>
-        <div class="p-name"><a href="">SunCH</a></div>
-        <div class="p-desc"><p>个人notebook</p></div>
-      </div>
+
       <nav class="m-nav">
-        <div class="p-homenav"></div>
+        <div class="p-catnav">
+          <p class="u-cattitle">forwarded</p>
+          <ul class="u-catposts-list">
+            <li class="u-catposts-item"><a href="/posts/css-quotes/">CSS quotes 属性</a></li>
+            <li class="u-catposts-item"><a href="/posts/hello-vue-js/">Hello! Vue.js</a></li>
+            <li class="u-catposts-item"><a href="/posts/Javascript-console-methods/">Javascript调试命令——你只会Console.log() ?</a></li>
+            <li class="u-catposts-item"><a href="/posts/nodejs前端模板引擎swig入门/">nodejs前端模板引擎swig入门</a></li>
+            <li class="u-catposts-item"><a href="/posts/nodejs读写json文件/">nodejs读写json文件</a></li>
+            <li class="u-catposts-item"><a href="/posts/如何画好断线图标/">如何画好断线图标？我总结了这4个规律</a></li>
+            <li class="u-catposts-item"><a href="/posts/小米4c变砖解救/">小米4c变砖解救</a></li>
+            <li class="u-catposts-item"><a href="/posts/简单-强大的swig-js/">简单、强大的swig.js</a></li>
+          </ul>
+          <p class="u-cattitle">backup</p>
+          <ul class="u-catposts-list">
+            <li class="u-catposts-item"><a href="/posts/reading_list_backup/">reading_list_backup</a></li>
+          </ul>
+          <p class="u-cattitle">英语备考</p>
+          <ul class="u-catposts-list">
+            <li class="u-catposts-item"><a href="/posts/作文句式/">作文句式</a></li>
+            <li class="u-catposts-item"><a href="/posts/新东方写作笔记/">考博单词公开课笔记（赵亮，新东方）</a></li>
+            <li class="u-catposts-item"><a href="/posts/考博单词公开课-赵亮-新东方/">考博单词公开课笔记（赵亮，新东方）</a></li>
+          </ul>
+          <p class="u-cattitle">托福写作范文</p>
+          <ul class="u-catposts-list">
+            <li class="u-catposts-item"><a href="/posts/托福高分范文经验/">托福高分范文经验</a></li>
+            <li class="u-catposts-item"><a href="/posts/托福综合写作高分范文/">托福综合写作高分范文</a></li>
+            <li class="u-catposts-item"><a href="/posts/托福独立写作高分范文（1）/">托福独立写作高分范文（1）</a></li>
+            <li class="u-catposts-item"><a href="/posts/托福独立写作高分范文（3）/">托福独立写作高分范文（3）</a></li>
+            <li class="u-catposts-item"><a href="/posts/托福独立写作高分范文（2）/">托福独立写作高分范文（2）</a></li>
+          </ul>
+          <p class="u-cattitle">留言板</p>
+          <ul class="u-catposts-list">
+            <li class="u-catposts-item"><a href="/posts/memo/">留言板</a></li>
+          </ul>
+          <p class="u-cattitle">英语</p>
+          <ul class="u-catposts-list">
+            <li class="u-catposts-item"><a href="/posts/词缀/">词缀</a></li>
+          </ul>
+        </div>
+        <div class="p-homenav">
+          <p>test</p>
+        </div>
         <div class="p-content">
           <!-- toc -->
         </div>
@@ -41,9 +85,6 @@
         <div class="p-social"></div>
         <div class="p-power"></div>
       </div>
-      <div class="m-temp">
-        <p>阿斯顿发哦我办法上帝把违法保额䬄啊是的减肥吧咖啡胡椒粉巴萨卡的步伐维护费巴适得很别发神经可还方便文化部hi我温柔期望的如风达发光自动发光自动去</p>
-      </div>
     </aside>
 
   </div>
@@ -51,7 +92,7 @@
 
     <div class="b-titlebar" :class="titlebarClassObject">
       <div class="m-titlebar">
-        <a class="p-logoarea" href="/"><img class="u-logo" src="/logo.svg" alt="notebook"><span class="u-sitename">notebook</span></a>
+        <a class="p-logoarea" href="/"><img class="u-logo" src="/logo.svg" alt="语宙心星"><span class="u-sitename">语宙心星</span></a>
       </div>
     </div>
 
@@ -95,11 +136,11 @@
             <div class="catpostlist-body">
               <div class="catpostlist-meta"><div class="catpostlist-title-wrap"><span class="catpostlist-title">托福写作范文</span></div></div>
               <nav class="catpostlist-content">
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/托福综合写作高分范文/">托福综合写作高分范文</a></span>
                 <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/托福高分范文经验/">托福高分范文经验</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/托福综合写作高分范文/">托福综合写作高分范文</a></span>
                 <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/托福独立写作高分范文（1）/">托福独立写作高分范文（1）</a></span>
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/托福独立写作高分范文（2）/">托福独立写作高分范文（2）</a></span>
                 <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/托福独立写作高分范文（3）/">托福独立写作高分范文（3）</a></span>
+                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/托福独立写作高分范文（2）/">托福独立写作高分范文（2）</a></span>
               </nav>
             </div>
 
