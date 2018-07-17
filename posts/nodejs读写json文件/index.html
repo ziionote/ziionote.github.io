@@ -145,42 +145,12 @@
     <main class="b-printarea">
       <header class="m-header"></header>
       <article class="m-article">
-        <div class="p-meta">
-          <span class="u-post-title">nodejs读写json文件</span>
-          <span class="u-post-metaspan u-post-author">SunCH</span>
-          <a class="u-post-metaspan u-post-site" href="/">语宙心星</a>
-          <span class="u-post-metaspan u-post-date">2017-11-08</span>
-          <span class="u-post-metaspan u-post-time">22:06:21</span>
+        <div class="p-meta"></div>
+        <div class="p-write">
+          <pre>nodejs读写json文件</pre>
         </div>
-        <div class="p-write" id="post-content"><blockquote>
-<p>原链接：<a href="http://blog.csdn.net/yayali98/article/details/49124877" target="_blank" rel="external">http://blog.csdn.net/yayali98/article/details/49124877</a></p>
-</blockquote>
-<p>nodejs 读json文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var fs=reauire(&apos;fs&apos;);</div><div class="line">var file=&quot;d:\\0.json&quot;;</div><div class="line">var result=JSON.parse(fs.readFileSync( file));</div><div class="line">//操作对象</div></pre></td></tr></table></figure>
-<p>nodejs 写json文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">var coors = &#123;&#125;;</div><div class="line">    coors.left_top = &#123;&#125;;</div><div class="line">    coors.right_top = &#123;&#125;;</div><div class="line">    coors.left_bottom = &#123;&#125;;</div><div class="line">    coors.right_bottom = &#123;&#125;;</div><div class="line">//填充coors中内容</div><div class="line">var filename = &quot;d:\\coors\\0.json&quot;;</div><div class="line"> fs.writeFileSync(filename, JSON.stringify(coors));</div><div class="line"> //对象嵌套</div><div class="line"> var fs = require(&apos;fs&apos;);</div><div class="line">var fileDirectory = &quot;D:\\column&quot;;</div><div class="line">var newfileDirectory = &quot;d:\\new&quot;;</div><div class="line">if (fs.existsSync(fileDirectory)) &#123;</div><div class="line">    var files = fs.readdirSync(fileDirectory);</div><div class="line"></div><div class="line">    for (var i = 0; i &lt; files.length; i++) &#123;</div><div class="line"></div><div class="line">        var filePath = fileDirectory + &quot;/&quot; + files[i];</div><div class="line">        var newfilepath = newfileDirectory + &quot;/&quot; + files[i]</div><div class="line">        var filestr = JSON.parse(fs.readFileSync(filePath));</div><div class="line">        for (var item in filestr) &#123;</div><div class="line">            var  inter=filestr[item];</div><div class="line">             for(var m in inter)</div><div class="line">             &#123;</div><div class="line">                inter[m]=parseFloat(inter[m]);</div><div class="line"></div><div class="line">             &#125;</div><div class="line">            fs.writeFileSync(newfilepath, JSON.stringify(filestr));</div><div class="line">        &#125;</div><div class="line"></div><div class="line">    &#125;</div><div class="line">&#125; else &#123;</div><div class="line">    console.log(fileDirectory + &quot;  Not Found!&quot;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>版权声明：本文为博主原创文章，未经博主允许不得转载。</p>
-</div>
         <div class="p-state"></div>
-        <div class="p-tails">
-          <div class="post-meta-footer-wrap"><ul class="post-tag-list"><li class="post-tag-list-item"><a class="post-tag-list-link" href="/tags/json/">json</a></li><li class="post-tag-list-item"><a class="post-tag-list-link" href="/tags/lang-node-js/">lang:node.js</a></li></ul></div>
-        </div>
       </article>
-      <div class="m-pagination"></div>
-      <div class="m-share"></div>
-      <div class="m-comment">
-          <div class="comments-wrap tabs" id="commenttabs">
-            <ul class="nav-tabs">
-              <li class="tab"><a href="#welcomcomments_wrap">欢迎评论！</a></li>
-              <li class="tab active"><a href="#valinecomments_wrap">Valine评论</a></li>
-            </ul>
-            <div class="tab-content">
-              <div class="tab-pane" id="welcomcomments_wrap"><div id="welcomcomments"><p>欢迎进行评论😆。</p></div></div>
-              <div class="tab-pane active" id="valinecomments_wrap"><div id="valinecomments"></div></div>
-            </div>
-          </div>
-        </div>
-      <div class="m-related"></div>
       <footer class="m-footer"></footer>
     </main>
 
