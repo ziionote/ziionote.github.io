@@ -26,9 +26,6 @@ pre code {
   background: none;
   text-shadow: none;
 }
-.highlight {
-  border-radius: 1px;
-}
 .highlight pre {
   border: none;
   margin: 0;

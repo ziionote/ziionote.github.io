@@ -694,7 +694,7 @@ table {
   right: 0;
   height: 100%;
   overflow: auto;
-  background: #fff;
+  background: #eee0d0;
 }
 .l-pagewrap {
   position: fixed;
@@ -706,7 +706,6 @@ table {
   margin: 0 0 0 24rem;
   overflow: auto;
   height: 100%;
-  background: rgba(255,170,170,0.1);
   transition: margin 0.4s cubic-bezier(0.4, 0, 0, 1), background 1.4s cubic-bezier(0.4, 0, 0, 1);
 }
 @media screen and (max-width: 940px) {
@@ -786,7 +785,7 @@ table {
 }
 .b-printarea {
   position: relative;
-  background: rgba(170,170,170,0.05);
+  background: rgba(255,255,255,0.8);
   margin: 13rem auto 0;
   padding: 0.1rem 1rem;
   width: 640px;
@@ -830,37 +829,70 @@ table {
   width: 100%;
   background: #ff0;
 }
+.p-meta {
+  font-family: -apple-system-font, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", Arial, sans-serif;
+}
+.p-meta .u-post-title {
+  font-size: 22px;
+  line-height: 1.4;
+  margin-bottom: 14px;
+  font-weight: 400;
+}
+.p-meta .u-post-metaspan {
+  line-height: 20px;
+  word-wrap: break-word;
+  word-break: break-all;
+  hyphens: auto;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 10px 10px 0;
+  font-size: 15px;
+  color: rgba(0,0,0,0.3);
+}
+.p-meta a.u-post-metaspan {
+  color: #576b95;
+}
 .m-article {
   margin: 2rem 0;
   min-height: 2rem;
   width: 100%;
-  padding: 1rem;
+  padding: 32px 16px 1rem;
   background: #fff;
 }
 .m-article .p-meta {
-  margin: 2rem 0;
-  min-height: 2rem;
-  width: 100%;
-  background: #faf;
+  font-family: -apple-system-font, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", Arial, sans-serif;
+  margin-bottom: 22px;
 }
 .m-article .p-meta .u-post-title {
   display: block;
-  font-size: 2em;
+  font-size: 22px;
+  line-height: 1.4;
+  margin-bottom: 14px;
+  font-weight: 400;
 }
-.m-article .p-meta:after {
-  content: "~";
-  display: block;
-  margin: 0.5rem 0 0 0;
-  width: 8rem;
-  height: 0;
-  overflow: hidden;
-  border-bottom: 0.5rem solid #fd0;
+.m-article .p-meta .u-post-metaspan {
+  line-height: 20px;
+  word-wrap: break-word;
+  word-break: break-all;
+  hyphens: auto;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 10px 10px 0;
+  font-size: 15px;
+  color: rgba(0,0,0,0.3);
+}
+.m-article .p-meta .u-post-metaspan.u-post-time {
+  display: none;
+}
+.m-article .p-meta a.u-post-metaspan {
+  color: #576b95;
 }
 .m-article .p-write {
+  font-family: -apple-system-font, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", Arial, sans-serif;
   margin: 2rem 0;
   min-height: 2rem;
   width: 100%;
-  border: 1px dotted #000;
+  border-bottom: 1px dotted #000;
 }
 .m-article .p-state {
   margin: 2rem 0;
@@ -1107,9 +1139,14 @@ table {
   margin: 1rem 0;
   font-size: 1.2rem;
 }
+.m-nav a {
+  color: inherit;
+}
 .m-nav .u-navcaption,
 .m-nav .u-navlist,
-.m-nav .u-navitem {
+.m-nav .u-navitem,
+.m-nav .u-toctree,
+.m-nav .u-tocitem {
   margin: 0;
 }
 .m-nav .u-navcaption {
@@ -1118,7 +1155,8 @@ table {
   font-weight: bold;
   color: #aaa;
 }
-.m-nav .u-navlist {
+.m-nav .u-navlist,
+.m-nav .u-toctree {
   padding-left: 0;
   list-style: none;
 }
@@ -1132,6 +1170,7 @@ table {
 }
 .m-nav .u-navitem.z-current {
   background: #555;
+  font-weight: bold;
 }
 .m-nav .u-navitem:hover {
   background: #444;
@@ -1145,8 +1184,36 @@ table {
   height: 100%;
   padding: 1rem 1rem 1rem 2rem;
 }
-.m-nav a {
-  color: inherit;
+.m-nav .u-toctree {
+  background: #666;
+}
+.m-nav .u-toctree ul {
+  margin: 0;
+  padding: 0 0 0 1rem;
+}
+.m-nav .u-tocitem {
+  padding: 0;
+  list-style: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all 0.2s;
+  font-weight: normal;
+}
+.m-nav .u-tocitem.z-current {
+  font-weight: bold;
+  text-shadow: 0px 0px 1em rgba(255,170,85,0.6);
+}
+.m-nav .u-tocitem:hover {
+  background: #777;
+}
+.m-nav .u-tocitem a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 1rem 1rem 1rem 3rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 #post-content * {
   line-height: 1.6;
@@ -1157,7 +1224,7 @@ table {
 #post-content h4,
 #post-content h5,
 #post-content h6 {
-  font-family: "STHeiti", "Microsoft YaHei", "SimHei";
+  font-family: -apple-system-font, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", Arial, sans-serif;
 }
 #post-content hr {
   border: none;
@@ -1167,12 +1234,12 @@ table {
   margin: 2em 0;
 }
 #post-content a {
-  border-bottom: 1px dotted #092;
-  color: #092;
+  border-bottom: 1px dotted rgba(76,134,100,0.5);
+  color: #4c8664;
 }
 #post-content a:hover {
-  border-bottom: 1px dotted #08f;
-  color: #08f;
+  border-bottom: 1px dotted rgba(87,107,149,0.5);
+  color: #576b95;
 }
 #post-content p {
   margin: 0.6em auto;
@@ -1193,12 +1260,12 @@ table {
 #post-content p code,
 #post-content ul code,
 #post-content ol code {
-  padding: 1px 2px;
-  margin: 0 2px;
-  border: 1px dotted #ffef59;
-  background-color: transparent;
-  font-size: 0.9em;
-  color: #c8971b;
+  padding: 1px 0.4em;
+  margin: 0 0.4em;
+  border-radius: 3px;
+  background-color: #fffbd8;
+  font-size: 0.95em;
+  color: #a07402;
 }
 #post-content p code:first-child,
 #post-content ul code:first-child,
@@ -1229,9 +1296,12 @@ table {
   }
 }
 #post-content blockquote {
-  margin: 0.357142857142857rem auto;
-  padding: 0.357142857142857rem 1.071428571428571rem;
-  border: 1px dotted #aaa;
+  margin: 0.6em auto;
+  padding: 0.6em 0.6em 0.6em 1.5em;
+  background: #fafafa;
+  border-radius: 3px;
+  border-left: 6px solid #f0f0f0;
+  color: #666;
 }
 #post-content > table {
   margin: 0.5em auto;
@@ -1257,10 +1327,11 @@ table {
 }
 figure.highlight {
   font-size: 0.9em;
-  border: 1px dotted #aaa;
+  background: #fafafa;
+  border-radius: 3px;
 }
 figure.highlight .gutter {
-  border-right: 1px dotted #ddd;
+  background: #f0f0f0;
 }
 figure.highlight pre {
   white-space: pre;
@@ -1292,9 +1363,6 @@ pre code {
   color: #4d4d4c;
   background: none;
   text-shadow: none;
-}
-.highlight {
-  border-radius: 1px;
 }
 .highlight pre {
   border: none;

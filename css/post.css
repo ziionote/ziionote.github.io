@@ -7,7 +7,7 @@
 #post-content h4,
 #post-content h5,
 #post-content h6 {
-  font-family: "STHeiti", "Microsoft YaHei", "SimHei";
+  font-family: -apple-system-font, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", Arial, sans-serif;
 }
 #post-content hr {
   border: none;
@@ -17,12 +17,12 @@
   margin: 2em 0;
 }
 #post-content a {
-  border-bottom: 1px dotted #092;
-  color: #092;
+  border-bottom: 1px dotted rgba(76,134,100,0.5);
+  color: #4c8664;
 }
 #post-content a:hover {
-  border-bottom: 1px dotted #08f;
-  color: #08f;
+  border-bottom: 1px dotted rgba(87,107,149,0.5);
+  color: #576b95;
 }
 #post-content p {
   margin: 0.6em auto;
@@ -43,12 +43,12 @@
 #post-content p code,
 #post-content ul code,
 #post-content ol code {
-  padding: 1px 2px;
-  margin: 0 2px;
-  border: 1px dotted #ffef59;
-  background-color: transparent;
-  font-size: 0.9em;
-  color: #c8971b;
+  padding: 1px 0.4em;
+  margin: 0 0.4em;
+  border-radius: 3px;
+  background-color: #fffbd8;
+  font-size: 0.95em;
+  color: #a07402;
 }
 #post-content p code:first-child,
 #post-content ul code:first-child,
@@ -79,9 +79,12 @@
   }
 }
 #post-content blockquote {
-  margin: 0.357142857142857rem auto;
-  padding: 0.357142857142857rem 1.071428571428571rem;
-  border: 1px dotted #aaa;
+  margin: 0.6em auto;
+  padding: 0.6em 0.6em 0.6em 1.5em;
+  background: #fafafa;
+  border-radius: 3px;
+  border-left: 6px solid #f0f0f0;
+  color: #666;
 }
 #post-content > table {
   margin: 0.5em auto;

@@ -9,7 +9,7 @@
   right: 0;
   height: 100%;
   overflow: auto;
-  background: #fff;
+  background: #eee0d0;
 }
 .l-pagewrap {
   position: fixed;
@@ -21,7 +21,6 @@
   margin: 0 0 0 24rem;
   overflow: auto;
   height: 100%;
-  background: rgba(255,170,170,0.1);
   transition: margin 0.4s cubic-bezier(0.4, 0, 0, 1), background 1.4s cubic-bezier(0.4, 0, 0, 1);
 }
 @media screen and (max-width: 940px) {
@@ -101,7 +100,7 @@
 }
 .b-printarea {
   position: relative;
-  background: rgba(170,170,170,0.05);
+  background: rgba(255,255,255,0.8);
   margin: 13rem auto 0;
   padding: 0.1rem 1rem;
   width: 640px;
@@ -145,37 +144,70 @@
   width: 100%;
   background: #ff0;
 }
+.p-meta {
+  font-family: -apple-system-font, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", Arial, sans-serif;
+}
+.p-meta .u-post-title {
+  font-size: 22px;
+  line-height: 1.4;
+  margin-bottom: 14px;
+  font-weight: 400;
+}
+.p-meta .u-post-metaspan {
+  line-height: 20px;
+  word-wrap: break-word;
+  word-break: break-all;
+  hyphens: auto;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 10px 10px 0;
+  font-size: 15px;
+  color: rgba(0,0,0,0.3);
+}
+.p-meta a.u-post-metaspan {
+  color: #576b95;
+}
 .m-article {
   margin: 2rem 0;
   min-height: 2rem;
   width: 100%;
-  padding: 1rem;
+  padding: 32px 16px 1rem;
   background: #fff;
 }
 .m-article .p-meta {
-  margin: 2rem 0;
-  min-height: 2rem;
-  width: 100%;
-  background: #faf;
+  font-family: -apple-system-font, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", Arial, sans-serif;
+  margin-bottom: 22px;
 }
 .m-article .p-meta .u-post-title {
   display: block;
-  font-size: 2em;
+  font-size: 22px;
+  line-height: 1.4;
+  margin-bottom: 14px;
+  font-weight: 400;
 }
-.m-article .p-meta:after {
-  content: "~";
-  display: block;
-  margin: 0.5rem 0 0 0;
-  width: 8rem;
-  height: 0;
-  overflow: hidden;
-  border-bottom: 0.5rem solid #fd0;
+.m-article .p-meta .u-post-metaspan {
+  line-height: 20px;
+  word-wrap: break-word;
+  word-break: break-all;
+  hyphens: auto;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 10px 10px 0;
+  font-size: 15px;
+  color: rgba(0,0,0,0.3);
+}
+.m-article .p-meta .u-post-metaspan.u-post-time {
+  display: none;
+}
+.m-article .p-meta a.u-post-metaspan {
+  color: #576b95;
 }
 .m-article .p-write {
+  font-family: -apple-system-font, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", Arial, sans-serif;
   margin: 2rem 0;
   min-height: 2rem;
   width: 100%;
-  border: 1px dotted #000;
+  border-bottom: 1px dotted #000;
 }
 .m-article .p-state {
   margin: 2rem 0;
@@ -422,9 +454,14 @@
   margin: 1rem 0;
   font-size: 1.2rem;
 }
+.m-nav a {
+  color: inherit;
+}
 .m-nav .u-navcaption,
 .m-nav .u-navlist,
-.m-nav .u-navitem {
+.m-nav .u-navitem,
+.m-nav .u-toctree,
+.m-nav .u-tocitem {
   margin: 0;
 }
 .m-nav .u-navcaption {
@@ -433,7 +470,8 @@
   font-weight: bold;
   color: #aaa;
 }
-.m-nav .u-navlist {
+.m-nav .u-navlist,
+.m-nav .u-toctree {
   padding-left: 0;
   list-style: none;
 }
@@ -447,6 +485,7 @@
 }
 .m-nav .u-navitem.z-current {
   background: #555;
+  font-weight: bold;
 }
 .m-nav .u-navitem:hover {
   background: #444;
@@ -460,6 +499,34 @@
   height: 100%;
   padding: 1rem 1rem 1rem 2rem;
 }
-.m-nav a {
-  color: inherit;
+.m-nav .u-toctree {
+  background: #666;
+}
+.m-nav .u-toctree ul {
+  margin: 0;
+  padding: 0 0 0 1rem;
+}
+.m-nav .u-tocitem {
+  padding: 0;
+  list-style: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all 0.2s;
+  font-weight: normal;
+}
+.m-nav .u-tocitem.z-current {
+  font-weight: bold;
+  text-shadow: 0px 0px 1em rgba(255,170,85,0.6);
+}
+.m-nav .u-tocitem:hover {
+  background: #777;
+}
+.m-nav .u-tocitem a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 1rem 1rem 1rem 3rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
