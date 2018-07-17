@@ -85,10 +85,10 @@
           <p class="u-navcaption">托福写作范文</p>
           <ul class="u-navlist">
             <li class="u-navitem">
-              <a href="/posts/托福高分范文经验/">托福高分范文经验</a>
+              <a href="/posts/托福综合写作高分范文/">托福综合写作高分范文</a>
             </li>
             <li class="u-navitem">
-              <a href="/posts/托福综合写作高分范文/">托福综合写作高分范文</a>
+              <a href="/posts/托福高分范文经验/">托福高分范文经验</a>
             </li>
             <li class="u-navitem">
               <a href="/posts/托福独立写作高分范文（1）/">托福独立写作高分范文（1）</a>
@@ -145,12 +145,152 @@
     <main class="b-printarea">
       <header class="m-header"></header>
       <article class="m-article">
-        <div class="p-meta"></div>
-        <div class="p-write">
-          <pre>Javascript调试命令——你只会Console.log() ?</pre>
+        <div class="p-meta">
+          <span class="u-post-title">Javascript调试命令——你只会Console.log() ?</span>
+          <span class="u-post-metaspan u-post-author">SunCH</span>
+          <a class="u-post-metaspan u-post-site" href="/">语宙心星</a>
+          <span class="u-post-metaspan u-post-date" title="2018-01-28 18:13:38">01月28日</span>
+          
         </div>
+        <div class="p-write" id="post-content"><blockquote>
+<p>转自：<a href="https://segmentfault.com/a/1190000012957199" target="_blank" rel="external">https://segmentfault.com/a/1190000012957199</a><br>
+作者：<a href="https://segmentfault.com/u/xudada_5a101817293ef" target="_blank" rel="external">徐大大</a><br>
+时间：2018.01.23</p>
+</blockquote>
+<blockquote>
+<p>Console 对象提供对浏览器控制台的接入（如：Firefox 的 Web Console）。不同浏览器上它的工作方式是不一样的，但这里会介绍一些大都会提供的接口特性。<br>
+Console对象可以在任何全局对象中访问，如 Window，WorkerGlobalScope 以及通过属性工作台提供的特殊定义。<br>
+它被浏览器定义为 Window.Console，也可被简单的 Console 调用。</p>
+</blockquote>
+<p>最常用的方法就是<code>Console.log()</code>,就是在控制台输出内容。刚开始学前端的时候看到大家都是用的<code>Console.log()</code>,几乎没有见过<code>Console</code>的其他用法，难道<code>Console</code>真的没有别的用法了？查了一下后发现<code>Console</code>还是非常强大的，至于为什么很少看到有人用可能是因为用过都删掉了吧。在此记录一下<code>Console</code>的其他用法。</p>
+<p>注意：因为<strong>Console 对象提供对浏览器控制台的接入</strong> 所以在不同浏览器中的支持及表现形式可能不太一样，但是调试内容只有我们开发者会看，所以保证开发环境能用这些方法就可以了，下面演示全部都为<code>Chrome</code>上面的效果。</p>
+<h1><span id="分类输出"> 分类输出</span></h1>
+<p>不同类别信息的输出</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="string">'文字信息'</span>);</div><div class="line"><span class="built_in">console</span>.info(<span class="string">'提示信息'</span>);</div><div class="line"><span class="built_in">console</span>.warn(<span class="string">'警告信息'</span>);</div><div class="line"><span class="built_in">console</span>.error(<span class="string">'错误信息'</span>);</div></pre></td></tr></table></figure>
+<p><img src="https://segmentfault.com/img/remote/1460000012957208?w=957&amp;h=110" alt="img"></p>
+<h1><span id="分组输出"> 分组输出</span></h1>
+<p>使用<code>Console.group()</code>和<code>Console.groupEnd()</code>包裹分组内容。</p>
+<p>还可以使用<code>Console.groupCollapsed()</code>来代替<code>Console.group()</code>生成折叠的分组。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.group(<span class="string">'第一个组'</span>);</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"1-1"</span>);</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"1-2"</span>);</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"1-3"</span>);</div><div class="line"><span class="built_in">console</span>.groupEnd();</div><div class="line"></div><div class="line"><span class="built_in">console</span>.group(<span class="string">'第二个组'</span>);</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"2-1"</span>);</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"2-2"</span>);</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"2-3"</span>);</div><div class="line"><span class="built_in">console</span>.groupEnd();</div></pre></td></tr></table></figure>
+<p><img src="https://segmentfault.com/img/remote/1460000012957209?w=937&amp;h=217" alt="img"></p>
+<p><code>Console.group()</code>还可以嵌套使用</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.group(<span class="string">'第一个组'</span>);</div><div class="line">    <span class="built_in">console</span>.group(<span class="string">"1-1"</span>);</div><div class="line">        <span class="built_in">console</span>.group(<span class="string">"1-1-1"</span>);</div><div class="line">            <span class="built_in">console</span>.log(<span class="string">'内容'</span>);</div><div class="line">        <span class="built_in">console</span>.groupEnd();</div><div class="line">    <span class="built_in">console</span>.groupEnd();</div><div class="line">    <span class="built_in">console</span>.group(<span class="string">"1-2"</span>);</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'内容'</span>);</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'内容'</span>);</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'内容'</span>);</div><div class="line">    <span class="built_in">console</span>.groupEnd();</div><div class="line"><span class="built_in">console</span>.groupEnd();</div><div class="line"></div><div class="line"><span class="built_in">console</span>.groupCollapsed(<span class="string">'第二个组'</span>);</div><div class="line">    <span class="built_in">console</span>.group(<span class="string">"2-1"</span>);</div><div class="line">    <span class="built_in">console</span>.groupEnd();</div><div class="line">    <span class="built_in">console</span>.group(<span class="string">"2-2"</span>);</div><div class="line">    <span class="built_in">console</span>.groupEnd();</div><div class="line"><span class="built_in">console</span>.groupEnd();</div></pre></td></tr></table></figure>
+<p><img src="https://segmentfault.com/img/remote/1460000012957210?w=942&amp;h=236" alt="img"></p>
+<h1><span id="表格输出"> 表格输出</span></h1>
+<p>使用<code>console.table()</code>可以将传入的对象，或数组以表格形式输出。适合排列整齐的元素</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Obj = &#123;</div><div class="line">    Obj1: &#123;</div><div class="line">        a: <span class="string">"aaa"</span>,</div><div class="line">        b: <span class="string">"bbb"</span>,</div><div class="line">        c: <span class="string">"ccc"</span></div><div class="line">    &#125;,</div><div class="line">    Obj2: &#123;</div><div class="line">        a: <span class="string">"aaa"</span>,</div><div class="line">        b: <span class="string">"bbb"</span>,</div><div class="line">        c: <span class="string">"ccc"</span></div><div class="line">    &#125;,</div><div class="line">    Obj3: &#123;</div><div class="line">        a: <span class="string">"aaa"</span>,</div><div class="line">        b: <span class="string">"bbb"</span>,</div><div class="line">        c: <span class="string">"ccc"</span></div><div class="line">    &#125;,</div><div class="line">    Obj4: &#123;</div><div class="line">        a: <span class="string">"aaa"</span>,</div><div class="line">        b: <span class="string">"bbb"</span>,</div><div class="line">        c: <span class="string">"ccc"</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.table(Obj);</div><div class="line"></div><div class="line"><span class="keyword">var</span> Arr = [</div><div class="line">    [<span class="string">"aa"</span>,<span class="string">"bb"</span>,<span class="string">"cc"</span>],</div><div class="line">    [<span class="string">"dd"</span>,<span class="string">"ee"</span>,<span class="string">"ff"</span>],</div><div class="line">    [<span class="string">"gg"</span>,<span class="string">"hh"</span>,<span class="string">"ii"</span>],</div><div class="line">]</div><div class="line"></div><div class="line"><span class="built_in">console</span>.table(Arr);</div></pre></td></tr></table></figure>
+<p><img src="https://segmentfault.com/img/remote/1460000012957211?w=887&amp;h=339" alt="img"></p>
+<h1><span id="查看对象"> 查看对象</span></h1>
+<p>使用<code>Console.dir()</code>显示一个对象的所有属性和方法<br>
+在Chrome中<code>Console.dir()</code>和<code>Console.log()</code>效果相同</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> CodeDeer = &#123;</div><div class="line">    nema: <span class="string">'CodeDeer'</span>,</div><div class="line">    blog: <span class="string">'www.xluos.com'</span>,</div><div class="line">        </div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(<span class="string">"console.dir(CodeDeer)"</span>);</div><div class="line"><span class="built_in">console</span>.dir(CodeDeer);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(<span class="string">"console.log(CodeDeer)"</span>);</div><div class="line"><span class="built_in">console</span>.log(CodeDeer);</div></pre></td></tr></table></figure>
+<p><img src="https://segmentfault.com/img/remote/1460000012957212?w=943&amp;h=247" alt="img"></p>
+<h1><span id="查看节点"> 查看节点</span></h1>
+<p>使用<code>Console.dirxml()</code>显示一个对象的所有属性和方法<br>
+在Chrome中<code>Console.dirxml()</code>和<code>Console.log()</code>效果相同</p>
+<p>百度首页logo的节点信息<br>
+<img src="https://segmentfault.com/img/remote/1460000012957213?w=907&amp;h=540" alt="img"></p>
+<h1><span id="条件输出"> 条件输出</span></h1>
+<p>利用<code>console.assert()</code>,可以进行条件输出。</p>
+<ul>
+<li>当第一个参数或返回值为真时，不输出内容</li>
+<li>当第一个参数或返回值为假时，输出后面的内容并抛出异常</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.assert(<span class="literal">true</span>, <span class="string">"你永远看不见我"</span>);</div><div class="line"><span class="built_in">console</span>.assert((<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="keyword">return</span> <span class="literal">true</span>;&#125;)(), <span class="string">"你永远看不见我"</span>);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.assert(<span class="literal">false</span>, <span class="string">"你看得见我"</span>);</div><div class="line"><span class="built_in">console</span>.assert((<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="keyword">return</span> <span class="literal">false</span>;&#125;)(), <span class="string">"你看得见我"</span>);</div></pre></td></tr></table></figure>
+<p><img src="https://segmentfault.com/img/remote/1460000012957214?w=956&amp;h=84" alt="img"></p>
+<h1><span id="计次输出"> 计次输出</span></h1>
+<p>使用<code>Console.count()</code>输出内容和被调用的次数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++)&#123;</div><div class="line">        <span class="built_in">console</span>.count(<span class="string">"运行次数："</span>);</div><div class="line">    &#125;</div><div class="line">&#125;)()</div></pre></td></tr></table></figure>
+<p><img src="https://segmentfault.com/img/remote/1460000012957215?w=953&amp;h=132" alt="img"></p>
+<h1><span id="追踪调用堆栈"> 追踪调用堆栈</span></h1>
+<p>使用<code>Console.trace()</code>来追踪函数被调用的过程，在复杂项目时调用过程非常多，用这个命令来帮你缕清。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">a, b</span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.trace(<span class="string">"Add function"</span>);</div><div class="line">    <span class="keyword">return</span> a + b;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">add3</span>(<span class="params">a, b</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> add2(a, b);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">add2</span>(<span class="params">a, b</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> add1(a, b);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">add1</span>(<span class="params">a, b</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> add(a, b);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> x = add3(<span class="number">1</span>, <span class="number">1</span>);</div></pre></td></tr></table></figure>
+<p><img src="https://segmentfault.com/img/remote/1460000012957216?w=927&amp;h=190" alt="img"></p>
+<h1><span id="计时功能"> 计时功能</span></h1>
+<p>使用<code>Console.time()</code>和<code>Console.timeEnd()</code>包裹需要计时的代码片段，输出运行这段代码的事件。</p>
+<ul>
+<li><code>Console.time()</code>中的参数作为计时器的标识，具有唯一性。</li>
+<li><code>Console.timeEnd()</code>中的参数来结束此标识的计时器，并以毫秒为单位返回运行时间。</li>
+<li>最多同时运行10000个计时器。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.time(<span class="string">"Chrome中循环1000次的时间"</span>);</div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">1000</span>; i++)</div><div class="line">&#123;</div><div class="line"></div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.timeEnd(<span class="string">"Chrome中循环1000次的时间"</span>);</div></pre></td></tr></table></figure>
+<p><img src="https://segmentfault.com/img/remote/1460000012957217?w=959&amp;h=92" alt="img"></p>
+<h1><span id="性能分析"> 性能分析</span></h1>
+<p>使用<code>Console.profile()</code>和<code>Console.profile()</code>进行性能分析，查看代码各部分运行消耗的时间，但是我在Chrome自带的调试工具中并没有找到在哪里查看这两个方法生成的分析报告。应该需要其他的调试工具。</p>
+<p>具体参考这里：<br>
+<a href="http://www.oschina.net/translate/performance-optimisation-with-timeline-profiles" target="_blank" rel="external">http://www.oschina.net/transl…</a></p>
+<h1><span id="有趣的consolelog"> 有趣的Console.log()</span></h1>
+<p>最后再来介绍一下强大的<code>Console.log()</code>,这个方法有很多的用法（其他输出方法的用法，如error()等，可以参照log()使用）。</p>
+<h2><span id="一-提示输出"> 一、提示输出</span></h2>
+<p>可以再输出的对象、变量前加上提示信息，增加辨识度</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> ans = <span class="number">12345</span>;</div><div class="line"><span class="built_in">console</span>.log(<span class="string">"这是临时变量ans的值："</span>,ans);</div></pre></td></tr></table></figure>
+<p><img src="https://segmentfault.com/img/remote/1460000012957218?w=912&amp;h=84" alt="img"></p>
+<h2><span id="二-格式化输出"> 二、格式化输出</span></h2>
+<table>
+<thead>
+<tr>
+<th>占位符</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>%s</td>
+<td>字符串输出</td>
+</tr>
+<tr>
+<td>%d or %i</td>
+<td>整数输出</td>
+</tr>
+<tr>
+<td>%f</td>
+<td>浮点数输出</td>
+</tr>
+<tr>
+<td>%o</td>
+<td>打印javascript对象，可以是整数、字符串以及JSON数据</td>
+</tr>
+</tbody>
+</table>
+<p>样例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="string">"小明"</span>, <span class="string">"小红"</span>];</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(<span class="string">"欢迎%s和%s两位新同学"</span>,arr[<span class="number">0</span>],arr[<span class="number">1</span>]);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(<span class="string">"圆周率整数部分：%d，带上小数是：%f"</span>,<span class="number">3.1415</span>,<span class="number">3.1415</span>);</div></pre></td></tr></table></figure>
+<p><img src="https://segmentfault.com/img/remote/1460000012957219?w=909&amp;h=116" alt="img"></p>
+<h2><span id="三-自定义样式"> 三、自定义样式</span></h2>
+<p>使用<code>%c</code>为打印内容定义样式,再输出信息前加上<code>%c</code>，后面写上标准的css样式，就可以为输出的信息添加样式了</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="string">"%cMy stylish message"</span>, <span class="string">"color: red; font-style: italic"</span>);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(<span class="string">"%c3D Text"</span>, <span class="string">" text-shadow: 0 1px 0 #ccc,0 2px 0 #c9c9c9,0 3px 0 #bbb,0 4px 0 #b9b9b9,0 5px 0 #aaa,0 6px 1px rgba(0,0,0,.1),0 0 5px rgba(0,0,0,.1),0 1px 3px rgba(0,0,0,.3),0 3px 5px rgba(0,0,0,.2),0 5px 10px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.2),0 20px 20px rgba(0,0,0,.15);font-size:5em"</span>);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(<span class="string">'%cRainbow Text '</span>, <span class="string">'background-image:-webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );color:transparent;-webkit-background-clip: text;font-size:5em;'</span>);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(<span class="string">'%cMy name is classicemi.'</span>, <span class="string">'color: #fff; background: #f40; font-size: 24px;'</span>);</div></pre></td></tr></table></figure>
+<p><img src="https://segmentfault.com/img/remote/1460000012957220?w=911&amp;h=332" alt="img"></p>
+<h1><span id="总结"> 总结</span></h1>
+<p>Console的用法很多，有些再调试过程中非常实用，可以节省很多时间。当然我知道debug还是用断点调试的方法比较好，但是小问题用“printf大法”也是很好用的（滑稽脸）。</p>
+<h1><span id="参考资料"> 参考资料</span></h1>
+<blockquote>
+<ol>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Console" target="_blank" rel="external">https://developer.mozilla.org…</a></li>
+<li><a href="http://www.jb51.net/article/56504.htm" target="_blank" rel="external">http://www.jb51.net/article/5…</a></li>
+<li><a href="https://segmentfault.com/a/1190000000481884" target="_blank" rel="external">https://segmentfault.com/a/11…</a></li>
+<li><a href="https://www.cnblogs.com/liyunhua/p/4529079.html#_label18" target="_blank" rel="external">https://www.cnblogs.com/liyun…</a></li>
+</ol>
+</blockquote>
+</div>
         <div class="p-state"></div>
+        <div class="p-tails">
+          <div class="post-meta-footer-wrap"><ul class="post-tag-list"><li class="post-tag-list-item"><a class="post-tag-list-link" href="/tags/lang-javascript/">lang:javascript</a></li></ul></div>
+        </div>
       </article>
+      <div class="m-pagination"></div>
+      <div class="m-share"></div>
+      <div class="m-comment">
+          <div class="comments-wrap tabs" id="commenttabs">
+            <ul class="nav-tabs">
+              <li class="tab"><a href="#welcomcomments_wrap">欢迎评论！</a></li>
+              <li class="tab active"><a href="#valinecomments_wrap">Valine评论</a></li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane" id="welcomcomments_wrap"><div id="welcomcomments"><p>欢迎进行评论😆。</p></div></div>
+              <div class="tab-pane active" id="valinecomments_wrap"><div id="valinecomments"></div></div>
+            </div>
+          </div>
+        </div>
+      <div class="m-related"></div>
       <footer class="m-footer"></footer>
     </main>
 

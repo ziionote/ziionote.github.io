@@ -85,10 +85,10 @@
           <p class="u-navcaption">托福写作范文</p>
           <ul class="u-navlist">
             <li class="u-navitem">
-              <a href="/posts/托福高分范文经验/">托福高分范文经验</a>
+              <a href="/posts/托福综合写作高分范文/">托福综合写作高分范文</a>
             </li>
             <li class="u-navitem">
-              <a href="/posts/托福综合写作高分范文/">托福综合写作高分范文</a>
+              <a href="/posts/托福高分范文经验/">托福高分范文经验</a>
             </li>
             <li class="u-navitem">
               <a href="/posts/托福独立写作高分范文（1）/">托福独立写作高分范文（1）</a>
@@ -145,12 +145,96 @@
     <main class="b-printarea">
       <header class="m-header"></header>
       <article class="m-article">
-        <div class="p-meta"></div>
-        <div class="p-write">
-          <pre>CSS quotes 属性</pre>
+        <div class="p-meta">
+          <span class="u-post-title">CSS quotes 属性</span>
+          <span class="u-post-metaspan u-post-author">SunCH</span>
+          <a class="u-post-metaspan u-post-site" href="/">语宙心星</a>
+          <span class="u-post-metaspan u-post-date" title="2017-11-12 15:39:41">2017年11月12日</span>
+          
         </div>
+        <div class="p-write" id="post-content"><h1><span id="css-quotes-属性"> CSS quotes 属性</span></h1>
+<h2><span id="实例"> 实例</span></h2>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">q</span><span class="selector-pseudo">:lang(en)</span></div><div class="line">  &#123;</div><div class="line">  <span class="attribute">quotes</span>: <span class="string">'"'</span> <span class="string">'"'</span> <span class="string">"'"</span> <span class="string">"'"</span>;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<p>HTML 代码：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">q</span>&gt;</span>This is a <span class="tag">&lt;<span class="name">q</span>&gt;</span>big<span class="tag">&lt;/<span class="name">q</span>&gt;</span> quote<span class="tag">&lt;/<span class="name">q</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&quot;This is a &apos;big&apos; quote&quot;</div></pre></td></tr></table></figure>
+<h2><span id="浏览器支持"> 浏览器支持</span></h2>
+<p>所有浏览器都支持 quotes 属性。</p>
+<p>注释：如果已规定 !DOCTYPE，那么 Internet Explorer 8 （以及更高版本）支持 quotes 属性。</p>
+<h2><span id="定义和用法"> 定义和用法</span></h2>
+<p>quotes 属性设置嵌套引用（embedded quotation）的引号类型。</p>
+<table>
+<thead>
+<tr>
+<th>默认值：</th>
+<th>not specified</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>继承性：</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>版本：</td>
+<td>CSS2</td>
+</tr>
+<tr>
+<td>JavaScript 语法：</td>
+<td><em>object</em>.style.quotes=“none”</td>
+</tr>
+</tbody>
+</table>
+<h2><span id="可能的值"> 可能的值</span></h2>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>none</td>
+<td>规定 “content” 属性的 “open-quote” 和 “close-quote” 的值不会产生任何引号。</td>
+</tr>
+<tr>
+<td><em>string string string string</em></td>
+<td>定义要使用的引号。前两个值规定第一级引用嵌套，后两个值规定下一级引号嵌套。</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承 quotes 属性的值。</td>
+</tr>
+</tbody>
+</table>
+<h2><span id="引号字符"> 引号字符</span></h2>
+<p><img src="http://www.w3school.com.cn/i/ct_css_pr_gen_quotes.gif" alt="table"></p>
+<h2><span id="相关页面"> 相关页面</span></h2>
+<p>HTML DOM 参考手册：<a href="http://www.w3school.com.cn/jsref/prop_style_quotes.asp" target="_blank" rel="external">quotes 属性</a></p>
+<p><a href="http://www.w3school.com.cn/cssref/index.asp" target="_blank" rel="external">CSS 参考手册</a></p>
+</div>
         <div class="p-state"></div>
+        <div class="p-tails">
+          <div class="post-meta-footer-wrap"><ul class="post-tag-list"><li class="post-tag-list-item"><a class="post-tag-list-link" href="/tags/lang-css/">lang:css</a></li></ul></div>
+        </div>
       </article>
+      <div class="m-pagination"></div>
+      <div class="m-share"></div>
+      <div class="m-comment">
+          <div class="comments-wrap tabs" id="commenttabs">
+            <ul class="nav-tabs">
+              <li class="tab"><a href="#welcomcomments_wrap">欢迎评论！</a></li>
+              <li class="tab active"><a href="#valinecomments_wrap">Valine评论</a></li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane" id="welcomcomments_wrap"><div id="welcomcomments"><p>欢迎进行评论😆。</p></div></div>
+              <div class="tab-pane active" id="valinecomments_wrap"><div id="valinecomments"></div></div>
+            </div>
+          </div>
+        </div>
+      <div class="m-related"></div>
       <footer class="m-footer"></footer>
     </main>
 
