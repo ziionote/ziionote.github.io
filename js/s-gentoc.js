@@ -186,10 +186,10 @@ function initSubHeaders () {
           : 0
         var currentActiveOffset = currentActive.offsetTop + currentActive.parentNode.clientHeight
         var sidebarHeight = the_sidebar.clientHeight
-        console.log('currentActive.offsetTop == '+currentActive.offsetTop)
-        console.log('the_sidebar.scrollTop   == '+the_sidebar.scrollTop)
-        console.log('currentActiveOffset     == '+currentActiveOffset)
-        console.log('sidebarHeight           == '+sidebarHeight)
+        // console.log('currentActive.offsetTop == '+currentActive.offsetTop)
+        // console.log('the_sidebar.scrollTop   == '+the_sidebar.scrollTop)
+        // console.log('currentActiveOffset     == '+currentActiveOffset)
+        // console.log('sidebarHeight           == '+sidebarHeight)
         var currentActiveIsInView = (
           currentActive.offsetTop >= the_sidebar.scrollTop &&
           currentActiveOffset <= the_sidebar.scrollTop + sidebarHeight

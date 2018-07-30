@@ -31,7 +31,7 @@
 #post-content ul,
 #post-content ol {
   list-style-position: outside;
-  margin: 1em 1em 1em 2.6em;
+  margin: 0.6em 1em;
   padding: 0 0 0 1.6em;
 }
 #post-content ul ul,

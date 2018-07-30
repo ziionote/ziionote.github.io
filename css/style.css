@@ -786,21 +786,19 @@ table {
 .b-printarea {
   position: relative;
   background: rgba(255,255,255,0.8);
-  margin: 13rem auto 0;
+  margin: 6rem auto 0;
   padding: 0.1rem 1rem;
   width: 640px;
   transition: all 0.4s cubic-bezier(0.4, 0, 0, 1);
 }
 @media screen and (max-width: 940px) {
   .b-printarea {
-    margin: 9rem auto 0;
     max-width: 100%;
     width: 640px;
   }
 }
 @media screen and (max-width: 640px) {
   .b-printarea {
-    margin: 6rem auto 0;
     max-width: 100%;
     width: 100%;
     padding: 0.01rem;
@@ -1016,7 +1014,7 @@ table {
   height: 2.2em;
   line-height: 2em;
   vertical-align: middle;
-  font-size: 4rem;
+  font-size: 2.25rem;
   transition: all 0.6s cubic-bezier(0.4, 0, 0, 1);
 }
 .m-titlebar .p-logoarea .u-logo {
@@ -1038,14 +1036,6 @@ table {
   .m-titlebar {
     width: 100%;
     border-radius: 0;
-  }
-  .m-titlebar .p-logoarea {
-    font-size: 3.25rem;
-  }
-}
-@media screen and (max-width: 640px) {
-  .m-titlebar .p-logoarea {
-    font-size: 2.25rem;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1248,7 +1238,7 @@ table {
 #post-content ul,
 #post-content ol {
   list-style-position: outside;
-  margin: 1em 1em 1em 2.6em;
+  margin: 0.6em 1em;
   padding: 0 0 0 1.6em;
 }
 #post-content ul ul,
