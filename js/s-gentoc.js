@@ -77,9 +77,10 @@ function initSubHeaders () {
       })
       .forEach(makeHeaderClickable)
 
-    // smoothScroll.init({
+    // var scroll = new SmoothScroll('[data-scroll]', {
+    //   topOnEmptyHash: false,
     //   speed: 400,
-    //   offset: 0
+    //   offset: 10
     // })
   }
 
@@ -109,9 +110,13 @@ function initSubHeaders () {
         last = link
       }
     }
-    if (last)
-      // console.log(last)
-      setActive(last.childNodes[0].id, !hoveredOverSidebar)
+    if (last) {
+      if (last.id) {
+        setActive(last.id, !hoveredOverSidebar)
+      } else {
+        setActive(last.childNodes[0].id, !hoveredOverSidebar)
+      }
+    }
   }
 
   function makeLink (h) {
@@ -127,10 +132,13 @@ function initSubHeaders () {
       }
     }).join('').replace(/\(.*\)$/, '')
     link.classList.add('u-tocitem')
+    if (h.id) {
+      the_id = h.id
+    } else {
+      the_id = h.childNodes[0].id
+    }
     link.innerHTML =
-      '<a data-scroll href="#' + h.childNodes[0].id + '">' +
-        htmlEscape(text) +
-      '</a>'
+      '<a data-scroll href="#' + the_id + '">' + htmlEscape(text) + '</a>'
     return link
   }
 
@@ -141,6 +149,7 @@ function initSubHeaders () {
       .replace(/'/g, '&#39;')
       .replace(/</g, '&lt;')
       .replace(/>/g, '&gt;')
+      .replace(/(^\s*)|(\s*$)/g, "")
   }
 
   function collectH3s (h) {
@@ -208,7 +217,6 @@ function initSubHeaders () {
   function makeHeaderClickable (header) {
     var link = header.querySelector('a')
     link.setAttribute('data-scroll', '')
-
     // transform DOM structure from
     // `<h2><a></a>Header</a>` to <h2><a>Header</a></h2>`
     // to make the header clickable
@@ -221,7 +229,6 @@ function initSubHeaders () {
     }
   }
 
-  // console.log('initSubHeaders!')
 }
 
 })()

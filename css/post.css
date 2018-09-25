@@ -1,6 +1,3 @@
-#post-content * {
-  line-height: 1.6;
-}
 #post-content h1,
 #post-content h2,
 #post-content h3,
@@ -9,6 +6,30 @@
 #post-content h6 {
   font-family: -apple-system-font, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", Arial, sans-serif;
 }
+#post-content h1:not(:first-child),
+#post-content h2:not(:first-child),
+#post-content h3:not(:first-child),
+#post-content h4:not(:first-child),
+#post-content h5:not(:first-child),
+#post-content h6:not(:first-child) {
+  margin: 2.8em 0 0.8em;
+}
+#post-content h1:first-child,
+#post-content h2:first-child,
+#post-content h3:first-child,
+#post-content h4:first-child,
+#post-content h5:first-child,
+#post-content h6:first-child {
+  margin: 1.6em 0 0.8em;
+}
+#post-content h1 a,
+#post-content h2 a,
+#post-content h3 a,
+#post-content h4 a,
+#post-content h5 a,
+#post-content h6 a {
+  color: inherit;
+}
 #post-content hr {
   border: none;
   border-bottom: 1px solid #ddd;
@@ -16,17 +37,23 @@
 #post-content > hr {
   margin: 2em 0;
 }
+#post-content div > hr {
+  margin: 2em 0;
+}
 #post-content a {
-  border-bottom: 1px dotted rgba(76,134,100,0.5);
-  color: #4c8664;
+  color: #576b95;
 }
 #post-content a:hover {
   border-bottom: 1px dotted rgba(87,107,149,0.5);
   color: #576b95;
 }
+#post-content span.edited s {
+  opacity: 0.25;
+}
 #post-content p {
   margin: 0.6em auto;
   vertical-align: middle;
+  color: #333;
 }
 #post-content ul,
 #post-content ol {
@@ -43,12 +70,10 @@
 #post-content p code,
 #post-content ul code,
 #post-content ol code {
-  padding: 1px 0.4em;
-  margin: 0 0.4em;
-  border-radius: 3px;
-  background-color: #fffbd8;
-  font-size: 0.95em;
-  color: #a07402;
+  padding: 0 2px;
+  margin: 0 2px;
+  background-color: #eee;
+  color: #222;
 }
 #post-content p code:first-child,
 #post-content ul code:first-child,
@@ -79,7 +104,7 @@
   }
 }
 #post-content blockquote {
-  margin: 0.6em auto;
+  margin: 0.8em auto;
   padding: 0.6em 0.6em 0.6em 1.5em;
   background: #fafafa;
   border-radius: 3px;

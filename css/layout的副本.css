@@ -227,55 +227,51 @@
   margin: 2rem 0;
   min-height: 2rem;
   width: 100%;
-  border-bottom: 1px dotted #000;
 }
-.m-article .p-state {
-  margin: 2rem 0;
-  min-height: 2rem;
-  width: 100%;
-  background: #f0f;
+#post-content .p-tails {
+  margin: 0.6em auto;
 }
-.m-article .p-state:before {
-  content: attr(class);
+#post-content .p-tails .u-post-tag-list {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
-.m-article .p-tails {
-  margin: 2rem 0;
-  min-height: 2rem;
-  width: 100%;
-  background: #f0f;
+#post-content .p-tails .u-post-tag-list-item {
+  display: inline-block;
+  background: #eee;
+  border-radius: 3px;
+  margin: 0 0.25em;
+  padding: 0 0.5em;
 }
-.m-article .p-tails:before {
-  content: attr(class);
+#post-content .p-tails .u-post-tag-list-item a {
+  color: #666;
 }
-.m-pagination {
+.m-section {
   margin: 2rem 0;
   min-height: 2rem;
   width: 100%;
   background: #ff0;
+}
+.m-section:before {
+  content: attr(class);
+}
+@media screen and (max-width: 640px) {
+  .m-section {
+    margin: 0;
+  }
 }
 .m-share {
-  margin: 2rem 0;
-  min-height: 2rem;
-  width: 100%;
-  background: #ff0;
+  display: none;
 }
 .m-comment {
-  margin: 2rem 0;
-  min-height: 2rem;
-  width: 100%;
-  background: #ff0;
+  display: none;
 }
 .m-related {
-  margin: 2rem 0;
-  min-height: 2rem;
-  width: 100%;
-  background: #ff0;
+  display: none;
 }
 .m-footer {
-  margin: 2rem 0;
-  min-height: 2rem;
-  width: 100%;
-  background: #ff0;
+  display: none;
 }
 .m-namecard,
 .m-nav,

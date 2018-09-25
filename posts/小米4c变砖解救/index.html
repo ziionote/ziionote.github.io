@@ -7,14 +7,16 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <meta name="theme-color" content="#fff" />
-
+<!-- LINK -->
+<link rel="shortcut icon" href="/favicon.png" type="image/x-icon"/>
+<link rel="icon" sizes="any" mask="" href="/favicon.png"/>
 <!-- STYLE -->
+<link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/Han/3.2.7/han.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
 <link href="/css/style.css" rel="stylesheet" type="text/css" />
-
 <!-- SCRIPT -->
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-
-
+<script type="text/javascript" src="/js/smoothscroll.js"></script>
 <!-- END -->
 
 </head>
@@ -35,101 +37,25 @@
         </div>
       </div>
 
-      <nav class="m-nav">
+      <nav class="m-nav" v-on:click="doCloseAside">
         <div class="p-catnav">
-          <p class="u-navcaption">forwarded</p>
+          <p class="u-navcaption">《语法讲义》朱德熙</p>
           <ul class="u-navlist">
             <li class="u-navitem">
-              <a href="/posts/css-quotes/">CSS quotes 属性</a>
+              <a href="/posts/chinese-grammar-handouts-0/">语法讲义（目录、索引等）</a>
             </li>
             <li class="u-navitem">
-              <a href="/posts/hello-vue-js/">Hello! Vue.js</a>
+              <a href="/posts/chinese-grammar-handouts-1/">语法讲义（上）</a>
             </li>
             <li class="u-navitem">
-              <a href="/posts/Javascript-console-methods/">Javascript调试命令——你只会Console.log() ?</a>
+              <a href="/posts/chinese-grammar-handouts-2/">语法讲义（中）</a>
             </li>
             <li class="u-navitem">
-              <a href="/posts/nodejs读写json文件/">nodejs读写json文件</a>
-            </li>
-            <li class="u-navitem">
-              <a href="/posts/nodejs前端模板引擎swig入门/">nodejs前端模板引擎swig入门</a>
-            </li>
-            <li class="u-navitem">
-              <a href="/posts/如何画好断线图标/">如何画好断线图标？我总结了这4个规律</a>
-            </li>
-            <li class="u-navitem z-current">
-              <a href="/posts/小米4c变砖解救/">小米4c变砖解救</a>
-            </li>
-            <li class="u-navitem">
-              <a href="/posts/简单-强大的swig-js/">简单、强大的swig.js</a>
+              <a href="/posts/chinese-grammar-handouts-3/">语法讲义（下）</a>
             </li>
           </ul>
-          <p class="u-navcaption">backup</p>
-          <ul class="u-navlist">
-            <li class="u-navitem">
-              <a href="/posts/reading_list_backup/">reading_list_backup</a>
-            </li>
-          </ul>
-          <p class="u-navcaption">英语备考</p>
-          <ul class="u-navlist">
-            <li class="u-navitem">
-              <a href="/posts/作文句式/">作文句式</a>
-            </li>
-            <li class="u-navitem">
-              <a href="/posts/新东方写作笔记/">考博单词公开课笔记（赵亮，新东方）</a>
-            </li>
-            <li class="u-navitem">
-              <a href="/posts/考博单词公开课-赵亮-新东方/">考博单词公开课笔记（赵亮，新东方）</a>
-            </li>
-          </ul>
-          <p class="u-navcaption">托福写作范文</p>
-          <ul class="u-navlist">
-            <li class="u-navitem">
-              <a href="/posts/托福高分范文经验/">托福高分范文经验</a>
-            </li>
-            <li class="u-navitem">
-              <a href="/posts/托福综合写作高分范文/">托福综合写作高分范文</a>
-            </li>
-            <li class="u-navitem">
-              <a href="/posts/托福独立写作高分范文（2）/">托福独立写作高分范文（2）</a>
-            </li>
-            <li class="u-navitem">
-              <a href="/posts/托福独立写作高分范文（1）/">托福独立写作高分范文（1）</a>
-            </li>
-            <li class="u-navitem">
-              <a href="/posts/托福独立写作高分范文（3）/">托福独立写作高分范文（3）</a>
-            </li>
-          </ul>
-          <p class="u-navcaption">留言板</p>
-          <ul class="u-navlist">
-            <li class="u-navitem">
-              <a href="/posts/memo/">留言板</a>
-            </li>
-          </ul>
-          <p class="u-navcaption">testing</p>
-          <ul class="u-navlist">
-            <li class="u-navitem">
-              <a href="/posts/testing-post/">测试用</a>
-            </li>
-          </ul>
-          <p class="u-navcaption">英语</p>
-          <ul class="u-navlist">
-            <li class="u-navitem">
-              <a href="/posts/词缀/">词缀</a>
-            </li>
-          </ul>
-        </div>
-        <div class="p-homenav">
-          <p>test</p>
-        </div>
-        <div class="p-content">
-          <!-- toc -->
         </div>
       </nav>
-      <div class="m-info">
-        <div class="p-social"></div>
-        <div class="p-power"></div>
-      </div>
     </aside>
 
   </div>
@@ -152,7 +78,8 @@
           <span class="u-post-metaspan u-post-date" title="2017-11-17 12:37:32">2017年11月17日</span>
           
         </div>
-        <div class="p-write" id="post-content"><h1><span id="小米4c变砖解救教程不需要解锁"> 小米4c变砖解救教程,(不需要解锁)</span></h1>
+        <div class="p-write" id="post-content">
+<h1><span id="小米4c变砖解救教程不需要解锁"> 小米4c变砖解救教程,(不需要解锁)</span></h1>
 <p>发表在 <a href="http://bbs.xiaomi.cn/f-353-0-0-0-871" target="_blank" rel="external">晒机评测	</a>2016-05-23 22:30:23 来自PC复制链接手机看帖<strong>15</strong>30996</p>
 <p>1.方案(高通9008刷机)</p>
 <p>2.具体情况.</p>
@@ -276,15 +203,20 @@ fastboot oem edl</p>
 <img src="http://cdn.fds.api.xiaomi.com/b2c-bbs/cn/attachment/7702bb78e13c98453a3d22cd2bf0f41e6dcf8fd7.jpg?_v=1458260452" alt="img"><br>
 等待进度条走完，刷机也就完成了。手动长按开机键知道米logo出现即可开机。</p>
 <p>友情提示：刷机有风险，请大家谨慎操作！</p>
-</div>
-        <div class="p-state"></div>
-        <div class="p-tails">
-          <div class="post-meta-footer-wrap"></div>
+
+          <hr/>
+          <div class="p-state"><blockquote>
+            <p>当前链接：<a href="https://ziionote.github.io/posts/小米4c变砖解救/">https://ziionote.github.io/posts/小米4c变砖解救/</a></p>
+          </blockquote></div>
+          <div class="m-pagination">
+<p>继续阅读：<a href="/posts/托福单词目录/"></a></p>
+<p>回顾前篇：<a href="/posts/css-quotes/">CSS quotes 属性</a></p>
+<p>返回首页：<a href="/">语宙心星</a></p>
+          </div>
         </div>
       </article>
-      <div class="m-pagination"></div>
-      <div class="m-share"></div>
-      <div class="m-comment">
+      <div class="m-section m-share"></div>
+      <div class="m-section m-comment">
           <div class="comments-wrap tabs" id="commenttabs">
             <ul class="nav-tabs">
               <li class="tab"><a href="#welcomcomments_wrap">欢迎评论！</a></li>
@@ -296,8 +228,8 @@ fastboot oem edl</p>
             </div>
           </div>
         </div>
-      <div class="m-related"></div>
-      <footer class="m-footer"></footer>
+      <div class="m-section m-related"></div>
+      <footer class="m-section m-footer"></footer>
     </main>
 
   </div>
@@ -309,14 +241,18 @@ fastboot oem edl</p>
 
   </div>
 </div>
-
+<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
 <script>
 
 const layoutApp = new Vue({
   delimiters: ['${', '}'],
   el: '#l-viewport',
   data: function () {
+    // var x = navigator;
+    // var y = returnCitySN;
     return {
+      // browser: x,
+      // citysn: y,
       asideIsOpen: false,
       scrollAfterTop: false,
       scrolledDown: false,
@@ -324,6 +260,12 @@ const layoutApp = new Vue({
     }
   },
   computed: {
+    browser: function () {
+      return { navigator }
+    },
+    citysn: function () {
+      return { returnCitySN }
+    },
     sideClassObject: function () {
       return {
         'z-open': this.asideIsOpen,
@@ -383,7 +325,6 @@ const layoutApp = new Vue({
 
 </script>
 <script src="/js/s-gentoc.js"></script>
-
 </body>
 </html>
 

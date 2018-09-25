@@ -7,14 +7,16 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <meta name="theme-color" content="#fff" />
-
+<!-- LINK -->
+<link rel="shortcut icon" href="/favicon.png" type="image/x-icon"/>
+<link rel="icon" sizes="any" mask="" href="/favicon.png"/>
 <!-- STYLE -->
+<link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/Han/3.2.7/han.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
 <link href="/css/style.css" rel="stylesheet" type="text/css" />
-
 <!-- SCRIPT -->
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-
-
+<script type="text/javascript" src="/js/smoothscroll.js"></script>
 <!-- END -->
 
 </head>
@@ -35,101 +37,25 @@
         </div>
       </div>
 
-      <nav class="m-nav">
+      <nav class="m-nav" v-on:click="doCloseAside">
         <div class="p-catnav">
-          <p class="u-navcaption">forwarded</p>
+          <p class="u-navcaption">《语法讲义》朱德熙</p>
           <ul class="u-navlist">
             <li class="u-navitem">
-              <a href="/posts/css-quotes/">CSS quotes 属性</a>
+              <a href="/posts/chinese-grammar-handouts-0/">语法讲义（目录、索引等）</a>
             </li>
             <li class="u-navitem">
-              <a href="/posts/hello-vue-js/">Hello! Vue.js</a>
+              <a href="/posts/chinese-grammar-handouts-1/">语法讲义（上）</a>
             </li>
             <li class="u-navitem">
-              <a href="/posts/Javascript-console-methods/">Javascript调试命令——你只会Console.log() ?</a>
+              <a href="/posts/chinese-grammar-handouts-2/">语法讲义（中）</a>
             </li>
             <li class="u-navitem">
-              <a href="/posts/nodejs读写json文件/">nodejs读写json文件</a>
-            </li>
-            <li class="u-navitem">
-              <a href="/posts/nodejs前端模板引擎swig入门/">nodejs前端模板引擎swig入门</a>
-            </li>
-            <li class="u-navitem">
-              <a href="/posts/如何画好断线图标/">如何画好断线图标？我总结了这4个规律</a>
-            </li>
-            <li class="u-navitem">
-              <a href="/posts/小米4c变砖解救/">小米4c变砖解救</a>
-            </li>
-            <li class="u-navitem">
-              <a href="/posts/简单-强大的swig-js/">简单、强大的swig.js</a>
+              <a href="/posts/chinese-grammar-handouts-3/">语法讲义（下）</a>
             </li>
           </ul>
-          <p class="u-navcaption">backup</p>
-          <ul class="u-navlist">
-            <li class="u-navitem">
-              <a href="/posts/reading_list_backup/">reading_list_backup</a>
-            </li>
-          </ul>
-          <p class="u-navcaption">英语备考</p>
-          <ul class="u-navlist">
-            <li class="u-navitem">
-              <a href="/posts/作文句式/">作文句式</a>
-            </li>
-            <li class="u-navitem">
-              <a href="/posts/新东方写作笔记/">考博单词公开课笔记（赵亮，新东方）</a>
-            </li>
-            <li class="u-navitem">
-              <a href="/posts/考博单词公开课-赵亮-新东方/">考博单词公开课笔记（赵亮，新东方）</a>
-            </li>
-          </ul>
-          <p class="u-navcaption">托福写作范文</p>
-          <ul class="u-navlist">
-            <li class="u-navitem">
-              <a href="/posts/托福高分范文经验/">托福高分范文经验</a>
-            </li>
-            <li class="u-navitem">
-              <a href="/posts/托福综合写作高分范文/">托福综合写作高分范文</a>
-            </li>
-            <li class="u-navitem">
-              <a href="/posts/托福独立写作高分范文（2）/">托福独立写作高分范文（2）</a>
-            </li>
-            <li class="u-navitem">
-              <a href="/posts/托福独立写作高分范文（1）/">托福独立写作高分范文（1）</a>
-            </li>
-            <li class="u-navitem">
-              <a href="/posts/托福独立写作高分范文（3）/">托福独立写作高分范文（3）</a>
-            </li>
-          </ul>
-          <p class="u-navcaption">留言板</p>
-          <ul class="u-navlist">
-            <li class="u-navitem">
-              <a href="/posts/memo/">留言板</a>
-            </li>
-          </ul>
-          <p class="u-navcaption">testing</p>
-          <ul class="u-navlist">
-            <li class="u-navitem">
-              <a href="/posts/testing-post/">测试用</a>
-            </li>
-          </ul>
-          <p class="u-navcaption">英语</p>
-          <ul class="u-navlist">
-            <li class="u-navitem">
-              <a href="/posts/词缀/">词缀</a>
-            </li>
-          </ul>
-        </div>
-        <div class="p-homenav">
-          <p>test</p>
-        </div>
-        <div class="p-content">
-          <!-- toc -->
         </div>
       </nav>
-      <div class="m-info">
-        <div class="p-social"></div>
-        <div class="p-power"></div>
-      </div>
     </aside>
 
   </div>
@@ -145,101 +71,8 @@
     <main class="b-printarea">
       <header class="m-header"></header>
       <article class="m-article">
-        <div class="p-meta"></div>
-        <div class="p-write">
-
-            <div class="catpostlist-body">
-              <div class="catpostlist-meta"><div class="catpostlist-title-wrap"><span class="catpostlist-title">forwarded</span></div></div>
-              <nav class="catpostlist-content">
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/css-quotes/">CSS quotes 属性</a></span>
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/hello-vue-js/">Hello! Vue.js</a></span>
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/Javascript-console-methods/">Javascript调试命令——你只会Console.log() ?</a></span>
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/nodejs读写json文件/">nodejs读写json文件</a></span>
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/nodejs前端模板引擎swig入门/">nodejs前端模板引擎swig入门</a></span>
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/如何画好断线图标/">如何画好断线图标？我总结了这4个规律</a></span>
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/小米4c变砖解救/">小米4c变砖解救</a></span>
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/简单-强大的swig-js/">简单、强大的swig.js</a></span>
-              </nav>
-            </div>
-
-            <div class="catpostlist-body">
-              <div class="catpostlist-meta"><div class="catpostlist-title-wrap"><span class="catpostlist-title">backup</span></div></div>
-              <nav class="catpostlist-content">
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/reading_list_backup/">reading_list_backup</a></span>
-              </nav>
-            </div>
-
-            <div class="catpostlist-body">
-              <div class="catpostlist-meta"><div class="catpostlist-title-wrap"><span class="catpostlist-title">英语备考</span></div></div>
-              <nav class="catpostlist-content">
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/作文句式/">作文句式</a></span>
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/新东方写作笔记/">考博单词公开课笔记（赵亮，新东方）</a></span>
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/考博单词公开课-赵亮-新东方/">考博单词公开课笔记（赵亮，新东方）</a></span>
-              </nav>
-            </div>
-
-            <div class="catpostlist-body">
-              <div class="catpostlist-meta"><div class="catpostlist-title-wrap"><span class="catpostlist-title">托福写作范文</span></div></div>
-              <nav class="catpostlist-content">
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/托福高分范文经验/">托福高分范文经验</a></span>
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/托福综合写作高分范文/">托福综合写作高分范文</a></span>
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/托福独立写作高分范文（2）/">托福独立写作高分范文（2）</a></span>
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/托福独立写作高分范文（1）/">托福独立写作高分范文（1）</a></span>
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/托福独立写作高分范文（3）/">托福独立写作高分范文（3）</a></span>
-              </nav>
-            </div>
-
-            <div class="catpostlist-body">
-              <div class="catpostlist-meta"><div class="catpostlist-title-wrap"><span class="catpostlist-title">留言板</span></div></div>
-              <nav class="catpostlist-content">
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/memo/">留言板</a></span>
-              </nav>
-            </div>
-
-            <div class="catpostlist-body">
-              <div class="catpostlist-meta"><div class="catpostlist-title-wrap"><span class="catpostlist-title">testing</span></div></div>
-              <nav class="catpostlist-content">
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/testing-post/">测试用</a></span>
-              </nav>
-            </div>
-
-            <div class="catpostlist-body">
-              <div class="catpostlist-meta"><div class="catpostlist-title-wrap"><span class="catpostlist-title">英语</span></div></div>
-              <nav class="catpostlist-content">
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/词缀/">词缀</a></span>
-              </nav>
-            </div>
 
 
-
-
-            <div class="catpostlist-body">
-              <div class="catpostlist-meta"><div class="catpostlist-title-wrap"><span class="catpostlist-title">测试用</span></div></div>
-              <nav class="catpostlist-content">
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/memo/">留言板</a></span>
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/testing-post/">测试用</a></span>
-              </nav>
-            </div>
-
-            <div class="catpostlist-body">
-              <div class="catpostlist-meta"><div class="catpostlist-title-wrap"><span class="catpostlist-title">测试文章</span></div></div>
-              <nav class="catpostlist-content">
-                <span class="catpostlist-item"><a class="catpostlist-item-link" href="/posts/词缀/">词缀</a></span>
-              </nav>
-            </div>
-
-            <div class="catpostlist-body">
-              <div class="catpostlist-meta"><div class="catpostlist-title-wrap"><span class="catpostlist-title">测试2</span></div></div>
-              <nav class="catpostlist-content">
-              </nav>
-            </div>
-
-
-
-
-        </div>
-        <div class="p-state"></div>
-        <div class="p-tails"></div>
       </article>
       <div class="m-pagination"></div>
       <div class="m-share"></div>
@@ -257,14 +90,18 @@
 
   </div>
 </div>
-
+<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
 <script>
 
 const layoutApp = new Vue({
   delimiters: ['${', '}'],
   el: '#l-viewport',
   data: function () {
+    // var x = navigator;
+    // var y = returnCitySN;
     return {
+      // browser: x,
+      // citysn: y,
       asideIsOpen: false,
       scrollAfterTop: false,
       scrolledDown: false,
@@ -272,6 +109,12 @@ const layoutApp = new Vue({
     }
   },
   computed: {
+    browser: function () {
+      return { navigator }
+    },
+    citysn: function () {
+      return { returnCitySN }
+    },
     sideClassObject: function () {
       return {
         'z-open': this.asideIsOpen,
@@ -330,7 +173,6 @@ const layoutApp = new Vue({
 })
 
 </script>
-
 </body>
 </html>
 

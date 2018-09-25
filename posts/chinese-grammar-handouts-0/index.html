@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html class="theme-docapp" lang="zh-Hans">
+<head>
+<title>语法讲义（目录、索引等） | 语宙心星</title>
+<!-- META -->
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="theme-color" content="#fff" />
+<!-- LINK -->
+<link rel="shortcut icon" href="/favicon.png" type="image/x-icon"/>
+<link rel="icon" sizes="any" mask="" href="/favicon.png"/>
+<!-- STYLE -->
+<link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/Han/3.2.7/han.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+<!-- SCRIPT -->
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script type="text/javascript" src="/js/smoothscroll.js"></script>
+<!-- END -->
+
+</head>
+<body>
+<div class="l-viewport" id="l-viewport">
+  <div class="l-side" :class="sideClassObject" id="l-side">
+
+    <aside class="b-sidebar">
+      <div class="m-logoandsearch">
+        <a class="p-logoarea" href="/" title="关于语言与心智的文章收集站"><span class="u-sitename">语宙心星</span></a>
+        <p class="p-description" title="关于语言与心智的文章收集站">探索语言与心智的奥秘</p>
+        <div class="p-searchbox" role="search">
+          <form id="u-searchform" class="u-searchform" action="http://www.baidu.com/s?ie=utf-8" method="get" target="_blank">
+            <input id="u-searchbox" class="u-searchbox" type="text" name="q" placeholder="Search">
+            <input type="hidden" name="check_keywords" value="yes">
+            <input type="hidden" name="area" value="default">
+          </form>
+        </div>
+      </div>
+
+      <nav class="m-nav" v-on:click="doCloseAside">
+        <div class="p-catnav">
+          <p class="u-navcaption">《语法讲义》朱德熙</p>
+          <ul class="u-navlist">
+            <li class="u-navitem z-current">
+              <a href="/posts/chinese-grammar-handouts-0/">语法讲义（目录、索引等）</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/chinese-grammar-handouts-1/">语法讲义（上）</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/chinese-grammar-handouts-2/">语法讲义（中）</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/chinese-grammar-handouts-3/">语法讲义（下）</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+  </div>
+  <div class="l-pagewrap" :class="pageClassObject" v-on:click="doCloseAside" id="l-pagewrap">
+
+    <div class="b-titlebar" :class="titlebarClassObject">
+      <div class="m-titlebar">
+        <a class="p-logoarea" href="/"><img class="u-logo" src="/logo.svg" alt="语宙心星"><span class="u-sitename">语宙心星</span></a>
+      </div>
+    </div>
+
+
+    <main class="b-printarea">
+      <header class="m-header"></header>
+      <article class="m-article">
+        <div class="p-meta">
+          <span class="u-post-title">语法讲义（目录、索引等）</span>
+          <span class="u-post-metaspan u-post-author">SunCH</span>
+          <a class="u-post-metaspan u-post-site" href="/">语宙心星</a>
+          <span class="u-post-metaspan u-post-date" title="2018-09-20 00:00:00">09月20日</span>
+          
+        </div>
+        <div class="p-write" id="post-content">
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">语法讲义</div></pre></td></tr></table></figure>
+<img src="/posts/chinese-grammar-handouts-0/cover-title.svg" title="cover-title">
+<img src="/posts/chinese-grammar-handouts-0/cover-press.svg" title="cover-press">
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">语法讲义</div><div class="line">朱德熙</div><div class="line"></div><div class="line">商务印书馆</div><div class="line">2007年·北京</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">所有权利保留。</div><div class="line">未经许可，不得以任何方式使用。</div><div class="line"></div><div class="line">语法讲义</div><div class="line">朱德熙</div><div class="line">---</div><div class="line">商务印书馆出版</div><div class="line">（北京王府井大街36号　邮政编码100710）</div><div class="line">商务印书馆发行</div><div class="line">北京民族印刷厂印刷</div><div class="line">ISBN 7 -100 -02001 -8/H·583</div><div class="line">---</div><div class="line">1982 年 9 月第 1 版　　开本 850x1168 1/32</div><div class="line">2007 年 3 月北京第 13 次印刷　印张 7 1/2</div><div class="line">印数5 000册</div><div class="line"></div><div class="line">定价：11.00元</div></pre></td></tr></table></figure>
+<h2><span id="重印题记"> 重印题记</span></h2>
+<p>有两件事要借这次重印的机会说一下：</p>
+<p>第一、第七章把句首的处所词和时间词一律看成主语（<a href="">7.2</a>），其实有的是状语，例如：屋里坐，明天见。这两类格式的区别可以从重音位置看出来。“屋里坐”“明天见”的“屋里”“明天”必须重读。如果处所词、时间词做主语，重音只能落在后边谓语部分。这一点是陆俭明同志告诉我的。</p>
+<p>第二、这本书写得太简略，有些问題为什么那么处理，道理没有交代清楚。如果有的读者想在这方面知道得多一点，可以参看作者另外一本谈语法的小书《语法答问》（即将出版）。</p>
+<p>1983年8月31日</p>
+<h2><span id="序"> 序</span></h2>
+<p>这部书的底本是作者1961至1962年在北京大学讲授现代汉语语法（二）这门课程的讲义。从1961年初次在北大油印这份讲义到现在，已经过了整整二十年。这次修订出版，补写了第十一、第十四、第十六、第十八几章。其余部分也作了补充和修改。</p>
+<p>书中某些论点以及提到的一些语言事实，曾经跟王还、陆俭明等同志讨论过，得益很多。此外，当年在班上听课的同学们提出的许多有意思的现象和问题，对作者的启发是很大的。谨在此一并向他们表示深切的感谢。</p>
+<p>作者</p>
+<p>1981年10月2日</p>
+<h2><span id="目录"> 目录</span></h2>
+<table>
+<thead>
+<tr>
+<th>-</th>
+<th>-</th>
+<th>-</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>凡例</strong></td>
+<td></td>
+<td>7</td>
+</tr>
+<tr>
+<td><strong>第一章</strong></td>
+<td><strong>语法单位</strong></td>
+<td>9</td>
+</tr>
+<tr>
+<td>1.1</td>
+<td>语素</td>
+<td>9</td>
+</tr>
+<tr>
+<td>1.2</td>
+<td>词</td>
+<td>11</td>
+</tr>
+<tr>
+<td>1.3</td>
+<td>词组</td>
+<td>14</td>
+</tr>
+<tr>
+<td>1.4</td>
+<td>句子</td>
+<td>21</td>
+</tr>
+<tr>
+<td><strong>第二章</strong></td>
+<td><strong>词的构造</strong></td>
+<td>25</td>
+</tr>
+<tr>
+<td>2.1</td>
+<td>句法和词法</td>
+<td>25</td>
+</tr>
+<tr>
+<td>2.2</td>
+<td>重叠</td>
+<td>25</td>
+</tr>
+<tr>
+<td>2.3</td>
+<td>附加</td>
+<td>28</td>
+</tr>
+<tr>
+<td>2.4</td>
+<td>前缀</td>
+<td>29</td>
+</tr>
+<tr>
+<td>2.5</td>
+<td>后缀</td>
+<td>30</td>
+</tr>
+<tr>
+<td>2.6</td>
+<td>复合</td>
+<td>32</td>
+</tr>
+<tr>
+<td>2.7</td>
+<td>复杂的合成词</td>
+<td>34</td>
+</tr>
+<tr>
+<td>2.8</td>
+<td>并立式复合词</td>
+<td>36</td>
+</tr>
+<tr>
+<td><strong>第三章</strong></td>
+<td><strong>词类</strong></td>
+<td>37</td>
+</tr>
+<tr>
+<td>3.1</td>
+<td>划分词类的根据</td>
+<td>37</td>
+</tr>
+<tr>
+<td>3.2</td>
+<td>词类的共性和个性</td>
+<td>38</td>
+</tr>
+<tr>
+<td>3.3</td>
+<td>兼类</td>
+<td>38</td>
+</tr>
+<tr>
+<td>3.4</td>
+<td>实词和虚词</td>
+<td>39</td>
+</tr>
+<tr>
+<td>3.5</td>
+<td>体词和谓词</td>
+<td>40</td>
+</tr>
+<tr>
+<td>3.6</td>
+<td>词类表</td>
+<td>40</td>
+</tr>
+<tr>
+<td><strong>第四章</strong></td>
+<td><strong>体词</strong></td>
+<td>41</td>
+</tr>
+<tr>
+<td>4.1</td>
+<td>名词</td>
+<td>41</td>
+</tr>
+<tr>
+<td>4.2</td>
+<td>处所词</td>
+<td>42</td>
+</tr>
+<tr>
+<td>4.3</td>
+<td>时间词</td>
+<td>43</td>
+</tr>
+<tr>
+<td>4.4</td>
+<td>方位词</td>
+<td>43</td>
+</tr>
+<tr>
+<td>4.5</td>
+<td>数词</td>
+<td>45</td>
+</tr>
+<tr>
+<td>4.6</td>
+<td>基数和序数</td>
+<td>46</td>
+</tr>
+<tr>
+<td>4.7</td>
+<td>系位构造</td>
+<td>46</td>
+</tr>
+<tr>
+<td>4.8</td>
+<td>系位组合</td>
+<td>46</td>
+</tr>
+<tr>
+<td>4.9</td>
+<td>复杂的系位构造</td>
+<td>47</td>
+</tr>
+<tr>
+<td>4.10</td>
+<td>“二”和“两”</td>
+<td>47</td>
+</tr>
+<tr>
+<td>4.11</td>
+<td>概数词</td>
+<td>48</td>
+</tr>
+<tr>
+<td>4.12</td>
+<td>量词</td>
+<td>48</td>
+</tr>
+<tr>
+<td>4.13</td>
+<td>数量词</td>
+<td>51</td>
+</tr>
+<tr>
+<td>4.14</td>
+<td>区别词</td>
+<td>52</td>
+</tr>
+<tr>
+<td><strong>第五章</strong></td>
+<td><strong>谓词</strong></td>
+<td>55</td>
+</tr>
+<tr>
+<td>5.1</td>
+<td>动词和形容词的区分</td>
+<td>55</td>
+</tr>
+<tr>
+<td>5.2</td>
+<td>动词的分类</td>
+<td>57</td>
+</tr>
+<tr>
+<td>5.3</td>
+<td>及物动词和不及物动词</td>
+<td>58</td>
+</tr>
+<tr>
+<td>5.4</td>
+<td>体宾动词和谓宾动词</td>
+<td>58</td>
+</tr>
+<tr>
+<td>5.5</td>
+<td>名动词</td>
+<td>60</td>
+</tr>
+<tr>
+<td>5.6</td>
+<td>助动词</td>
+<td>61</td>
+</tr>
+<tr>
+<td>5.7</td>
+<td>能　能够　可以　会　可能　得（dé）</td>
+<td>62</td>
+</tr>
+<tr>
+<td>5.8</td>
+<td>敢　肯　愿意　情愿　乐意　想　要</td>
+<td>63</td>
+</tr>
+<tr>
+<td>5.9</td>
+<td>应　应该　应当　该</td>
+<td>64</td>
+</tr>
+<tr>
+<td>5.10</td>
+<td>许　准</td>
+<td>64</td>
+</tr>
+<tr>
+<td>5.11</td>
+<td>值得　配</td>
+<td>65</td>
+</tr>
+<tr>
+<td>5.12</td>
+<td>别　甭</td>
+<td>65</td>
+</tr>
+<tr>
+<td>5.13</td>
+<td>好</td>
+<td>66</td>
+</tr>
+<tr>
+<td>5.14</td>
+<td>动词重叠式</td>
+<td>66</td>
+</tr>
+<tr>
+<td>5.15</td>
+<td>动词后缀</td>
+<td>68</td>
+</tr>
+<tr>
+<td>5.16</td>
+<td>性质形容词和状态形容词</td>
+<td>73</td>
+</tr>
+<tr>
+<td>5.17</td>
+<td>名形词</td>
+<td>75</td>
+</tr>
+<tr>
+<td>5.18</td>
+<td>“多”和“少”</td>
+<td>76</td>
+</tr>
+<tr>
+<td>5.19</td>
+<td>谓词的体词化</td>
+<td>77</td>
+</tr>
+<tr>
+<td><strong>第六章</strong></td>
+<td><strong>代词</strong></td>
+<td>80</td>
+</tr>
+<tr>
+<td>6.1</td>
+<td>代词的性质和分类</td>
+<td>80</td>
+</tr>
+<tr>
+<td>6.2</td>
+<td>人称代词</td>
+<td>81</td>
+</tr>
+<tr>
+<td>6.3</td>
+<td>我　你　他　我们　你们　他们</td>
+<td>81</td>
+</tr>
+<tr>
+<td>6.4</td>
+<td>咱们</td>
+<td>82</td>
+</tr>
+<tr>
+<td>6.5</td>
+<td>自己</td>
+<td>83</td>
+</tr>
+<tr>
+<td>6.6</td>
+<td>别人　人家</td>
+<td>84</td>
+</tr>
+<tr>
+<td>6.7</td>
+<td>大家　大伙儿</td>
+<td>85</td>
+</tr>
+<tr>
+<td>6.8</td>
+<td>指示代词</td>
+<td>85</td>
+</tr>
+<tr>
+<td>6.9</td>
+<td>这　那</td>
+<td>85</td>
+</tr>
+<tr>
+<td>6.10</td>
+<td>这会儿　那会儿　这儿　那儿</td>
+<td>86</td>
+</tr>
+<tr>
+<td>6.11</td>
+<td>这么　那么　这样　那样　这么样　那么样</td>
+<td>87</td>
+</tr>
+<tr>
+<td>6.12</td>
+<td>疑问代词</td>
+<td>89</td>
+</tr>
+<tr>
+<td>6.13</td>
+<td>谁　什么</td>
+<td>89</td>
+</tr>
+<tr>
+<td>6.14</td>
+<td>哪　哪儿</td>
+<td>90</td>
+</tr>
+<tr>
+<td>6.15</td>
+<td>怎么　怎么样</td>
+<td>91</td>
+</tr>
+<tr>
+<td>6.16</td>
+<td>疑问代词的非疑问用法</td>
+<td>93</td>
+</tr>
+<tr>
+<td><strong>第七章</strong></td>
+<td><strong>主谓结抅</strong></td>
+<td>95</td>
+</tr>
+<tr>
+<td>7.1</td>
+<td>主语和谓语</td>
+<td>95</td>
+</tr>
+<tr>
+<td>7.2</td>
+<td>时间主语和处所主语</td>
+<td>97</td>
+</tr>
+<tr>
+<td>7.3</td>
+<td>受事主语、与事主语和工具主语</td>
+<td>99</td>
+</tr>
+<tr>
+<td>7.4</td>
+<td>谓词性主语</td>
+<td>101</td>
+</tr>
+<tr>
+<td>7.5</td>
+<td>谓语的类型</td>
+<td>102</td>
+</tr>
+<tr>
+<td>7.6</td>
+<td>体词性谓语</td>
+<td>102</td>
+</tr>
+<tr>
+<td>7.7</td>
+<td>形容词谓语</td>
+<td>104</td>
+</tr>
+<tr>
+<td>7.8</td>
+<td>由动词“是”组成的谓语</td>
+<td>105</td>
+</tr>
+<tr>
+<td>7.9</td>
+<td>主谓结构作谓语</td>
+<td>106</td>
+</tr>
+<tr>
+<td>7.10</td>
+<td>由“的”字结构组成的判断句</td>
+<td>108</td>
+</tr>
+<tr>
+<td><strong>第八章</strong></td>
+<td><strong>述宾结构</strong></td>
+<td>110</td>
+</tr>
+<tr>
+<td>8.1</td>
+<td>述语和宾语</td>
+<td>110</td>
+</tr>
+<tr>
+<td>8.2</td>
+<td>主宾语和施受关系</td>
+<td>111</td>
+</tr>
+<tr>
+<td>8.3</td>
+<td>粘合式述宾结构和组合式述宾结构</td>
+<td>112</td>
+</tr>
+<tr>
+<td>8,4</td>
+<td>处所宾语和时间宾语</td>
+<td>113</td>
+</tr>
+<tr>
+<td>8.5</td>
+<td>存现宾语</td>
+<td>114</td>
+</tr>
+<tr>
+<td>8.6</td>
+<td>准宾语</td>
+<td>116</td>
+</tr>
+<tr>
+<td>8.7</td>
+<td>双宾语</td>
+<td>117</td>
+</tr>
+<tr>
+<td>8.8</td>
+<td>虚指宾语</td>
+<td>121</td>
+</tr>
+<tr>
+<td>8.9</td>
+<td>程度宾语</td>
+<td>121</td>
+</tr>
+<tr>
+<td>8.10</td>
+<td>谓词性宾语</td>
+<td>122</td>
+</tr>
+<tr>
+<td>8.11</td>
+<td>指称性宾语和陈述性宾语</td>
+<td>124</td>
+</tr>
+<tr>
+<td><strong>第九章</strong></td>
+<td><strong>述补结构</strong></td>
+<td>125</td>
+</tr>
+<tr>
+<td>9.1</td>
+<td>补语和宾语的比较</td>
+<td>125</td>
+</tr>
+<tr>
+<td>9.2</td>
+<td>粘合式述补结构和组合式述补结构</td>
+<td>125</td>
+</tr>
+<tr>
+<td>9.3</td>
+<td>结果补语</td>
+<td>126</td>
+</tr>
+<tr>
+<td>9.4</td>
+<td>趋向补语</td>
+<td>128</td>
+</tr>
+<tr>
+<td>9.5</td>
+<td>到</td>
+<td>130</td>
+</tr>
+<tr>
+<td>9.6</td>
+<td>可能补语</td>
+<td>132</td>
+</tr>
+<tr>
+<td>9.7</td>
+<td>可能补语“得”</td>
+<td>133</td>
+</tr>
+<tr>
+<td>9.8</td>
+<td>状态补语</td>
+<td>133</td>
+</tr>
+<tr>
+<td>9.9</td>
+<td>程度补语</td>
+<td>137</td>
+</tr>
+<tr>
+<td>9.10</td>
+<td>补语的引申意义</td>
+<td>138</td>
+</tr>
+<tr>
+<td>9.11</td>
+<td>述补结构的紧缩形式</td>
+<td>138</td>
+</tr>
+<tr>
+<td><strong>第十章</strong></td>
+<td><strong>偏正结构</strong></td>
+<td>140</td>
+</tr>
+<tr>
+<td>10.1</td>
+<td>修饰语和中心语</td>
+<td>140</td>
+</tr>
+<tr>
+<td>10.2</td>
+<td>定语和状语的区分</td>
+<td>140</td>
+</tr>
+<tr>
+<td>10.3</td>
+<td>书面上的“的”和“地”</td>
+<td>142</td>
+</tr>
+<tr>
+<td>10.4</td>
+<td>定语和“的”</td>
+<td>142</td>
+</tr>
+<tr>
+<td>10.5</td>
+<td>同位性偏正结构</td>
+<td>144</td>
+</tr>
+<tr>
+<td>10.6</td>
+<td>准定语</td>
+<td>145</td>
+</tr>
+<tr>
+<td>10.7</td>
+<td>粘合式偏正结构和组合式偏正结构</td>
+<td>148</td>
+</tr>
+<tr>
+<td>10.8</td>
+<td>多项式偏正结构</td>
+<td>150</td>
+</tr>
+<tr>
+<td>10.9</td>
+<td>定语的次序</td>
+<td>150</td>
+</tr>
+<tr>
+<td>10.10</td>
+<td>状语和中心语</td>
+<td>151</td>
+</tr>
+<tr>
+<td>10.11</td>
+<td>副词性状语</td>
+<td>152</td>
+</tr>
+<tr>
+<td>10.12</td>
+<td>形容词性状语</td>
+<td>153</td>
+</tr>
+<tr>
+<td><strong>第十一章</strong></td>
+<td><strong>联合结构</strong></td>
+<td>156</td>
+</tr>
+<tr>
+<td>11.1</td>
+<td>并列成分的连接</td>
+<td>156</td>
+</tr>
+<tr>
+<td>11.2</td>
+<td>体词性联合结构和谓词性联合结构</td>
+<td>157</td>
+</tr>
+<tr>
+<td>11.3</td>
+<td>联合结构的逻辑意义</td>
+<td>157</td>
+</tr>
+<tr>
+<td><strong>第十二章</strong></td>
+<td><strong>连谓结构</strong></td>
+<td>160</td>
+</tr>
+<tr>
+<td>12.1</td>
+<td>连谓结构的性质和构造</td>
+<td>160</td>
+</tr>
+<tr>
+<td>12.2</td>
+<td>N和V<sub>2</sub>意义上的联系</td>
+<td>162</td>
+</tr>
+<tr>
+<td>12.3</td>
+<td>V<sub>1</sub>带“着”或“了”的连谓结构</td>
+<td>164</td>
+</tr>
+<tr>
+<td>12.4</td>
+<td>由动词“来”“去”组成的连谓结构</td>
+<td>165</td>
+</tr>
+<tr>
+<td>12.5</td>
+<td>由动词“是”组成的连谓结构</td>
+<td>167</td>
+</tr>
+<tr>
+<td>12.6</td>
+<td>由动词“有”组成的连谓结构</td>
+<td>168</td>
+</tr>
+<tr>
+<td>12.7</td>
+<td>由动词“给”组成的连谓结构</td>
+<td>170</td>
+</tr>
+<tr>
+<td><strong>第十三章</strong></td>
+<td><strong>介词</strong></td>
+<td>174</td>
+</tr>
+<tr>
+<td>13.1</td>
+<td>介词和动词</td>
+<td>174</td>
+</tr>
+<tr>
+<td>13.2</td>
+<td>介词和介词结构</td>
+<td>174</td>
+</tr>
+<tr>
+<td>13.3</td>
+<td>跟　和　同</td>
+<td>176</td>
+</tr>
+<tr>
+<td>13.4</td>
+<td>被　叫　让</td>
+<td>178</td>
+</tr>
+<tr>
+<td>13.5</td>
+<td>给</td>
+<td>179</td>
+</tr>
+<tr>
+<td>13.6</td>
+<td>在</td>
+<td>182</td>
+</tr>
+<tr>
+<td>13.7</td>
+<td>把</td>
+<td>185</td>
+</tr>
+<tr>
+<td>13.8</td>
+<td>比</td>
+<td>189</td>
+</tr>
+<tr>
+<td>13.9</td>
+<td>连</td>
+<td>190</td>
+</tr>
+<tr>
+<td><strong>第十四章</strong></td>
+<td><strong>副词</strong></td>
+<td>192</td>
+</tr>
+<tr>
+<td>1.14</td>
+<td>副词和形容词</td>
+<td>192</td>
+</tr>
+<tr>
+<td>14.2</td>
+<td>副词后缀“的”</td>
+<td>193</td>
+</tr>
+<tr>
+<td>14.3</td>
+<td>重叠式副词</td>
+<td>194</td>
+</tr>
+<tr>
+<td>14.4</td>
+<td>范围副词</td>
+<td>195</td>
+</tr>
+<tr>
+<td>14.5</td>
+<td>程度副词</td>
+<td>196</td>
+</tr>
+<tr>
+<td>14.6</td>
+<td>时间副词</td>
+<td>198</td>
+</tr>
+<tr>
+<td>14.7</td>
+<td>否定副词</td>
+<td>200</td>
+</tr>
+<tr>
+<td><strong>第十五章</strong></td>
+<td><strong>疑问句和祈使句</strong></td>
+<td>202</td>
+</tr>
+<tr>
+<td>15.1</td>
+<td>疑问句</td>
+<td>202</td>
+</tr>
+<tr>
+<td>15.2</td>
+<td>祈使句</td>
+<td>205</td>
+</tr>
+<tr>
+<td><strong>第十六章</strong></td>
+<td><strong>语气词</strong></td>
+<td>207</td>
+</tr>
+<tr>
+<td>16.1</td>
+<td>语气词的组合层次</td>
+<td>207</td>
+</tr>
+<tr>
+<td>16.2</td>
+<td>了　呢<sub>1</sub>　来着</td>
+<td>209</td>
+</tr>
+<tr>
+<td>16.3</td>
+<td>呢<sub>2</sub>　吗　吧<sub>1</sub>　吧<sub>2</sub></td>
+<td>211</td>
+</tr>
+<tr>
+<td>16.4</td>
+<td>啊　呕　欸　嚜　呢<sub>3</sub>　罢了</td>
+<td>211</td>
+</tr>
+<tr>
+<td>16.5</td>
+<td>句中停顿和语气词</td>
+<td>213</td>
+</tr>
+<tr>
+<td><strong>第十七章</strong></td>
+<td><strong>复句</strong></td>
+<td>215</td>
+</tr>
+<tr>
+<td>17.1</td>
+<td>单句和复句</td>
+<td>215</td>
+</tr>
+<tr>
+<td>17.2</td>
+<td>分句之间的联系</td>
+<td>216</td>
+</tr>
+<tr>
+<td>17.3</td>
+<td>复句和连词</td>
+<td>217</td>
+</tr>
+<tr>
+<td><strong>第十八章</strong></td>
+<td><strong>省略和倒装</strong></td>
+<td>220</td>
+</tr>
+<tr>
+<td>18.1</td>
+<td>省略</td>
+<td>220</td>
+</tr>
+<tr>
+<td>18.2</td>
+<td>倒装</td>
+<td>221</td>
+</tr>
+<tr>
+<td><strong>索引</strong></td>
+<td></td>
+<td>224</td>
+</tr>
+</tbody>
+</table>
+<h2><span id="凡例"> 凡例</span></h2>
+<p>一、本书举例除了作为独立的句子来讨论的以外，末尾一律不加句号。引文按原书标点。</p>
+<p>二、例句前边加<code>*</code>号表示没有这样的说法，加<code>？</code>号表示这种说法可疑。</p>
+<p>三、汉字或音标左上角加<code>'</code>号表示重读，前边加<code>·</code>号表示轻声。</p>
+<p>四、除<a href="">10.3</a>讨论“的”和“地”的区别一节以外，本书不区分“的”和“地”，一律写“的”，引文则按原书的写法写。</p>
+<p><code>p:7</code></p>
+<h2><span id="索引"> 索引</span></h2>
+<table>
+<thead>
+<tr>
+<th>a啊86,202,211-212,214 ba把 135,136,181,185—189 罢了 213 吧202,211，214ban半46 bao包括式（人称代词）82—83 bei被 135,178-179 beng甭65,200 bi比189bian边44 bie别65,206 别人84—85bing宾语 15,16,110-124,111,125,129, 132并 156—157 并立式复合词36 并且156 bo啵207bu 补语 16，125,175 不76,200 不成词语素11 不定量词41,42,49,116</th>
+<th>不定位（分句）215 不定位语柰10,29,33,34 不及物动词56,58, 110, 126, 127, 130,183不可数名词41 不少76,116 cai才 199-200ceng层次构造20Vchen陈述17,124陈述句23,202 &gt;212陈述性宾语124陈述性主语102 cheng称呼句24 成词语素11 程度宾语121 程度补语137 程度副词196—198 chong重叠25重叠式25,57 重疊式名词26 重叠式（董词）26,97 重叠式（形容词）26—28 重叠式（动词）26,66—68 重鲞式副词28，194一195 重（副词）199 重新199 chou抽象名词42，168 chu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<table>
+<thead>
+<tr>
+<th>初（前银）29处所词42—43，105，106，113，115 处所词组113，115 处所主语97—99,115处所宾语 1】3—114,115,128,129 ci词 11，12;13 词法25词根28,29,30,32 词类37—40 词缀28,29 词组 12,13,14,215CUD存现宾语114 一 115 存现句184 da大家85大伙儿85 dai '代词80—94,216dan单（副词）196 单宾语119420 单纯词10,25 单纯方位词《—44 单句23,215单音节形容词75,141,154dao到 m，J30-13J 倒装221倒装句218,222,223 de得（动词）62—63 得（动词后缀）32,126,133,134 得（助词）125—126，133，134,220·de（“在”的弱化形式）114,115,182 的（副词后缀）31,73, 75, 152,153, 193—194的（状态形容词后缀）31, 142, 154,</th>
+<th>155,195,197的（助词）32,77,108—109,142,145, 194“的”字结构77,145,197,221 的（定语后头的）142 —144,151 di第（前缀）29 递系式162,179dian点儿41，49ding定位（分句）215 定位分句217 定位语素10,28,33,34 定语 15,73，140 定语（次序）150—151 dong动词55,56，动词重迭式66,185 动词后缀68—72 动董66—68 动1：宾语116〜117 动董词42，117，120dou都 $，190，191，195—196 du·度量词41,49,116 dui对称性动词176—177duo多（形容词）76 多（概数词）45 多项式偏正结构150 多少45,46,116ei欸211—212,213 er而156 儿（后缀）30 二47fan反复问句98,203,204,211 反问句91，204 范围副词195 —196fang方位词43—45 fei非对称性动词177 非主谓句22 fen分句23,215,216—217 fou否定副词200~201 fu复合25,32 复合词32,33,34 复合趋向补语129 复句23,215—219 复指83,99副词28, 53, 70, 141,152,153,155, 192-201,218副词后缀75,77,142,152, 153, 155, 193, 194副词性状语152~153 附加25,28gai该64概数词45,48gan敢63感叹句24,197,198 干嘛90 干什么90 ge个49,121 个体置词41，48,52 gei给（动词）118,170-1,3,178 给（介词）135,178,179—182 gen跟（连词）156,157,176 跟（介词）176—178跟…一样177 —178 gong工具99,100,107,173 工具主语96,99一100guai怪73,197 guang光196guo过（后缀）72过（动词）72 hai还98hao好（副词）197 好（助动词）66 好多76 好几45 好些45,76 好意思66 he和 156,157,158 合成方位词43—44 合成词10,25,34 合成语气词208 hen很53,73,76，197 很多76,116 很少76hou后置（分句）216 后置定位语素10,28 后缀28,30hu互斥性选择关系159 hua话题17,96 bui会（助动词）62—63</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<table>
+<thead>
+<tr>
+<th>或（或者，或是）158龕鬌基式（重叠式的）25,46 集合董词42,49 集合名词41~42 及物 126,127,129 及物动词56, 58, 78, 110, 126,128, 129,182,183jiao叫 178-179,180 jian兼类38〜39 减缩式复合词35 简称35结构 14,22,33,34 结果补语126—128,132 介词 147，160,174—191 介词结构175近宾语 118,119,147 近指85紧缩式复合词35 紧缩形式 109，138，139，196 j*ng敬称式82·«J1U躭196JU句法25 句法结构14 句子21 ke可能（助动词）62—63 可能补语132—133 可数名词41,49 可以62—63 keo肯63—64kuo</th>
+<th>r展〗2, 13, 34, 36, 113, 133,134, 148,150 la啦207,214 lai来（动词）128,165-166 来（概数词）45 来着209 lao老（副词）29,119 le乐意63-64了（后缀）61,68-70,115,163, 165, 186,209了（语气词）71，209〜210,214 li里44lian连（介词）190—191 连词99,215，156,216,217,219 连谓结构 18-19,90,153,160-173 联合结构 18, 20, 36, 90,150,156— 159联合式（复合词）33 liang两（数词）47 置词41 一42,45,48,220 iin临时董词41,50,52 ling领属关系89,106,118,144,145,147, 148,179领属性定语 119, 142, 143,144,151， 186 lou喽207 ma吗202,204,211 me曝213,214</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<table>
+<thead>
+<tr>
+<th>没（有）61,70，153,'200,203men们31 mian面（后缀）44 mm闽南语71 ming名词41 名动词60~61 名最词117 名形词75—76 na那81,85,86,119 那会儿85,86 那么81,85,87—88 那么样81,85,87,88 那样85,87,88 m 90-91 鄉里91 啷儿90—91 呐207oan难（助动词）66 ne呢72,184,202, 204, 209, 211, 213, 214neng能（够）62—63 ni你81—82 你们81nian粘合式偏正结构148—149，150 粘合式述宾结构112 —113 粘合式述补结构125—126 粘着形式128 粘着语柰9,33</th>
+<th>ou欧化句法218呕（语气词）211 — 212 pai排除式（人称代词）.82—83 pan判断 108—109判断句123 peiSB 65pian偏正结构 14，15，140—155 偏正式（复合词）32,qi祈使句23, 65&gt; 67, 180, 205—206,211,212qian前置（分句）216,217 前置定位语素10 前缀28,29 qU区别词52—54,148 趋向补语128—130,132 趋向动词1W，128 去 128,165—166rang让 178—179，180 ren人称代词80,81,84—85，166rong容易66 ruo若干45 shang上（方位词）44,45 shao 少76shei谁89—90,93</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<table>
+<thead>
+<tr>
+<th>施亊 16,17,66-68,78,95,96,111, 112,127,137,162,187 时点43时间宾语113—114,130 时间词43,106,114 时间词组114 时间副词198—201 时间主语96,97—99 时量43时量宾语69,116—117 时量词120什么81,89—90,102,121 实词39—40 使动意义110 亊物化101-102是 102,103,105,106,108, 109,146, 167,196是非问句202,203,204,211,212 sheng省略220—221 shou受事 16,17,78,95,96,107,111,112, 127,137，147，162,173，180,181, 185,186,222受事主语96,99—100,179,223 受亊主语句188 shu述宾结构 15,16,110-124,139,203 述宾式（复合词）32 述宾式复合动词113 述补结构 16—17,111,125—139，?01 述补式（复合词）33 述语 15,16,121,110 数量宾语116数置词45—48,51，76,103,116 数量名结构103,110 shuang双宾语117 — 12U47双音节形容词75,141,142,154,193</th>
+<th>似（shi）的 177song宋元白M 132SUO所78,79,98 ta他81-82,121,122 他们81—82 tan悠82 te特指问句202,203,204,211 ti体宾动词58—59,76 体词40,41 体词化77,112 体词性代词81 体词性联合结构157 体词性偏正结构141，142 体词性谓语102—103ting挺（副词）73,197%tong同位性定语144—145 同位锤偏正结构83，144一 145 同位语84 tou头（后缀）31,44 wai外C方位词）44 wei为什么90谓宾动词58—60,122 谓词40,55,127,131 谓词性宾语81，87 谓词性联合结构157谓词性偏正结构142 谓词性主语101—102 谓语 17—18,95，101—108</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<table>
+<thead>
+<tr>
+<th>104,位数词4S wo我81—82 我们81—83,205 wu无153 无定115 无定宾语129 吴语66 xi系数词45 系位构造46,47,52 系位组合46,52 xiang相容性选择关系159 想（助动词）64 象…一样177 xie些42,49xing形容词55,56,110，i34，192 形容词性状语153—155 形容词谓语104 性质形容词57, 73二75, 103, 153,154 xiu修饰语14,15,140 xU虚词39—40 虚指宾语121 许（助动词）64—65 许多76 序数46 xuan选择问句202,203,204,211 yao要64 ye也93,156,191,196yi</th>
+<th>疑问代词80,89,93 疑问句23,123,124,202—2（W ying应（助动词）64 应当64 应该64 印欧语101you有60,153,168 有定99,129,130,187,189 又 156,198 yu与事95,96,100,107,180,181 与事主语96,99，100 语法功能37 语气词207—214 语素9,10,11 yuan远宾语118，119 远指85 »意63-64 yue蜜语71 za咱们82—83,205 zai在 114,182-185 再198 zen怎么81，91一92 怎么样81,91—92,102 怎样91 zhe者78这81,85,86,119 这儿85,86,87 这会儿85,86 这里85 这么81,85,87 这么样81,85,87,88</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<table>
+<thead>
+<tr>
+<th>这样85,87,88着28,71-72,87,91,115,163,164— 165,186,210 着呢208zhen真197真宾语56-57, 58, 110, 111，116, 117,119,120,126 真定语147真谓宾动词59，122，123 zhi知道124 值得65直接成分20—21 只196 指称124 指称性主语102 指称性宾语124 指示代词80,85 zhong中心语15,140 zhou周遍性97,99，108,223 zhu主谓结构 17-18,22,78,136,152 主谓结构（做谓语）100, 106, 108, 146, 189主谓结构（做补语）135—137 主谓结构（做状语）153 主谓句22 主谓式（复合词）32</th>
+<th>主语 17—18,95 —100,111 助动词61—66,124 zhuan专有名词42转换98, 115, 118-119, 131,132, 136,146,147,168,182,183,184, 190,202zhuang状态补语133—137 状态形容词28,57,77,103,104,134, 154,195,197状态形容词后缀142，154,155，195，197 状语 15,75,140—141,151—155 zhun准（助动词）64—65 准宾语56,58,72,110,116,117,119 准定语145—148 准量词50 准谓宾动词59—60 zi子（后缀）30 自己83-84 自由语素9一 10,33 zu组合式偏正结构148—149,150 组合式述补结构125—126,132,133 组合式述宾结构112—113 zui最198ZUO撖什么90</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2><span id="backcover"> backcover</span></h2>
+<img src="/posts/chinese-grammar-handouts-0/cover-code.svg" title="cover-code">
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ISBN 7-100-02001-8</div><div class="line"></div><div class="line">9 787100 020015</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ISBN 7-100-02001-8/H·583</div><div class="line">---</div><div class="line">定价：11.00元</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[General Information]</div><div class="line">SS号=11811187</div></pre></td></tr></table></figure>
+
+          <hr/>
+          <div class="p-state"><blockquote>
+            <p>当前链接：<a href="https://ziionote.github.io/posts/chinese-grammar-handouts-0/">https://ziionote.github.io/posts/chinese-grammar-handouts-0/</a></p>
+          </blockquote></div>
+          <div class="m-pagination">
+<p>继续阅读：<a href="/posts/chinese-grammar-handouts-1/">语法讲义（上）</a></p>
+<p>回顾前篇：<a href="/posts/朱清时：量子意识，现代科学与佛学的汇合处/">朱清时：量子意识，现代科学与佛学的汇合处</a></p>
+<p>返回首页：<a href="/">语宙心星</a></p>
+          </div>
+        </div>
+      </article>
+      <div class="m-section m-share"></div>
+      <div class="m-section m-comment">
+          <div class="comments-wrap tabs" id="commenttabs">
+            <ul class="nav-tabs">
+              <li class="tab"><a href="#welcomcomments_wrap">欢迎评论！</a></li>
+              <li class="tab active"><a href="#valinecomments_wrap">Valine评论</a></li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane" id="welcomcomments_wrap"><div id="welcomcomments"><p>欢迎进行评论😆。</p></div></div>
+              <div class="tab-pane active" id="valinecomments_wrap"><div id="valinecomments"></div></div>
+            </div>
+          </div>
+        </div>
+      <div class="m-section m-related"></div>
+      <footer class="m-section m-footer"></footer>
+    </main>
+
+  </div>
+  <div class="l-ctrl" :class="ctrlClassObject" v-on:click="doOpenAside" id="l-ctrl">
+
+    <div class="b-ctrl">
+      <div class="m-ctrl"></div>
+    </div>
+
+  </div>
+</div>
+<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+<script>
+
+const layoutApp = new Vue({
+  delimiters: ['${', '}'],
+  el: '#l-viewport',
+  data: function () {
+    // var x = navigator;
+    // var y = returnCitySN;
+    return {
+      // browser: x,
+      // citysn: y,
+      asideIsOpen: false,
+      scrollAfterTop: false,
+      scrolledDown: false,
+      scrolledUp: false,
+    }
+  },
+  computed: {
+    browser: function () {
+      return { navigator }
+    },
+    citysn: function () {
+      return { returnCitySN }
+    },
+    sideClassObject: function () {
+      return {
+        'z-open': this.asideIsOpen,
+      }
+    },
+    pageClassObject: function () {
+      return {
+        'z-moved': this.asideIsOpen,
+      }
+    },
+    ctrlClassObject: function () {
+      return {
+        'z-hidden': this.asideIsOpen,
+      }
+    },
+    titlebarClassObject: function () {
+      return {
+        'z-nottop': this.scrollAfterTop,
+        'z-show': this.scrolledDown,
+      }
+    }
+  },
+  methods: {
+    doCloseAside: function (event) {
+      this.asideIsOpen = false;
+    },
+    doOpenAside: function (event) {
+      this.asideIsOpen = (this.asideIsOpen)?false:true;
+    },
+    handleScroll () {
+      var scrollTop = document.querySelector('.l-pagewrap').scrollTop
+      var offsetTop = document.querySelector('.b-printarea').offsetTop
+      if (scrollTop > offsetTop) {
+        this.scrollAfterTop = true
+      } else {
+        this.scrollAfterTop = false
+      }
+      if (this.lastScroll && scrollTop > this.lastScroll) {
+        this.scrolledDown = false
+        this.scrolledUp = true
+        // console.log('scrolling up');
+      } else if (this.lastScroll && scrollTop < this.lastScroll) {
+        this.scrolledDown = true
+        this.scrolledUp = false
+        // console.log('scrolling down');
+      }
+      this.lastScroll = scrollTop
+    }
+  },
+  mounted () {
+    document.querySelector('.l-pagewrap').addEventListener('scroll', this.handleScroll)
+  },
+  destroyed () {
+    document.querySelector('.l-pagewrap').removeEventListener('scroll', this.handleScroll)
+  }
+})
+
+</script>
+<script src="/js/s-gentoc.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
