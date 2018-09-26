@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html class="theme-docapp" lang="zh-Hans">
+<head>
+<title>现代汉语-四-语法-上 | 语宙心星</title>
+<!-- META -->
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="theme-color" content="#fff" />
+<!-- LINK -->
+<link rel="shortcut icon" href="/favicon.png" type="image/x-icon"/>
+<link rel="icon" sizes="any" mask="" href="/favicon.png"/>
+<!-- STYLE -->
+<link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/Han/3.2.7/han.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+<!-- SCRIPT -->
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script type="text/javascript" src="/js/smoothscroll.js"></script>
+<!-- END -->
+
+</head>
+<body>
+<div class="l-viewport" id="l-viewport">
+  <div class="l-side" :class="sideClassObject" id="l-side">
+
+    <aside class="b-sidebar">
+      <div class="m-logoandsearch">
+        <a class="p-logoarea" href="/" title="关于语言与心智的文章收集站"><span class="u-sitename">语宙心星</span></a>
+        <p class="p-description" title="关于语言与心智的文章收集站">探索语言与心智的奥秘</p>
+        <div class="p-searchbox" role="search">
+          <form id="u-searchform" class="u-searchform" action="http://www.baidu.com/s?ie=utf-8" method="get" target="_blank">
+            <input id="u-searchbox" class="u-searchbox" type="text" name="q" placeholder="Search">
+            <input type="hidden" name="check_keywords" value="yes">
+            <input type="hidden" name="area" value="default">
+          </form>
+        </div>
+      </div>
+
+      <nav class="m-nav" v-on:click="doCloseAside">
+        <div class="p-catnav">
+          <p class="u-navcaption">《现代汉语》沈阳 郭锐</p>
+          <ul class="u-navlist">
+            <li class="u-navitem">
+              <a href="/posts/modern-chinese-0/">现代汉语-〇-参考文献等</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/modern-chinese-1/">现代汉语-一-总论</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/modern-chinese-3/">现代汉语-三-词汇</a>
+            </li>
+            <li class="u-navitem z-current">
+              <a href="/posts/modern-chinese-4-1/">现代汉语-四-语法-上</a>
+            </li>
+          </ul>
+          <p class="u-navcaption">《语法讲义》朱德熙</p>
+          <ul class="u-navlist">
+            <li class="u-navitem">
+              <a href="/posts/chinese-grammar-handouts-0/">语法讲义（目录、索引等）</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/chinese-grammar-handouts-1/">语法讲义（上）</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/chinese-grammar-handouts-2/">语法讲义（中）</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/chinese-grammar-handouts-3/">语法讲义（下）</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+  </div>
+  <div class="l-pagewrap" :class="pageClassObject" v-on:click="doCloseAside" id="l-pagewrap">
+
+    <div class="b-titlebar" :class="titlebarClassObject">
+      <div class="m-titlebar">
+        <a class="p-logoarea" href="/"><img class="u-logo" src="/logo.svg" alt="语宙心星"><span class="u-sitename">语宙心星</span></a>
+      </div>
+    </div>
+
+
+    <main class="b-printarea">
+      <header class="m-header"></header>
+      <article class="m-article">
+        <div class="p-meta">
+          <span class="u-post-title">现代汉语-四-语法-上</span>
+          <span class="u-post-metaspan u-post-author">SunCH</span>
+          <a class="u-post-metaspan u-post-site" href="/">语宙心星</a>
+          <span class="u-post-metaspan u-post-date" title="2017-12-20 00:04:01">2017年12月20日</span>
+          
+        </div>
+        <div class="p-write" id="post-content">
+<h2><span id="第四章-语法-上"> 第四章 语法 上</span></h2>
+<ul>
+<li>第一节 语法概说</li>
+<li>第二节 词类</li>
+<li><s>第三节 语法结构和语法成分</s></li>
+<li><s>第四节 句子的结构和意义</s></li>
+<li><s>第五节 单句句式</s></li>
+<li><s>第六节 复句句式</s></li>
+</ul>
+<h3><span id="第一节-语法概说"> 第一节 语法概说</span></h3>
+<h4><span id="本节学习要点"> 本节学习要点</span></h4>
+<ol>
+<li>语法的性质：构词造句是有限制的，因此需要语法规则。</li>
+<li>现代汉语语法与古代汉语、方言、外语语法有差异；现代汉语语法内部存在现代白话和文言的分层、口语和书面语的差异、常规和非常规的区别。</li>
+<li>语法单位是对语言片段切分的结果，语法单位分为四个层级和基本单位、组合单位两个系列；语法单位之间有组成关系和实现关系两种关系。</li>
+<li>语法结构根据组成成分之间的语法关系分为不同类型，语法结构的基本类型有六种，不同类型的语法结构在语义和形式上都存在区别。</li>
+<li>语法结构的组成成分是有层次地组合在一起的，层次分析法是分析语法结构的有效方法。</li>
+</ol>
+<p>学习现代汉语语法之前，先要了解几个最基础的问题：第一，语法主要管什么样的语言现象；第二，现代汉语语法与其他语法现象有什么联系和区别；第三，语法包含哪些基本的成员单位；第四，现代汉语有哪些基本的语法结构类型；第五，语法结构的层次性和怎样进行语法结构的层次分析。</p>
+<h4><span id="一-什么是语法"> 一、什么是语法</span></h4>
+<p>什么是语法？简单地说，语法就是构词造句的规则。语言表达是用一个一个的词构成句子来进行的，词怎么组成词组，词组怎么形成句子，这些都要遵守一定的规则。这种说话时大家都必须遵守的规则，就是语法。</p>
+<p>语法包括哪些具体的规则，或者说语法要管语言中的哪些现象，这一点说起来可能会比较抽象。因为语法并不是像语音那样能读出来，像文字或词汇那样能看得见，语法的这种规则只是说本族语的人头脑中对语句结构和语句意义的“直觉”或“语感”，这种直觉或语感是看不见摸不着的。但毕竟语法规则又是通过人们说出来的一句一句的话表现的，也就是一个句子说得对不对，说现代汉语的人是可以通过直觉和语感来加以判断的。因此对于语法规则在语言中是如何表现的，或者语法要管什么现象，可通过一些例子来说明。</p>
+<p>第一组例子是关于“以前”和“过去”的用法。比较:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">（1）a1.  以前他在广州工作。　　a2.  三年以前他在广州工作。</div><div class="line">　 　b1.  过去他在广州工作。　　b2. *三年过去他在广州工作。</div></pre></td></tr></table></figure>
+<p>可以发现，“以前”和“过去”在这里都表示时间，意思差不多，但“以前”可出现在一个数量短语后面，还可以出现在另一个表示时间的词语后面（如“春节以前”），而“过去”不可以（如“<code>*</code>春节过去”）。“以前”和“过去”在组合中的这种差异是由各自的词类性质不同造成的，“以前”是方位词，“过去”是时间词。</p>
+<p>第二组例子是关于“大量”和“大型”的用法。比较：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">（2）a1.  大量豪华客轮　　→　　a2.  大量豪华的客轮</div><div class="line">　 　b1.  大型豪华客轮　　→　　b2. *大型豪华的客轮</div></pre></td></tr></table></figure>
+<p>可以发现，“大量”和“大型”虽然在上面的例子中都是做定语，但“大量”可以出现在带“的”的定语前面，而“大型”不能出现在带“的”的定语前面。之所以有这样的差别，是因为两个词的词类属性不同，“大量”是数量词，“大型”是区别词。</p>
+<p>第三组例子是关于“稍”和“稍微”的用法。比较：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">（3）a1.  请稍等。　　　　　　a2.  *请稍微等。</div><div class="line">　 　b1.  请稍微等几分钟。　　b2.  *请稍微等五分钟。</div></pre></td></tr></table></figure>
+<p>可以发现，“稍”和“稍微”虽然都是副词，意思相同，但用法却有差异，“稍”可以修饰单个动词，而“稍微”修饰的动词性成分必须包含数量成分，而且应是一个表达不确定量的数量成分（如“几分钟”）。</p>
+<p>第四组是关于“别”和“甭”的用法。比较：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">（4）al.  别理睬他。　　a2.  甭理睬他。</div><div class="line">　 　bl.  别感冒了。　　b2. *甭感冒了。</div></pre></td></tr></table></figure>
+<p>可以看到，“别”和“甭”都是表示否定的副词，但用法不同。“别”既可对“理睬、去、看”等自主动作的动词加以否定，又可以对“感冒、丢、受伤”等非自主动作的动词加以否定，而“甭”则只能对前一类动词加以否定。</p>
+<p>第五组是关于词语在句子中位置的不同表现。比较：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">（5）a1.  在黑板上写字　　→　　a2.  字写在黑板上</div><div class="line">　 　b1.  在脸盆里洗手　　→　　b2. *手洗在脸盆里</div></pre></td></tr></table></figure>
+<p>可以发现，（5a）和（5b）都是“在+处所+动词+名词”格式，但前一句可以变换为“名词+动词+在+处所”格式，而后者不可以。这种差异主要体现在动词的语义特征上，“写”这类动词具有“附着”的语义特征，而“洗”这类动词则没有这种特征。</p>
+<p>第六组是关于句子的不同理解问题。比较：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">（6）a.  调查结果怎么样　　（a1. 调查的结果怎么样；　a2. 对某事的结果如何进行调查）</div><div class="line">　 　b.  解释不清楚　　　　（b1. 不能解释清楚；　　　b2. 解释是不清楚的）</div><div class="line">　 　c.  相信的是没脑子的人（c1. 相信没脑子的人；　　c2. 相信某事的人是没脑子的人）</div></pre></td></tr></table></figure>
+<p>可以注意到，这一组例子都有歧义。但造成这些歧义的因素是不同的。（6a）是由于结构的组合层次不同造成的：（6a1）是“调查结果/怎么样”，（6a2）是“调查/结果怎么样”；（6b）是由于结构的组合关系不同造成的：（6b1）“解释不清楚”是主谓结构，（6b2）“调查不清楚”是述补结构；（6c）是由于结构成分的语义关系不同造成的：（6c1）中“没脑子的人”是“相信”的对象（宾语），（6c2）中“没脑子的人”是“相信”的施事（主语）。</p>
+<p>上面这些例子说明，不同的词类在结构的组合中受到不同的限制，属于同一词类的词，如果语义特征不同，也有可能影响词的组合限制。词在组合中的层次、结构关系、语义关系等不同会影响句子的意思。也就是说，语法规则一方面决定哪些组合能说，哪些组合不能说，另一方面也决定不同组合方式所造成的句子是这个意义，还是那个意义。这些现象就可以看作语法在语言中不同层面上的具体表现，或者说这些现象就是语法规则要管的问题。</p>
+<h4><span id="二-现代汉语语法"> 二、现代汉语语法</span></h4>
+<p>要了解现代汉语语法的一般知识，就需要知道现代汉语语法跟其他语言语法的不同及语法的不同方面之间的区别和联系。</p>
+<p>**第一，要区别汉语语法现象和外语语法现象。**汉语最值得注意的语法类型特点就是缺乏形态变化和形式标记。所谓缺乏形态变化，是指汉语词形本身没有成系统的差异并显示词类，如不像意大利语的动词词尾“<code>-are</code>/<code>-ire</code>/<code>-ere</code>”；名词词尾“<code>-o</code>（阳）/<code>-a</code>（阴）/<code>-e</code>（阴阳）”；也没有成系统的词形变化（词汇意义不变），如不像英语名词有复数（plural）变化，动词有时（tense）、体（aspect）和人称变化，形容词有级（degree）变化。所谓缺乏形式标记，是指汉语没有标示某种语法成分的标记，如不像日语那样有话题标记“<code>wa</code>”、主语标记“<code>ga</code>”、宾语标记“<code>wo</code>”、处所标记“<code>ni</code>”、工具标记“<code>de</code>”。汉语另一个语法类型特点就是由于缺乏形态而更突出虚词和语序的作用。汉语“时、体、态”的语法意义更多由“了、着、过”等虚词来表达。汉语的词序变化也较为丰富，不同词序可以表达不同的语法意义，如“客人来了/来客人了”“我急了一头汗/急了我一头汗”“在黑板上写字/字写在黑板上”，语序不同造成语法意义的不同。汉语词类的区分也比较细致。世界上所有语言都有名词、动词、形容词和副词等主要词类，代词、数词、连词、介词也具有普遍性；但汉语的量词、方位词和语气词则比较特殊。汉语有量词和方位词，不仅是多了两个词类，更重要的意义在于汉语名词功能的特点：名词只表实体而不表计量单位和位置，所以才需要量词和方位词来表现这种语法意义。汉语语法结构的搭配范围比较广，如“我/是四川人，她/是山东人”“我/是女孩，她/是男孩”“我/是炒，她/是煮”“老王/个子很高”都是主语与谓语搭配的合法形式；“写字、写文章、写一只狗、写黑板、写毛笔、写地上”，“拉车、拉了一个客人、拉煤、拉家里”，说明汉语动词与宾语的搭配也复杂多样。</p>
+<p><strong>第二，要区别现代汉语现象和古代汉语语法现象。<strong>由于历史的发展，现代汉语语法与古代汉语语法有不少差异。比如古代汉语的名词可直接与数词结合，表示个体事物的数量，如“二桃、三士”，而现代汉语名词通常不能直接受数词修饰表示个体事物的数量。再如古代汉语的数词可置于动词前表示动量，如“吾日三省吾身”“三过其门而不入”，而现代汉语中数词需添加动量词，一般放在动词后面，有时也可放在动词前面，如“反省自己三次/三次反省自己”“路过家门三次/三次路过家门”。另外古代汉语普通名词可直接放在处所介词“于”的后面表示位置，如“交交黄鸟，止于桑”“和声入于耳而藏于心”，而现代汉语需加上方位词，如“停在桑树上”“藏在心里”。==古今语法差异的例子还有不少，不过现代汉语内部也并非都是同质的，实际上是不同历史层次的混合体，主要可以分出两个层次：现代白话层次和文言层次。==现代书面汉语以现代白话为底子，夹杂一些文言说法。==文言层次的成分主要出现于韵文、标题、四字格和其他对举格式、单音节方位词“前、后、内、外、中”等的前面，以及军事语体、新闻语体、公文语体、科技语体中。==不同历史层次的成分在语法上会造成</strong>三方面不同</strong>：<mark>一是<strong>成词与否</strong></mark>。如“国、校、鸭、置、于、之”在现代白话层次不成词，但在文言层次成词，如“处理<u>国</u>与<u>国</u>关系”“该<u>校</u>共培养了2万名干部”“左手一只鸡，右手一只<u>鸭</u>（歌词）”“<u>置</u>贫困村<u>于</u>不顾”。<mark>二是<strong>功能不同</strong></mark>。如“两车速度”的“车”虽是现代白话层次的词，但直接受数词修饰，却是文言用法；“决战中原”中“决战”在现代白话层次不能带宾语，但在文言用法中就可带处所宾语。<mark>三是<strong>词类不同</strong></mark>。例如“杯、盘、拳、口”在现代白话层次属量词，如“一杯酒、一盘菜、打一拳、咬一口”，但在文言层次属名词，如“杯中、挥拳、口中”。“依然”在现代白话层次属副词，如“国际形势依然不稳定”，但在文言层次属状态词，如“风采依然”。现代白话层次的语法现象与文言层次的语法现象属于不同的语法系统。</p>
+<p>**第三，要区别普通话语法现象和方言语法现象。**语言具有地域性，同一语言在不同地域可能会出现差异。如普通话表示给予的双宾语结构的形式是“动词+接受者+物品”（送他一本书），但有些方言是“动词+物品+接受者”（送一本书他）。方言语法也影响着普通话语法。比如普通话里动词、形容词的正反问格式是“AB不AB”，如“知道不知道、干净不干净”，但近年来受南方方言的影响，产生了 “知不知道、干不干净”这种“A不AB”的格式。还有些方言语法现象，虽然还没有成为普遍接受的用法，但已为部分普通话使用者接受。如“有+动词性成分”（有看见、有吃饭）表示已然，是闽粤方言中的现象，目前已逐渐进入普通话。因此在注意区分普通话语法和方言语法的同时，也要注意本来属于方言语法的一些语法现象，可能已成为普通话语法现象。</p>
+<p>**第四，要区别口语语法现象和书面语语法现象。**现代汉语的口语和书面语在语法上基本上一致，但还是有一些差异。比如“前面来了一老太太”（数词“一”直接修饰名词）是口语语法现象；“这一问题、给敌人以打击”则是书面语的说法。由于口语和书面语语法存在差异，所以要注意区分是口语语法现象还是书面语语法现象。</p>
+<p><strong>第五，要区别常规语法现象和非常规语法现象。<strong>如果两种语法格式表达基本相同的语义，通常一种是</strong>常规表达</strong>，而另一种是<strong>非常规表达</strong>。常规表达又叫做<strong>无标记表达</strong>，适用范围较广；非常规表达又叫<strong>有标记表达</strong>、<strong>特异性表达</strong>，往往有特殊的语用、修辞、感情色彩或特殊上下文语境限制。如“这本书我看过”和“我这本书看过”，前一句是常规表达，没有特殊色彩，后一句则是非常规表达，其中的“这本书”要用在把“这本书”与其他书对比的语境中。再如“那件干净的衣服”和“干净的那件衣服”，前一词组是常规表达，没有特殊色彩，而后一词组则有强调“干净的”与“脏的”对比的色彩。又如“我的书”和“我书”，两例都是表示领属关系的定中偏正结构，但在回答“这是谁的书？ ”时，只能用前一个说法；后一词组通常不单说，只用于句中主宾语位置，或用于“把〜拿来”时。在研究语法时要注意区分常规语法现象和非常规语法现象，并找出非常规用法的特殊色彩和限制条件。</p>
+<h4><span id="三-语法单位"> 三、语法单位</span></h4>
+<p>学习和研究语法，首先要知道语法包括哪些成员单位，以及这些语法的单位是怎么样划分出来的，各自有什么性质和特点。</p>
+<h5><span id="一语流切分和语法单位的类别"> （一）语流切分和语法单位的类别</span></h5>
+<p>人们使用的语句的长度各不相同，小到只有一个词，大到一句话或一段话，这些可以总称为语言片段。一方面这些大大小小的语言片段之间是有联系的，因为大的语言片段可以分解成更小的语言片段，或者说小的语言片段可以组合成更大的语言片段。比如“我粉刷了房子”是由“我”和“粉刷了房子”构成的，“粉刷了房子”是由“粉刷了”和“房子”构成的，“房子”又是由更小的“房”和“子”构成的。另一方面这些大大小小的语言片段之间也是有区别的，因为不同的语言片段在性质和作用上也各不相同。比如“我粉刷了房子。”是说出来的完整的一句话，“粉刷”和“房子”不是一句话，但可以在语句中独立使用，“房”和“子”不能独立使用，但还是各自具有一定的意义。由此可见，虽然这些语言片段都是语法要研究的对象，但还是需要先把这些大小不同或性质不同的语言片段分成不同的单位，这也就是“语法单位”。有了语法单位才便于描写和说明各种语言片段的类和关系。</p>
+<p>==要建立不同的语法单位，需要三个基本手续：一是“<strong>切分</strong>”，二是“<strong>归并</strong>”，三是“<strong>分类</strong>”。==所谓“切分”，就是要对一串串说出来的话即语流进行切分，也就是把语流整体切成较小的片段，或观察较小的片段是如何组成较大片段的。无论是从大到小切分还是从小到大组合，都可以得到篇章、段落、句群、句子、词组、词、语素等大大小小的片段。语法单位就是为了研究语法从语流中切分出的大小不同的语言片段。所谓“归并”，就是根据语音和意义的同一性把切分出的片段分成不同单位或合并成同一单位。在词这一级层面上，切分出的是个体词，个体词经过归并操作，得到的是概括词。所谓“分类”，则是在归并的基础上，根据切分出的片段的功能或性质进行类的划分。比如“他知道你不知道他很不喜欢你”这句话可以分出“1他/2知道/3你/4不/5知道/6他/7很/8不/9喜欢/10你/”这10个个体词。而进一步可以归并为“他（1/6）、知道（2/5）、你（3/10）、不（4/8）、很（7）、喜欢（9）”这6个概括词；进而还可把其中的“他、你”归为代词，“知道、喜欢”归为动词，“不、很”归为副词：这就是词这一级单位的分类。如果进一步对更大的语法单位进行分类，比如对词组进行分类，也都是这样进行的。有了类的划分，语法规则的描写与说明就比较方便了，如“名词+动词”可构成主谓结构，“动词+名词”可构成述宾结构。</p>
+<p>从切分的角度说，<mark>语法单位可以分为以下4级7种</mark>：</p>
+<p><strong>第一级是构词单位</strong>，即构成词的组成成分的语言片段。其中包括“<strong>语素</strong>”和“<strong>语素组</strong>”两种语法单位。如语素“民”可以作为“人民、网民、民众”等词的构词成分，语素组“明信”作为“明信片”的构词成分，而得到的“人民”或“明信片”都是词。</p>
+<p><strong>第二级是造句单位</strong>。其中包括“<strong>词</strong>”和“<strong>词组</strong>”两种语法单位。例如在“人民的利益高于一切”这句话中，词“人民、利益”，词组“人民的利益、高于一切”等都是这句话的造句单位。</p>
+<p><strong>第三级是表意单位</strong>，即表达一个相对完整意思的语言片段。其中包括“<strong>小句</strong>”和“<strong>小句组</strong>”两种语法单位。例如在“他病了，没来上课”这个句子中，“他病了”就是小句，在“他病了，没来上课，也没去医院”这个句子中，“没来上课，也没去医院”就是小句组。</p>
+<p><strong>第四级是表达单位</strong>，即构成话语或语篇表达的最小单位的语言片段。这种语法单位也就是“<strong>句子</strong>”。句子在书面上通常用句号、感叹号、问号标记。例如在回答“小王怎么没有来？ ”时说“他病了。”，或者说出“小王病了，没有来上课。”都是句子。<u>表达单位中虽然也有组合单位“<strong>句组（句群）</strong>”，但句组（句群）一般认为属于话语层面的单位，不算是语法单位。</u></p>
+<h5><span id="二不同语法单位的含义"> （二）不同语法单位的含义</span></h5>
+<p>下面从小到大说明各层级的各种语法单位的性质和特点。</p>
+<h6><span id="1-语素morpheme"> 1. 语素（morpheme）</span></h6>
+<p>从功能上说，语素是最小的构词单位；从性质上说，语素是最小的音义结合体。把语言片段切分到最小的既有语音形式又表示一定语义的音义结合的片段，就是语素。所谓“最小”，是切分出的片段内部不再包含更小的音义结合体。比如“火车”这个片段内部还包含更小的音义结合体“火”和“车”，因此“火车”不是一个语素。而“火”或“车”都不能再分析成更小的音义结合体，因此“火”和“车”分别是一个语素。语素作为构词的基本单位，有的语素本身单独就构成一个词，如“人、有、来、大、的、了”，叫成词语素；有的语素不能单独构成一个词，如“民、苹、机、惑、食”，叫不成词语素。通常一个汉字就代表了一个语素，但语素和汉字并不完全对应。大致有以下几种情况：一是一个汉字对应一个语素，如“人、民、走、红、机、三、和、了”； 二是一个汉字包含两个语素，如“俩、仨、甭、瓧、浬、吋”；三是多个汉字对应一个语素，如“玻璃、喇叭、戈壁、沙发、卡通、马拉松、奥林匹克”。</p>
+<h6><span id="2-语素组morpheme-group"> 2. 语素组（morpheme group）</span></h6>
+<p>语素组是语素的组合体。比如“明信片”这个词中，构词成分“明信”就是一个语素组，其内部还包含两个更小的同级单位——语素“明”和语素“信”。词由语素或语素组构成，由一个语素构成的词是单纯词，由多个语素（一个语素组）构成的词是合成词。</p>
+<p>语素组与语素的功能一样，都是用来构词。语素组也有成词的语素组和不成词的语素组之分。如“明信”是不成词语素组，“交响（乐、曲）、向日（葵）、后遗（症）、分水（岭）”也是不成词的语素组；而“计算、研究、多数、前提”则是成词的语素组，除了可以单独构成词以外，还可以跟别的构词成分一起构成词，如“计算机、研究员、大多数、小前提”。其实，所有的片段在成为“词”，即进入造句单位前，都是语素或语素组。如不但“明信片”中的“明信”是语素组，“计算机”中的“计算”是语素组，而且“明信片、计算机”在成为“词”之前，在构词层级也首先是语素组。</p>
+<h6><span id="3-词word"> 3. 词（word）</span></h6>
+<p>从功能上说，词是最小的造句单位；从性质上说，<strong>词是最小的独立运用的语言单位</strong>。所谓“独立运用”是指可以与别的成分临时组合在一起或单独成句。例如在“桌子上有水、他买了一块白布”中的“有”和“水”、“白”和“布”是临时组合在一起，因此各自都是词；但在“这件事很有趣、他买了一棵白菜”中，“有”和“趣”、“白”和“菜”发生固定的组合，因此其中的“有”和“趣”、“白”和“菜”不是词而是语素。所谓“最小”，指词的内部不再包含更小的独立运用单位。“很有趣”与“他”虽也是临时组合，但“很有趣”的内部还包含临时组合的“很”和“有趣”，因此“很有趣”不是词，而是比词大的词组，只有“有趣”才是词。**可见一个成分是否是词，实际上不是单独看这个成分能否独立运用，而是看这个成分是否处在独立运用的实际状态中。**如“有”，在“有水”中处于独立运用的实际状态中，是词；在“有趣”中不处于独立运用的实际状态中，不是词。</p>
+<h6><span id="4-词组word-group-或-phrase"> 4. 词组（word group 或 phrase）</span></h6>
+<p>词组又叫短语，指词与词的组合体。其中既包括实词与实词的组合，如“新书、马上走、速度快、看电视、洗干净、充实提高、去公园玩”等；也包括实词与虚词的组合，如“新的、走了、被他（拿走了）、正确与否”等。</p>
+<p>词组与由两个或多个语素构成的复合词之间很容易相混，汉语语法学界一般根据两个标准来区分词组与复合词：<strong>一是扩展性标准</strong>。词内部的组成成分之间一般不可扩展，而词组内部组成成分之间一般可以扩展。比如“白菜”不能扩展（如“<code>*</code>白的菜”），“肉麻”不能扩展（如“<code>*</code>肉很麻”），应看作词；“白纸”可以扩展（如“白的纸”），“手麻”可以扩展（如“手很麻”），应看作词组。<strong>二是意义透明性标准</strong>。词组的意义是透明的，即整体的意义可以由组成成分的意义推知，而词的意义可能是不透明的，即有的词整体的意义不能由组成成分的意义推知。比如词组“白纸、手麻”的意义是透明的，复合词“白菜、肉麻”的意义是不透明的。但有些词的意义也是透明的，如“兔毛、棉衣”，因此，只能说意义不透明的是词，但不能说意义透明的都是词组。词组与词的功能相同，都是用来造句。</p>
+<h6><span id="5-小句clause"> 5. 小句（clause）</span></h6>
+<p>从功能上说，小句是最小的表达一个独立事件的语言片段；从性质上说，小句是最小的结构上独立的片段。所谓“结构上独立”，指不与其他成分发生结构上的组合关系。例如在“他病了”这句话或“他病了，没有来上课”这句话中的“他病了”，在结构上独立，分别是小句；而在“他病了的事情我知道”这句话中的“他病了”在结构上被一个偏正词组所包含，即是做一个偏正词组的定语，因此不是一个小句，而只是一个词组。</p>
+<h6><span id="6-小句组clause-group"> 6. 小句组（clause group）</span></h6>
+<p>小句组是小句与小句的组合体。如在“他病了，没有来上课，所以不会做这道题”这句话中包含三个小句，但其组合层次是“他病了，没有来上课” + “所以不会做这道题”，其中前一片段由两个小句构成，是一个小句组。再如在“由于第一次上讲堂，心情难免紧张，因此讲话有点结巴，有时竟急得满头大汗”这句话，组合层次是“由于第一次上讲堂，心情难免紧张” + “因此讲话有点结巴，有时竟急得满头大汗”，前后两个片段都是小句组。小句组与小句功能相同，都是用来表意。</p>
+<h6><span id="7-句子sentence"> 7. 句子（sentence）</span></h6>
+<p>句子是最小的独立表达单位。句子都是由小句或小句组直接构成的。如“他病了”是由一个小句构成一个句子，这样的句子是单句；而“他病了，没有来上课，所以不会做这道题”是由多个小句（一个小句组）构成一个句子，这样的句子是复句。</p>
+<p>上面说的这4级7 （8）种语法单位的关系可以图示如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">（7）语法单位层级和类别:</div><div class="line">　 　　　　　　　　　　　　基本单位　　　组合单位</div><div class="line">　 　第一级（构词单位）：　　语素　　→　　语素组</div><div class="line">　 　　　　　　　　　　　　　↓　　　↙</div><div class="line">　 　第二级（造句单位）：　　词　　　→　 　词组</div><div class="line">　 　　　　　　　　　　　　　↓　　　↙</div><div class="line">　 　第三级（表意单位）：　　小句　　→　　小句组</div><div class="line">　 　　　　　　　　　　　　　↓　　　↙</div><div class="line">　 　第四级（表达单位）：　　句子　　→　 （句组）</div></pre></td></tr></table></figure>
+<p>从上面的图可看出，7（8）种语法单位之间的关系概括起来说实际上只有两种：一是“<strong>组成关系</strong>”，即由两个或多个小单位构成一个大单位，如词与词组的关系；二是“<strong>实现关系</strong>”，即一个下级单位身份改变，成为上级单位，如一个语素构成一个词的关系。也就是说这4级7 （8）种语法单位的关系可以横着看，也可以竖着看。横着看，每一级语法单位可以根据数量分为基本单位和组合单位两类，各级语法单位中基本单位分别是“语素、词、小句、句子”，组合单位分别是“语素组、词组、小句组、（句组）”，每一级基本单位和组合单位间的关系就是组成关系。即基本单位是最小单位，其内部不再包含同级的语法单位，而组合单位就是由两个以上基本单位组合成的长度更长的单位。可见这种关系就是“长度可变，但身份不变”。竖着看，每一级语法单位之间，第一级构词单位（语素和语素组）与第二级造句单位（词和词组）之间，第二级造句单位（词和词组）与第三级表意单位（小句和小句组）之间，第三级表意单位（小句和小句组）与第四级表达单位（句子和句组）之间，分别都是实现关系。比如当构词层级的语素或语素组进入更高的造句层级时，其本身成分不发生变化，只是“摇身一变”而实现为“词”，其他每个层级语法单位之间的关系也是如此。可以说这种关系就是“长度不变，但身份改变”。</p>
+<blockquote>
+<p><strong>提示1</strong></p>
+<p>【离合词和不完整词】一般来说，词具有完整性，因此通常不能拆开（扩展），也不能残缺，这就是用扩展法来切分词的依据。但现代汉语中有两种特殊的词的变异形式：一类可以拆开来，如“帮忙”可以拆开，产生“帮了忙、帮什么忙、帮他忙、帮大忙、这个忙不能帮”等分离形式，这样的词叫离合词；另一类可以残缺，如“喜不喜欢”中第一个“喜”是“喜欢”的残缺形式，“动植物”中的“动”是“动物”的残缺形式，“大到暴雨”中的“大”是“大雨” 残缺形式，这类词叫不完整词。</p>
+</blockquote>
+<h4><span id="四-语法结构的基本类型"> 四、语法结构的基本类型</span></h4>
+<p>由两个或两个以上的词构成的片段叫做语法结构，简称“结构”。语法结构可以是词组，也可以形成句子，或者说各种语法结构在最终实现为句子之前都是词组。</p>
+<p>不同的语法结构的组成成分之间可以形成不同的结构关系，如例（8）。有时一个语法结构可以有不同的结构关系（即语法关系），从而产生歧义，如例（9）。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">（8）a. 新衣服　（修饰关系）　　b. 洗衣服（支配关系）</div><div class="line">　 　c. 衣服干净（陈述关系）　　d. 洗干净（补充关系）</div><div class="line"></div><div class="line">（9）a. 阅读课文（支配/修饰）　 b. 解释清楚（陈述/补充）</div></pre></td></tr></table></figure>
+<p>根据不同的结构关系，可以把语法结构分为不同的类型。其中偏正结构、述宾结构、述补结构、主谓结构、联合结构和复谓结构是最基本的语法结构类型。</p>
+<h4><span id="1-偏正结构"> 1. 偏正结构</span></h4>
+<p>组成成分为修饰关系的结构是偏正结构。偏正结构有两类，一是定中偏正结构，二是状中偏正结构。定中偏正结构和状中偏正结构的区别主要在形式特点和表义方式上，后者是根本区别，即指称性的偏正结构是定中结构，陈述性的偏正结构是状中结构。定中偏正结构中的修饰语叫定语，状中偏正结构中的修饰语叫状语。</p>
+<p>定中偏正结构，简称“定中结构”。其特点是：从组成成分看，由两个组成成分构成。从结构关系看，组成成分之间是修饰关系，前一成分修饰后一成分，前一成分是修饰语（定语），后一成分是中心语。从形式特征看，两个组成成分之间一般带助词“的”或可加上“的”。从结构核心看，中心语基本决定了整个结构的语法性质和语义，是结构的核心成分。从表义方式看，结构整体表示指称，即指出一个对象。定语同中心语在意义上的联系是多种多样的。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">（10）a. 新/衣服　　　红/布　　　　伟大的/祖国　　　（属性）</div><div class="line">　  　b. 木头/房子　　塑料/椅子　　布的/衣服　　　　（质料）</div><div class="line">　  　c. 我们/学校　　小王/哥哥　　他的/书　　　　　（领属）</div><div class="line">　  　d. 雪白的/墙　　厚厚的/被子　干干净净的/衣服　（状态）</div><div class="line">　  　e. 我买的/书　　买书的/人　　迟到的/学生　　　（描写性分类）</div><div class="line">　  　f. 一支/笔　　　两斤/菜　　　一碗/水　　　　　（数量）</div><div class="line">　  　g. 桌子/上　　　医院/里　　　学校的/旁边　　　（方位参照）</div></pre></td></tr></table></figure>
+<p>状中偏正结构，简称“状中结构”。其特点是：从组成成分看，由两个组成成分构成。从结构关系看，组成成分之间是修饰关系，前一成分修饰后一成分，前一成分是修饰语（状语），后一成分是中心语。从形式特征看，两个组成成分之间有时带助词“地”或可加上“地”。从结构核心看，中心语是整个结构的核心。从表义方式看，结构整体表示陈述，即表达一个断言，也就是词语对另外一个对象有所断言。状语同中心语在意义上的联系也是多种多样的。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">（11）a. 热烈/欢迎　　慢慢地/走　　全速/前进　　（方式）</div><div class="line">　  　b. 马上/出发　　刚/来　　　　巳经/到达　　（时间）</div><div class="line">　  　C. 非常/伟大　　很/干净　　　最/珍贵　　　（程度）</div><div class="line">　  　d. 不/同意　　　没/看见　　　别/着急　　　（否定）</div><div class="line">　  　e. 都/知道　　　只/吃苹果　　另外/找人　　（范围）</div><div class="line">　  　f. 也许/知道　　大概/没人　　准/来　　　　（情态）</div><div class="line">　  　g. 实在/不行　　到底/来了　　简直/不像话</div></pre></td></tr></table></figure>
+<h6><span id="2-述宾结构"> 2. 述宾结构</span></h6>
+<p>组成成分之间为支配关系的结构是述宾结构。述宾结构的特点是：从组成成分看，由两个组成成分构成。从结构关系看，组成成分之间是支配关系，前一成分支配后一成分。前一成分是述语，后一成分是宾语。从形式特征看，组成成分之间一般带有或可加上助词“了、着、过”；一般可形成正反问格式“V不/没VO”（V代表述语，O代表宾语）。从结构核心看，述语是整个结构的核心。从表义方式看，结构整体表示陈述。述语同宾语的语义关系是多种多样的。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">（12）a. 洗/衣服　看/电视　　吃/苹果　　　（受事）</div><div class="line">　  　b. 盖/房子　写/小说　　做/饭　　　　（结果）</div><div class="line">　  　c. 来/客人　住/人　　　飞着/一只鸟　（施事）</div><div class="line">　  　d. 给/他　　送/同学　　借/他　　　　（与事）</div><div class="line">　  　e. 写/毛笔　照/镜子　　坐/沙发　　　（工具）</div><div class="line">　  　f. 浇/水　　烧/煤　　　擦/油　　　　（材料）</div><div class="line">　  　g. 去/学校　坐/地上　　进/房间　　　（处所）</div><div class="line">　  　h. 考/大学　挤/汽车　　跑/买卖　　　（目的）</div><div class="line">　  　i. 吃/食堂　走/钢丝　　踢/后卫　　　（方式）</div><div class="line">　  　j. 是/小王　当/代表　　像/大人　　　（系事）</div><div class="line">　  　k. 同意/去　喜欢/下棋　认为/不错　　（内容）</div></pre></td></tr></table></figure>
+<h6><span id="3-述补结构"> 3. 述补结构</span></h6>
+<p>组成成分之间为补充关系的结构是述补结构。述补结构的特点是：从组成成分看，由两个组成成分构成。从结构关系看，组成成分之间是补充关系，前一成分是表示行为动作或性质状态的成分，后一成分补充说明这一行为动作、性质状态所达到的结果。前一成分是述语，后一成分是补语。从形式特征看，两个组成成分之间已有或能插入“得”。从结构核心看，述语是核心成分。从表义方式看，结构整体表示陈述。从语义上看，补语都是述语表达的行为、状态的结果，但表达结果的方式有不同。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">（13）a. 洗/干净　　　　擦/干净　　　　洗/破　　　（一般结果）</div><div class="line">　  　b. 走/来　　　　　放/下去　　　　递/上来　　（趋向结果）</div><div class="line">　  　c. 洗得/干净　　　洗/不干净　　　吃得/完　　（结果的情态）</div><div class="line">　  　d. 洗得/干干净净　洗得/手都酸了　热得/出汗　（描写性结果）</div><div class="line">　  　e. 好/极（了）　　热/死（了）　　坏得/很　　（程度性结果）</div></pre></td></tr></table></figure>
+<h6><span id="4-主谓结构"> 4. 主谓结构</span></h6>
+<p>组成成分之间为陈述关系的结构是主谓结构。主谓结构的特点是：从组成成分看，由两个组成成分构成。从结构关系看，组成成分之间是陈述关系，前一成分是话题，后一成分是对话题的陈述，前一成分是主语，后一成分是谓语。从形式特征看，两个组成成分之间可插入表示疑问的“是不是”。从结构核心看，谓语是整个结构的核心。从表义方式看，结构整体表示陈述。主语和谓语之间的语义关系也是多种多样的。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">（14）a. 我/去学校　　　小王/休息　　　（施事）</div><div class="line">　  　b. 衣服/干净　　　脸/圆圆的　　　（当事）</div><div class="line">　  　c. 明天/都休息　　今天/阴天　　　（时间）</div><div class="line">　  　d. 教室里/有人　　外面/很冷　　　（处所）</div><div class="line">　  　e. 自行车/修好了　衣服/洗了　　　（受事）</div><div class="line">　  　f. 这把刀/切菜　　风/把门吹开了　（工具/动力）</div><div class="line">　  　g. 走/不合适　　　虚心/使人进步　（动作/属性）</div></pre></td></tr></table></figure>
+<h6><span id="5-联合结构"> 5. 联合结构</span></h6>
+<p>组成成分之间为并列或选择关系的结构是联合结构。联合结构的特点是：从组成成分看，由两个或两个以上的组成成分构成。从结构关系看，组成成分之间是并列或选择关系，组成成分的顺序从语法上说可任意变化。从形式特征看，组成成分之间可插入“和、与、及、或”等连词。从结构核心看，组成成分没有主次之分。从表义方式看，结构整体有的表7K指称，有的表7K陈述，取决于组成成分本身是指称性的还是陈述性的。下面是联合结构的例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">（15）a. 老师/和/学生　　　黄河/长江/珠江</div><div class="line">　  　b. 朴素/而大方 　　　勤劳/勇敢</div><div class="line">　  　C. 讨论/并通过 　　　巩固/充实/提高</div><div class="line">　  　d. 又多/又快　 　　　既节省/又干净</div><div class="line">　  　e. 小刘/或小王 　　　好/不好</div></pre></td></tr></table></figure>
+<h6><span id="6-复谓结构"> 6. 复谓结构</span></h6>
+<p>有时动词、形容词、状态词等谓词性成分连续出现而不构成上述五种结构<br>
+（偏正、述宾、述补、主谓、联合），这样的结构叫复谓结构。复谓结构的特点是：从组成成分的数量看，递系式、连环式和表示方式、目的、因果关系等的复谓结构只有两个组成成分，表示连贯关系的复谓结构可以有三个甚至更多的组成成分。从结构关系看，复谓结构是一种成分连用的结构，但又不形成明显的结构关系。从结构核心看，复谓结构有的核心在后（笑着说、出去买菜、打球扭了腰），有的核心在前（劝他离开、借书看），有的没有主次之分（站起来走过去打开门）。从表义方式看，复谓结构表义陈述。总的来看，复谓结构内部形式和语义的特点都不统一。下面是复谓结构的例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">（16）a. 笑着/说　　（方式）　　出去/买菜 　　　　　　（目的）</div><div class="line">　  　b. 打球/扭了腰（目的）　　站起来/走过去/打开门　（连贯）</div><div class="line">　  　C. 劝他/离开　　　　　　　让我/生气</div><div class="line">　  　   买糖/吃　　　　　　　　借书/看 　　　　　　　（递系式）</div><div class="line">　  　d. 越说/越高兴　　　　　　不看/不知道</div><div class="line">　  　   一说/就笑　　　　　　　非去/不可 　　　　　　（连环式）</div></pre></td></tr></table></figure>
+<p>上面六种由实词性成分相互组合构成的基本句法中的组成成分统称为句法成分，包括主语、谓语、述语<sub>1</sub>（〜宾）、宾语、述语<sub>2</sub>（〜补）、补语、定语、中心语<sub>1</sub>（定〜）、状语、中心语<sub>2</sub> （状〜）以及联合结构的组成成分、复谓结构的组成成分。</p>
+<blockquote>
+<p><strong>提示2</strong></p>
+<p>【虚词结构】上面提到的六种基本句法结构都是实词相互组合而形成的结构。除此之外，还有实词与虚词组合形成的虚词结构。其中重要的虚词结构有介词结构和“的”字结构。介词结构的构成是“介词+宾语”，如“对我、把书、向南”，介词结构一般不独立使用，而是做状语、补语或加“的”做定语。“的”字结构是由“实词性成分+的<sub>3</sub>”构成，“的<sub>3</sub>”是定语标记，如“我的、红的、吃的、卖菜的”。“的”字结构的主要功能是做定语，也能在语义转指的情况下做主宾语。</p>
+</blockquote>
+<h4><span id="五-语法结构的层次分析"> 五、语法结构的层次分析</span></h4>
+<p>上述各类语法结构中，按最小组合来看，除联合结构和部分复谓结构外，都只有两个词，而这两个词都是直接组合在一起的。但如果一个语法结构包含两个以上的词，一般情况下，这些词就并不是直接组合在一起的。对于由多个词组成的复杂词组，就需要了解结构的层次性，对这种结构的构造形式就需要采用“层次分析法”。</p>
+<h5><span id="一语法结构的层次性和层次分析法"> （一）语法结构的层次性和层次分析法</span></h5>
+<p>述宾词组“穿新衣服”有三个词，其中“穿”与“新衣服”发生直接联系，“新”与“衣服”发生直接联系；而述宾词组“穿完衣服”也有三个词，则是“穿完”与“衣服”发生直接联系，“穿”与“完”发生直接联系。这些结构中相邻成分并不一定发生直接联系，如“穿”与“新”没有直接联系，“完”与“衣服”没有直接联系。有些结构中，发生直接联系的成分有不同，如“穿好衣服”既可能与“穿新衣服”结构相同，也可能与“穿完衣服”结构相同，由此会造成歧义。可见，尽管语法结构中词都是线性排列的，但相邻的两个词不一定直接联系，而是有层次地发生联系。也就是说，语法结构中的词是有层次地组合在一起的，语法结构的这种性质就是语法结构的层次性。语法结构中发生直接联系的成分叫“<strong>直接组成成分</strong>”（immediate constituent），简称“<strong>直接成分</strong>”。比如在“穿新衣服”中“穿”和“新衣服”是第一层次的一对直接成分，“新”和“衣服”是第二层次的一对直接成分。</p>
+<p>既然语法结构有层次性，在分析语法结构的构造时，就可以按照语法结构本身的层次对其构造进行分析，找出各个层次上的直接成分，这种分析语法结构的方法叫“<strong>层次分析法</strong>”或“<strong>直接成分分析法</strong>（immediate constituent analysis）”。</p>
+<p>层次分析法可以跟结构关系分析结合起来。对语法结构进行分析，具体手续有两个：一是找出语法结构中不同层次上的直接成分。完整的分析要分析到词为止，有时根据需要也可以只分析语法结构中的部分层次。直接成分用半框形线条在下面标出；有时也可以用斜线或竖线在两个直接成分之间标出，如“穿/新衣服”“穿完/衣服”。二是注明直接成分间的结构关系。通常用结构关系的简称标明，由于虚词不充任句法成分，如果结构中有助词、语气词、连词、介词，则直接用虚词词类简称标出直接成分。例如下面的几个例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">（17）   &lt; 穿   新   衣   服 &gt;</div><div class="line">　  　   | 述 + 　   宾   　 |</div><div class="line">　  　     　 | 定 + 　 中   |</div><div class="line"></div><div class="line">　  　   &lt; 穿   完   衣   服 &gt;</div><div class="line">　  　   | 　 述   + 　 宾   |</div><div class="line">　  　   | 述 + 补 |</div><div class="line"></div><div class="line">　  　   &lt; 穿   好   衣   服 &gt;</div><div class="line">　  　a. | 述 + 　   宾   　 |</div><div class="line">　  　     　 | 定 + 　 中   |</div><div class="line"></div><div class="line">　  　b. | 　 述   + 　 宾   |</div><div class="line">　  　   | 述 + 补 |</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">（18）   &lt; 狐火   是   生物体   发光   的   一   种   自然   现象。&gt;</div><div class="line">　  　   | 主　+  　   　　　   　　   谓   　   　   　　   　　　|</div><div class="line">　  　     　　|  述 + 　　　   　　   　   宾   　   　　   　　　|</div><div class="line">　  　     　　   　 | 　　　   　　 + 助 |   定  　+ 　　 中  　　|</div><div class="line">　  　     　　   　 | 　主　 +　谓  | 　 | 定 + 中 |  定　+ 　中　|</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">（19）   &lt; 适度   的   体育   锻炼   对   健康   很   有   益处。&gt;</div><div class="line">　  　   | 　　   　  主 　   　　 + 　   　　    谓    　 　　　|</div><div class="line">　  　   | 　  定 　 + 　  中 　　 | 　  状 　 +  　    中 　　　|</div><div class="line">　  　   | 　　 + 助 |  定　+　中  | 介 +　宾  | 状 + 　  中 　　|</div><div class="line">　  　     　　   　   　　   　　   　   　　   　 | 述 + 　宾　|</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">（19）   &lt; 我   和   哥哥   特别   爱   看   你们   的   杂志。&gt;</div><div class="line">　  　   | 　    主  　　 + 　　   　   　   谓　   　   　　　|</div><div class="line">　  　   | 联 + 连 +　合  |  状　+ 　   　   　 中  　   　　　|</div><div class="line">　  　     　   　   　　   　　 | 述 + 　   　　  宾    　　　|</div><div class="line">　  　     　   　   　　   　　   　 | 述 + 　　    宾  　　　|</div><div class="line">　  　     　   　   　　   　　   　   　 |　  定  　 + 　中　|</div><div class="line">　  　     　   　   　　   　　   　   　 | 　　 + 助 |</div></pre></td></tr></table></figure>
+<h5><span id="二层次分析的原则"> （二）层次分析的原则</span></h5>
+<p>语法结构具有的层次性各不相同，在分析语法结构的层次时，依据什么这样分析而不那样分析呢？<mark>划分层次构造，应遵守<strong>四个原则</strong></mark>。</p>
+<p><strong>一是结构原则</strong>，即每一层次上的每一直接成分本身应成立。若有“abed”四个成分，如果把“ab”划在一起，“cd”划在一起，那么“ab”和“cd”本身应是可以说的。但下面例（21）的分析中，第一种切分得到的直接成分“三下门”不成立，因此第一种切分不能釆用。第二种切分得到的直接成分“敲了三下”可以说，“门”是一个词，天然成立，因此应采用第二种切分。比较：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">（21）   &lt; 敲   了   三下   门 &gt;</div><div class="line">　①  *  | 　   　 | 　　   　 |　（“敲了”可以说，但“三下门”不能说）</div><div class="line">　②     | 　   　   　　 | 　 |</div></pre></td></tr></table></figure>
+<p>再如下面例（22）的第一种切分得到的直接成分“很有”不能说<!--额，感觉不太对啊-->，因此不宜采用第一种切分。第二种切分得到的直接成分“有经验”能说，“很”是一个词，因此应采用第二种切分。比较：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">（22）   &lt; 很   有   经验 &gt;</div><div class="line">　①  *  | 　   　 | 　　 |　（“经验”可以说，但“很有”不能说）</div><div class="line">　②     | 　 | 　   　　 |</div></pre></td></tr></table></figure>
+<p><strong>二是组合原则</strong>，即每一层次上的直接成分之间应有相互组合的能力。若有“abcd”四个成分，如果把“ab”划在一起，“cd”划在一起，那么“ab”与“cd”应搭配。下面例（23）第一种切分是数量词“一所”修饰名词“学生”，“一所”和“学生”不搭配，因此第一种切分不能采用。第二种切分得到“一所”修饰名词“医学院”，两者可以搭配，因此应釆用第二种切分。比较：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">（23）   &lt; 一所   医学院   的   学生 &gt;</div><div class="line">　①  *  | 　　 | 　　　   　   　　 |　（“一所”与“学生”不能组合）</div><div class="line">　②     | 　　   　　　   　 | 　　 |</div></pre></td></tr></table></figure>
+<p>再如下面例（24）第一种切分得到的结果是副词“最”修饰名词“诗人”，而事实上两者不能搭配。第二种切分中副词“最”修饰形容词“伟大”，两者可搭配，因此应釆用第二种切分。比较：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">（24）   &lt; 最   伟大的   诗人 &gt;</div><div class="line">　①  *  | 　 | 　　　   　　 |　（“最”与“诗人”不能组合）</div><div class="line">　②     | 　   　　　 | 　　 |</div></pre></td></tr></table></figure>
+<p><strong>三是意义原则</strong>，即层次分析应不违反原义。下面例（25）第一种切分得到“中国最伟大”的结果，违反原义。第二种切分中“中国”是“诗人”的领属性定语，不违反原义，可以采用。比较：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">（25）   &lt; 中国   最伟大   的   诗人 &gt;</div><div class="line">　①  *  | 　　   　　　   　 | 　　 |</div><div class="line">　　     | 　　   　　　 | 　 |</div><div class="line">　　     | 　　 | 　　　 | 　   　　  　（得到“中国最伟大”，违反原义）</div><div class="line">　②     | 　　 | 　　　   　   　　 |</div></pre></td></tr></table></figure>
+<p>再如下面例（26）第一种切分中，“只”只管到“买”，违反原义。第二种切分“只”管辖到“买一本书”，“只”在语义上约束的对象“一本书”在其管辖范围内，不违反原义，可以采用。<!--额，感觉还可以跨越“买”字来管辖“一本”啊-->比较：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">（26）   &lt; 只   买   一本书 &gt;</div><div class="line">　①  *  | 　   　 | 　　　 |</div><div class="line">　　     | 　 | 　 | 　　　  　（“只”不能管辖“一本书”，违反原义）</div><div class="line">　②     | 　 | 　   　　　 |</div></pre></td></tr></table></figure>
+<p><strong>四是系统原则</strong>，即以整个系统的规律为层次划分的依据。当某个结构的层次有两种可能的层次划分时，要做系统比较，选择适应面更广的划分。如例（27）“父亲的父亲的父亲”有两种可能切分。可找一些与之在结构上和语义类型上相同，但包含词语不同的同类结构进行比较。比如比较例（28）可以发现，第一种切分化简会得到“父亲的学生”“我的朋友”，违反原义。第二种切分不违反原义，可以采用。因此尽管无法直接判断“父亲的父亲的父亲”釆取第一种切分是否合适，但按照系统原则，“父亲的父亲的父亲”也应按第二种切分来分析。比较：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">（27）   &lt; 父亲的   父亲的   父亲 &gt;</div><div class="line">　①  *  | 　　　 | 　　　   　　 |</div><div class="line">　②     | 　　　   　　　 | 　　 |</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">（28）   &lt; 父亲的   同学的   学生 &gt;</div><div class="line">　①  *  | 　　　 | 　　　   　　 |　（违反原义）</div><div class="line">　②     | 　　　   　　　 | 　　 |</div><div class="line"></div><div class="line">　  　   &lt; 我　的   哥哥的   朋友 &gt;</div><div class="line">　①  *  | 　　　 | 　　　   　　 |　（违反原义）</div><div class="line">　②     | 　　　   　　　 | 　　 |</div></pre></td></tr></table></figure>
+<p>再如例（29）“他洗衣服”可以有两种切分。第一种切分虽不违反前面说的三项原则，但比较例（30）的其他结构，可以看到，有些“主+动+宾”结构由于“主+动”不成立，因此第一种切分违反了结构原则。所以按照系统原则，其他“主+动+宾”结构也应釆取第二种切分。比较：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">（29）   &lt; 他   洗   衣服 &gt;</div><div class="line">　①  *  | 　   　 | 　　 |</div><div class="line">　②     | 　 | 　   　　 |</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">（30）   &lt; 他   属于   好学生 &gt;</div><div class="line">　①  *  | 　   　　 | 　　　 |　（违反结构原则：“他属于”不成立）</div><div class="line">　②     | 　 | 　　   　　　 |</div></pre></td></tr></table></figure>
+<p>又如例（31）“认真学习语法”也有两种切分，第一种切分似乎不违反前面说的三项原则。但比较其他“状语+动词+宾语”结构，按照系统原则，“认真学习语法”也应采取第二种切分。比较：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">（31）   &lt; 认真   学习   语法 &gt;</div><div class="line">　①  *  | 　　   　　 | 　　 |</div><div class="line">　②     | 　　 | 　　 |</div><div class="line"></div><div class="line">（32）   &lt; 只   买   一本书 &gt;</div><div class="line">　①  *  | 　   　 | 　　　 |　（“只”不能管辖“一本书”，违反原义）</div><div class="line">　②     | 　 | 　   　　　 |</div></pre></td></tr></table></figure>
+<p>上述四条原则是层次分析的基本原则，但毕竟语法现象很复杂，这些原则只是常规情况，有可能会碰到一些例外。如“发我三本书可以变换为“发了我一共三本书”，因为“我一共三本书”不成立，所以整个结构应分析为“发我/一共三本书”，但直接成分“发我”又好像不能单独成立。这说明，<mark><u>层次分析的四条原则还不足以覆盖所有的情况，因此不能机械地套用这四条原则，而应从语言事实出发，全面考虑各种因素，寻找最好的层次切分方案</u></mark>。</p>
+<blockquote>
+<p><strong>提示3</strong></p>
+<p>【中心词分析法】中心词分析法是不同于层次分析法的另一种句法分析方法。其做法是首先把句子分析出主语部分和谓语部分，然后在一个层次上分别找出各个句子成分，从而把句子结构分解为句子成分，所以又叫句子成分分析法。下面是一个中心词分析法的实例：</p>
+<blockquote>
+<p>（我）的　<u><strong>同学</strong></u>｜［已经］<u>写</u>〈完〉了（今天）的　<u>作业</u><br>
+　定　　　主　　　状　　谓　补　　　定　　　　宾</p>
+</blockquote>
+<p>中心词分析法虽然有简便、易于抓住句子主干的优点，但由于层次性是句法结构的基本性质，而中心词分析法对句法结构层次性的分析不完整，在揭示句法构造时不够彻底，因此本教材不釆取中心词分析法。</p>
+</blockquote>
+<h4><span id="思考和练习"> 思考和练习</span></h4>
+<ol>
+<li>什么是语法？为什么说构词造句有限制？语法体现在哪些方面？</li>
+<li>现代汉语主要可以分为哪两个历史层次？两个层次的差异主要表现在哪些方面？</li>
+<li>在现代汉语语料中找至少3例非常规语法现象，并分析说明使用的特殊条件和表义作用。</li>
+<li>什么是语法单位？汉语语法单位可以分为哪几个，各自的性质是什么？不同语法单位之间的关系如何？</li>
+<li>切分下列例子中包含的语素和词（用 “<u>  </u>”切分语素，“/”切分词，如：<u>他</u>/<u>不</u>/<u>喜</u><u>欢</u>/<u>吃</u>/<u>葡萄</u>）:<br>
+a. 学开摩托车　　　　　　　　b. 我买了一条漂亮的裙子<br>
+c. 把苹果皮扔进垃圾箱　　　　d. 我有俩哥哥<br>
+e. 咳嗽释放的爆炸性空气的速度最高可达每小时96.56公里</li>
+<li>词组根据语法关系的不同可以分为哪些基本类型？各有什么形式特点和语义特点？自行设计一个图表，比较说明主谓、偏正、述宾、述补、联合和复谓等语法结构的特点。</li>
+<li>指出下列各语法结构的所属类型：<br>
+我们学校　　贯彻执行　　长得很高　　增加投入<br>
+生产效率　　生产粮食　　阅读课文　　历史研究<br>
+进行调查　　学习文件　　浙江绍兴　　要求参加<br>
+完全不行　　应该参加　　研究方法　　马上出发<br>
+今天晴天　　高兴得很　　我看的书　　说不清楚<br>
+一件小事　　一件不剩　　屋里很冷　　没有吃饭<br>
+两个酸的　　长期合同　　认为很好　　踮着脚走<br>
+工作积极　　抓住不放　　经济建设　　打扫干净</li>
+<li>用层次分析法分析下列句法结构：<br>
+a. 他知道那件事　　　　　　　　　b. 我知道的那件事<br>
+c. 你马上出发去借书　　　　　　　d. 我先后去了广州和深圳<br>
+e. 远处是一片草地　　　　　　　　f. 我们最敬重的客人到了<br>
+g. 我们最尊贵的客人到了　　　　　h. 我们最幸福的时刻到了<br>
+i. 他不知道那位同学买没买香蕉<br>
+j. 他不认识的那位同学买没买香蕉</li>
+<li>“解释很清楚”“说清楚”和“解释清楚”分别是什么类型的语法结构？为什么？</li>
+</ol>
+<h3><span id="第二节-词类"> 第二节 词类</span></h3>
+<h4><span id="本节学习要点"> 本节学习要点</span></h4>
+<ol>
+<li>语法位置对词有选择限制，为了说明语法规则，需要对词从语法上进行分类。</li>
+<li>划分词类的依据是语法功能，词义与词的语法分类并不完全对应，不能作为划分词类的依据，但不同词类也有语义上的基础。</li>
+<li>兼有两种或以上词类归属的词是兼类词，分为同义兼类词和异义兼类词；兼类词要与词的多功能性、异类同音词、词类活用等区分开。</li>
+<li>掌握各类词的基本语法特点和语义特点，可以判断词的词类属性。</li>
+<li>词类既有个性，又有共性，由此形成不同层级的词类。其中“实词—虚词”“谓词—体词—饰词”的划分尤为重要。</li>
+</ol>
+<p>语句是由词构成的，不同的词在构成句子时起着不同的作用，根据词在造句中的作用把词分成不同的词类是语法研究中一项很重要的工作。</p>
+<h4><span id="一-词类划分"> 一、词类划分</span></h4>
+<p>词类是词的语法分类，即根据词的语法作用所做的分类。本节先就词类划分的一般问题进行说明。</p>
+<h5><span id="一划分洞类的必要性"> （一）划分洞类的必要性</span></h5>
+<p>除独词句外，大多数句子都是由词与词相互组合构成的。组合中的词与其直接成分形成了一定的语法关系，由此形成不同位置，如在主谓结构中形成了主语和谓语两个位置，在述宾结构中形成了述语和宾语两个位置。这些由语法关系规定的直接成分的位置叫做语法位置。主语、谓语、述语、宾语、修饰语、中心语等这样的语法位置是较为概括的语法位置，每一种语法位置还可以细分为更具体的语法位置。如修饰语还可以分为定语和状语，定语内部还可以分为数量定语、领属定语、指示定语、属性定语、数定语等。</p>
+<p>每个词实际上都占据一定的语法位置，而不同的词占据语法位置的能力可能有不同。之所以不同词占据语法位置的能力有不同，是因为词本身在语法性质上的差异。为了说明词组合成句的规则，就有必要根据词本身语法性质的差异把词分成不同的类。看下面的例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">（1）   &lt; 这   一   个   大   苹果 &gt;</div><div class="line">　 　   | a　| 　   　 b 　   　　 |</div><div class="line">　 　      　| 　 c 　 | 　  d　　 |</div><div class="line">　 　      　|　e | f　|　g  |　h　|</div></pre></td></tr></table></figure>
+<p>在例（1）中由词的组合形成的语法位置有“a、b、c、d、e、f、g、h”共八个，其中“a、c、e、f、g、h”六个位置上可以由单词占据：a位置可由“这、那、每、某、任何、另”等词占据，c位置可由“俩、仨、许多、一切、所有”等词占据，e位置可由“一、两、十、半、几”等词占据，f位置可由“个、块、台、辆、斤”等词占据，g位置可由“大、小、红、绿、干净、新”等词占据，h位置可由“苹果、石头、书、衣服、汽车”等词占据。换个角度看，语法位置对能进入的词有选择限制：选择一部分词进入，排斥另一部分词进入。比如a位置上可选择“这、那、每、某、任何、另”等词，但排斥c位置的“俩、仨、许多、一切、所有”、e位置的“一、两、十、半、几”、f位置的“个、块、台、辆、斤”、g位置的“大、小、红、绿、干净、新”、h位置的“苹果、石头、书、电脑、汽车”等词进入。可见词在语法性质上存在着差异，而句子又是由这些存在语法性质差异的词按照一定的顺序组合起来的，为了说明语法规则，就有必要根据词在语法性质上的差异把词分成不同的词类。</p>
+<h5><span id="二划分词类的依据"> （二）划分词类的依据</span></h5>
+<p>分类需要以某方面的特征为依据，词类划分的依据是什么呢？</p>
+<p>有些语言，如意大利语、俄语，有丰富的形态，因此可借助词的形态来划分词类，但汉语的词没有成系统的形态差异，便无法据此划分词类。一般常说，名词表示事物，动词表示行为动作，形容词表示性质和状态，似乎词类是根据词的意义划分出来的，但实际上汉语也不能根据意义划分词类。有两个原因：一方面，词的意义不能明确观察到，因而难以明确把握。划类应以可明确观察的特征为依据。另一方面，词的语法性质与词的意义并不完全对应。比如“成功”和“胜利”是同义词，但“成功”除了可做谓语外，还可以受“很”等程度副词修饰，“胜利”可以做谓语但不可受“很”修饰，所以“成功”是形容词，而“胜利”是动词。“突然”和“忽然”也是同义词，而且都可做状语，但“突然”还可受“很”等程度副词修饰，而“忽然”不可以，所以“突然”是形容词，而“忽然”是副词。</p>
+<p>汉语划分词类主要根据词的语法功能，即词占据某些语法位置的能力。这包括两个方面：一是充任句法成分的能力。句法成分指六种基本语法结构中的直接成分，如主语、宾语、定语等。二是与别的词或短语组合的能力。如能否受“不、很”修饰等。以形容词为例，如果一个词可以受“很”等程度副词修饰，不能做宾语，那么基本可以断定这个词属于形容词，如“干净、伟大、痛、脏”。之所以可以根据词的语法功能划分词类，是因为语法功能反映了词的语法性质，而且是可以明确观察的。</p>
+<p>虽然不能根据词的意义划分汉语的词类，但词的意义在判断词的词类归属时还是有引导作用。比如表示动作的词一般是动词，这就可以引导我们首先用动词的语法功能标准去测试，而不必把所有词类的标准都拿来测试。而且还应承认，不同的词类有不同的语义基础。比如名词表示指称性的实体，动词表示陈述性的行为动作，形容词表示陈述性的属性，状态词表示陈迷性的状态，位置词（时间词、处所词、方位词）表示指称性的位置，量词表示指称性的计量单位，数词表示修饰性的数值，数量词表示修饰性的数量，区别词表示修饰性的属性，指示词表示修饰性的指示，虚词表示辅助性意义：因此可以利用词义来帮助判断词类。</p>
+<h5><span id="三划分词类的基本原则"> （三）划分词类的基本原则</span></h5>
+<p>在进行词类划分的操作时，应遵守以下两个基本原则：</p>
+<p>一是同一性原则，即应以概括词为划分词类的单位。也就是说，划分词类的单位是经过归并以后的单位，而归并的标准就是音义的同一性。同一性原则要求在划分词类时，具有同一性的词，即一个概括词，应作为一个单位，不具有同一性的词，即不同概括词应作为不同单位分别考察其语法功能以判断词类归属。如“学习汉语、学习时间、学习重要”中的“学习”虽然语法功能不同，但这三个“学习”在音义上具有同一性，因此应作为一个单位看待，不能看作兼类词。而在“一把锁”和“锁门”中，“锁”的意义不同，前者指一种工具，后者指一种行为，因此应分为不同单位分别考察其语法功能，由于语法功能的不同，应分别归为名词和动词。</p>
+<p>二是系统性原则，即对于具有同一性的单位来说，如果某种语法功能在某一词类中很常见，这种语法功能在这个词类中就具有系统性。此时不应把这种具有系统性的语法功能看作兼其他词类。如果某种语法功能在某一词类中不具有系统性，那么可以把这种语法功能看作另一词类的功能，从而把这个词看作兼类词。比如“木头、天气、语言”等可直接做定语的名词在名词中占到70%左右，做定语在名词中具有系统性，就不能把做定语看作形容词的功能而认为这些词兼属名词和形容词。而“区别、讽剌、持续”等可以直接做状语的词在动词中很少，因此做状语在动词中不具有系统性，这些词做状语的功能可看作副词的功能，这时才把这些词看作动词兼副词。之所以提出系统性原则，是考虑到分类的基本原则。分类就是要把不同的对象分别开，分出的类的成员应该大部分不兼属。如果分出的两个类的成员全部或多数是重合的，那么这样的分类就不合适，应该合并为同一个类。</p>
+<h5><span id="四词的兼类"> （四）词的兼类</span></h5>
+<p>即使划分了词类，有时有些词的归类仍然不是很明确，即有些词从语法功能看是跨类的，这种兼属两类或以上词类的词叫做兼类词。</p>
+<p>划分词类是以概括词为单位。根据是否在意义上属于同一个概括词，把兼类词分为两种：一种是异义兼类词，指多义词的不同义项属于不同的词类。如“学<u>科学</u>”（名词）和“很<u>科学</u>”（形容词），“回答很<u>干脆</u>”（形容词）和“我<u>干脆</u>不去了”（副词）。另一种是同义兼类词，指同一义项兼属不同的词类。如“<u>共同</u>利益”（区别词）和“<u>共同</u>繁荣”（副词）、“一<u>小时</u>活动时间”（量词）和“一个<u>小时</u>”（名词）。异义兼类词是根据同一性原则划分出来的，即某个词的不同用法不具有同一性，属于不同的概括词，因此须作为不同单位确定词类。同义兼类词是根据系统性原则划分出来的，即当某项语法功能对于某类词没有系统性时，可看作兼另一类词。</p>
+<p>兼类词要与三种现象区别开，一是词类的多功能现象不等于兼类，二是词的多类同音现象不等于兼类，三是词的活用现象不等于兼类。</p>
+<p>词类的多功能现象指某个词类具有多种语法功能，并且这些功能具有系统性，不能看作兼类。如动词做主语或宾语在动词中具有系统性，不能看作兼名词。这里需要掌握两个标准：一是看不同位置的词是否具有同一性，不具有同一性则看作异义兼类词，如“科学、干脆”；二是看不同的功能是否具有系统性，具有系统性的功能不看作兼类，不具有系统性的功能则可看作兼类，如“共同、小时”。因为作为区别词又能做状语的极少，作为副词同时又能做定语的也极少，因此区别词做状语不具有系统性，副词做定语不具有系统性，可处理成区别词和副词的兼类。名词一般不能受数词直接修饰，量词一般不能受数量词组的修饰，而“小时”既能受数词直接修饰，又能受数量词组修饰，因此可看作量词和名词的兼类。</p>
+<p>词的多类同音现象是指某些词词形相同，读音相同，但意义无联系的情况。比如“会”有动词（<u>会</u>下雨）和名词（开一个<u>会</u>）两种词类，“制服”有动词（<u>制服</u>了敌人）和名词（一套<u>制服</u>）两种词类，但都不是兼类词，而是同音词。异义兼类词是一个多义词的不同义项属于不同词类，而多类同音词是同音的两个或多个词分别属于不同词类，其区别标准是看词义有无联系。“科学、干脆”的两个义项间有语义上的联系，是多义词的不同义项，而“会、制服”的不同词义间没有语义上的联系，则属于同音词。</p>
+<p>词类活用是指某个词语临时用于不属于其词类的语法位置，例如“我是<u>近视眼</u>”（名词）和“别那么<u>近视眼</u>”（形容词），“这个镇有三千个<u>家庭</u>”（名词）和“老王是一个很<u>家庭</u>的男人”（形容词），“改革开放造就了无数<u>大款</u>”（名词）和“我今天也要<u>大款</u>一回”（动词）。后者是词类活用现象，不是词的兼类。词的兼类是词的固定用法，而词类活用则是修辞上的临时用法。</p>
+<h5><span id="五现代汉语词类系统概貌"> （五）现代汉语词类系统概貌</span></h5>
+<p>词类划分有一定相对性，不同体系划分的结果有差异。“暂拟汉语教学语法系统”（1956）把词类分为11类：名词、量词、代词、动词、形容词、数词、副词、介词、连词、助词、叹词，该系统修订为《中学教学语法系统提要》（1984）时，增加了拟声词一类。这个词类体系影响较大，目前出版的标注词类的词典，大多沿用这个体系。《现代汉语词典》（第5版、第6版）的词类标注体系也是这个体系。朱德熙《语法讲义》（1982）从形容词中独立出区别词，从名词中独立出方位词、时间词和处所词，从助词中独立出语气词，共计17类词。北京大学中文系现代汉语教研室编《现代汉语》（1993）把状态形容词独立为状态词，但仍把方位词、时间词、处所词归回名词，共计15类词。</p>
+<p>本书在朱德熙（1982）的词类基础上，又分出指示词、数量词和状态词。如果把方位词、时间词、处所词仍归名词，则共17类词，如果把方位词、时间词、处所词单独分出，则共20类词。这些词类可根据能否充任句法成分先分为<strong>实词</strong>和<strong>虚词</strong>两个大类，实词是可以充任句法成分的词类（11类/14类），包括<strong>核心词类</strong>、<strong>修饰词类</strong>和<strong>称代词类</strong>。核心词类中属于<strong>谓词</strong>的有①动词，②形容词，③状态词；属于<strong>体词</strong>的有④名词，（⑤方位词，⑥时间词，⑦处所词），⑧量词。修饰词类有：⑨数词，⑩数量词，⑪指示词，⑫区别词，⑬副词。称代词类有：⑭代词。虚词不能充任句法成分，只在组合中起辅助作用（4类），包括：⑮介词，⑯连词，⑰语气词，⑱助词。另一大类是<strong>特殊词类</strong>（2类），包括：⑲拟声词，⑳叹词。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">核心词类-谓词</div><div class="line">  ①动词</div><div class="line">  ②形容词</div><div class="line">  ③状态词</div><div class="line"></div><div class="line">核心词类-体词</div><div class="line">  ④名词</div><div class="line">  ⑤方位词</div><div class="line">  ⑥时间词</div><div class="line">  ⑦处所词</div><div class="line">  ⑧量词</div><div class="line"></div><div class="line">修饰词类</div><div class="line">  ⑨数词</div><div class="line">  ⑩数量词</div><div class="line">  ⑪指示词</div><div class="line">  ⑫区别词</div><div class="line">  ⑬副词</div><div class="line"></div><div class="line">称代词类</div><div class="line">  ⑭代词</div><div class="line"></div><div class="line">虚词</div><div class="line">  ⑮介词</div><div class="line">  ⑯连词</div><div class="line">  ⑰语气词</div><div class="line">  ⑱助词</div><div class="line"></div><div class="line">特殊词类</div><div class="line">  ⑲拟声词</div><div class="line">  ⑳叹词</div></pre></td></tr></table></figure>
+<h4><span id="二-核心词类"> 二、核心词类</span></h4>
+<p>词类中最主要的类别是能充任主语、谓语、宾语、述语、补语、中心语这些主要句法成分的词类，这些词类叫做核心词类。核心词类中包括谓词和体词两大类。谓词中又分动词、形容词、状态词等小类，体词中又分名词、方位词、时间词、处所词、量词（单位词）等小类。</p>
+<h5><span id="一动词"> （一）动词</span></h5>
+<p>动词是谓词中最重要的词类。从意义上看，动词表示行为动作。动词的基本功能是做谓语、补语，是一种陈述性成分。动词的语法特点是：能受“不/没（有）”的修饰；能带助词“了/着/过”；能做谓语；能带宾语，包括真宾语和准宾语，真宾语指常规的实指性宾语，准宾语指虚指宾语（如“好什么”中的“什么”）、非常规性实指宾语（如“跑了一身汗”中的“一身汗”）、动量、时量、程度量等数量宾语（如“看一下”中的“一下”，“等一会儿”中的“一会儿”，“好一些”中的“一些”）；能带补语；一般不受“很、非常、十分”等程度副词修饰；大多可以做主语和宾语；部分动词可以重叠。例如:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">（2） a. 洗：没洗，洗了，妈妈洗，洗衣服，洗干净，洗洗</div><div class="line">　 　 b. 走：不走，走了，我走，走远了，走走</div></pre></td></tr></table></figure>
+<p>==有两类特殊动词需要特别加以说明。一类是助动词，一类是趋向动词。助动词又叫情态助动词、能愿动词。这类动词主要用于表达情态意义。情态意义指能力、可能性、必要性、意愿等意义。情态意义可以通过其他一些手段来表达，如情态副词（大概、必须、也许、准），情态补语结构（学得会、洗不干净、来得了、去不得），但最常见的手段是助动词。==现代汉语中的助动词主要有以下几小类。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">（3） a. 能，能够，会，可以，可　　　　　　　　（表能力）</div><div class="line">　 　 b. 应，应该，应当，该，得（děi），值得　（表必要性）</div><div class="line">　 　 c. 可能，会，能，一定　　　　　　　　　　（表可能性）</div><div class="line">　 　 d. 愿意，愿，肯，想，要　　　　　　　　　（表意愿）</div></pre></td></tr></table></figure>
+<p>情态助动词往往是多义的，因此有时兼表不同类型的情态意义。如“可以”可以表示能力，也可以表示必要性（许可）；“会”可以表示能力，也能表示可能性；“应该”可以表示必要性，也能表示可能性（推测）；“一定”可以表示必要性，也能表示可能性（推测）。</p>
+<p>助动词通常出现在“助动词+动词/形容词性成分”的环境，由此构成的结构是一种述宾结构，而不是状中结构。这类结构更接近典型的述宾结构，而不同于状中结构。比较：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">（4） a. 述宾结构　　　　b. 状中结构　　　　c. 助动词+动词/形容词性成分</div><div class="line">　 　    同意去　　　　　   马上去　　　　　   应该去</div><div class="line">　 　    同意不同意去　　 * 马上不马上去　　   应该不应该去</div></pre></td></tr></table></figure>
+<p>趋向动词主要用于表达趋向意义。所谓趋向，指相对于某个参照点的位置移动。根据构词和参照点的不同，可以把趋向动词分为三类。见下表：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">（5）趋向动词分类</div><div class="line">|      |      | 上    | 下    | 进    | 出    | 回    | 过    | 起    | 开    |</div><div class="line">| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |</div><div class="line">|      |      |      |      |      |      |      |      |      |      |</div><div class="line">| 来    |      | +    | +    | +    | +    | +    | +    | +    | ⊕    |</div><div class="line">| 去    |      | +    | +    | +    | +    | +    | +    | -    | ⊕    |</div></pre></td></tr></table></figure>
+<p><img src="../%E6%8F%92%E5%9B%BE/4-2-2-1-5.png" alt=""></p>
+<p>（5a）类趋向动词是单纯趋向动词，以说话人的位置为参照。“来”表达朝向说话人位置的位移，“去”表达背离说话人位置的位移。（5b）类趋向动词也是单纯趋向动词，以其他位置为参照。又分为不同情况：一是以地心位置为参照，“上”表达离开地心方向的位移，“下”表达朝向地心方向的位移。二是以某个封闭范围为参照，“进”表达进入某个封闭范围的参照，“出”表达离开某个封闭范围的位移。三是以移动物体原来的位置为参照，“回”表达朝向原位置的位移。四是以位移轨迹中的中间点或中间段为参照，“过”表达穿过或经过位移轨迹的中间点或中间段。五是以某个水平面为参照点，“起”表达离开某个水平面。六是以原来接触或接近的部分为参照，“开”表示脱离接触。（5c）类趋向动词是“b+a”构成的合成趋向动词，从参照上看也是“b+a”的结合，即既以说话人位置为参照，又以其他位置为参照。如“上来”，既以说话人位置为参照，又以地心位置为参照；“进去”既以说话人位置为参照，又以某个封闭范围为参照。合成趋向动词中，“起去”在近代汉语中使用，如“那手帕化做一片白云，飞将起去”（《水浒传》），“就地上踏一片云，起去赶那黄衣女子”（《警世通言》），但在普通话中已基本消失；而“开来”“开去”已趋于消失，现在很少使用。</p>
+<h5><span id="二形容词"> （二）形容词</span></h5>
+<p>形容词也是谓词中的主要词类。从意义上看，形容词表示程度性属性。现代汉语中，形容词的基本功能是做谓语和补语，是一种陈述性成分。形容词的语法特点是：能受“不”修饰；能受以“很”为代表的绝对程度副词（指没有比较含义的程度副词，包括“很、非常、十分、特别、格外、挺、满”等）的修饰，或否定式能受绝对程度副词修饰（如“不耐烦、不好意思、不一样”）；能带助词“了”和“过”；此外还包括能做谓语，不能带真宾语，能带补语，能做补语，一部分能做定语，一部分能做状语，一般能做主宾语，一部分形容词可以重叠。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">（6） a. 好：不好，很好，好了，身体好，好极了，唱得好，好人，好好儿</div><div class="line">　 　 b. 认真：不认真，很认真，认真过，态度认真，认真得很，学得认真，认真态度，认真学习，认认真真</div></pre></td></tr></table></figure>
+<p>形容词虽然可以做谓语，但有限制条件，常见的情况是下面三种：一是带程度副词，如“衣服很干净、衣服挺干净（的）”；二是出现在对举格式中，如“衣服干净，裤子脏”；三是用于否定式中，如“衣服不干净”。这是因为单个的形容词做谓语通常带有对比的含义，因而常用对举格式，或者为了消除这种对比的含义而带上程度副词。否定式中，形容词通常不表达对比，因而做谓语较自由。在表达类似意义时，还可以釆取用“是……的”格式，如“衣服是干净的”，但这已不是形容词做谓语，实际上做谓语的是“是+形容词+的”。</p>
+<p>形容词通常不能带真宾语。有的例子似乎是形容词带真宾语，如“端正态度、统一思想”，其实是形容词的使动用法。但形容词带动量词和时量词准宾语很自由，如“大一点儿、高他一头”。形容词都可以带补语，如“干净得很、大极了”。也有不少形容词可以做补语，如“洗干净、染红、表现得很优秀”。虽然做定语是形容词最主要的功能，如“干净衣服、红衣服、优秀学生”，但大多数形容词不能直接（不带“的”）做定语，如“痛、饿、对、累、荣幸、齐全、难过”。少数形容词可做状语，如“认真学习、简要说明、密切联系实际”，但大多数形容词不能直接（不加“地”）做状语，如“疼、对、伟大、干净、贵重、美丽”。一部分形容词可以重叠。如AA式“轻轻、慢慢、远远、长长、好好”或AABB式“干干净净、大大方方、马马虎虎、端端正正”。但形容词重叠以后就不再是形容词，而是状态词了。</p>
+<blockquote>
+<p><strong>提示4</strong></p>
+<p>【汉语形容词的特点】汉语形容词和英语形容词在功能上有较大差异。汉语形容词的主要功能是做谓语，多数形容词做定语需加定语标记“的”。英语形容词的主要功能是做定语，而做谓语时需加标记（加系词“be”）。从语言类型学角度看，世界语言的形容词的功能主要有两个极端类型，一个极端是定语型形容词，主要做定语，做谓语需加标记，如英语、意大利语、斯瓦希里语；另一个极端是谓语型形容词，主要做谓语，做定语需加标记，如韩语、嘉戎语、贝姆巴语。两个极端类型之间有一些过渡类型，如日语、泰语、希腊语的形容词兼属定语型和谓语型。汉语形容词基本属于谓语型，但兼有一些定语型的性质，即多数形容词可以无标记做谓语，不能无标记做定语，如“痛、饿、髙兴、对、荣幸”，但有少数形容词可以无标记做定语，如“大、新、干净、优秀、漂亮”。</p>
+</blockquote>
+<h5><span id="三状态词"> （三）状态词</span></h5>
+<p>谓词中还有一类就是状态词。从意义上看，状态词表示状态的描写。过去一般把状态词和形容词归为同一类，或者一个叫性质形容词，一个叫状态形容词。但状态词和形容词有明显区别，如“白、香、干净”等都能受“不、很”修饰，而“雪白、香喷喷、干干净净”等都不能受“不、很”修饰，所以还是应把状态词从形容词中分离出来独立成类。状态词的语法特点是：大多数状态词可以做谓语；一半以上的状态词可以做补语，但限于带“得”的补语；不能受“不”的修饰；不能受“很”等程度副词修饰;<br>
+不能带宾语；不能带补语；不能带助词“了、着、过”；多数状态词常跟“的”配合使用，“状态词+的”与单个状态词的功能大致相同，而单音节形容词的重叠形式通常必须加“的”才能使用；部分状态词可以重叠，重叠形式为“ABAB”，如“雪白雪白、通红通红、笔直笔直、细长细长、灰白灰白”。</p>
+<p>状态词的基本功能是做谓语和补语，因此状态词是一种陈述性的成分。根据状态词的构词形式，可以把状态词分为以下小类。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">（7） a. 胖胖（的）、红红（的）、甜甜（的），干干净净、大大方方、端端正正，</div><div class="line">　 　    马里马虎、流里流气、稀里糊涂，黑咕隆咚、甜丝髮、皱巴巴、绿油油</div><div class="line">　 　 b. 雪白、通红、稀烂、笔直、飞快、精光、崭新、冰凉、死沉、烂熟</div><div class="line">　 　 C. 巨大、繁多、大好、严寒、酷热、众多、广大</div><div class="line">　 　 d. 灰白、瘦长、细长、矮胖、优良、花白、干瘦、干冷</div><div class="line">　 　 e. 闪闪、跑睹、悠悠、滔滔、潺潺、旖旎、滂沱、婆娑、逶迤、绰约</div></pre></td></tr></table></figure>
+<p>（7a）类状态词做谓语或补语时可以加或已带“的”。主要是由形容词的重叠式及形容词的变化形式（如“马里马虎、稀里糊涂”）构成，另外还有一些原式为其他词类或找不到原式的，如“疙疙瘩瘩、磨磨蹭蹭、比比画画、哩哩啦啦、堂堂正正”等。（7b）类状态词从构词上看是“X+单音节形容词语素”，“X”是比况性成分，大多有ABAB式重叠。这类状态词做谓语或补语时不能加“的”，但重叠式可以加“的”，如“雪白雪白的”。（7c）类状态词从构词上看也是“X+单音节形容词语素”，不过其中的“X”不是比况性的，而是表示程度。这类状态词做谓语或补语时不能加“的”，也没有重叠形式。（7d）类状态词从构词上看一般是两个形容词词根的并列，整个词的意义是两个形容词词根的意义相加。这类状态词做谓语不能加“的”。大多有ABAB式重叠，重叠后可加“的”，如“灰白灰白的、矮胖矮胖的、干瘦干瘦的”。（7e）类状态词是文言状态词的遗留。有叠言式和AB式两种。常做谓语，也可直接做定语，个别的也能做状语，一般不能做补语，做谓语时不能加“的”。</p>
+<h5><span id="四名词"> （四）名词</span></h5>
+<p>名词是体词中最主要的词类。从意义上看，名词表示事物。名词的基本语法功能是做主语和宾语，是一种指称性成分。名词的主要语法特点是：绝大多数名词可做主语、宾语；多数名词能受数量词组的修饰，但一般不受数词、数词词组直接修饰；绝大多数名词可受数词、数量词组以外的其他定语的修饰，其中能受另一个名词直接修饰的名词占半数；多数名词可直接做定语。</p>
+<p>名词大多能受数量词修饰，但也有一些名词不能受数量词修饰，如“边缘、表面、对方、列强、年龄、人事、双方、私人、岁数、行政、医药、主流、主权、总和、自然”。名词一般不受数词、数词词组直接修饰。特殊情况下，名词也可受数词、数词词组修饰，如“十亿人民、三兄弟、这一地区、三大工程、前面来了一老太太、马尔马拉海上一轮渡失火、三十二楼”。</p>
+<p>名词一般不能做“在”的宾语，加方位词以后才能做，如“<code>*</code>在桌子（在桌子上）、<code>*</code>在碗（在碗里）、<code>*</code>在树（在树上）”。而只有“教室、工厂、操场、邮局、学校、中国”等名词可以直接做“在”的宾语，这种名词是“具有处所功能的名词”，其与处所词的不同之处是这些名词还能带方位词，而处所词不能。比较：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">（8） a. 在教室 —— 在教室里　　b. 在工厂 —— 在工厂旁边</div><div class="line">　 　 c. 在操场 —— 在操场上　　d. 在中国 —— 在中国以南</div><div class="line">（9） a. 在当地 ——*在当地里　　b. 在野外 ——*在野外上</div><div class="line">　 　 a. 在民间 ——*在民间里　　b. 在远处 ——*在远处上</div></pre></td></tr></table></figure>
+<p>名词一般不能做状语，但在下面几种情况中可以做状语：一是“名词+动词”，其中的名词具有处所功能。如“操场去、学校见、主场迎战对手”。二是“名词+形容词”。如“拳头大、碗口粗”，这种情况中名词表示比喻。三是“名词+动词性成分”。如“电话采访、公费请客、凉水洗澡、武力镇压、政治解决柬埔寨问题”，这类例子表示使用某种工具或通过某种途径做某事。以上名词做状语的情形都可以找出条件，具有一定的类推性，这也是系统性的表现，因此不看作名词兼副词。除了上述情况之外的名词做状语时可将名词看作副词，如“重点解决、顺序上车”中的“重点、顺序”应看作副词。</p>
+<p>一般情况下名词不做谓语，但可以有条件地做谓语，如“我买的书”（回答“你买的是什么”时），“今天阴天、他双眼皮、下午运动会”等，实际上都是做判断句的谓语。</p>
+<p>名词一般情况下不能受状语修饰，但在下列三种情况中例外：一是“时间副词+非初始项顺序义名词+了”，如“都大学生了、已经大人了”。二是“也+体态特征名词”，如“（他）也双眼皮、（他）也高个儿”。三是“也+表身份的名词”，如“（他）也大学生、（我）也团长”。四是“表限制的范围副词+名词”，如“就苹果好吃、光飞机就有一百架”。这种情况中的“状语+名词”用在主语位置上。</p>
+<p>名词通常不能重叠。有些名词似乎可以重叠，如“人人、家家”，但“人、家”还能直接受数词修饰，如“一人、三人、一家、四家”，因此“人人、家家”应看作量词重叠。有些双音节名词也有相应重叠形式，如“子孙—子子孙孙、风雨—风风雨雨、恩怨—恩恩怨怨、方面—方方面面”，重叠形式都有“多、每”的意思。这种名词重叠形式可看作构词性重叠。</p>
+<h5><span id="五方位词-时间词-处所词"> （五）方位词、时间词、处所词</span></h5>
+<p>体词中除名词外还有方位词、时间词、处所词。这三类词的共同点是都可表示方向或位置，体现在语法上，就是可出现在“在/到/往〜”的语法位置上。这几个词类具有名词的某些性质和功能，但又有不同之处，因此既可以作为独立词类，也可作为特殊的名词或名词的特殊小类。</p>
+<p>从语义功能上看，方位词表示带有参照点的方向或相对位置关系。方位词表示的相对位置既可以是空间，如“桌子上面、大树下”；也可以是时间，如“春节前、三天以后”。个别方位词只能表示位置，如“以上、之下”。有些趋向动词发展出表示方向的用法，如“往回走、往出走、往起拉”，应认为已经变成了表示方向的方位词。方位词的语法特点是：能做主语和宾语；能做表示处所的介词或动词“在/到”的宾语；能做状语；最主要功能是出现在实词性成分后面，构成方位结构，如“大树旁边、桌子上”。根据构词形式，方位词可分为以下小类：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">（10）a. 单纯方位词:上、下、左、右、东、南、里、外、前、后、旁</div><div class="line">　  　b. 合成方位词：</div><div class="line">　  　   b1. 前后、上下、左右、里外，东南、西北、东北</div><div class="line">　  　   b2. 东边、前边、上边、左边、东面、前面、上面、后面、东侧、</div><div class="line">　  　       前侧、后侧、左侧、东头、前头、后头、上头、东方、前方、</div><div class="line">　  　       上方、下方</div><div class="line">　  　   b3. 以东、以前、以后、以下、之前、之后、之上、之下</div><div class="line">　  　   b4. 中间、跟前、旁边、周围、附近</div></pre></td></tr></table></figure>
+<p>合成方位词的语法功能比较多，但单纯方位词单用时一般只能表示方向，如“往前走、向左转”，表示位置时一般要出现在实词性成分后面构成方位结构，如“桌子上、大门前”。如果单用表示位置，需出现在对举格式中，如“前有埋伏，后有追兵”。</p>
+<p>时间词表示时间位置，一般可以用“这时、那时”指代，用“什么时候、多会儿<!--？？-->”提问。时间词的语法特点是：能做主语和宾语，能做“在/到/等到”的宾语，能做状语。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">（11）今天、明年、上午、星期三、春节、现在、刚才、将来、过去、原来</div></pre></td></tr></table></figure>
+<p>处所词表示空间位置，可用“这里、那里”指代，用“哪里”提问。处所词的语法特点是：能做主语和宾语，能做“在/到”的宾语，能做状语，不能再带方位词。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">（12）当地、远处、空中、原地、故乡、身上、门口、民间</div></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>提示5</strong></p>
+<p>【位置词在现代汉语语法中的地位】方位词、时间词和处所词由于都表示位置（空间位置或时间位置），合称为位置词。表示位置的词在任何语言中都存在，但不一定是独立的词类，比如在英语和古代汉语中，都不必把位置词从名词中独立出来。现代汉语中之所以可把位置词从名词中独立出来，是因为名词表示位置的语义功能已基本消失，如“*在桌子”、“*在海”，表示位置主要由位置词单独或“名词+方位词”来承担，如“在上面、在昨天、在原地、在桌子上”。而英语和古代汉语名词本身就可以表示位置，如“on the desk”“孙叔敖举于海，百里奚举于市”，因此英语和古代汉语中表示位置的词不必从名词中独立出来。</p>
+</blockquote>
+<h5><span id="六量词单位词"> （六）量词（单位词）</span></h5>
+<p>量词也属于体词。从语法意义上看，量词表示计量的单位或等级、编号单位。量词本身并不包含数量的意义，只有与数词结合后，数量词组整体才表示数量，因此叫“单位词”更准确。</p>
+<p><u>量词可分名量词、动量词、时量词和自主量词四类</u>。</p>
+<p><strong>第一类是名量词</strong>。名量词表示事物的计量单位。与数词组合后一般都可以做定语修饰名词性成分；可以做动词的真宾语，少数可以放在动词、形容词后面做准宾语，如“比他矮一寸、增加十斤、高一些、下降了一点儿”等。名量词根据意义不同大致可分为以下几个小类：</p>
+<p>A. <strong>个体量词</strong>：以计量对象的自然个体为计量单位，如“个、只、件、本、支、辆”等。</p>
+<p>B. <strong>集合量词</strong>：把计量对象作为群体事物来计量，如“双、对、副、批、伙、套、群”等。</p>
+<p>C. <strong>约定量词</strong>：从某个角度观察而自然约定的计量单位。观察的角度有多种，主要是以一次出现的量为单位，如“笔（一〜债）、份（一〜礼）、剂（一〜药）、支（一〜军队）、宗（一〜交易）、桩（一〜买卖）”等；也有其他角度，如“套（一〜把戏）、手（一〜本领）、项（三〜比赛）”等。</p>
+<p>D. <strong>度量词</strong>：计量长短、面积、体积、容积、轻重、频率、币值等可精确度量的抽象性质时人为制定的计量单位，如“尺、亩、立方、升、斤、赫兹、圆、伏特、安培”等。有些度量词受数词修饰后只能单独使用，后面不能直接跟名词，如“码、海里、伏安”等。</p>
+<p>E. <strong>成形量词</strong>：把计量对象形成的形状作为计量单位，经常用于无自然个体的事物，也可用于有自然个体但不以自然个体为计量单位时。选择哪一个量词与事物在某种状态形成的形状有关，如“团、块（一〜土）、片（一〜西瓜）、摊、滴、股、堆、层、串、节、绺、卷、捆、缕、排、丝、条”等。</p>
+<p>F. <strong>容纳量词</strong>：以某个容器或承载物所容纳的量为计量单位。一类如“杯、箱、瓶、袋、盘、盆、把、捧、担、挑、包”等，另一类如“身（一〜土）、口（一〜白牙）、地（一〜水）”等。其中后一类以整个容器和承载物所容纳的量为计量单位。此类量词前数词只能用“一”，意思相当于“满+量”，可称为“满纳量词”。</p>
+<p>G. <strong>部分量词</strong>：以整体的一部分为计量单位，如“部分、半、段（一〜文章）、截、成”等。</p>
+<p>H. <strong>种类量词</strong>：以种类为计量单位，如“种、类”等。</p>
+<p>I. <strong>过程量词</strong>：把计量对象作为一个过程来计量，如“场（一〜电影）、顿（一〜饭）、次（一〜地震）、盘（一〜棋）、圈（两〜麻将）、任（三〜总统）、出（一〜戏）”等。</p>
+<p>J. <strong>编号量词</strong>：表示等级或编号单位，如“等、级、档、号”等。</p>
+<p>K. <strong>不定名量词</strong>：以一个不确定量为计量单位，如“些、点儿”，前面只能加数词“一、点儿、些”，一般表示小量。</p>
+<p>以上这些小类的成员都是专职名量词，有些名词也有名量词的性质，只是根据系统性原则处理成了名词。这些名词表示具有承载功能的事物的名词体现量词性质时主要有两种情况，一种体现为一般容纳量词，如“一桶水、两碗饭、三车煤、一瓶子酱油、两书架书”；另一种体现为满纳量词，如“一头白发、一脸汗、一院子人、一桌子灰”等。这些名词用作量词是临时用法，所以叫借用量词或临时量词。</p>
+<p><strong>第二类是动量词</strong>。动量词表示动作的计量单位。如“下、遍、趟、回、声、次、拳、眼、口、番”。与数词组合构成数量词组后可以放在动词、形容词后做准宾语。如“去一趟、看三遍”；也可做状语，如“他曾三次遇险”。还有部分名词、动词也有动量词功能，只是根据系统性原则处理为名词或动词，而不看作兼量词。如“放一炮、砍两刀、踢几脚、抽一鞭子”等，是借自名词的借用动量词，作为名词时通常是动作的工具。“眼、拳、口”作为名词性成分时已不成词，只能作为一个语素使用，作为词使用时只做量词用，因此不是借用动量词。另一种借用动量词是重复前面出现的动词作为计量单位。现代汉语中只有单音节动词有这种用法，数词也只能用“一”，如“看一看、想一想、拍一拍、踩一踩”等。</p>
+<p><strong>第三类是时量词</strong>。时量词表示时间的计量单位。与数词组合后可以放在动词、形容词后面做准宾语，表示时长，如“坐三天、等一会儿”；有时也可修饰名词性成分，如“三天工夫、一年时间”等。时量词中有些表示确定的量，如“天、年、周、分钟”。还有些表示不确定的量，如“会儿、阵儿、下（等一〜）”。不定时量词前只能用数词“一”。</p>
+<p><strong>第四类是自主量词</strong>。从意义看，这类量词一般表示事物的量，但与数词组合后不能修饰名词，一般也不能做准宾语，只能做主语、真宾语。如“点（我想谈三〜）\边（两〜都是人）、头（两〜跑）、面（三〜环水）、撇（指“丿”，如“加一撇”）、课（最后一〜）、票（得了八〜）、章、倍、分（考了一百〜）、版（第一〜）、人（八〜迟到）”等。其中由“岁、倍”构成的数量词组可以做准宾语。</p>
+<p>量词的语法特点主要有以下几点：</p>
+<p><strong>第一，量词都可以受数词或数词词组修饰，这是量词最重要的功能</strong>。“数词+量词”构成的数量结构的功能与量词的类有密切关系。其规律：一是“数词+名量词”主要是做定语，如“一个人、三斤米、一堆土”。做主宾语时意义上通常要转指，如“一个不如一个、买三本”。有时也做谓语，如“这只羊五十斤”。二是“数词+动量词”主要放在动词后做准宾语或放在动词前做状语，如“打三下、一下也没打着”。三是“数词+时量词”主要放在动词后做准宾语或动词前做状语，如“等三天、坐一小时、一天也没等”。四是“数词+自主量词” 一般不做定语，可以做主宾语或准宾语、状语，内部分歧较大。</p>
+<p><strong>第二，量词不能再受数量词或数量词组修饰</strong>。“一个小时、三个立方”中的“小时、立方”都应看作名词。“小时、立方”又能受“一、两、几”的修饰，可以处理为名词兼量词。但部分量词可以受“大、小、满、整、长、厚、薄”等少数几个形容词的修饰，如“一大张、两小杯、一满盆、一小块、一大团、一薄片（肉）、一大群、一小批、一厚本（日记）、一长列（火车）、（吓我）一大跳、（转了）一大圈、一整天、一整夜”。</p>
+<p><strong>第三，一半左右的量词可以重叠</strong>。能重叠的量词都是单音节的，但不是所有单音节量词都能重叠（能重叠的单音节量词占81.62%）。量词重叠后，功能与单个量词不同，而与相应的数量词组功能基本相同，可以做定语、主语，有些还能做状语，比较“九条大路——<u>条条</u>大路（做定语）、十朵葵花——<u>朵朵</u>葵花（做定语）、八个都是好汉——<u>个个</u>都是好汉（做主语）、三次去他家都没找着他——<u>次次</u>去他家都没找着他（做状语）”。当重叠量词放在主要动词前面时常有任指义，但放在宾语中及前有指示词时一般没有任指义，如“仰头望着晴朗的蓝天，那<u>朵朵</u>白云仿佛变成了条条的小手絹，顷刻间堵上了一切好事者的嘴”，“像渴久了的禾稼一样，枝叶被<u>丝丝</u>细雨越浇越青翠”。从意义上看，量词重叠也与数量结构相当，即不再表示单位，而是表示数量，即具有了量化的性质。</p>
+<p><strong>第四，单个量词只在以下情况中可以做宾语</strong>：一是做“论”的宾语，如“论斤还是论两”，二是在“把〜换算（变）成〜”及“由〜换算（变）成〜”格式中做宾语，如“把斤换算成两、把单位由公斤变成克”。三是在“用〜（来）计算”格式中做宾语，如“用公斤计算、用小时来计算”。由于量词不能做主语，所以尽管部分名词也能受数词修饰，但可以根据能否做主语把量词和能受数词修饰的名词区分开。</p>
+<blockquote>
+<p><strong>提示6</strong></p>
+<p>【个体量词的特殊性】表示计量单位的词在任何一种语言中都存在，但把量词作为一个独立词类却只有部分语言是这样。关键是表示个体的计量单位是否在数词与名词的结合中是必需的。在英语、古代汉语中，数词与个体名词的结合不需要表示个体计量单位的词参与，而是数词与个体名词直接结合。而现代汉语中数词与个体名词的结合需要表示个体单位的词参与，数词不与名词直接结合。由于现代汉语中表示计量单位的词语与名词之间有较大的功能差异，因此有必要把表示计量单位的词作为一个独立词类看待。</p>
+</blockquote>
+<h4><span id="三-修饰词类"> 三、修饰词类</span></h4>
+<p>修饰词类中包括区别词、副词、数词、数量词、指示词。与体词、谓词这些核心词类相比，修饰词类的特点是一般不能充任主语、谓语、真宾语、述语、补语、中心语这些句法成分，只能充任修饰语或准宾语。</p>
+<h5><span id="一区别词"> （一）区别词</span></h5>
+<p>从意义上看，区别词也表示属性，这一点与形容词相同。不同之处是，区别词的基本功能是做定语而不是谓语。从表义方式看，区别词是一种修饰性成分。下面是区别词的例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">（13）男、女、正、副、公、母、粉（颜色）</div><div class="line">　  　高等、大型、民用、袖珍、野生、公共、日常、现行、次要、大龄、黑白</div></pre></td></tr></table></figure>
+<p>区别词与形容词在意义类上相同，也都可做定语，但功能上有较大区别。比如形容词“大、高级、重要”，可以受“不、很”修饰，可以做谓语;<br>
+但区别词如“大型、高等、主要”，则不能受“不、很”的修饰，不能做谓语。这些是区别词不同于形容词的重要特征。</p>
+<p>区别词的主要语法特点：一是做定语。二是带“的”构成“的”字结构。由此构成的“区别词+的”结构多数用来做定语，也有时可用于“（是）〜的”结构做谓语。三是不能单独做主宾语。只有在对举格式中可以做主宾语，此时区别词在意义上是转指，即不再表示属性，而是转指一个对象。例如，“急性好治，慢性不好治”“男女都一样”。这里的“急性、慢性”并不指属性，而是指具有“急性、慢性”属性的事物，即指急性病、慢性病；“男、女”也不是指性别，而是人，即指男人、女人。四是不能做其他成分。</p>
+<blockquote>
+<p><strong>提示7</strong></p>
+<p>【区别词与形容词的关系】区别词与形容词在语义上有很大共性。语义上区别词和形容词都表示属性。提示4说过，汉语形容词基本是谓语型，兼有一些定语型的性质。这里说的形容词实际就是属性词。现代汉语中属性词的功能格局可用下图显示：</p>
+<p><img src="../%E6%8F%92%E5%9B%BE/4-2-3-2-tips7.png" alt=""></p>
+<p>面对这样的格局，可以有不同的分类方案。第一种方案是把语法功能不同的三种属性词都归为形容词。第二种是把a归为形容词，b归为区别词，c则看作形容词和区别词的兼类词。第三种方案是把a和c归为形容词，把b归为区别词。第一种方案忽略了做谓语和做定语的重大功能区别。第二种方案由于属于c的属性词较多，造成兼类词过多。第三种方案关注了做谓语和做定语的重大区别，又避免造成过多兼类词。此外，第三种方案的形容词与区别词在语义上也有重要的区别：谓语型的属性词都具有程度性，定语型的属性词不具有程度性，因此根据这一点可把能否受以“很”为代表的程度副词修饰作为区分形容词和区别词的标准。</p>
+</blockquote>
+<h5><span id="二副词"> （二）副词</span></h5>
+<p>副词没有统一的语义类别，但语法功能很一致，基本上只能做状语。个别副词，如“很、极”等，除了做状语外，还可以做补语，如“好得很，好极了”。副词也是一种修饰性成分。下面是副词的例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">（14） a. 语气副词：简直、难道、居然、幸亏、究竟</div><div class="line">　  　 b. 情态副词：大概、也许、必须、准、八成</div><div class="line">　  　 c. 关联副词：也、还、又、就、才</div><div class="line">　  　 d. 时间副词：已经、曾经、正在、将、赶紧、常常、偶尔</div><div class="line">　  　 e. 范围副词：都、全、只、光、唯独、另外</div><div class="line">　  　 f. 程度副词：很、非常、挺、更、最、极、稍微</div><div class="line">　  　 g. 否定副词：不、没、别、甭</div><div class="line">　  　 h. 方式副词：亲自、悄悄、大力、全速、相互、顺便</div></pre></td></tr></table></figure>
+<h5><span id="三数词"> （三）数词</span></h5>
+<p>数词表示数值，由于数值有顺序性，也可以用来表示顺序或编号，起这种作用的数词叫序数词，仅表达数值的数词叫基数词。序数词常前加序数助词“第”，但也可以不加。数词的基本功能是做定语，是一种修饰性成分。下面是数词的例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">（15） a. 系数词：一、二、两、五、七、九</div><div class="line">　  　 b. 位数词：十、百、千、万、亿</div><div class="line">　  　 c. 概数词：几、许多、若干</div></pre></td></tr></table></figure>
+<p>数词与数词相互组合构成的结构叫数词结构，如“三十、二百、几万、三万三千四百五十六”。数词结构的语法功能与数词基本相同。</p>
+<p>数词和数词结构的主要语法特点如下：一是修饰量词，构成数量结构，如“一个、两本、十斤”。二是与“第、点、百分之、分之、多、余”等助词配合，构成数词结构，如“第二、三点一四、百分之三十、五分之一、二十多、十余（人）”。三是修饰名词。数词直接修饰名词主要是序数词和序数词结构，如“三楼、第一中学”。基数词和基数词结构修饰名词受到很大限制，主要条件有：大整数修饰名词，如“百万大军、十三亿人民”；修饰集合名词，如“三兄弟、四姐妹、两夫妇”；用于科技、新風、法律等语体的文言格式中，如“两车速度相等、这一问题得到妥善解决”。“一车煤”中的“车”是名词用作临时量词受数词修饰，不能看作数词修饰名词的例子。四是一般不做主宾语。做主宾语限于以下两种条件：一是运算表达，如“一加一等于二、两个三是六”；二是转指表达，如“一死两伤”。</p>
+<h5><span id="四数量词"> （四）数量词</span></h5>
+<p>数量词是一个封闭的类。下面是常见的数量词的例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">（16） a. 名数量词：大量、少量、多数、少数、一切、全部、俩、仨</div><div class="line">　  　 b. 动数量词：所有、少许、一番、一气</div><div class="line">　  　 c. 时教量词：许久、片刻、一会儿、一生</div></pre></td></tr></table></figure>
+<p>数量词表示数量意义。数量词的基本功能是做定语或准宾语。数量词与“数词+量词”构成的数量结构在意义上和语法功能上都相当。可分为三类：第一类是相当于“数词+名量词”的名数量词，主要做定语或转指作用的主宾语，如“大量、多数、一切、全部、俩”，比较“买了三斤（苹果）、三斤（苹果）都坏了、买了许多（苹果）、许多（苹果）都坏了”。数量词主要做定语，这一点容易与区别词相混。二者的区别主要是，数量词可以出现在带“的”的定语前面，而区别词不行。数量词的这个特点与数量结构是一致的。比较“十艘豪华的客轮——大量豪华的客轮——*大型豪华的客轮”“七条不利的证据——所有不利的证据——*主要不利的证据”。第二类是相当于“数词+动量词”的动数量词，主要做准宾语或状语，如“一番、一气”，比较“打扮了一下、打扮了一番”。第三类是相当于“数词+时量词”的时数量词，主要做准宾语或状语，如“许久、片刻”，比较“等了三天、等了许久”。</p>
+<h5><span id="五指示词"> （五）指示词</span></h5>
+<p>指示词起指示作用。指示词的基本功能是做定语，是一种修饰成分。指示词有以下小类：一是<strong>表定指</strong>（即表示确定的所指），如表近指的“这”和表远指的“那”。二是<strong>表不定指</strong>（即表示不确定的所指），如“某”。三是<strong>表任指</strong>（即表示任意所指），如“每、任何、各”。四是<strong>表另指</strong>（即表示另有所指），如“其他、另、另外、又”。五是<strong>表唯指</strong>（即表示唯一所指），如“唯、唯一”。六是<strong>表序指</strong>（即表示指称的顺序），如“上、下、前、后、头”。七是<strong>表同指</strong>（即表示同一所指），如“同”。</p>
+<p>指示词的语法特点：一是用于“〜（数）量（名）”结构中构成定中偏正结构。如“这一个人、那本书、每个、某个人、前一个人、同一首歌”。这是指示词区别于其他词类的最重要特点。二是直接修饰名词。如“这人、那鬼地方、某机构、任何同学、唯一方法、其他手段”。但序指、同指指示词不能直接修饰名词；另指指示词中的“另、另外、又”也不能直接修饰名词。“本单位、该同学”中的“本、该”是文言指示词，可以直接修饰名词，但一般不用于“〜（数）量（名）”结构中构成定中偏正结构，这种差异是历史层次不同造成的。</p>
+<h4><span id="四-称代词类"> 四、称代词类</span></h4>
+<p>代词与其他词类不同，没有统一的语法功能，而分别属于不同大类：有的代体词，有的代谓词，还有的代饰词。这是因为代词不是根据语法功能划分出来的，而是根据“专门的称代作用”这个语义功能划分出来的。代词的语法功能与其所替代的词语相当。如“小王看见张老师了”和“小王看见谁了”，其中“谁”替代“张老师”，代词“谁”的语法功能与名词相当。“小刘买了三本书”和“小刘买了多少书”，其中“多少”替代“三本”，代词“多少”的语法功能与数量词相当。“老李喝醉了”和“老李怎么样了”，“这本书很好看”和“这本书怎么样”，其中“怎么样”替代“喝醉、好看，’，代词“怎么样”的功能与动词或形容词相当。</p>
+<h5><span id="一代词的基本类型"> （一）代词的基本类型</span></h5>
+<p>代词没有实在的概念意义，主要起专门的称代作用。所谓称代作用，指成为人、事物、处所、时间、数量、方式、行为动作、性质、状态等的替代形式。其他一些词类有时也可以临时起称代作用，如数量词（“买了许多、没收一切”）、数词（“一死两伤”）、区别词（“生男生女都一样”“急性好治，慢性不好治”）。但代词是专门用于称代作用的词类。代词除了起专门的称代作用外，还有其他一些语义功能，据此可分成几个次类。</p>
+<h6><span id="1-人称代词"> 1. 人称代词</span></h6>
+<p>人称表示话语活动的参与者的角色：表示发话人一方为第一人称，表示受话人一方为第二人称，表示除发话人和受话人以外的第三方为第三人称，表示某个会话角色自身为反身代词。第一人称代词如“我、我们、咱、咱们”，第二人称如“你、你们、您”，第三人称代词如“他（她、它）、他们（她们、它们）”，反身代词如“自己、自个儿”。还有一些词也可以表示会话的参与者角色，如“本人、大家、人家、别人”等，但这些慝于名词，“本校、贵校、其他人”则可以归入名词性词组。因为这些词实际上是通过概念意义来表示对象，而且本身就是名词或名词词组，因此不是名词性成分的替代形式。</p>
+<p>“我们”和“咱们”都是第一人称，但“咱们”包括受话人，这种用法叫包括式；“我们” 一般不包括受话人，这种用法叫排除式，有时也可以包括受话人。“您”是第二人称的尊称形式。第三人称虽然有“他、她、它”三种书写形式，但由于语音形式完全相同，因此并不意味着现代汉语有三个第三人称代词。“我、你、他”都有泛指、虚指等特殊用法。</p>
+<h6><span id="2-指示代词"> 2. 指示代词</span></h6>
+<p>指示代词是具有指示功能的代词。指示功能主要有两种具体的用法，一是直示用法，即直接指向话语场景中的人、事物、行为动作、性质、数量等；二是回指用法，即指向上文提到的人、事物、行为动作、性质、数量等。</p>
+<p>指示代词根据所指的相对距离分为两类：一类是近指代词，如“这、这里、这儿、这时、这会儿、这样、这么、这么样等，另一类是远指代词，如“那、那里、那儿、那时、那会儿、那样、那么、那么样”等。“每、某、任何、另、各”由于没有称代作用，是指示词而不是指示代词。“这、那”做主宾语时是指示代词，做定语时是指示词。</p>
+<h6><span id="3-疑问代词"> 3. 疑问代词</span></h6>
+<p>疑问代词是指以一个所指不确定的形式去替代人、事物、处所、时间、数量、行为动作、性质、状态、方式等，从而具有疑问的功能的代词。如“谁、什么、哪里、哪儿、几、多少、怎样、怎么样、怎么、多、何时、多会儿”。</p>
+<h5><span id="二疑问代词的非疑问用法"> （二）疑问代词的非疑问用法</span></h5>
+<p>现代汉语中的疑问代词还有一些非疑问的用法。</p>
+<p><strong>一是充当某些从句中的成分</strong>。疑问代词所在的动词结构如果做“知道、弄清、了解、量”等动词的主语、宾语等成分时，就不再表示疑问。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">（17） a. 我知道谁来了。</div><div class="line">　  　 b. 你量量他有多高。</div><div class="line">　  　 c. 谁家的小伙该娶媳妇了，谁家的姑娘该出嫁了，她都摸得一清二楚。</div></pre></td></tr></table></figure>
+<p><strong>二是表示任指的成分</strong>。任指就是任意指称，也就是表示“全部、所有”的意思。疑问代词表任指分为三种类型：一种是周遍性任指（所说范围内无条件任指），如（18），一种是倚变性任指（所说范围内无条件任指），如（19），还有一种是对待性任指（所说范围内有条件地两两相对任指），如（20）。比较:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">（18） a. 谁都不认识老王。</div><div class="line">　  　 b. 他什么事都会做。</div><div class="line">　  　 c. 怎么说也说服不了他。</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">（19） a. 想怎么办就怎么办。</div><div class="line">　  　 b. 谁接住拋下的绣球，谁今年就有运气。</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">（20） a. 谁也说服不了谁。</div><div class="line">　  　 b. 咱们谁也别挑谁。</div></pre></td></tr></table></figure>
+<p><strong>三是表示不定指的成分</strong>。不定指就是指某个不确定、不知道、不想明确说出或一时想不起的人或事物、处所、时间、行为动作、性质状态等。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">（21） a. 这孩子淘气，没准又把人什么东西弄坏了。</div><div class="line">　  　 b. 你吃点什么吗？</div><div class="line">　  　 c. 谁要说我不好啊，那才瞎了眼哪。</div><div class="line">　  　 d. 我不相信谁会这么没良心。</div><div class="line">　  　 e. 那个谁，你看见我的书了吗？</div></pre></td></tr></table></figure>
+<p><strong>四是表示否定</strong>。带疑问代词的小句整体意义相当于否定句。这种用法来源于反问。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">（22） a. 我又不会吃掉你，你跑什么！　（≈你不该跑）</div><div class="line">　  　 b. 他的事我哪里知道。　　　　　（≈他的事我不知道）</div><div class="line">　  　 c. 谁知道他来不来。　　　　　　（≈没人知道他来不来）</div></pre></td></tr></table></figure>
+<p><strong>五是表示感叹</strong>。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">（23） a. 这是怎样的战士和勇者！</div><div class="line">　  　 b. 这两人是多么地不同啊！</div></pre></td></tr></table></figure>
+<p><strong>六是表示列举和省略</strong>。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">（24） a. 什么篮球、排球、足球，他样样精通。</div><div class="line">　  　 b. 我还可以给你们出点儿主意什么的。</div></pre></td></tr></table></figure>
+<h4><span id="五-虚词词类"> 五、虚词词类</span></h4>
+<p>从语义上看，虚词不表示概念意义，即虚词的意义不反映外部世界，而是反映语言内部的各种关系、状态，或表达说话人的主观性含义。虚词缺乏语法上的独立性，不能单独充任句法成分，必须依附于另一个实词性成分。虚词词类都是封闭类。</p>
+<h5><span id="一介词"> （一）介词</span></h5>
+<p>介词缺乏独立性，必须用在另一实词性成分前面，构成介词结构。从语义作用上看，介词主要是引出与行为动作有关的各种对象，有时也可以引出与事物有关的对象。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">（25） a. 对这个问题进行研究　　　　（引出受事）</div><div class="line">　  　    ◇一一一一</div><div class="line">　  　 b. 小刘被老师批评了一顿　　　（引出施事）</div><div class="line">　  　    　　◇一一</div><div class="line">　  　 c. 用树枝把帐篷撑起来　　　　（用：引出工具；把：引出受事）</div><div class="line">　  　    ◇一一◇一一</div><div class="line">　  　 d. 向前跑去　　　　　　　　　（引出方向）</div><div class="line">　  　    ◇一</div><div class="line">　  　 e. 从学校去火车站　　　　　　（引出源点）</div><div class="line">　  　    ◇一一</div><div class="line">　  　 f. 给弟弟买了一本书　　　　　（引出与事）</div><div class="line">　  　    ◇一一</div><div class="line">　  　 g. 给小朋友讲故事　　　　　　（引出受益者）</div><div class="line">　  　    ◇一一一</div><div class="line">　  　 h. 关于宇宙起源的学术报告　　（引出关涉对象）</div><div class="line">　  　    ◇◇一一一一</div><div class="line">　  　 i. 对这个问题的意见　　　　　（引出目标对象）</div><div class="line">　  　    ◇一一一一</div></pre></td></tr></table></figure>
+<p>根据介词所引出的对象的角色不同，可把介词分成不同的次类：表示方所，如“在、从、到、向、往、朝、自、于”等；表示时间，如“在、从、自从、打、赶、当、到”等；表示主体，如“被、让、叫、教、由”等；表示客体，如“把、管、对”等；表示旁体，如“为、给、对、对于、和、与、同、跟、替、向、用、比”等；表示根据，如“按、经过、根据、凭、照”等；表示排除，如“除了、除”等。</p>
+<p>介词结构主要有三项功能：一是做状语，如（26）; 二是做补语，如（27）；三是加“的”做定语，如（28）。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">（26） a. 小李比小王高。</div><div class="line">　  　    　　◇一一</div><div class="line">　  　 b. 把问题解释清楚。</div><div class="line">　  　    ◇一一</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">（27） a. 火车开往东北。</div><div class="line">　  　    　　　◇一一</div><div class="line">　  　 b. 他从小生活在边疆。</div><div class="line">　  　    　　　　　◇一一</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">（28） a. 关于宇宙起源的学术报告</div><div class="line">　  　    ◇◇一一一一◇</div><div class="line">　  　 b. 对这个问题的研究</div><div class="line">　  　    ◇一一一一◇</div></pre></td></tr></table></figure>
+<p>多数介词都是从动词虚化而来，有些介词仍保留动词用法。区分介词和动词的标准是：如果“X+宾语”独立做谓语，X是动词，如（29）左侧例；如果“X+宾语”不能单独做谓语，必须在后面跟上一个动词、形容词性成分后做谓语，X是介词，如（29）右侧例。比较：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">（29） a1.大门+朝+南。　　　　　a2.他+朝+我走来。</div><div class="line">　  　 b1.我+给+他一本书。　　　b2.我+给+他借了一本书。</div><div class="line">　  　 c1.他+在+阳台上。　　　　c2.他+在+阳台上种了几盆花。</div><div class="line">　  　 d1.小狗一直+跟+着他。　　d2.我+跟+他一起去。</div></pre></td></tr></table></figure>
+<h5><span id="二连词"> （二）连词</span></h5>
+<p>连词起到连接的作用，并表示被连接成分之间的并列、选择、递进、转折、因果、条件、目的等逻辑关系。根据表示的逻辑关系的不同，可把连词分为以下次类：<strong>并列连词</strong>，如“和、与、同、跟、及、以及、并、并且、而”等；<strong>选择连词</strong>，如“或、或者、要么、宁可、与其、还是”等；递进连词，如“不但、而且、进而、何况、况且”等；<strong>转折连词</strong>，如“虽然、尽管、但是、可是、不过、只是、然而”等；<strong>条件连词</strong>，如“如果、要是、只要、只有、不管、无论、除非、否则”等；<strong>因果连词</strong>，如“因为、由于、所以、因此、故”等；<strong>目的连词</strong>，如“为了、以便、以免、以”等。连词中，有的连词连接词或词组，如“和、及、或”；有的连接分句或句子，如“但是、要么、因此”。其中有些连词既可连接词或词组，又可连接分句或句子，如“而、并且、并、或者”。</p>
+<p>“和”与“并、而”都用于词或词组的并列连接，但有大致的分工。“并”主要连接动词性成分；“而”主要连接形容词性成分；“和”主要连接名词性成分，连接动词、形容词性成分时所形成的并列词组一般做主语、宾语、定语，偶尔可以做谓语核心，前面一定有较为复杂的状语。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">（30） a. 柳城犹如一位年青小伙子，显得那样地英俊+和+潇洒。</div><div class="line">　  　 b. 陈宁还是那样地开朗+和+健谈。</div><div class="line">　  　 c. 我国根据和平共处五项原则，同其他国家建立+和+发展外交关系。</div></pre></td></tr></table></figure>
+<p>“和、与、同、跟”既是连词又是介词。区分标准是：如可按“甲+和+乙+谓语→甲+〔动词/状语〕+和+乙+谓语”变换，则“和”类词是介词，否则是连词，如（31）;如可按“甲+和+乙+谓语→和+乙+谓语”变换，则“和”类词是介词，否则是连词，如（32）。比较：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">（31） a1. 我和大家说几句话。　→　a2. 我〔想〕和大家说几句话。</div><div class="line">　  　 b1. 他跟我们开玩笑。　　→　b2. 他〔刚才〕跟我们开玩笑。</div><div class="line">　  　 c1. 小王和小李一样高。　→　c2. 小王〔以前〕和小李一样高。</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">（32） a1. 我和大家说几句话。　→　a2. 和大家说几句话。</div><div class="line">　  　 b1. 他跟我们开玩笑。　　→　b2. 跟我们开玩笑。</div><div class="line">　  　 c1. 小王和小李一样高。　→　c2. 和小李一样高。</div></pre></td></tr></table></figure>
+<p>“和、跟”如果是连词，则不能有上面两种变换，如“我和大家都说普通话”不能变换为“我想和大家都说普通话”，“和大家都说普通话”。</p>
+<p>当同一句中既出现做连词的“和”类词，又出现做介词的“和”类词时，习惯上用“和”做连词，用“同、与、跟”做介词。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">（33） a. 我国根据和平共处五项原则，+同+其他国家建立和发展外交关系。</div><div class="line">　  　 b. 他们正在采取各种措施+和+办法，同低温+和+风沙斗争。</div></pre></td></tr></table></figure>
+<p>“因、因为、为了、由于”也是连词和介词的兼类。如果这些词后面的成分是名词性成分，则应看作介词；如果是谓词性的，就是连词。下面的例子都是介词用法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">（34） a. 他+因+事未能到会。</div><div class="line">　  　 b. 他这样做都是+为了+你。</div><div class="line">　  　 c. +由于+天气原因取消了这趟航班。</div></pre></td></tr></table></figure>
+<h5><span id="三语气词"> （三）语气词</span></h5>
+<p>语气词是专门表示语气的后置性词。根据语气词表示的语气不同，把语气词分为以下几类.·疑问语气词，如“吗、呢、吧、啊”；祈使语气词，如“吧、啊”；感叹语气词，如“啊”；陈述语气词，如“了、啦、呢、吧、嘛、呗、罢了、而已”等。</p>
+<p>语气词主要用于句尾，有些也可用于句中，用于句中时，总是在一个停顿的前面。如“他啊，最喜欢啊，吃冰糖葫芦”，“这件事呢，不能怪你”，“我一直呢，就没去找他”。语气词“啊”还可以用于动词重复结构中，如“走啊走”“说啊说啊”。</p>
+<p>陈述语气词“了、呢”后面还可以加上其他语气词，形成语气词连用。例如“小王去图书馆了吗？ ”“外面下雨呢吧？ ”通常语气词后面不能再出现其他语气词，而“了、呢”后面还可以出现其他语气词，这可能与“了、呢”的性质有关：“了、呢”除了表示语气意义外，还表示时体意义，“了”表示出现新变化，“呢”表示状态的持续，因此实际上是时体助词和语气词的混合体，并不是典型的语气词。句尾“啦”的意义和用法与“了”基本相同，是“了”的强化形式。用于句中表示列举的“啦”则是“啊”的音变形式。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">（35） 碗啦、盘啦、饭盒啦，工艺品似的在窗台上摆了一溜。</div></pre></td></tr></table></figure>
+<p>下面例句中句末的“的”有人也看作语气词，但由于这种用法来源于“是……的”结构，而且“的”还可用于句中无停顿的地方，因此还应归为助词。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">（36） a. 我们（是）不会屈服+的+。</div><div class="line">　  　 b. 他是昨天来北京+的+。　→　他是昨天来+的+北京。</div></pre></td></tr></table></figure>
+<h5><span id="四助词"> （四）助词</span></h5>
+<p>助词是虚词中的剩余类，即把虚词中不能归入介词、连词、语气词的词聚在一起形成的类。剩余类是为了称说方便而设的类，并不是因为其成员有统一的性质。因此助词内部的成员个性较强，共性较少。总的说，助词是附加在实词性成分上起一定的语法作用，都可看做是语法标记。根据助词所起的作用，可把助词分为以下几类：<strong>结构助词</strong>，如“的、地、得、之、者”；<strong>动态助词</strong>，如“了、着、过、来着”；<strong>其他助词</strong>，包括<strong>比况助词</strong>，如“似的、一般、般”；<strong>数助词</strong>，如“第、点、分之、多、余”；<strong>特殊助词</strong>，如“连、等等、等、所”等。</p>
+<h6><span id="1-结构助词"> 1. 结构助词</span></h6>
+<p>结构助词的作用是附加在某些语法结构中，成为某些句法成分的标记或词性的标记。</p>
+<p>助词“的”有两个不同的用法。第一个“的”附加在做定语的成分后面，是定语的标记。“实词性成分+的”构成的结构叫“的”字结构。“的”字结构除了主要做定语外，还可以做主语、宾语和谓语。当“的”字结构做主宾语时，是一种无核定中结构，即中心语不出现的定中结构，“的”字结构起到临时替代整个定中结构的作用，可看作修饰词语的转指用法。从词性转化的角度说，这个“的”是饰词的标记，体词性成分、谓词性成分一旦加上“的”就转化为一个饰词性成分。“之”和“者”是文言成分，但在现代汉语书面语中仍使用。这两个都是定语标记，“之”用于有核定中结构，“者”用于无核定中结构。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">（37） a. 买书+的+人　　　（动词性成分“（某人）买书”加“的”）</div><div class="line">　  　 b. 送信+的+来了。　（动词性成分“（某人）送信”加“的”；无核定中结构）</div><div class="line">　  　 c. 同学+的+书　　　（名词性成分“同学”加“的”）</div></pre></td></tr></table></figure>
+<p>第二个“的”是状态词标记，可加在状态词后面，使状态词的使用更自由；也可加在一些词组后面，使这些词组转化为状态词性的。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">（38） a. 衣服干干净净+的+。</div><div class="line">　  　 b. 小孩的脸红红+的+。　　　　　（“红红”本来不能单用，加“的”后可以自由做谓语和补语）</div><div class="line">　  　 c. 大家挺高兴+的+。　　　　　　（状中词组“挺高兴”加“的”转化为状态词）</div><div class="line">　  　 d. 外面敲锣打鼓+的+，很热闹。　（联合结构“敲锣打鼓”加“的”转化为状态词）</div></pre></td></tr></table></figure>
+<p>助词“地”附加在做状语的成分后面，是状语标记。从词性转化角度看，“地”是一个副词标记，一个谓词性成分、体词性成分一旦加上“地”，就转化为一个副词性成分。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">（39） a. 我荣幸+地+成为其中的一员。　（形容词“荣幸”加“地”转化为副词性成分）</div><div class="line">　  　 b. 你要有计划+地+学习和复习。　（动词性成分“有计划”加“地”转化为副词性成分）</div><div class="line">　  　 c. 应该历史+地+看待这个问题。　（名词“历史”加“地”转化为副词性成分）</div></pre></td></tr></table></figure>
+<p>助词“得”附加在述补结构的述语后面，标示后面成分是补语，可看作补语标记。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">（40） a. 洗+得+干干净净。</div><div class="line">　  　 b. 累+得+站不起来了。</div></pre></td></tr></table></figure>
+<h6><span id="2-动态助词"> 2. 动态助词</span></h6>
+<p>动态助词的作用，是附加在动词或形容词后面，表示动词、形容词所表示的行为动作、性质状态的进展状况，又叫时体助词、体助词。“了”表示动作行为的完成、状态的实现。“着”表示动作、状态的持续。“过”表示某个动作行为或状态是过去的经历。“来着”表示对过去发生的事件或状态的回顾。</p>
+<h6><span id="3-其他助词"> 3. 其他助词</span></h6>
+<p>比况助词加在表示喻体的词语后面，可看作比喻标记如“般、一般、似的”。</p>
+<p>数助词是用在数词结构中，起辅助作用的标记性成分。“第”是序数标记，“点”是小数标记，“分之”是分数标记，“多、余”是余数标记。</p>
+<p>除了上面明确归类的助词外，还有一些助词不好归类，算作特殊助词。“连”是极端项标记；“等、等等”是列举未尽标记；“所”是文言文遗留下来的成分，是动词性成分做定语时的宾语提取标记，即表示定语所修饰的中心语是定语中的动词或介词的宾语。</p>
+<h4><span id="六-特殊词类"> 六、特殊词类</span></h4>
+<p>拟声词和叹词既无词汇意义，也无语法意义，而是通过自然模拟的声音和流露情感的声音来表达意义。从语法功能上看，叹词没有组合能力，与其他词类都不同；拟声词的语法功能不统一，实际上是根据模拟声音这个语义功能划分出来的。由于叹词和拟声词的特殊性，既不归为实词，也不归为虚词，而是归为实词、虚词之外的特殊词类。</p>
+<h5><span id="一拟声词"> （一）拟声词</span></h5>
+<p>拟声词是专门模拟声响的词，又叫象声词。拟声词的语法功能：一是直接或加“地”做状语，如（41a）; 二是加“的”做定语，如（41b）;三是做独立成分，如（41c）;四是直接或加“的”做谓语或补语，如（41d）。这些功能不是每个拟声词都具有，拟声词的功能与其构词形式有关，通常只有“AABB、A里AB、ABB”三种格式的拟声词才能做谓语和补语，其他的拟声词只有前三项功能。拟声词还可以临时用作动词，如（41e）。比较：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">（41） a. 嗡嗡（地）响。</div><div class="line">　  　    叽叽喳喳（地）叫个不停。</div><div class="line">　  　 b. “啪”的一声。</div><div class="line">　  　    叽叽喳喳的鸟叫声。</div><div class="line">　  　 c. 砰，突然一声枪响。</div><div class="line">　  　    停顿了片刻，轰隆，又抬高一个八度。</div><div class="line">　  　 d. 打得稀里哗啦（的）。</div><div class="line">　  　    窗外滴滴答答（的），雨还没有停。</div><div class="line">　  　 e. 两人叽里咕噜了一阵子就走了。</div><div class="line">　  　    时钟“滴答” 一下就赢到五元。</div></pre></td></tr></table></figure>
+<h5><span id="二叹词"> （二）叹词</span></h5>
+<p>叹词是独立使用，专门表示感叹、呼应的词。叹词的语义功能可分为感叹和呼应两类：一类是情感叹词，表示说话人的情感、态度，包括赞叹、惊讶、恍然大悟、疑惑、痛苦、蔑视不满等情感或态度，如“啊、哎、哎呀、哎哟、哟、咳、哦、咦、哼、哇、呸”等；另一类是呼应叹词，表示对对方的呼唤、提醒、应答，如“喂、嘿、嗯、喏、诶”等。</p>
+<p>叹词总是独立使用，做独立成分，不与其他词语发生结构上的联系。下面的用法不是叹词，而是拟声词，叹词大多兼做拟声词。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">（42） a. 电话里传来“喂喂”的声音。</div><div class="line">　  　 b. 小刘吓了一跳，“啊” 了 一声。</div></pre></td></tr></table></figure>
+<h4><span id="七-词类的个性-共性和层级"> 七、词类的个性、共性和层级</span></h4>
+<p>不同词类有互相区别的个性，但不同词类之间也有共性。比如动词、形容词、状态词都可以做谓语，可以归为谓词这个大类；名词、量词、时间词、处所词、方位词可做主宾语，可以受定语修饰，一般不能做谓语，可以归为体词这个大类。而谓词和体词又都能做核心成分，与区别词、副词都只能做修饰语不同，前者可归为核词，后者可归为饰词。词类之间的共性大小，构成了词类的层级性。</p>
+<p>正是由于词类具有共性的层级性，在划分词类时就可以根据词类本身的层级关系从大到小逐层划分。前面介绍的20个词类之间这种大类和小类的关系如下图所示：</p>
+<blockquote>
+<p>（43）现代汉语词类大类及划分标准</p>
+<img src="/posts/modern-chinese-4-1/4-2-7-0-43.png" title="4-2-7-0-43">
+</blockquote>
+<p>按照前面的介绍，上图中词类最后一层的大类包含的具体词类如下：谓词包括：①动词、②形容词、③状态词。体词包括：④名词（⑤时间词、⑥处所词、⑦方位词）、⑧量词。饰词包括：⑨区别词、⑩副词、⑪数词、⑫数量词、⑬指示词。虚词包括：⑭介词、⑮连词、⑯语气词、⑰助词。独立词只包括⑱叹词。另外还有⑲代词、⑳拟声词两个特殊词类。</p>
+<p>谓词和体词是最重要的两个大类，其语法功能上的区别是谓词可以充任述谓成分（做谓语、做补语、带宾语、带补语、受“不”、“很”以及其他状语的修饰），而体词一般不能充任述谓成分。另一方面，谓词和体词在词类层级系统中是最后才分出的大类，因此又具有很大的共性，这个共性就是都可以充任句法成分中除修饰语以外的核心成分，包括主语、宾语、谓语、述语、补语、中心语，以此与只能充任修饰语的饰词区别开。但饰词与谓词、体词实际上也有很大的共性，与虚词相比，饰词、谓词、体词可以充任句法成分，而虚词不可以，因此，谓词、体词、饰词可归为更上层的大类——实词，与虚词相对。副词可以做状语，状语与定语都属于句法成分中的修饰语，因此，副词与只能做定语的区别词一样归入实词。实词、虚词都有组合能力，可归为更大的类——组合词，与不具有组合能力的独立词（叹词）相区别。代词和拟声词是根据语义功能划分出来的词类，未放入上图中。</p>
+<p>这些大类的分类标准都是词的常规功能，排除了受到较大限制的非常规功能。名词也能做谓语，但受到很大限制，是非常规功能，因此不把名词归为谓词。区别词、数词、数量词可以做主宾语，但这几类词做主宾语时受到特殊限制，一般需要发生语义的转指，也不是一种常规的用法，不归为体词。有些副词也能做谓语（如“你赶快”“我不”），但也受到很大限制，是非常规功能，不归为谓词。</p>
+<p>以上的大类划分，谓词、体词和饰词的区分与表义方式有关，谓词表示陈述，体词表示指称，饰词表示修饰。而虚词没有词汇意义，只有语法意义，因此要单归一类。代词是根据“称代”这一语义功能划分出来的，没有统一的语法功能：有的代词是体词性的，如“我、你、他、这里、那时、谁、什么、哪里”；有的代词是谓词性的，如“这样、那样、这么样、怎样、怎么样”；还有的代词是饰词性的，如“几、多少、这么、多么、多”。至于叹词则既无词汇意义，也无语法意义，只能单独划类。</p>
+<p>同类词有共性，但并不是说同类词的语法功能完全相同。因此，基本词类还可以再分小类，比如动词根据能否带真宾语可分成及物动词和不及物动词，虚词更是须再划分为若干小类。</p>
+<blockquote>
+<p><strong>提示8</strong></p>
+<p>【词类和词组的类】词组的功能相当于词，所以词组也可按照词类的大类分别归为体词性词组、谓词性词组和饰词性词组。体词性词组包括：定中词组、体词性成分联合词组；谓词性词组包括：状中词组、述补词组、述宾词组、主谓词组、谓词性成分联合词组、复谓词组；饰词性词组包括：饰词性成分联合词组、数量词组、数词词组、介词结构、“的”字结构。</p>
+</blockquote>
+<h4><span id="思考和练习"> 思考和练习</span></h4>
+<ol>
+<li>划分词类的主要依据是什么？</li>
+<li>什么是兼类词？兼类词分几种类型？兼类词与同音词如何区分？</li>
+<li>为什么说词类是层级体系？汉语词类层次系统是什么样的？</li>
+<li>词类与语义的关系是什么样的？</li>
+<li>指出下面的词所属的词类：<br>
+现象　恶性　前面　步　呢　一切　大型　大量　抽象　抽象性　因为　每　坚定　赶紧　任何　啊　平常　平时　时常　明白　明明白白　等　健全　的确　少量　温暖　拳　高　碧绿　实在　刚　刚才　刚刚　过去　可惜　危险　谁　忽然　突然　部分　典型　片刻　弹性　白　洁白　惨白　花白　白色　统一　相同　相反　讨论　粉　公共　全　永远　对　怎么　绝对　相对</li>
+<li>切分下面的语句中的词，并标注词类（词类标记：动词v，形容词a，状态词z，名词n，量词l，数词m，数量词q，区别词b，指示词h，副词d，代词r，介词p，连词c，语气词y，助词u，拟声词0，叹词e。示例：我们/r要/v不断/d学习/v先进/a技术/n。）<br>
+（1）等待是一种折磨。<br>
+（2）马光远认为进行翡翠投资一定要理性，他甚至调侃说，“上帝还没有把看透另类投资价值规律的钥匙交给经济学”。同时他认为，目前相关产业政策尚未形成体系，亟须进—步明确发展方向，他建议可以建立相应的交易所，来理性地发现翡翠价值。</li>
+<li>在括号内填入合适的单词，每小题给出2〜5个可能的答案，并指出其所属词类，说明理由：
+<ul>
+<li>a. 前面来了（　）个老太太。</li>
+<li>b. （　）一个人都应该这样做。</li>
+<li>c. 我看见了（　）戴眼镜的学生。</li>
+<li>d. 把书放在抽屉（　）。</li>
+<li>e. 这件衣服很（　）。</li>
+<li>f. 我们在（　）看见了一头牛。</li>
+<li>g. 我不（　）英语。</li>
+<li>h. 我非常（　）打球。</li>
+<li>i. 他们在教室里（　）。</li>
+<li>j. 他穿了一件（　）衣服。</li>
+</ul>
+</li>
+<li>判断下列句子中“和”的词类属性：
+<ul>
+<li>a. 电视台和报纸也纷纷披露此事。</li>
+<li>b. 我是想让小王和小刘多接触。</li>
+<li>c. 他和我关系很好。</li>
+<li>d. 每个星球都有自己的运行轨道和周期。</li>
+<li>e. 老王和我一起去。</li>
+<li>f. 他和我一样大。</li>
+</ul>
+</li>
+<li>“容易生病”“难处理”是述宾结构还是状中偏正结构？为什么？</li>
+<li>按下面的表格，总结代词的语法性质，并说明代词的语法功能与什么因素有关。
+<blockquote>
+<p>| 语法性质 |    人称代词    | 指示代词 | 疑问代词 |<br>
+| :–: | :--------: | :–: | :–: |<br>
+| 名词性  | （填入代表性的例词） |      |      |<br>
+| 动词性  |            |      |      |<br>
+|  ……  |            |      |      |</p>
+</blockquote>
+</li>
+</ol>
+
+          <hr/>
+          <div class="p-state"><blockquote>
+            <p>当前链接：<a href="https://ziionote.github.io/posts/modern-chinese-4-1/">https://ziionote.github.io/posts/modern-chinese-4-1/</a></p>
+          </blockquote></div>
+          <div class="m-pagination">
+<p>继续阅读：<a href="/posts/英语备考/新东方写作笔记/">考博单词公开课笔记（赵亮，新东方）</a></p>
+<p>回顾前篇：<a href="/posts/modern-chinese-3/">现代汉语-三-词汇</a></p>
+<p>返回首页：<a href="/">语宙心星</a></p>
+          </div>
+        </div>
+      </article>
+      <div class="m-section m-share"></div>
+      <div class="m-section m-comment">
+          <div class="comments-wrap tabs" id="commenttabs">
+            <ul class="nav-tabs">
+              <li class="tab"><a href="#welcomcomments_wrap">欢迎评论！</a></li>
+              <li class="tab active"><a href="#valinecomments_wrap">Valine评论</a></li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane" id="welcomcomments_wrap"><div id="welcomcomments"><p>欢迎进行评论😆。</p></div></div>
+              <div class="tab-pane active" id="valinecomments_wrap"><div id="valinecomments"></div></div>
+            </div>
+          </div>
+        </div>
+      <div class="m-section m-related"></div>
+      <footer class="m-section m-footer"></footer>
+    </main>
+
+  </div>
+  <div class="l-ctrl" :class="ctrlClassObject" v-on:click="doOpenAside" id="l-ctrl">
+
+    <div class="b-ctrl">
+      <div class="m-ctrl"></div>
+    </div>
+
+  </div>
+</div>
+<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+<script>
+
+const layoutApp = new Vue({
+  delimiters: ['${', '}'],
+  el: '#l-viewport',
+  data: function () {
+    // var x = navigator;
+    // var y = returnCitySN;
+    return {
+      // browser: x,
+      // citysn: y,
+      asideIsOpen: false,
+      scrollAfterTop: false,
+      scrolledDown: false,
+      scrolledUp: false,
+    }
+  },
+  computed: {
+    browser: function () {
+      return { navigator }
+    },
+    citysn: function () {
+      return { returnCitySN }
+    },
+    sideClassObject: function () {
+      return {
+        'z-open': this.asideIsOpen,
+      }
+    },
+    pageClassObject: function () {
+      return {
+        'z-moved': this.asideIsOpen,
+      }
+    },
+    ctrlClassObject: function () {
+      return {
+        'z-hidden': this.asideIsOpen,
+      }
+    },
+    titlebarClassObject: function () {
+      return {
+        'z-nottop': this.scrollAfterTop,
+        'z-show': this.scrolledDown,
+      }
+    }
+  },
+  methods: {
+    doCloseAside: function (event) {
+      this.asideIsOpen = false;
+    },
+    doOpenAside: function (event) {
+      this.asideIsOpen = (this.asideIsOpen)?false:true;
+    },
+    handleScroll () {
+      var scrollTop = document.querySelector('.l-pagewrap').scrollTop
+      var offsetTop = document.querySelector('.b-printarea').offsetTop
+      if (scrollTop > offsetTop) {
+        this.scrollAfterTop = true
+      } else {
+        this.scrollAfterTop = false
+      }
+      if (this.lastScroll && scrollTop > this.lastScroll) {
+        this.scrolledDown = false
+        this.scrolledUp = true
+        // console.log('scrolling up');
+      } else if (this.lastScroll && scrollTop < this.lastScroll) {
+        this.scrolledDown = true
+        this.scrolledUp = false
+        // console.log('scrolling down');
+      }
+      this.lastScroll = scrollTop
+    }
+  },
+  mounted () {
+    document.querySelector('.l-pagewrap').addEventListener('scroll', this.handleScroll)
+  },
+  destroyed () {
+    document.querySelector('.l-pagewrap').removeEventListener('scroll', this.handleScroll)
+  }
+})
+
+</script>
+<script src="/js/s-gentoc.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
