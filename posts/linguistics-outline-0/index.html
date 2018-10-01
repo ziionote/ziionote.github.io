@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html class="theme-docapp" lang="zh-Hans">
+<head>
+<title>导言 | 语宙心星</title>
+<!-- META -->
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="theme-color" content="#fff" />
+<!-- LINK -->
+<link rel="shortcut icon" href="/favicon.png" type="image/x-icon"/>
+<link rel="icon" sizes="any" mask="" href="/favicon.png"/>
+<!-- STYLE -->
+<link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/Han/3.2.7/han.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+<!-- SCRIPT -->
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script type="text/javascript" src="/js/smoothscroll.js"></script>
+<!-- END -->
+
+</head>
+<body>
+<div class="l-viewport" id="l-viewport">
+  <div class="l-side" :class="sideClassObject" id="l-side">
+
+    <aside class="b-sidebar">
+      <div class="m-logoandsearch">
+        <a class="p-logoarea" href="/" title="关于语言与心智的文章收集站"><span class="u-sitename">语宙心星</span></a>
+        <p class="p-description" title="关于语言与心智的文章收集站">探索语言与心智的奥秘</p>
+        <div class="p-searchbox" role="search">
+          <form id="u-searchform" class="u-searchform" action="http://www.baidu.com/s?ie=utf-8" method="get" target="_blank">
+            <input id="u-searchbox" class="u-searchbox" type="text" name="q" placeholder="Search">
+            <input type="hidden" name="check_keywords" value="yes">
+            <input type="hidden" name="area" value="default">
+          </form>
+        </div>
+      </div>
+
+      <nav class="m-nav" v-on:click="doCloseAside">
+        <div class="p-catnav">
+          <p class="u-navcaption">《现代汉语》沈阳 郭锐</p>
+          <ul class="u-navlist">
+            <li class="u-navitem">
+              <a href="/posts/modern-chinese-0/">现代汉语-〇-目录、参考文献等</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/modern-chinese-1/">现代汉语-一-总论</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/modern-chinese-3/">现代汉语-三-词汇</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/modern-chinese-4-1/">现代汉语-四-语法-上</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/《现代汉语》沈阳 郭锐/《现代汉语·词汇》纲要/">《现代汉语·词汇》纲要</a>
+            </li>
+          </ul>
+          <p class="u-navcaption">《语法讲义》朱德熙</p>
+          <ul class="u-navlist">
+            <li class="u-navitem">
+              <a href="/posts/chinese-grammar-handouts-0/">语法讲义（目录、索引等）</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/chinese-grammar-handouts-1/">语法讲义（上）</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/chinese-grammar-handouts-2/">语法讲义（中）</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/chinese-grammar-handouts-3/">语法讲义（下）</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/chinese-grammar-answers/">语法答问</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/notes-on-chinese-grammar-handouts/">语法讲义 笔记</a>
+            </li>
+          </ul>
+          <p class="u-navcaption">《语言学纲要》叶蜚声 徐通锵</p>
+          <ul class="u-navlist">
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-meta/">元信息</a>
+            </li>
+            <li class="u-navitem z-current">
+              <a href="/posts/linguistics-outline-0/">导言</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-1/">第一章　语言的功能</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-2/">第二章　语言是符号系统</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-3/">第三章　语音和音系</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-4/">第四章　语法</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-5/">第五章　语义和语用</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-6/">第六章　文字</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-7/">第七章　语言演变与语言分化</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-8/">第八章　语言的接触</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-9/">第九章　语言系统的演变</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+  </div>
+  <div class="l-pagewrap" :class="pageClassObject" v-on:click="doCloseAside" id="l-pagewrap">
+
+    <div class="b-titlebar" :class="titlebarClassObject">
+      <div class="m-titlebar">
+        <a class="p-logoarea" href="/"><img class="u-logo" src="/logo.svg" alt="语宙心星"><span class="u-sitename">语宙心星</span></a>
+      </div>
+    </div>
+
+
+    <main class="b-printarea">
+      <header class="m-header"></header>
+      <article class="m-article">
+        <div class="p-meta">
+          <span class="u-post-title">导言</span>
+          <span class="u-post-metaspan u-post-author">SunCH</span>
+          <a class="u-post-metaspan u-post-site" href="/">语宙心星</a>
+          <span class="u-post-metaspan u-post-date" title="2018-10-01 00:00:01">10月01日</span>
+          
+        </div>
+        <div class="p-write" id="post-content">
+<h2><span id="导-言"> 导　言</span></h2>
+<h3><span id="一-语言学的对象和学科性质"> 一、语言学的对象和学科性质</span></h3>
+<p>语言学，顾名思义，是研究语言的科学。语言是语言学的研究对象。</p>
+<p>语言现象是人类社会普遍具有的现象，是人类生活中最司空见惯的现象。人们一来到这个世界，就处在一个语言社会中，周围的人们都借着某种语言彼此沟通交流协作。正常的人长到两三岁，自己也开始学会说话，并在学话的过程中，越来越多地认识这个世界。在文明的社会里，进入学龄的儿童还要学习阅读和书写，掌握文字和书面语的理解运用能力。通过书面语，语言发挥了更大的功效，人们可以跨越时空，更深入地理解生活的世界，同时也极大地增强了和周围世界的联系沟通能力。世界上的语言是多种多样的，如果离开自己从小生长的社会，到世界上其他文化地区生活，还必须学会其他种类的语言，以便在那个社会中也能自由地与人交流。这样，一个人从出生到离世，可以说一辈子就生活在语言当中。</p>
+<p>在人的日常生活中，语言像饮食起居一样不可或缺，人们太习以为常了。每个正常的人都会说话，这就像每个人都用两条腿走路一样，极其平常。正因为它太平常了，一般人才不去想它究竟是怎么回事情。其实，平凡的现象中隐含着深邃的哲理。谁能够揭示这个哲理，谁就能够推动科学的发展。牛顿看到成熟的苹果从树上掉下来，研究它的原因，发现了万有引力的秘密，开创了物理学的一个新时代。瓦特从水开时蒸汽顶起壶盖的现象中受到启发，发明了蒸汽机。语言中也隐藏着很深奥的秘密。人类有语言，会说话，实在是一件了不起的大事。它是把人和其他动物区别开来的一个重要的标志。自古以来，历代都有人探索语言中的奥妙，取得了不少成果。</p>
+<p>语言现象是最早纳入人类研究视野的现象之一。人类对于世界上的各种自然现象和社会现象的理性认识以及相关的许多抽象观念，是在各个古典文明形成的时期出现的。有关语言的理性思考也是从这一时期开始的。中国先秦时期的思想家、古希腊的哲学家、古代印度的思想家等等，都提出了对语言的一般看法，并且对后人产生了深远的影响。这是对语言的最早的理性认识。</p>
+<p>此后，在各个文明的发展过程中，古代文化典籍的传承成为文化发展延续的重要途径。这些政治、哲学、宗教、历史、文学等方面的经典著作要得到学习和继承，首先都需要语言方面的分析和解释，许多学者从事这样的研究工作。这样，在许多有着悠久历史文化传统的地区都出现了语文学研究，这是语言的系统研究的开始。中国、印度和希腊-罗马在传统语文学的研究上都取得了辉煌的成就，是语言学的三大发源地。</p>
+<p>在我国，文字和书面语很早就出现并成熟起来。先秦时期已经出现了大量的文化典籍，它们所使用的古代书面语体被后人学习继承，称作文言文。直至20世纪初，正式的书面语一直使用这种文言文的形式。中国传统的语言研究主要是围绕着解读文言文典籍的需要进行的。由于汉语书面语使用的文字——汉字的特点，中国传统语言研究主要是抓住汉字，分析它的形体，探求它的古代读音和意义，形成了统称“小学”的文字、音韵、训诂之学，也就是中国传统的语文学。</p>
+<p>在印度，文化经典主要是宗教典籍，所用的语言是古代的梵语。最初这些经典是靠口耳相传，后来由文字记载下来。古代印度的语言研究主要是对这些经典的解读。古代印度的学者在对语言一般性质的认识以及具体的语音和语法研究等方面，都有卓越建树，对世界其他地区的语言研究也产生了深远影响。</p>
+<p>在欧洲，古希腊有丰富的文化典籍，语文学非常发达，已经有了系统的语法研究成果。后来罗马人继承了古希腊的语言研究传统，形成了拉丁语的语法研究体系。西欧各国有一千多年时间在正式的场合都使用古典拉丁语，语言研究主要围绕拉丁语进行，语法、修辞、逻辑成为学校传授的主课，编出了种种语法、词典和读本。语言研究越来越深入，逐渐形成了传统的西方语言学。</p>
+<p>语文学时期的语言研究虽然成果巨大，但语文学研究所关注的，首先是反映在古代书面文献中的古代思想观念、政治制度等等，其直接目的是解读古典文献，而不是自觉地探索语言自身的规律，对同时代活生生的口语更是完全不感兴趣。这必然会使人们对语言的认识受到限制。因此，语文学时期的语言研究还不是独立的学科。</p>
+<p>欧洲文艺复兴之后，社会的政治、经济、文化各方面都有了发展变化。随着近代思想观念和科学技术的进步，以及对世界语言广泛的了解，语言研究的观念和方法也有了发展，研究对象不再局限在古代书面语，许多活的口头的语言也得到了客观的观察描写。到19世纪，语言的历史研究取得了辉煌的成就，语言自身独自具有的发展规律被越来越多地认识到，形成了历史比较语言学，这标志着语言学不再是其他学科的附庸，已经成为一门独立的学科。</p>
+<p>语言现象是丰富而复杂的。语言研究发展的过程，也是人们对研究对象的界定逐渐明确的过程。在这一过程中，研究对象的性质也得到了越来越深入的认识。20世纪初，瑞士语言学家索绪尔（F. de Saussure）在《普通语言学教程》中提出，存在于语言社团中每个人头脑中的共同的语言形式结构是语言学研究的真正对象。这是明确语言学研究对象的重要一步，极大地促进了语言研究的深入和发展，为形成系统的现代语言学理论体系奠定了基础。语言学从此成为一门现代科学。语言整体的结构和发展得到了较全面的研究。</p>
+<p>语言本身的构造很复杂，需要从不同的角度，不同的方面进行研究。通常来说，语言系统大致可以分为语音、语法、语汇等几个子系统。语言研究可以分别描写语言每个子系统在某一个特定时期的共时状态和不同子系统之间的关联，这是共时语言学的研究角度；也可以研究语言每个子系统在不同时期所发生的变化及其变化中不同子系统之间的关联，这是历史语言学的研究角度。语言研究可以具体地研究某一个语言，也可以通过多语言的比较探求所有人类语言的语音、语法、语汇在共时结构上的共性，探求所有人类语言在历史发展中的共同规律。综合各种语言的研究成果，归纳成语言的一般规律，这就是理论语言学的任务。理论语言学，也称普通语言学，是关于语言的一般规律的理论研究。理论语言学的水平在很大程度上决定于具体语言的研究成果。世界上有几千种语言，有些语言的研究已经比较深入，但大部分语言还研究得很不够，甚至还没有人去研究。所以理论语言学就目前的状况来说，只是综合了一部分语言的研究成果，还有待于不断补充和修正。</p>
+<p>语言既有自身结构的独立性和自主性，同时也与人类自身以及社会环境存在着密切的关联。语言学除了关注语言本体的结构性质和发展规律，同时也要探究语言系统与人、与社会之间错综复杂的联系。20世纪下半叶出现的社会语言学、心理语言学、计算语言学等新的语言学分支，以及关于语言功能的研究，语言认知基础的研究，逻辑和语义的关系的研究，等等，都涉及语言系统之外的众多问题，这些研究的深入也促进了对语言本体结构性质的认识。</p>
+<p>从语言学的研究对象和发展过程可以看出，语言学是关于人类社会生活中的最基本现象的研究之一，对语言性质的认识直接影响到人类对于自身和周围世界的一些基本理念，从这一点讲，语言学像数学、逻辑学、物理学、生命科学等基础学科一样，是一项基础研究。语言研究是人类探求自身奥秘的重要途径，具有永恒的魅力和价值。</p>
+<h3><span id="二-语言学在科学体系中的地位"> 二、语言学在科学体系中的地位</span></h3>
+<p>在人类的科学体系中，任何一门学科的产生、存在和发展都不是孤立的，语言学也是这样。</p>
+<p>运用语言进行交际的过程是瞬间的事情，但却包含着一系列复杂的问题。如果借用信息论的术语来说，这一过程大体上可以分为“编码—发送—传递—接收—解码”五个阶段。说话人为了表达某一信息，首先需要在语言中寻求有关的词语，按照语言的语法规则编排起来，进行编码；说话人力求编码清晰、明确，避免失误。编码完成，通过发音器官输出，口语的发音器官是肺、声带、咽腔、口腔、鼻腔等。信息一经输出，说话人发音器官所发出的声音就通过空气等媒介传递，到达听话人一方；听话人的听觉器官开始运转，接收信息，并进行解码，将它还原为说话人要表达的信息。整个过程涉及人的生理机制的运作，心理机制的运作，还有声波在空气中传播的物理过程。在整个语言交际过程中，语言学关心的核心是编码和解码的过程，它涉及对语言结构本体的研究，包含形式和内容两个方面，语言形式和内容的关系，是语言研究的最根本的问题。</p>
+<p>但是，要真正把语言交际的过程认识清楚，则不是语言学所能独立完成的，还需要各门学科的配合和协作。很多学科都从自己关心的角度来研究语言。生理学研究语言发音的生理基础，物理学研究语音产生和传递的物理过程，心理学关心语言的听觉接收，神经学研究语言在中枢神经系统中的生理基础，病理学通过说话的种种现象判断和治疗失语症，情报学和信息科学研究语言的情报编码和计算机编码以便情报和信息的储存和利用，数学把语言看作素（elements）及其可允许组合的一套数学体系，等等。这些学科研究的目的不完全在于语言自身，但这些研究对于全面认识和把握语言的各个侧面和各种特性是必需的，有益于语言本体研究的深入。</p>
+<p>从语言学的发展历史看，语言研究的产生与发展和同时代的各种学术思想有着密切的关联。语言学既受其他学科研究的影响，同时也在很大程度上影响着其他学科的发展。</p>
+<p>语言研究首先和其他人文学科关系密切。在语言学成为独立的学科之前，语言研究就是哲学、逻辑学、文学或文献学的一部分，可见语言研究的成果对于这些学科的重要性，而这些领域曾是语言学最初产生的土壤，直接影响了最初语言研究的视角。当语言学成为独立的学科后，这些传统的人文学科和语言学之间仍然有着千丝万缕的联系，同时历史学、考古学、社会学、人类学等人文社会学科也在很大程度上受益于语言学的研究成果。</p>
+<p>随着时代的发展和科学思想的进步，语言学和各个时代的自然科学思潮同样体现出密切的相关性。19世纪的历史比较语言学在语言观念和研究方法上都与生物学的进化论关系密切。20世纪初的语言结构思想则与科学的整体论思想息息相关。进入20世纪下半叶，语言学和信息科学、认知科学以及数理逻辑等学科之间表现出了前所未有的密切关联，这些学科在研究取向、理论方法和阐释方式上都直接影响了语言学研究，同时，这些学科的发展也亟待语言学的研究成果为其提供必要的条件。</p>
+<p>无论从语言现象的特征看，还是从语言学的历史看，语言学在科学体系中都具有独特而重要的地位。可以说，语言学是自然科学和人文社会科学联系的桥梁。</p>
+<p>语言既存在于社会，又是人类天赋的能力，既承载着人类已有文明的成果，又是人类新的精神创造的工具。语言是联系人类主观认知和外在客观世界的中介，是认识人类自身和外在世界的必要途径。面对这样独特的研究对象，语言学在揭示语言的根本性质的过程中，需要不断借鉴融合其他学科的理论方法，不断开拓新的研究视角，提供新的具有创造性的理论，在加深认识语言现象的同时，也为其他学科的发展提供理论方法的参照。语言学需要并正在成为一门领先的科学。</p>
+<h3><span id="三-语言学的应用价值"> 三、语言学的应用价值</span></h3>
+<p>社会需求是任何学科存在和发展的根本前提，语言学也同样如此。语言学的研究成果在人类社会生活中有着广泛而重要的应用价值。</p>
+<p>在历史上，语言研究曾为解读古代经典，继承传统文化提供了基本保证。人类文明的发展离不开对文化传统的继承，社会生活中对语言学的这一需求将会一直存在下去。语言文字教学也是传统语言研究的重要应用领域，包括本族语的教学和外语教学，也包括古代书面语的教学，等等。语言教学需要建立在对语言的理性认识之上，是语言研究成果最直接的应用。此外，在文化交流中，不同语言之间的口语和书面语的翻译工作起着非常重要的作用，古已有之，同样需要语言研究成果为其提供帮助。</p>
+<p>随着社会发展和科学体系的完善，语言学的应用价值越来越广泛。我们在前一节谈到了语言学在科学体系中的地位。语言学和其他学科间的密切关联体现出语言学在科学技术发展中的重要作用。今天，语言学的研究成果不仅在哲学、逻辑学、文学、历史学、考古学、社会学、人类学、心理学等人文学科中起着重要作用，而且在神经生理学、信息科学、认知科学等自然学科中也产生了重大的影响，并促使形成了许多交叉学科，如社会语言学、心理语言学、神经语言学、病理语言学、计算语言学、认知语言学、语言人类学等等。有些学科本身就是应用学科，具有直接的应用价值，如病理语言学，就是把语言学成果用于分析治疗像失语症、聋哑疾病等语言障碍临床症状。语言学在科学发展中正发挥着越来越大的作用。</p>
+<p>除此之外，由于语言在社会生活中的重要地位，有关语言的一些政策法规成为国家政府规划政策的一部分，比如民族共同语的确定和规范，文字的规范，各民族语在教育中的地位，等等。国家语文政策的制定需要顺应语言自然的规律，语言学研究的成果会为这些政策的正确制定提供参考和依据。我国幅员辽阔，民族众多，方言分歧大，在民族语文政策的制定，普通话的推广等工作中都需要语言学的研究成果。这也是语言学重要的社会需求。</p>
+<p>总之，语言学既有作为基础学科的魅力和学术价值，同时也有广泛的应用前景，是一门既有悠久的历史又具有科学前沿性的充满活力的科学。</p>
+
+          <hr/>
+          <div class="p-state"><blockquote>
+            <p>当前链接：<a href="https://ziionote.github.io/posts/linguistics-outline-0/">https://ziionote.github.io/posts/linguistics-outline-0/</a></p>
+          </blockquote></div>
+          <div class="m-pagination">
+<p>继续阅读：<a href="/posts/linguistics-outline-1/">第一章　语言的功能</a></p>
+<p>回顾前篇：<a href="/posts/linguistics-outline-meta/">元信息</a></p>
+<p>返回首页：<a href="/">语宙心星</a></p>
+          </div>
+        </div>
+      </article>
+      <div class="m-section m-share"></div>
+      <div class="m-section m-comment">
+          <div class="comments-wrap tabs" id="commenttabs">
+            <ul class="nav-tabs">
+              <li class="tab"><a href="#welcomcomments_wrap">欢迎评论！</a></li>
+              <li class="tab active"><a href="#valinecomments_wrap">Valine评论</a></li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane" id="welcomcomments_wrap"><div id="welcomcomments"><p>欢迎进行评论😆。</p></div></div>
+              <div class="tab-pane active" id="valinecomments_wrap"><div id="valinecomments"></div></div>
+            </div>
+          </div>
+        </div>
+      <div class="m-section m-related"></div>
+      <footer class="m-section m-footer"></footer>
+    </main>
+
+  </div>
+  <div class="l-ctrl" :class="ctrlClassObject" v-on:click="doOpenAside" id="l-ctrl">
+
+    <div class="b-ctrl">
+      <div class="m-ctrl"></div>
+    </div>
+
+  </div>
+</div>
+<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+<script>
+
+const layoutApp = new Vue({
+  delimiters: ['${', '}'],
+  el: '#l-viewport',
+  data: function () {
+    // var x = navigator;
+    // var y = returnCitySN;
+    return {
+      // browser: x,
+      // citysn: y,
+      asideIsOpen: false,
+      scrollAfterTop: false,
+      scrolledDown: false,
+      scrolledUp: false,
+    }
+  },
+  computed: {
+    browser: function () {
+      return { navigator }
+    },
+    citysn: function () {
+      return { returnCitySN }
+    },
+    sideClassObject: function () {
+      return {
+        'z-open': this.asideIsOpen,
+      }
+    },
+    pageClassObject: function () {
+      return {
+        'z-moved': this.asideIsOpen,
+      }
+    },
+    ctrlClassObject: function () {
+      return {
+        'z-hidden': this.asideIsOpen,
+      }
+    },
+    titlebarClassObject: function () {
+      return {
+        'z-nottop': this.scrollAfterTop,
+        'z-show': this.scrolledDown,
+      }
+    }
+  },
+  methods: {
+    doCloseAside: function (event) {
+      this.asideIsOpen = false;
+    },
+    doOpenAside: function (event) {
+      this.asideIsOpen = (this.asideIsOpen)?false:true;
+    },
+    handleScroll () {
+      var scrollTop = document.querySelector('.l-pagewrap').scrollTop
+      var offsetTop = document.querySelector('.b-printarea').offsetTop
+      if (scrollTop > offsetTop) {
+        this.scrollAfterTop = true
+      } else {
+        this.scrollAfterTop = false
+      }
+      if (this.lastScroll && scrollTop > this.lastScroll) {
+        this.scrolledDown = false
+        this.scrolledUp = true
+        // console.log('scrolling up');
+      } else if (this.lastScroll && scrollTop < this.lastScroll) {
+        this.scrolledDown = true
+        this.scrolledUp = false
+        // console.log('scrolling down');
+      }
+      this.lastScroll = scrollTop
+    }
+  },
+  mounted () {
+    document.querySelector('.l-pagewrap').addEventListener('scroll', this.handleScroll)
+  },
+  destroyed () {
+    document.querySelector('.l-pagewrap').removeEventListener('scroll', this.handleScroll)
+  }
+})
+
+</script>
+<script src="/js/s-gentoc.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

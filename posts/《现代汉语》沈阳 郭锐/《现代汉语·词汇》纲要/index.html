@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html class="theme-docapp" lang="zh-Hans">
+<head>
+<title>《现代汉语·词汇》纲要 | 语宙心星</title>
+<!-- META -->
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="theme-color" content="#fff" />
+<!-- LINK -->
+<link rel="shortcut icon" href="/favicon.png" type="image/x-icon"/>
+<link rel="icon" sizes="any" mask="" href="/favicon.png"/>
+<!-- STYLE -->
+<link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/Han/3.2.7/han.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+<!-- SCRIPT -->
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script type="text/javascript" src="/js/smoothscroll.js"></script>
+<!-- END -->
+
+</head>
+<body>
+<div class="l-viewport" id="l-viewport">
+  <div class="l-side" :class="sideClassObject" id="l-side">
+
+    <aside class="b-sidebar">
+      <div class="m-logoandsearch">
+        <a class="p-logoarea" href="/" title="关于语言与心智的文章收集站"><span class="u-sitename">语宙心星</span></a>
+        <p class="p-description" title="关于语言与心智的文章收集站">探索语言与心智的奥秘</p>
+        <div class="p-searchbox" role="search">
+          <form id="u-searchform" class="u-searchform" action="http://www.baidu.com/s?ie=utf-8" method="get" target="_blank">
+            <input id="u-searchbox" class="u-searchbox" type="text" name="q" placeholder="Search">
+            <input type="hidden" name="check_keywords" value="yes">
+            <input type="hidden" name="area" value="default">
+          </form>
+        </div>
+      </div>
+
+      <nav class="m-nav" v-on:click="doCloseAside">
+        <div class="p-catnav">
+          <p class="u-navcaption">《现代汉语》沈阳 郭锐</p>
+          <ul class="u-navlist">
+            <li class="u-navitem">
+              <a href="/posts/modern-chinese-0/">现代汉语-〇-目录、参考文献等</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/modern-chinese-1/">现代汉语-一-总论</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/modern-chinese-3/">现代汉语-三-词汇</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/modern-chinese-4-1/">现代汉语-四-语法-上</a>
+            </li>
+            <li class="u-navitem z-current">
+              <a href="/posts/《现代汉语》沈阳 郭锐/《现代汉语·词汇》纲要/">《现代汉语·词汇》纲要</a>
+            </li>
+          </ul>
+          <p class="u-navcaption">《语法讲义》朱德熙</p>
+          <ul class="u-navlist">
+            <li class="u-navitem">
+              <a href="/posts/chinese-grammar-handouts-0/">语法讲义（目录、索引等）</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/chinese-grammar-handouts-1/">语法讲义（上）</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/chinese-grammar-handouts-2/">语法讲义（中）</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/chinese-grammar-handouts-3/">语法讲义（下）</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/chinese-grammar-answers/">语法答问</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/notes-on-chinese-grammar-handouts/">语法讲义 笔记</a>
+            </li>
+          </ul>
+          <p class="u-navcaption">《语言学纲要》叶蜚声 徐通锵</p>
+          <ul class="u-navlist">
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-meta/">元信息</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-0/">导言</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-1/">第一章　语言的功能</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-2/">第二章　语言是符号系统</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-3/">第三章　语音和音系</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-4/">第四章　语法</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-5/">第五章　语义和语用</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-6/">第六章　文字</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-7/">第七章　语言演变与语言分化</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-8/">第八章　语言的接触</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-9/">第九章　语言系统的演变</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+  </div>
+  <div class="l-pagewrap" :class="pageClassObject" v-on:click="doCloseAside" id="l-pagewrap">
+
+    <div class="b-titlebar" :class="titlebarClassObject">
+      <div class="m-titlebar">
+        <a class="p-logoarea" href="/"><img class="u-logo" src="/logo.svg" alt="语宙心星"><span class="u-sitename">语宙心星</span></a>
+      </div>
+    </div>
+
+
+    <main class="b-printarea">
+      <header class="m-header"></header>
+      <article class="m-article">
+        <div class="p-meta">
+          <span class="u-post-title">《现代汉语·词汇》纲要</span>
+          <span class="u-post-metaspan u-post-author">SunCH</span>
+          <a class="u-post-metaspan u-post-site" href="/">语宙心星</a>
+          <span class="u-post-metaspan u-post-date" title="2018-10-01 15:08:50">10月01日</span>
+          
+        </div>
+        <div class="p-write" id="post-content">
+<ul>
+<li>【A】词的基本概述
+<ul>
+<li><strong>一　词（的概述）</strong>
+<ul>
+<li>1、<strong>词</strong>的<code>定义</code>——词是<u>最小的</u>，<u>能独立运用</u>的，<u>有意义的</u>语言单位。</li>
+<li>2、<strong>语素</strong>的<code>定义</code>——语素是<u>最小的</u>，<u>有意义的</u>语言单位。</li>
+<li>3、词、语素、汉字（音节）三者之间的关系。</li>
+<li>4、词的语音形式
+<ul>
+<li>词中不能有停顿</li>
+<li>单音节词 | 双音节词 | ……</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>二　词的构造</strong>
+<ul>
+<li>1、单纯词</li>
+<li>2、合成词
+<ul>
+<li><strong>并列式</strong>合成词</li>
+<li><strong>偏正式</strong>合成词</li>
+<li><strong>陈述式</strong>合成词</li>
+<li><strong>支配式</strong>合成词</li>
+<li><strong>补充式</strong>合成词</li>
+<li><strong>重叠式</strong>合成词</li>
+<li><strong>附加式</strong>合成词
+<ul>
+<li>前缀+词根</li>
+<li>词根+后缀</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>3、<strong>简称</strong>
+<ul>
+<li>减缩</li>
+<li>紧缩</li>
+<li>其他</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>三　词的意义</strong>
+<ul>
+<li>1、<strong>词义</strong>（词的概念义）</li>
+<li>2、<strong>词的附属义</strong>
+<ul>
+<li>词的感情色彩</li>
+<li>词的语体色彩</li>
+</ul>
+</li>
+<li>3、<strong>语素义</strong>
+<ul>
+<li>不成词语素的意义</li>
+<li>成词语素的意义</li>
+</ul>
+</li>
+<li>4、词义和语素义之间的关系</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>【B】单个词内部意义之间的关系
+<ul>
+<li><strong>四　多义词</strong>
+<ul>
+<li>1、词的<strong>固定义</strong>和<strong>临时语境义</strong></li>
+<li>2、<strong>义项</strong></li>
+<li>3、<strong>多义词</strong>和<strong>单义词</strong></li>
+<li>4、词的<strong>本义</strong>、<strong>基本义</strong>、<strong>引申义</strong>、<strong>比喻义</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>【C】不同词之间的横向关系
+<ul>
+<li><strong>五　同音词</strong>
+<ul>
+<li>1、<strong>同音词</strong>的<code>概念</code></li>
+<li>2、同音词的<code>类型</code></li>
+<li>3、同音词的<code>来源</code></li>
+<li>4、同音词跟多义词的区别</li>
+</ul>
+</li>
+<li><strong>六　同义词</strong>
+<ul>
+<li>1、<strong>同义词</strong>的<code>类型</code>
+<ul>
+<li>绝对同义词</li>
+<li>相对同义词</li>
+</ul>
+</li>
+<li>2、同义词的<code>来源</code></li>
+<li>3、同义词的<code>辨析</code>
+<ul>
+<li>从概念义辨析</li>
+<li>从功能上辨析</li>
+<li>从附属义辨析</li>
+</ul>
+</li>
+<li>4、同义词的作用</li>
+</ul>
+</li>
+<li><strong>七　反义词</strong>
+<ul>
+<li>1、<strong>反义词</strong>的<code>类型</code>
+<ul>
+<li>绝对反义词</li>
+<li>相对反义词</li>
+</ul>
+</li>
+<li>2、反义词的<code>对应关系</code></li>
+<li>3、反义词的<code>作用</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>【D】不同词之间的纵向意义关系
+<ul>
+<li><strong>八　上下位词</strong>
+<ul>
+<li>1、词与词之间的上下位关系</li>
+<li>2、<strong>上位词</strong></li>
+<li>3、<strong>下位词</strong></li>
+<li>4、各类词中的上下位关系</li>
+<li>5、上下位词的作用</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>【E】（现汉）词汇的构成
+<ul>
+<li><strong>九　词汇的构成</strong>
+<ul>
+<li>1、<strong>基本词汇</strong></li>
+<li>2、<strong>一般词汇</strong></li>
+<li>3、<strong>古语词</strong>
+<ul>
+<li>历史词语</li>
+<li>文言词语</li>
+</ul>
+</li>
+<li>4、<strong>新词</strong></li>
+<li>5、<strong>方言词</strong></li>
+<li>6、<strong>术语</strong></li>
+<li>7、<strong>行业语</strong></li>
+<li>8、<strong>外来词</strong>
+<ul>
+<li>译音词</li>
+<li>译音兼译义词</li>
+<li>半译音半译义词</li>
+</ul>
+</li>
+<li>[9]、<strong>熟语</strong>（固定结构）
+<ul>
+<li><strong>成语</strong></li>
+<li><strong>谚语</strong></li>
+<li><strong>歇后语</strong></li>
+<li><strong>惯用语</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>【F】如何编词典
+<ul>
+<li><strong>十　词典</strong>
+<ul>
+<li>1、词典的类型
+<ul>
+<li>百科词典 | 语文词典</li>
+<li>单语词典 | 双语词典 | 多语词典</li>
+</ul>
+</li>
+<li>2、词典释义模式
+<ul>
+<li>用同义近义词释义</li>
+<li>用反义词或否定形式释义</li>
+<li>定义式释义</li>
+<li>展开描述式释义</li>
+<li>摹状式释义</li>
+<li>比喻义释义</li>
+<li>语文性释义 | 百科性释义</li>
+</ul>
+</li>
+<li>3、词典的编排
+<ul>
+<li>条目的编排（词条排序）</li>
+<li>条目下组成内容的编排</li>
+<li>条目下义项的编排</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          <hr/>
+          <div class="p-state"><blockquote>
+            <p>当前链接：<a href="https://ziionote.github.io/posts/《现代汉语》沈阳 郭锐/《现代汉语·词汇》纲要/">https://ziionote.github.io/posts/《现代汉语》沈阳 郭锐/《现代汉语·词汇》纲要/</a></p>
+          </blockquote></div>
+          <div class="m-pagination">
+<p>继续阅读：<a href="/posts/notes-on-chinese-grammar-handouts/">语法讲义 笔记</a></p>
+<p>回顾前篇：<a href="/posts/linguistics-outline-9/">第九章　语言系统的演变</a></p>
+<p>返回首页：<a href="/">语宙心星</a></p>
+          </div>
+        </div>
+      </article>
+      <div class="m-section m-share"></div>
+      <div class="m-section m-comment">
+          <div class="comments-wrap tabs" id="commenttabs">
+            <ul class="nav-tabs">
+              <li class="tab"><a href="#welcomcomments_wrap">欢迎评论！</a></li>
+              <li class="tab active"><a href="#valinecomments_wrap">Valine评论</a></li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane" id="welcomcomments_wrap"><div id="welcomcomments"><p>欢迎进行评论😆。</p></div></div>
+              <div class="tab-pane active" id="valinecomments_wrap"><div id="valinecomments"></div></div>
+            </div>
+          </div>
+        </div>
+      <div class="m-section m-related"></div>
+      <footer class="m-section m-footer"></footer>
+    </main>
+
+  </div>
+  <div class="l-ctrl" :class="ctrlClassObject" v-on:click="doOpenAside" id="l-ctrl">
+
+    <div class="b-ctrl">
+      <div class="m-ctrl"></div>
+    </div>
+
+  </div>
+</div>
+<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+<script>
+
+const layoutApp = new Vue({
+  delimiters: ['${', '}'],
+  el: '#l-viewport',
+  data: function () {
+    // var x = navigator;
+    // var y = returnCitySN;
+    return {
+      // browser: x,
+      // citysn: y,
+      asideIsOpen: false,
+      scrollAfterTop: false,
+      scrolledDown: false,
+      scrolledUp: false,
+    }
+  },
+  computed: {
+    browser: function () {
+      return { navigator }
+    },
+    citysn: function () {
+      return { returnCitySN }
+    },
+    sideClassObject: function () {
+      return {
+        'z-open': this.asideIsOpen,
+      }
+    },
+    pageClassObject: function () {
+      return {
+        'z-moved': this.asideIsOpen,
+      }
+    },
+    ctrlClassObject: function () {
+      return {
+        'z-hidden': this.asideIsOpen,
+      }
+    },
+    titlebarClassObject: function () {
+      return {
+        'z-nottop': this.scrollAfterTop,
+        'z-show': this.scrolledDown,
+      }
+    }
+  },
+  methods: {
+    doCloseAside: function (event) {
+      this.asideIsOpen = false;
+    },
+    doOpenAside: function (event) {
+      this.asideIsOpen = (this.asideIsOpen)?false:true;
+    },
+    handleScroll () {
+      var scrollTop = document.querySelector('.l-pagewrap').scrollTop
+      var offsetTop = document.querySelector('.b-printarea').offsetTop
+      if (scrollTop > offsetTop) {
+        this.scrollAfterTop = true
+      } else {
+        this.scrollAfterTop = false
+      }
+      if (this.lastScroll && scrollTop > this.lastScroll) {
+        this.scrolledDown = false
+        this.scrolledUp = true
+        // console.log('scrolling up');
+      } else if (this.lastScroll && scrollTop < this.lastScroll) {
+        this.scrolledDown = true
+        this.scrolledUp = false
+        // console.log('scrolling down');
+      }
+      this.lastScroll = scrollTop
+    }
+  },
+  mounted () {
+    document.querySelector('.l-pagewrap').addEventListener('scroll', this.handleScroll)
+  },
+  destroyed () {
+    document.querySelector('.l-pagewrap').removeEventListener('scroll', this.handleScroll)
+  }
+})
+
+</script>
+<script src="/js/s-gentoc.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

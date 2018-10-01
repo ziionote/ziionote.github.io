@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html class="theme-docapp" lang="zh-Hans">
+<head>
+<title>语法讲义 笔记 | 语宙心星</title>
+<!-- META -->
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="theme-color" content="#fff" />
+<!-- LINK -->
+<link rel="shortcut icon" href="/favicon.png" type="image/x-icon"/>
+<link rel="icon" sizes="any" mask="" href="/favicon.png"/>
+<!-- STYLE -->
+<link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/Han/3.2.7/han.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+<!-- SCRIPT -->
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script type="text/javascript" src="/js/smoothscroll.js"></script>
+<!-- END -->
+
+</head>
+<body>
+<div class="l-viewport" id="l-viewport">
+  <div class="l-side" :class="sideClassObject" id="l-side">
+
+    <aside class="b-sidebar">
+      <div class="m-logoandsearch">
+        <a class="p-logoarea" href="/" title="关于语言与心智的文章收集站"><span class="u-sitename">语宙心星</span></a>
+        <p class="p-description" title="关于语言与心智的文章收集站">探索语言与心智的奥秘</p>
+        <div class="p-searchbox" role="search">
+          <form id="u-searchform" class="u-searchform" action="http://www.baidu.com/s?ie=utf-8" method="get" target="_blank">
+            <input id="u-searchbox" class="u-searchbox" type="text" name="q" placeholder="Search">
+            <input type="hidden" name="check_keywords" value="yes">
+            <input type="hidden" name="area" value="default">
+          </form>
+        </div>
+      </div>
+
+      <nav class="m-nav" v-on:click="doCloseAside">
+        <div class="p-catnav">
+          <p class="u-navcaption">《现代汉语》沈阳 郭锐</p>
+          <ul class="u-navlist">
+            <li class="u-navitem">
+              <a href="/posts/modern-chinese-0/">现代汉语-〇-目录、参考文献等</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/modern-chinese-1/">现代汉语-一-总论</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/modern-chinese-3/">现代汉语-三-词汇</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/modern-chinese-4-1/">现代汉语-四-语法-上</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/《现代汉语》沈阳 郭锐/《现代汉语·词汇》纲要/">《现代汉语·词汇》纲要</a>
+            </li>
+          </ul>
+          <p class="u-navcaption">《语法讲义》朱德熙</p>
+          <ul class="u-navlist">
+            <li class="u-navitem">
+              <a href="/posts/chinese-grammar-handouts-0/">语法讲义（目录、索引等）</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/chinese-grammar-handouts-1/">语法讲义（上）</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/chinese-grammar-handouts-2/">语法讲义（中）</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/chinese-grammar-handouts-3/">语法讲义（下）</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/chinese-grammar-answers/">语法答问</a>
+            </li>
+            <li class="u-navitem z-current">
+              <a href="/posts/notes-on-chinese-grammar-handouts/">语法讲义 笔记</a>
+            </li>
+          </ul>
+          <p class="u-navcaption">《语言学纲要》叶蜚声 徐通锵</p>
+          <ul class="u-navlist">
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-meta/">元信息</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-0/">导言</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-1/">第一章　语言的功能</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-2/">第二章　语言是符号系统</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-3/">第三章　语音和音系</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-4/">第四章　语法</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-5/">第五章　语义和语用</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-6/">第六章　文字</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-7/">第七章　语言演变与语言分化</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-8/">第八章　语言的接触</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-9/">第九章　语言系统的演变</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+  </div>
+  <div class="l-pagewrap" :class="pageClassObject" v-on:click="doCloseAside" id="l-pagewrap">
+
+    <div class="b-titlebar" :class="titlebarClassObject">
+      <div class="m-titlebar">
+        <a class="p-logoarea" href="/"><img class="u-logo" src="/logo.svg" alt="语宙心星"><span class="u-sitename">语宙心星</span></a>
+      </div>
+    </div>
+
+
+    <main class="b-printarea">
+      <header class="m-header"></header>
+      <article class="m-article">
+        <div class="p-meta">
+          <span class="u-post-title">语法讲义 笔记</span>
+          <span class="u-post-metaspan u-post-author">SunCH</span>
+          <a class="u-post-metaspan u-post-site" href="/">语宙心星</a>
+          <span class="u-post-metaspan u-post-date" title="2018-10-01 19:10:18">10月01日</span>
+          
+        </div>
+        <div class="p-write" id="post-content">
+<h4><span id="143"> 1.4.3</span></h4>
+<p>从结构上看，句子可以分成<strong>主谓句</strong>和<strong>非主谓句</strong>两类。主谓句是由主谓结构形成的句子，非主谓句是由主谓结构以外的结构或是单个的词形成的句子。下边是非主谓句的例子。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">（1）好！</div><div class="line">（2）是我。</div><div class="line">（3）飞机！</div><div class="line">（4）下雨了。</div><div class="line">（5）禁止吸烟。</div><div class="line">（6）热得我满头大汗。</div></pre></td></tr></table></figure>
+<p>这些句子都是自足的，就是说并不缺少什么成分，因此前头补不出主语来。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">（7）（这件事）没有人不知道。</div><div class="line">（8）（我）有点儿不舒服。</div><div class="line">（9）（他）比我大三岁。</div><div class="line">（10）（我）马上就来。</div></pre></td></tr></table></figure>
+<p>这些句子前头都能补出主语来，都不是真正的非主谓句。应该看成省略了主语的主谓句。</p>
+<blockquote>
+<p><mark><strong>笔记—疑问</strong></mark>：</p>
+<ul>
+<li>（1）禁止吸烟。</li>
+<li>（2）这里禁止吸烟。</li>
+</ul>
+<p>（2）的“这里”是主语吗？如果是的话，“禁止吸烟”是否应该看成省略了主语的主谓句？</p>
+</blockquote>
+<h4><span id="222"> 2.2.2</span></h4>
+<p><strong>重叠式名词</strong>主要是亲属称谓。例如：“爷爷、奶奶、爸爸、妈妈、伯伯、叔叔、舅舅、哥哥、弟弟、姐姐、妹妹”。这一类重叠式的第二个音节读轻声，第一个音节如果原来是上声，在重叠式里变为半上。例如：“奶奶、姥姥、姐姐”。这一类重叠式的基式大都是粘着语素。</p>
+<p>亲属称谓以外的重叠式名词只有“娃娃、星星、宝宝”少数几个。“蝈蝈儿、蛐蛐儿、饽饽、猩猩”里的“蝈、蛐、饽、狸”从来不在别的场合出现，本身没有意义。可见“蝈蝈、蛐蛐、饽饽、猩猩”是音节的重叠，不是语素的重叠。</p>
+<blockquote>
+<p><mark><strong>笔记—疑问</strong></mark>：“猩球崛起”中，我们能够知道“猩”是指“猩猩”，那么怎么理解这里的“猩”呢？它是语素吗？同样的，假设一家餐饮公司起名叫“超级饽”，我们显然也会知道它是卖饽饽的，这里的“饽”是语素吗？</p>
+</blockquote>
+<h4><span id="223"> 2.2.3</span></h4>
+<p><strong>重叠式量词</strong>就是单音节量词的重叠式。例如：“个个、张张、本本、句句、棵棵”。这类重叠式包含“每”的意思，“个个”就是“每一个”，“张张”就是“每一张”。重叠式量词可以修饰名词（个个学生、张张纸），也可以离幵名词，单独充任句子的主语（个个都有本事|张张都是好的），但是不能作宾语（“通知每一个人”不能说成“<code>*</code>通知人人”或“通知个个”，“把每间屋子都打扫一遍”不能说成“<code>*</code>把间间都打扫一遍”）。</p>
+<blockquote>
+<p><mark><strong>笔记—语感差异</strong></mark>：“房子这么干净，可都是林嫂的功劳啊，这么多房间，她硬是把间间都打扫了一遍。”</p>
+</blockquote>
+<h4><span id="252"> 2.5.2</span></h4>
+<p>“儿”不自成音节。作用如下：</p>
+<p>（1）名词和量词的后缀。例如：</p>
+<table>
+<thead>
+<tr>
+<th>名</th>
+<th></th>
+<th></th>
+<th>词</th>
+<th>量    词</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>B</td>
+<td>C</td>
+<td>D</td>
+<td>E</td>
+</tr>
+<tr>
+<td>桃儿</td>
+<td>刀儿</td>
+<td>尖儿</td>
+<td>画儿</td>
+<td>口儿</td>
+</tr>
+<tr>
+<td>棍儿</td>
+<td>嘴儿</td>
+<td>干儿</td>
+<td>盖儿</td>
+<td>根儿</td>
+</tr>
+<tr>
+<td>盹儿</td>
+<td>字儿</td>
+<td>黄儿</td>
+<td>（打）滚儿</td>
+<td>朵儿</td>
+</tr>
+<tr>
+<td>賴蟵儿</td>
+<td>心儿</td>
+<td>零碎儿</td>
+<td>吃儿</td>
+<td>串儿</td>
+</tr>
+</tbody>
+</table>
+<p>A、B、C、D四组是名词，E组是量词。在A组里，词根是不成词语素，在B、C、D、E四组里，词根是成词语素（<a href="">1.2.1</a>）。B组词根成分独立时是名词，C组是形容词，D组是动词，E组是量词。</p>
+<p>（2）动词的后缀，仅见于以下几个动词：“玩儿，嗤儿（骂，责备），火儿了，颠儿了（走了），葛儿（gěr）了（死了）”。</p>
+<p>（3）副词和状态形容词的后缀。例如：</p>
+<ul>
+<li>副词：
+<ul>
+<li>慢慢儿、远远儿、悄悄儿</li>
+</ul>
+</li>
+<li>状态形容词：
+<ul>
+<li>小小儿的、高高儿的</li>
+<li>大大方方儿的、暖暖和和儿的</li>
+<li>红扑扑儿的、颤悠悠儿的</li>
+<li>酸不唧儿的、蔫不唧儿的</li>
+</ul>
+</li>
+</ul>
+<p>（4）今儿、明儿、后儿、昨儿。这个“儿”是“日”的变音。</p>
+<p>（5）这儿、那儿、哪儿。这个“儿”是“里”的变音。</p>
+<blockquote>
+<p><mark><strong>笔记—质疑</strong></mark>：如果“今儿”的“儿”是“日”的变音，那如何理解“今儿个”的“个”？</p>
+</blockquote>
+<h4><span id="431"> 4.3.1</span></h4>
+<p>时间词是能做“在”“到”“等到”的宾语，并且能用“这个时候”“那个时候”指称的体词。例如：宋朝、一九三〇年、立春、今天、去年、星期一、上星期、现在、刚才、这会儿、过去、以前、从前。</p>
+<p>时间词都表示时间，但是表示时间的词不一定是时间词。例如“已经、刚、忽然”是副词，“时间、时候、功夫”是一般名词；“一会儿、半天、两年”是数量词；都不是时间词。</p>
+<blockquote>
+<p><mark><strong>笔记—疑问</strong></mark>：如何分析“一时间”？比较：“一时之间”“一时半会儿”。</p>
+</blockquote>
+<h4><span id="441"> 4.4.1</span></h4>
+<p>方位词可以分成单纯方位词和合成方位词两类。单纯方位词包括“上、下、前、后、里、外、内、中、左、右、东、西、南、北”。</p>
+<p>单纯方位词加上“边（儿）、面（儿）、头（儿）”等后缀造成合成方位词，如下表：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>边（儿）</th>
+<th>面（儿）</th>
+<th>头（儿）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>上</td>
+<td>上边（儿）</td>
+<td>上面（儿）</td>
+<td>上头（儿）</td>
+</tr>
+<tr>
+<td>下</td>
+<td>下边（儿）</td>
+<td>下面（儿）</td>
+<td>下头（儿）</td>
+</tr>
+<tr>
+<td>前</td>
+<td>前边（儿）</td>
+<td>前面（儿）</td>
+<td>前头（儿）</td>
+</tr>
+<tr>
+<td>后</td>
+<td>后边（儿）</td>
+<td>后面（儿）</td>
+<td>后头（儿〉</td>
+</tr>
+<tr>
+<td>里</td>
+<td>里边（儿）</td>
+<td>里面（儿）</td>
+<td>里头（儿）</td>
+</tr>
+<tr>
+<td>外</td>
+<td>外边（儿〉</td>
+<td>外面（儿）</td>
+<td>外头（儿）</td>
+</tr>
+<tr>
+<td>左</td>
+<td>左边（儿）</td>
+<td>左面（儿）</td>
+<td>—</td>
+</tr>
+<tr>
+<td>右</td>
+<td>右边（儿）</td>
+<td>右面（儿）</td>
+<td>—</td>
+</tr>
+<tr>
+<td>东</td>
+<td>东边（儿）</td>
+<td>东面（儿）</td>
+<td>东头（儿）</td>
+</tr>
+<tr>
+<td>南</td>
+<td>南边（儿）</td>
+<td>南面（儿）</td>
+<td>南头（儿）</td>
+</tr>
+<tr>
+<td>西</td>
+<td>西边（儿）</td>
+<td>西面（儿）</td>
+<td>西头（儿）</td>
+</tr>
+<tr>
+<td>北</td>
+<td>北边（儿）</td>
+<td>北面（儿）</td>
+<td>北头（儿）</td>
+</tr>
+</tbody>
+</table>
+<p>“内”和“中”不能加“边、面、头”。由“中”造成的合成方位词有：“中间儿、当中”。由“后”造成的合成方位词还有“背后”。此外，合成方位词还有一个“当间儿”。</p>
+<blockquote>
+<p><mark><strong>笔记—疑问</strong></mark>：“桥头”、“路头”中的“头”和“上头”、“里头”中的“头”之间是怎样的关系？</p>
+</blockquote>
+<h4><span id="442"> 4.4.2</span></h4>
+<p>单纯方位词都是粘着的，合成方位词大部分是自由的。在单纯方位词里，“里”和“上”的活动能力强，其它几个活动能力弱。只要意思上讲得通，我们可以任意在名词后头加上“里”和“上”，例如：书上、窗户上、桌子上、心里、屋里、树林里、孩子里。可是和“里、上”相对应的反义词“外”和“下”就不能自由地跟名词结合，例如我们不说：<code>*</code>书下、<code>*</code>椅子下、<code>*</code>屋子外、<code>*</code>树林外。名词性成分后头加“下”或“外、有的是复合词、如：天下、乡下、阁下、郊外、例外、格外，有的是文言的说法，如：灯下、笔下、门外、世外。</p>
+<blockquote>
+<p><mark><strong>笔记—质疑</strong></mark>：“书下”、“屋子外”、“树林外”不能说？如何理解“屋外”、“屋檐下”、“树下”？</p>
+</blockquote>
+<h3><span id="45-数词"> 4.5 数词</span></h3>
+<p>数词包括：</p>
+<p>（1）系数词：一、二、三、四、五、六、七、八、九、十、两、几、多少。</p>
+<p>（2）位数词：十、百、千、万、亿。系数词能够放在位数词之前组成复合的数词。例如：二十、三千、几亿。</p>
+<p>“十”是系数词兼位数词，因为可以说：十万，又可以说：二十。</p>
+<p>（3）概数词：来、多、好几。概数词放在复合数词和量词之间表示概数。例如：二十来个、三百多本、二十好几个。系数词也能占据这个位置，例如：二十五个，可见概数词和系数词性质相近。 “好几”能放在量词或位数词前头。例如：好几个、好几百。“多”和“来”不能占据这两种位置。（<code>*</code>来个，<code>*</code>多个，<code>*</code>来万，<code>*</code>多万）。</p>
+<blockquote>
+<p><mark><strong>笔记—疑惑</strong></mark>：「“多”和“来”不能占据<strong>这两种位置</strong>」是指什么？前面不是举例了“二十来个、三百多本”吗？</p>
+</blockquote>
+<p>（4）好些、若干：这两个数词的特点是能够直接放在名词或量词前头（好些人、若干人、好些个人、若干吨钢）。“若干”还能和“万”“亿”组成复合数词（若干万元，若干亿）。</p>
+<p>（5）半：“半”能够放在量词之前（半个，半斤），还能放在数量词之后（一个半，三斤半），但不能跟位数词组合（<code>*</code>半千， <code>*</code>半亿）①。</p>
+<blockquote>
+<p>① “半百”是文言。不能说“半亿”，但可以说“半个亿”，“半”还是放在暈词“个”前边。</p>
+</blockquote>
+<h3><span id="410-二和两"> 4.10 “二”和“两”</span></h3>
+<p>“二”和“两”都代表“ 2 ”，但是用法不一样。“二”在以下几种位置上出现：</p>
+<p>（1）数数时单说。</p>
+<p>（2）充任系数：二十、二千。</p>
+<p>（3）放在度量词前头组成数量词：二尺、二斤；</p>
+<p>（4）系位组合的末项：十二、一百零二、三百二；</p>
+<p>（5）放在“第”之后组成系数：第二。</p>
+<p>“两”不能在（1）（4）（5）三种位置上出现。在（2）（3）两种位置上， “两”“二”也有区别。“百、千、万、亿”前边用“两”用“二”都可以， “十”前边必须用“二”。“二”只能放在度量词之前，可以说“二斤、二两、二尺”不能说：“二个、二只、二条”。“两”可以放在所有的量词之前（度量衡量词“两”前只能用“二”）。</p>
+<blockquote>
+<p><mark><strong>笔记—质疑</strong></mark>：“二位客官里边请。”</p>
+</blockquote>
+<h3><span id="52-动词的分类"> 5.2 动词的分类</span></h3>
+<p>动词是一个大类，语法功能并不完全一致，我们可以根据不同的标准把它分成许多小类。例如有的动词能加后缀“了”，有的不能（是、在、认为）；有的动词能加后缀“着”，有的不能（是、在、姓、同意）；有的动词能重迭，有的不能（是、姓、包括、成功）；有的能带双宾语（借、教、送、给），有的不能；有的动词能放在“〜给你”的格式里（送给你，交给你），有的不能（<code>*</code>走给你，<code>*</code>唱给你）；等等。这种种细微的区别，我们将在有关的章节中提到，这里不能详说，以下介绍的是动词内部几个重要的大类。</p>
+<blockquote>
+<p><mark><strong>笔记—疑问</strong></mark>：如何分析“唱给你听”？</p>
+</blockquote>
+<h4><span id="531"> 5.3.1</span></h4>
+<p>及物动词和不及物动词的区别在于所带的宾语不同。不及物动词只能带准宾语，及物动词除了准宾语之外，还能带真宾语。有的动词带真宾语的时候和不带真宾语的时候意义上有区别，比较：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">他笑了——他笑你</div><div class="line">他哭了——他哭他父亲</div><div class="line">坐着舒服些——坐飞机去</div><div class="line">睡一会儿——喜欢睡硬床</div><div class="line">车来了——来碗肉丝面</div><div class="line">他清醒过来了——清醒清醒头脑</div></pre></td></tr></table></figure>
+<p>我们说这些动词兼属不及物动词和及物动词两类。</p>
+<blockquote>
+<p><mark><strong>笔记—想法</strong></mark>：词典设计时，将词语的用法提升到条目的地位。比如<code>NP+来+了</code>，<code>来+[处所]</code>，<code>来+[量词]+NP</code>都作为单独的条目，而不设置单个的“来”的条目。</p>
+<p><code>他笑了</code>中的<code>他</code>之所以能接<code>笑+了</code>，是因为<code>他</code>继承了<code>可做表情者</code>这个<strong>行动模型类</strong>，通常行动模型类在语言中是隐藏的，也就是没有直接的词语来指代这个类。一个行动模型类意味着一系列配套的行动功能。<strong>识别类</strong>意味着一系列识别方法。<strong>构想类</strong>意味着一系列构想方法。大部分词语都有与之对应的行动模型类、识别类和构想类。</p>
+</blockquote>
+<h4><span id="551"> 5.5.1</span></h4>
+<p>准谓宾动词能带名词宾语，也能带动词宾语·，可是能带的动词宾语是有限制的。以准谓宾动词“有”为例，不能说：“<code>*</code>有看、<code>*</code>有写，<code>*</code>有去、<code>*</code>有反对、<code>*</code>有喜欢、<code>*</code>有同意”，可是能说：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">有影响　　有准备</div><div class="line">有剥削　　有计划</div><div class="line">有研究　　有演出</div><div class="line">有分析　　有工作</div><div class="line">有保证　　有调査</div></pre></td></tr></table></figure>
+<p>我们知道，名词可以直接修饰名词，修饰动词时，后头要加“的”字，可是上边举的“影响”等动词不受这个限制，可以受名词直接修饰。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">政治影响　　思想准备</div><div class="line">经济剥削　　工业计划</div><div class="line">历史研究　　文艺演出</div><div class="line">数学分析　　电影工作</div><div class="line">物质保证　　农村调査</div></pre></td></tr></table></figure>
+<p>这些现象说明“影响”一类动词有名词的功能，我们管它叫名动词。</p>
+<p>总括起来说，名动词的主要语法特征是：（1）可以充任准谓宾动词的宾语，（2）可以受名词直接修饰。</p>
+<blockquote>
+<p><mark><strong>笔记—质疑</strong></mark>：“昨天的晚会你有看吗？”“上次的作业你有写吗？”——可能是南方方言？</p>
+</blockquote>
+<h4><span id="562"> 5.6.2</span></h4>
+<p>有的动词有几个不同的意义，在一个意义上是助动词，在其它意义上不是助动词。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">a. 很想他（思念、怀念）</div><div class="line">b. 想办法（思索、动脑筋）</div><div class="line">c. 我想他不会来了（推测、料想）</div><div class="line">d. 他想去学习（愿望）</div></pre></td></tr></table></figure>
+<p>a和b的“想”能带体词宾语，c的“想”不能放在“〜不〜”格式里，都不是助动词，只有d里的“想”才是助动词。</p>
+<blockquote>
+<p><mark><strong>笔记—疑惑</strong></mark>：对于a，如何理解—“你<em>想不想</em>他”—“其实我也<em>想过</em>他”—“别再<em>想着</em>他了”？？</p>
+<p>但是能带体词宾语，不满足条件（1），所以就不是助动词了，所以助动词要满足全部条件才是。</p>
+</blockquote>
+<p>以下分组介绍助动词。</p>
+<h4><span id="612"> 6.1.2</span></h4>
+<p>代词可以分为人称代词、指示代词、疑问代词三类，如下表：</p>
+<p><code></code></p>
+<table>
+<thead>
+<tr>
+<th>-</th>
+<th>-</th>
+<th>-</th>
+<th>-</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td><strong>疑问代词</strong></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>什么</td>
+<td><strong>体词性</strong></td>
+</tr>
+<tr>
+<td><strong>人称代词</strong></td>
+<td>我　　咱　　你（您）　他<br>我们　咱们　你们　　　他们<br>人家　别人<br>大家　大伙儿</td>
+<td>谁</td>
+<td><strong>体词性</strong></td>
+</tr>
+<tr>
+<td><strong>指示代词</strong></td>
+<td>（A<sub>1</sub>）<br>这　　　　　那<br>这儿（里）　那儿（里）<br>这会儿　　　那会儿</td>
+<td>（B<sub>1</sub>）<br>哪<br>哪儿（里）<br>多会儿</td>
+<td><strong>体词性</strong></td>
+</tr>
+<tr>
+<td><strong>指示代词</strong></td>
+<td>（A<sub>2</sub>）<br>这么　　那么<br>这样　　那样<br>这么样　那么样</td>
+<td>（B<sub>2</sub>）<br>怎么<br>怎么样</td>
+<td><strong>谓词性</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><mark><strong>笔记—疑惑</strong></mark>：“多会儿”？？？“多晚”？</p>
+</blockquote>
+<p>疑问代词“谁”跟人称代词“我、你、他”等相配，疑问代词B<sub>1</sub>和B<sub>2</sub>分別跟指示代词A<sub>1</sub>和A<sub>2</sub>相配。</p>
+<h4><span id="713"> 7.1.3</span></h4>
+<p>从表达上说，说话的人有选择主语的自由。同样的意思，可以选择施事作主语，也可以选择受事或与事作主语。比较：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">（1a）我们昨天开了一个会（施事主语）</div><div class="line">（1b）昨天我们开了一个会（时间主语）</div><div class="line">（2a）他把电视机弄坏了（施事主语）</div><div class="line">（2b）电视机让他弄坏了（受事主语）</div><div class="line">（3a）我用这支笔写小楷（施事主语）</div><div class="line">（3b）这支笔我用来写小楷（工具主语）</div><div class="line">（4a）我给小王写了一封信（施事主语）</div><div class="line">（4b）小王我也给他写了一封信（与事主语）</div></pre></td></tr></table></figure>
+<p>这四组句子里相对应的（a）和（b）基本意思相同，只是所选的主语不一样。说话的人选来作主语的是他最感兴趣的话题，谓语则是对于选定了的话題的陈述。通常说主语是话题，就是从表达的角度说的，至于说主语是施事、受事或与事，那是从语义的角度说的，二者也不能混同。</p>
+<blockquote>
+<p><mark><strong>笔记—疑问</strong></mark>：“这支笔我用来写小楷”的结构如何分析？</p>
+</blockquote>
+<h4><span id="831"> 8.3.1</span></h4>
+<p>述宾结构可以分成粘合式和组合式两类。粘合式述宾结构的述语是单独的动词（不带补语和后缀），宾语是单独的名词（不带定语）。凡不符合以上条件的述宾结构都是组合式述宾结构。例如：</p>
+<table>
+<thead>
+<tr>
+<th>粘合式</th>
+<th>组合式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>吃饭</td>
+<td>吃完饭</td>
+</tr>
+<tr>
+<td>买票</td>
+<td>买了票</td>
+</tr>
+<tr>
+<td>说话</td>
+<td>说着话</td>
+</tr>
+<tr>
+<td>上课</td>
+<td>上点课</td>
+</tr>
+<tr>
+<td>打人</td>
+<td>打他</td>
+</tr>
+<tr>
+<td>提问题</td>
+<td>提个问题</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><mark><strong>笔记—疑问</strong></mark>：“打他”为什么也是组合式？？？</p>
+</blockquote>
+<h4><span id="982"> 9.8.2</span></h4>
+<p>“写得好”有时是能写好的意思，有时是写得不错的意思。在前一种意义上，“写得好”带的是可能补语，在后一种意义上带的是状态补语。两种结构的肯定式同形，否定式不一样，比较：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">（1）写得好〜写不好</div><div class="line">（2）写得好〜写得不好</div></pre></td></tr></table></figure>
+<p>（1）是表示可能的述补结构，（2）是表示状态的述补结构。其实两种结构的肯定式也是有区别的。表示状态的述补结构可以扩展。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">写得好→写得很好〜写得非常好〜写得确实好〜写得好极了</div></pre></td></tr></table></figure>
+<p>表示可能的述补结构“写得好”是不能扩展的。</p>
+<p>这两种述补结构的疑问形式也有区別。表示可能的述补结构的疑问形式是“写得好写不好”，表示状态的述补结构的疑问形式是“写得好不好”。</p>
+<blockquote>
+<p><mark><strong>笔记—补充</strong></mark>：“写不写得好”</p>
+</blockquote>
+<h4><span id="1031"> 10.3.1</span></h4>
+<p>书面上语素和词的写法有自己的习惯和传统，不一定跟语法分析的结果一致。按照我们的分析，修饰语后头的“的”包含三个不同的语素：一个是副词后缀，一个是状态形容词的后缀，还有一个是助词。（<a href="">2.5.6</a>,又<a href="">5.19</a>）可是书面上只有“的”和“地”两种写法。这两方面的对应关系大致如下：副词后缀写“地”，助词写“的”。状态形容词后缀写“的”还是写“地”，要看状态形容词出现在什么语法位置上。定语位置上写“的”（干干净净的衣服），状语位置上写“地”（干干净净地洗一洗）。谓语位置上也写“的”（屋里干干净净的）。补语位置上一般写“的”，（洗得干干净净的，洗得干干净净的衣服），只有整个述补结构作状语的时候才写“地”（洗得干干净净地收着）。</p>
+<blockquote>
+<p><mark><strong>笔记—疑惑</strong></mark>：“洗得干干净净地收着”？？？</p>
+</blockquote>
+<h4><span id="1061"> 10.6.1</span></h4>
+<p>所谓准定语指的是下边三类句式里头由“的”字结构充任的定语：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">（A）张三的原告，李四的被告</div><div class="line">（B）他的篮球打得好</div><div class="line">（C）我来帮你的忙</div></pre></td></tr></table></figure>
+<p>这些定语都是由指人的名词或人称代词组成的，按说应该表示领属关系，可是（A）（B）（C）里头的“我的”“你的”“他的”都不表示领属关系。（A）等于说：张三是原告，李四是被告；（B）等于说：他打篮球打得好；（C）的意思是：我来给你帮忙。</p>
+<blockquote>
+<p><mark><strong>笔记—理解</strong></mark>：“张三的原告，李四的被告”→“值为‘张三’的‘原告’字段，值为‘李四’的‘被告’字段”。</p>
+</blockquote>
+<h4><span id="1272"> 12.7.2</span></h4>
+<p>由动词“给”组成的连谓结构有以下三种基本格式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">送一本书/给他|织了一件毛衣/给他　　（A）</div><div class="line">送给他/一件毛衣　　　　　　　　　　（B）</div><div class="line">给他/织了一件毛衣　　　　　　　　　（C）</div></pre></td></tr></table></figure>
+<p>这三种格式都表示给予，其中动词“给”的宾语指接受者，另一个动词（以下记作V，在上边的例子里就是“送”和“织”）的宾语指所给予的事物。</p>
+<p>（A）式里的V可以是包含给予意义的动词，也可以是不包含给予意义的动词。前者如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">送一本书给他</div><div class="line">卖一所房子给他</div><div class="line">嫁一个女儿给他</div><div class="line">递一枝笔给他</div></pre></td></tr></table></figure>
+<p>后者如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">织一件毛衣给他</div><div class="line">沏一杯茶给他</div><div class="line">买一件毛衣给他</div><div class="line">抢了一把椅子给我</div></pre></td></tr></table></figure>
+<p>把（A）式里的N挪到后头去，就变成了（B）式。（B）式里的V</p>
+<p>只限于包含给予意义的那些，因此只能有：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">送给他一件毛衣</div><div class="line">卖给他一所房子</div><div class="line">嫁给他一个女儿</div><div class="line">交给他一封信</div></pre></td></tr></table></figure>
+<p>不能有：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">`*`织给他一件毛衣</div><div class="line">`*`彻给他一杯茶</div><div class="line">`*`买给他一件毛衣</div><div class="line">`*`抢给我一把椅子</div></pre></td></tr></table></figure>
+<p>把（A）式里的“给”连同它的宾语挪到V的前边，就变成了（C）式。（C）式和（B）式相反，其中的V只限于不包含给予意义的那些。因此只能有：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">给他织了一件毛衣</div><div class="line">给他沏了杯茶</div><div class="line">给他买了一件毛衣</div><div class="line">给我抢了一把椅子</div></pre></td></tr></table></figure>
+<p>不能有：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">`*`给我送了一本书</div><div class="line">`*`给我卖了一所房子</div><div class="line">`*`给我嫁了个女儿</div><div class="line">`*`给我递了一枝笔①</div></pre></td></tr></table></figure>
+<blockquote>
+<p>① 把“给”字理解为介词，这些句子是可以成立的。</p>
+</blockquote>
+<blockquote>
+<p><mark><strong>笔记—疑惑</strong></mark>：这里没明白。</p>
+</blockquote>
+<h4><span id="1513"> 15.1.3</span></h4>
+<p>上边说特指问句和选择问句之后只能带“呢”，不能带“吗”，是非问句之后只能带“吗”，不能带“呢”。下边的例子好象是例外。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">（1）今天星期几吗？</div><div class="line">（2）他去不去吗？</div><div class="line">（3）你去呢？</div></pre></td></tr></table></figure>
+<p>（1）本来是特指问句，（2）本来是反复问句。如果用语气词，都应该是“呢”，不应该是“吗”。现在用了“吗”，原来的特指问句和反复问句就变成了是非问句，意思是要求对方证实所提的问题。（1）的意思是：“你是问今天星期几吗？”（2）的意思是：“你是问他去不去吗？”（3）本来是是非问句，应该用“吗”，现在用了“呢”，就变成了特指问句了，意思是：你去怎么样？</p>
+<blockquote>
+<p><mark><strong>笔记—理解</strong></mark>：</p>
+<p>（那）你去（如何）呢？</p>
+</blockquote>
+
+          <hr/>
+          <div class="p-state"><blockquote>
+            <p>当前链接：<a href="https://ziionote.github.io/posts/notes-on-chinese-grammar-handouts/">https://ziionote.github.io/posts/notes-on-chinese-grammar-handouts/</a></p>
+          </blockquote></div>
+          <div class="m-pagination">
+<p>回顾前篇：<a href="/posts/《现代汉语》沈阳 郭锐/《现代汉语·词汇》纲要/">《现代汉语·词汇》纲要</a></p>
+<p>返回首页：<a href="/">语宙心星</a></p>
+          </div>
+        </div>
+      </article>
+      <div class="m-section m-share"></div>
+      <div class="m-section m-comment">
+          <div class="comments-wrap tabs" id="commenttabs">
+            <ul class="nav-tabs">
+              <li class="tab"><a href="#welcomcomments_wrap">欢迎评论！</a></li>
+              <li class="tab active"><a href="#valinecomments_wrap">Valine评论</a></li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane" id="welcomcomments_wrap"><div id="welcomcomments"><p>欢迎进行评论😆。</p></div></div>
+              <div class="tab-pane active" id="valinecomments_wrap"><div id="valinecomments"></div></div>
+            </div>
+          </div>
+        </div>
+      <div class="m-section m-related"></div>
+      <footer class="m-section m-footer"></footer>
+    </main>
+
+  </div>
+  <div class="l-ctrl" :class="ctrlClassObject" v-on:click="doOpenAside" id="l-ctrl">
+
+    <div class="b-ctrl">
+      <div class="m-ctrl"></div>
+    </div>
+
+  </div>
+</div>
+<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+<script>
+
+const layoutApp = new Vue({
+  delimiters: ['${', '}'],
+  el: '#l-viewport',
+  data: function () {
+    // var x = navigator;
+    // var y = returnCitySN;
+    return {
+      // browser: x,
+      // citysn: y,
+      asideIsOpen: false,
+      scrollAfterTop: false,
+      scrolledDown: false,
+      scrolledUp: false,
+    }
+  },
+  computed: {
+    browser: function () {
+      return { navigator }
+    },
+    citysn: function () {
+      return { returnCitySN }
+    },
+    sideClassObject: function () {
+      return {
+        'z-open': this.asideIsOpen,
+      }
+    },
+    pageClassObject: function () {
+      return {
+        'z-moved': this.asideIsOpen,
+      }
+    },
+    ctrlClassObject: function () {
+      return {
+        'z-hidden': this.asideIsOpen,
+      }
+    },
+    titlebarClassObject: function () {
+      return {
+        'z-nottop': this.scrollAfterTop,
+        'z-show': this.scrolledDown,
+      }
+    }
+  },
+  methods: {
+    doCloseAside: function (event) {
+      this.asideIsOpen = false;
+    },
+    doOpenAside: function (event) {
+      this.asideIsOpen = (this.asideIsOpen)?false:true;
+    },
+    handleScroll () {
+      var scrollTop = document.querySelector('.l-pagewrap').scrollTop
+      var offsetTop = document.querySelector('.b-printarea').offsetTop
+      if (scrollTop > offsetTop) {
+        this.scrollAfterTop = true
+      } else {
+        this.scrollAfterTop = false
+      }
+      if (this.lastScroll && scrollTop > this.lastScroll) {
+        this.scrolledDown = false
+        this.scrolledUp = true
+        // console.log('scrolling up');
+      } else if (this.lastScroll && scrollTop < this.lastScroll) {
+        this.scrolledDown = true
+        this.scrolledUp = false
+        // console.log('scrolling down');
+      }
+      this.lastScroll = scrollTop
+    }
+  },
+  mounted () {
+    document.querySelector('.l-pagewrap').addEventListener('scroll', this.handleScroll)
+  },
+  destroyed () {
+    document.querySelector('.l-pagewrap').removeEventListener('scroll', this.handleScroll)
+  }
+})
+
+</script>
+<script src="/js/s-gentoc.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

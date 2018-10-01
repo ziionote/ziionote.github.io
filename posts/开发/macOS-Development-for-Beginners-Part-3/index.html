@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html class="theme-docapp" lang="zh-Hans">
+<head>
+<title>macOS Development for Beginners: Part 3 | 语宙心星</title>
+<!-- META -->
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="theme-color" content="#fff" />
+<!-- LINK -->
+<link rel="shortcut icon" href="/favicon.png" type="image/x-icon"/>
+<link rel="icon" sizes="any" mask="" href="/favicon.png"/>
+<!-- STYLE -->
+<link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/Han/3.2.7/han.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+<!-- SCRIPT -->
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script type="text/javascript" src="/js/smoothscroll.js"></script>
+<!-- END -->
+
+</head>
+<body>
+<div class="l-viewport" id="l-viewport">
+  <div class="l-side" :class="sideClassObject" id="l-side">
+
+    <aside class="b-sidebar">
+      <div class="m-logoandsearch">
+        <a class="p-logoarea" href="/" title="关于语言与心智的文章收集站"><span class="u-sitename">语宙心星</span></a>
+        <p class="p-description" title="关于语言与心智的文章收集站">探索语言与心智的奥秘</p>
+        <div class="p-searchbox" role="search">
+          <form id="u-searchform" class="u-searchform" action="http://www.baidu.com/s?ie=utf-8" method="get" target="_blank">
+            <input id="u-searchbox" class="u-searchbox" type="text" name="q" placeholder="Search">
+            <input type="hidden" name="check_keywords" value="yes">
+            <input type="hidden" name="area" value="default">
+          </form>
+        </div>
+      </div>
+
+      <nav class="m-nav" v-on:click="doCloseAside">
+        <div class="p-catnav">
+          <p class="u-navcaption">《现代汉语》沈阳 郭锐</p>
+          <ul class="u-navlist">
+            <li class="u-navitem">
+              <a href="/posts/modern-chinese-0/">现代汉语-〇-目录、参考文献等</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/modern-chinese-1/">现代汉语-一-总论</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/modern-chinese-3/">现代汉语-三-词汇</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/modern-chinese-4-1/">现代汉语-四-语法-上</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/《现代汉语》沈阳 郭锐/《现代汉语·词汇》纲要/">《现代汉语·词汇》纲要</a>
+            </li>
+          </ul>
+          <p class="u-navcaption">《语法讲义》朱德熙</p>
+          <ul class="u-navlist">
+            <li class="u-navitem">
+              <a href="/posts/chinese-grammar-handouts-0/">语法讲义（目录、索引等）</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/chinese-grammar-handouts-1/">语法讲义（上）</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/chinese-grammar-handouts-2/">语法讲义（中）</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/chinese-grammar-handouts-3/">语法讲义（下）</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/chinese-grammar-answers/">语法答问</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/notes-on-chinese-grammar-handouts/">语法讲义 笔记</a>
+            </li>
+          </ul>
+          <p class="u-navcaption">《语言学纲要》叶蜚声 徐通锵</p>
+          <ul class="u-navlist">
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-meta/">元信息</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-0/">导言</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-1/">第一章　语言的功能</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-2/">第二章　语言是符号系统</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-3/">第三章　语音和音系</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-4/">第四章　语法</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-5/">第五章　语义和语用</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-6/">第六章　文字</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-7/">第七章　语言演变与语言分化</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-8/">第八章　语言的接触</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-9/">第九章　语言系统的演变</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+  </div>
+  <div class="l-pagewrap" :class="pageClassObject" v-on:click="doCloseAside" id="l-pagewrap">
+
+    <div class="b-titlebar" :class="titlebarClassObject">
+      <div class="m-titlebar">
+        <a class="p-logoarea" href="/"><img class="u-logo" src="/logo.svg" alt="语宙心星"><span class="u-sitename">语宙心星</span></a>
+      </div>
+    </div>
+
+
+    <main class="b-printarea">
+      <header class="m-header"></header>
+      <article class="m-article">
+        <div class="p-meta">
+          <span class="u-post-title">macOS Development for Beginners: Part 3</span>
+          <span class="u-post-metaspan u-post-author">SunCH</span>
+          <a class="u-post-metaspan u-post-site" href="/">语宙心星</a>
+          <span class="u-post-metaspan u-post-date" title="2018-07-14 10:50:17">07月14日</span>
+          
+        </div>
+        <div class="p-write" id="post-content">
+<p><a href="https://www.raywenderlich.com/151748/macos-development-beginners-part-3" target="_blank" rel="external">macOS Development for Beginners: Part 3</a></p>
+<p><a href="https://www.raywenderlich.com/u/sarah" target="_blank" rel="external"><img src="https://www.gravatar.com/avatar/8cbc865fb30491c7d0b7d698be189d9b.jpg?d=https%3A%2F%2Fwolverine.raywenderlich.com%2Fv3-resources%2Fimages%2Fdefault-account-avatar_2x.png&amp;s=100" alt="img"></a><a href="https://www.raywenderlich.com/u/sarah" target="_blank" rel="external">Sarah Reichelt</a> on February 22, 2017</p>
+<p><a href="https://koenig-media.raywenderlich.com/uploads/2017/01/macOSBeginner-feature.png" target="_blank" rel="external"><img src="https://koenig-media.raywenderlich.com/uploads/2017/01/macOSBeginner-feature-250x250.png" alt="macOSBeginner-feature"></a>Welcome back to the final and third part in our 3-part macOS Development tutorial for beginner series!</p>
+<p>In <a href="https://www.raywenderlich.com/151741/macos-development-beginners-part-1" target="_blank" rel="external">Part 1</a>, you learned how to install Xcode and how to create a simple app. In <a href="https://www.raywenderlich.com/151746/macos-development-beginners-part-2" target="_blank" rel="external">Part 2</a>, you created the user interface for a more complex app, but it doesn’t work yet as you have not coded anything. In this part, you are going to add the Swift code that will make your app come to life!</p>
+<h2><span id="getting-started"> Getting Started</span></h2>
+<p>If you haven’t completed Part 2 or want to start with a clean slate, you can <a href="https://koenig-media.raywenderlich.com/uploads/2017/01/EggTimer-Part2-3.zip" target="_blank" rel="external">download the project files</a> with the app UI laid out as it was at the end of Part 2. Open this project or your own project from Part 2 and run it to confirm that the UI is all in place. Open the Preferences window to check it as well.</p>
+<p><img src="https://koenig-media.raywenderlich.com/uploads/2017/01/RunPrefs-2.png" alt="RunPrefs"></p>
+<h2><span id="sandboxing"> Sandboxing</span></h2>
+<p>Before you dive into the code, take a minute to consider sandboxing. If you are an iOS developer, you will already be familiar with this concept – if not, read on.</p>
+<p>A sandboxed app has its own space to work in with separate file storage areas, no access to the files created by other apps and limited access and permissions. For iOS apps, this is the only way to operate. For macOS apps, this is optional; however, if you want to distribute your apps through the Mac App Store, they must be sandboxed. As a general rule, you should sandbox your apps, as this gives your apps less potential to cause problems.</p>
+<p>To turn on sandboxing for the Egg Timer app, select the project in the <em>Project Navigator</em> — this is the top entry with the blue icon. Select <em>EggTimer</em> in the <em>Targets</em> list (there will only be one target listed), then click <em>Capabilities</em> in the tabs across the top. Click the switch to turn on <em>App Sandbox</em>. The display will expand to show the various permissions you can now request for your app. This app doesn’t need any of these, so leave them all unchecked.</p>
+<p><img src="https://koenig-media.raywenderlich.com/uploads/2017/01/Sandbox.png" alt="Sandbox"></p>
+<h2><span id="organizing-your-files"> Organizing Your Files</span></h2>
+<p>Look at the <em>Project Navigator</em>. All the files are listed with no particular organization. This app will not have very many files, but grouping similar files together is good practice and allows for more efficient navigation, especially with larger projects.</p>
+<p><img src="https://koenig-media.raywenderlich.com/uploads/2017/01/ProjectNavigatorStart.png" alt="ProjectNavigatorStart"></p>
+<p>Select the two view controller files by clicking on one and Shift-clicking on the next. Right-click and choose <em>New Group from Selection</em> from the popup menu. Name the new group <em>View Controllers</em>.</p>
+<p>The project is about to get some model files, so select the top <em>EggTimer</em> group, right-click and choose <em>New Group</em>. Call this one <em>Model</em>.</p>
+<p>Finally, select <em>Info.plist</em> and <em>EggTimer.entitlements</em> and put them into a group called <em>Supporting Files</em>.</p>
+<p>Drag the groups and files around until your Project Navigator looks like this:</p>
+<p><img src="https://koenig-media.raywenderlich.com/uploads/2017/01/ProjectNavigatorEnd.png" alt="ProjectNavigatorEnd"></p>
+<h2><span id="mvc"> MVC</span></h2>
+<p>This app is using the MVC pattern: Model View Controller.</p>
+<p>The main model object type for the app is going to be a class called <code>EggTimer</code>. This class will have properties for the start time of the timer, the requested duration and the elapsed time. It will also have a <code>Timer</code> object that fires every second to update itself. Methods will start, stop, resume or reset the <code>EggTimer</code>object.</p>
+<p>The <code>EggTimer</code> model class holds data and performs actions, but has no knowledge of how this is displayed. The Controller (in this case <code>ViewController</code>), knows about the <code>EggTimer</code> class (the Model) and has a <code>View</code> that it can use to display the data.</p>
+<p>To communicate back to the <code>ViewController</code>, <code>EggTimer</code> uses a delegate protocol. When something changes, the <code>EggTimer</code> sends a message to its <code>delegate</code>. The <code>ViewController</code> assigns itself as the <code>EggTimer's delegate</code>, so it is the one that receives the message and then it can display the new data in its own View.</p>
+<h2><span id="coding-the-eggtimer"> Coding the EggTimer</span></h2>
+<p>Select the <em>Model</em> group in the <em>Project Navigator</em> and choose <em>File/New/File…</em> Select <em>macOS/Swift File</em>and click <em>Next</em>. Give the file a name of <em>EggTimer.swift</em> and click <em>Create</em> to save it.</p>
+<p>Add the following code:</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">EggTimer</span> </span>&#123;</div><div class="line"></div><div class="line">  <span class="keyword">var</span> timer: <span class="type">Timer</span>? = <span class="literal">nil</span></div><div class="line">  <span class="keyword">var</span> startTime: <span class="type">Date</span>?</div><div class="line">  <span class="keyword">var</span> duration: <span class="type">TimeInterval</span> = <span class="number">360</span>      <span class="comment">// default = 6 minutes</span></div><div class="line">  <span class="keyword">var</span> elapsedTime: <span class="type">TimeInterval</span> = <span class="number">0</span></div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>This sets up the <code>EggTimer</code> class and its properties. <code>TimeInterval</code> really means <code>Double</code>, but is used when you want to show that you mean seconds.</p>
+<p>The next thing is to add two computed properties inside the class, just after the previous properties:</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> isStopped: <span class="type">Bool</span> &#123;</div><div class="line">  <span class="keyword">return</span> timer == <span class="literal">nil</span> &amp;&amp; elapsedTime == <span class="number">0</span></div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> isPaused: <span class="type">Bool</span> &#123;</div><div class="line">  <span class="keyword">return</span> timer == <span class="literal">nil</span> &amp;&amp; elapsedTime &gt; <span class="number">0</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>These are convenient shortcuts that can be used to determine the state of the <code>EggTimer</code>.</p>
+<p>Insert the definition for the delegate protocol into the <em>EggTimer.swift</em> file but outside the <code>EggTimer</code> class – I like to put protocol definitions at the top of the file, after the import.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">protocol</span> <span class="title">EggTimerProtocol</span> </span>&#123;</div><div class="line">  <span class="function"><span class="keyword">func</span> <span class="title">timeRemainingOnTimer</span><span class="params">(<span class="number">_</span> timer: EggTimer, timeRemaining: TimeInterval)</span></span></div><div class="line">  <span class="function"><span class="keyword">func</span> <span class="title">timerHasFinished</span><span class="params">(<span class="number">_</span> timer: EggTimer)</span></span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>A protocol sets out a contract and any object that is defined as conforming to the <code>EggTimerProtocol</code> must supply these 2 functions.</p>
+<p>Now that you have defined a protocol, the <code>EggTimer</code> can get an optional <code>delegate</code> property which is set to any object that conforms to this protocol. <code>EggTimer</code> does not know or care what type of object the delegate is, because it is certain that the delegate has those two functions.</p>
+<p>Add this line to the existing properties in the <code>EggTimer</code> class:</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> delegate: <span class="type">EggTimerProtocol</span>?</div></pre></td></tr></table></figure>
+<p>Starting the <code>EggTimer</code>‘s timer object will fire off a function call every second. Insert this code which defines the function that will be called by the timer. The <code>dynamic</code> keyword is essential for the <code>Timer</code> to be able to find it.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">dynamic</span> <span class="function"><span class="keyword">func</span> <span class="title">timerAction</span><span class="params">()</span></span> &#123;</div><div class="line">    <span class="comment">// 1</span></div><div class="line">    <span class="keyword">guard</span> <span class="keyword">let</span> startTime = startTime <span class="keyword">else</span> &#123;</div><div class="line">      <span class="keyword">return</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// 2</span></div><div class="line">    elapsedTime = -startTime.timeIntervalSinceNow</div><div class="line"></div><div class="line">    <span class="comment">// 3</span></div><div class="line">    <span class="keyword">let</span> secondsRemaining = (duration - elapsedTime).rounded()</div><div class="line"></div><div class="line">    <span class="comment">// 4</span></div><div class="line">    <span class="keyword">if</span> secondsRemaining &lt;= <span class="number">0</span> &#123;</div><div class="line">      resetTimer()</div><div class="line">      delegate?.timerHasFinished(<span class="keyword">self</span>)</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">      delegate?.timeRemainingOnTimer(<span class="keyword">self</span>, timeRemaining: secondsRemaining)</div><div class="line">    &#125;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<p>So what’s happening here?</p>
+<ol>
+<li><code>startTime</code> is an <code>Optional Date</code> - if it is <code>nil</code>, the timer cannot be running so nothing happens.</li>
+<li>Re-calculate the <code>elapsedTime</code> property. <code>startTime</code> is earlier than now, so <em>timeIntervalSinceNow</em>produces a negative value. The minus sign changes it so that <em>elapsedTime</em> is a positive number.</li>
+<li>Calculate the seconds remaining for the timer, rounded to give a whole number of seconds.</li>
+<li>If the timer has finished, reset it and tell the <code>delegate</code> it has finished. Otherwise, tell the <code>delegate</code> the number of seconds remaining. As <code>delegate</code> is an optional property, the ? is used to perform optional chaining. If the <code>delegate</code> is not set, these methods will not be called but nothing bad will happen.</li>
+</ol>
+<p>You will see an error until you add the final bit of code needed for the <code>EggTimer</code> class: the methods for starting, stopping, resuming and resetting the timer.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 1</span></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">startTimer</span><span class="params">()</span></span> &#123;</div><div class="line">  startTime = <span class="type">Date</span>()</div><div class="line">  elapsedTime = <span class="number">0</span></div><div class="line"></div><div class="line">  timer = <span class="type">Timer</span>.scheduledTimer(timeInterval: <span class="number">1</span>,</div><div class="line">                               target: <span class="keyword">self</span>,</div><div class="line">                               selector: #selector(timerAction),</div><div class="line">                               userInfo: <span class="literal">nil</span>,</div><div class="line">                               repeats: <span class="literal">true</span>)</div><div class="line">  timerAction()</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 2</span></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">resumeTimer</span><span class="params">()</span></span> &#123;</div><div class="line">  startTime = <span class="type">Date</span>(timeIntervalSinceNow: -elapsedTime)</div><div class="line"></div><div class="line">  timer = <span class="type">Timer</span>.scheduledTimer(timeInterval: <span class="number">1</span>,</div><div class="line">                               target: <span class="keyword">self</span>,</div><div class="line">                               selector: #selector(timerAction),</div><div class="line">                               userInfo: <span class="literal">nil</span>,</div><div class="line">                               repeats: <span class="literal">true</span>)</div><div class="line">  timerAction()</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 3</span></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">stopTimer</span><span class="params">()</span></span> &#123;</div><div class="line">  <span class="comment">// really just pauses the timer</span></div><div class="line">  timer?.invalidate()</div><div class="line">  timer = <span class="literal">nil</span></div><div class="line"></div><div class="line">  timerAction()</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 4</span></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">resetTimer</span><span class="params">()</span></span> &#123;</div><div class="line">  <span class="comment">// stop the timer &amp; reset back to start</span></div><div class="line">  timer?.invalidate()</div><div class="line">  timer = <span class="literal">nil</span></div><div class="line"></div><div class="line">  startTime = <span class="literal">nil</span></div><div class="line">  duration = <span class="number">360</span></div><div class="line">  elapsedTime = <span class="number">0</span></div><div class="line"></div><div class="line">  timerAction()</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>What are these functions doing?</p>
+<ol>
+<li><code>startTimer</code> sets the start time to now using <code>Date()</code> and sets up the repeating <code>Timer</code>.</li>
+<li><code>resumeTimer</code> is what gets called when the timer has been paused and is being re-started. The start time is re-calculated based on the elapsed time.</li>
+<li><code>stopTimer</code> stops the repeating timer.</li>
+<li><code>resetTimer</code> stops the repeating timer and sets the properties back to the defaults.</li>
+</ol>
+<p>All these functions also call <code>timerAction</code> so that the display can update immediately.</p>
+<h2><span id="viewcontroller"> ViewController</span></h2>
+<p>Now that the <code>EggTimer</code> object is working, its time to go back to <em>ViewController.swift</em> and make the display change to reflect this.</p>
+<p><code>ViewController</code> already has the <code>@IBOutlet</code> properties, but now give it a property for the <code>EggTimer</code>:</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> eggTimer = <span class="type">EggTimer</span>()</div></pre></td></tr></table></figure>
+<p>Add this line to <code>viewDidLoad</code>, replacing the comment line:</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">eggTimer.delegate = <span class="keyword">self</span></div></pre></td></tr></table></figure>
+<p>This is going to cause an error because <code>ViewController</code> does not conform to the <code>EggTimerProtocol</code>. When conforming to a protocol, it makes your code neater if you create a separate extension for the protocol functions. Add this code below the <code>ViewController</code> class definition:</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">extension</span> <span class="title">ViewController</span>: <span class="title">EggTimerProtocol</span> </span>&#123;</div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">func</span> <span class="title">timeRemainingOnTimer</span><span class="params">(<span class="number">_</span> timer: EggTimer, timeRemaining: TimeInterval)</span></span> &#123;</div><div class="line">    updateDisplay(<span class="keyword">for</span>: timeRemaining)</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">func</span> <span class="title">timerHasFinished</span><span class="params">(<span class="number">_</span> timer: EggTimer)</span></span> &#123;</div><div class="line">    updateDisplay(<span class="keyword">for</span>: <span class="number">0</span>)</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>The error disappears because <code>ViewController</code> now has the two functions required by <code>EggTimerProtocol</code>. However both these functions are calling <code>updateDisplay</code> which doesn’t exist yet.</p>
+<p>Here is another extension for <code>ViewController</code> which contains the display functions:</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">extension</span> <span class="title">ViewController</span> </span>&#123;</div><div class="line"></div><div class="line">  <span class="comment">// MARK: - Display</span></div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">func</span> <span class="title">updateDisplay</span><span class="params">(<span class="keyword">for</span> timeRemaining: TimeInterval)</span></span> &#123;</div><div class="line">    timeLeftField.stringValue = textToDisplay(<span class="keyword">for</span>: timeRemaining)</div><div class="line">    eggImageView.image = imageToDisplay(<span class="keyword">for</span>: timeRemaining)</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">private</span> <span class="function"><span class="keyword">func</span> <span class="title">textToDisplay</span><span class="params">(<span class="keyword">for</span> timeRemaining: TimeInterval)</span></span> -&gt; <span class="type">String</span> &#123;</div><div class="line">    <span class="keyword">if</span> timeRemaining == <span class="number">0</span> &#123;</div><div class="line">      <span class="keyword">return</span> <span class="string">"Done!"</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">let</span> minutesRemaining = floor(timeRemaining / <span class="number">60</span>)</div><div class="line">    <span class="keyword">let</span> secondsRemaining = timeRemaining - (minutesRemaining * <span class="number">60</span>)</div><div class="line"></div><div class="line">    <span class="keyword">let</span> secondsDisplay = <span class="type">String</span>(format: <span class="string">"%02d"</span>, <span class="type">Int</span>(secondsRemaining))</div><div class="line">    <span class="keyword">let</span> timeRemainingDisplay = <span class="string">"<span class="subst">\(Int(minutesRemaining)</span>):<span class="subst">\(secondsDisplay)</span>"</span></div><div class="line"></div><div class="line">    <span class="keyword">return</span> timeRemainingDisplay</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">private</span> <span class="function"><span class="keyword">func</span> <span class="title">imageToDisplay</span><span class="params">(<span class="keyword">for</span> timeRemaining: TimeInterval)</span></span> -&gt; <span class="type">NSImage</span>? &#123;</div><div class="line">    <span class="keyword">let</span> percentageComplete = <span class="number">100</span> - (timeRemaining / <span class="number">360</span> * <span class="number">100</span>)</div><div class="line"></div><div class="line">    <span class="keyword">if</span> eggTimer.isStopped &#123;</div><div class="line">      <span class="keyword">let</span> stoppedImageName = (timeRemaining == <span class="number">0</span>) ? <span class="string">"100"</span> : <span class="string">"stopped"</span></div><div class="line">      <span class="keyword">return</span> <span class="type">NSImage</span>(named: stoppedImageName)</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">let</span> imageName: <span class="type">String</span></div><div class="line">    <span class="keyword">switch</span> percentageComplete &#123;</div><div class="line">    <span class="keyword">case</span> <span class="number">0</span> ..&lt; <span class="number">25</span>:</div><div class="line">      imageName = <span class="string">"0"</span></div><div class="line">    <span class="keyword">case</span> <span class="number">25</span> ..&lt; <span class="number">50</span>:</div><div class="line">      imageName = <span class="string">"25"</span></div><div class="line">    <span class="keyword">case</span> <span class="number">50</span> ..&lt; <span class="number">75</span>:</div><div class="line">      imageName = <span class="string">"50"</span></div><div class="line">    <span class="keyword">case</span> <span class="number">75</span> ..&lt; <span class="number">100</span>:</div><div class="line">      imageName = <span class="string">"75"</span></div><div class="line">    <span class="keyword">default</span>:</div><div class="line">      imageName = <span class="string">"100"</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="type">NSImage</span>(named: imageName)</div><div class="line">  &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><code>updateDisplay</code> uses private functions to get the text and the image for the supplied remaining time, and display these in the text field and image view.</p>
+<p><code>textToDisplay</code> converts the seconds remaining to M:SS format. <code>imageToDisplay</code> calculates how much the egg is done as a percentage of the total and picks the image to match.</p>
+<p>So the <code>ViewController</code> has an <code>EggTimer</code> object and it has the functions to receive data from <code>EggTimer</code> and display the result, but the buttons have no code yet. In Part 2, you set up the <code>@IBActions</code> for the buttons.</p>
+<p>Here is the code for these action functions, so you can replace them with this:</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@IBAction</span> <span class="function"><span class="keyword">func</span> <span class="title">startButtonClicked</span><span class="params">(<span class="number">_</span> sender: Any)</span></span> &#123;</div><div class="line">  <span class="keyword">if</span> eggTimer.isPaused &#123;</div><div class="line">    eggTimer.resumeTimer()</div><div class="line">  &#125; <span class="keyword">else</span> &#123;</div><div class="line">    eggTimer.duration = <span class="number">360</span></div><div class="line">    eggTimer.startTimer()</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="meta">@IBAction</span> <span class="function"><span class="keyword">func</span> <span class="title">stopButtonClicked</span><span class="params">(<span class="number">_</span> sender: Any)</span></span> &#123;</div><div class="line">  eggTimer.stopTimer()</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="meta">@IBAction</span> <span class="function"><span class="keyword">func</span> <span class="title">resetButtonClicked</span><span class="params">(<span class="number">_</span> sender: Any)</span></span> &#123;</div><div class="line">  eggTimer.resetTimer()</div><div class="line">  updateDisplay(<span class="keyword">for</span>: <span class="number">360</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>These 3 actions call the <code>EggTimer</code> methods you added earlier.</p>
+<p>Build and run the app now and then click the <em>Start</em> button.</p>
+<p>There are a couple of features missing still: the Stop &amp; Reset buttons are always disabled and you can only have a 6 minute egg. You can use the <em>Timer</em> menu to control the app; try stopping, starting and resetting using the menu and the keyboard shortcuts.</p>
+<p>If you are patient enough to wait for it, you will see the egg change color as it cooks and finally show “DONE!” when it is ready.</p>
+<p><img src="https://koenig-media.raywenderlich.com/uploads/2017/01/Cooking.png" alt="Cooking"></p>
+<h2><span id="buttons-and-menus"> Buttons and Menus</span></h2>
+<p>The buttons should become enabled or disabled depending on the timer state and the Timer menu items should match that.</p>
+<p>Add this function to the <code>ViewController</code>, inside the extension with the Display functions:</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">configureButtonsAndMenus</span><span class="params">()</span></span> &#123;</div><div class="line">  <span class="keyword">let</span> enableStart: <span class="type">Bool</span></div><div class="line">  <span class="keyword">let</span> enableStop: <span class="type">Bool</span></div><div class="line">  <span class="keyword">let</span> enableReset: <span class="type">Bool</span></div><div class="line"></div><div class="line">  <span class="keyword">if</span> eggTimer.isStopped &#123;</div><div class="line">    enableStart = <span class="literal">true</span></div><div class="line">    enableStop = <span class="literal">false</span></div><div class="line">    enableReset = <span class="literal">false</span></div><div class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> eggTimer.isPaused &#123;</div><div class="line">    enableStart = <span class="literal">true</span></div><div class="line">    enableStop = <span class="literal">false</span></div><div class="line">    enableReset = <span class="literal">true</span></div><div class="line">  &#125; <span class="keyword">else</span> &#123;</div><div class="line">    enableStart = <span class="literal">false</span></div><div class="line">    enableStop = <span class="literal">true</span></div><div class="line">    enableReset = <span class="literal">false</span></div><div class="line">  &#125;</div><div class="line"></div><div class="line">  startButton.isEnabled = enableStart</div><div class="line">  stopButton.isEnabled = enableStop</div><div class="line">  resetButton.isEnabled = enableReset</div><div class="line"></div><div class="line">  <span class="keyword">if</span> <span class="keyword">let</span> appDel = <span class="type">NSApplication</span>.shared().delegate <span class="keyword">as</span>? <span class="type">AppDelegate</span> &#123;</div><div class="line">    appDel.enableMenus(start: enableStart, stop: enableStop, reset: enableReset)</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>This function uses the <code>EggTimer</code> status (remember the computed variables you added to <code>EggTimer</code>) to work out which buttons should be enabled.</p>
+<p>In Part 2, you set up the Timer menu items as properties of the <code>AppDelegate</code>, so the <code>AppDelegate</code> is where they can be configured.</p>
+<p>Switch to <em>AppDelegate.swift</em> and add this function:</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">enableMenus</span><span class="params">(start: Bool, stop: Bool, reset: Bool)</span></span> &#123;</div><div class="line">  startTimerMenuItem.isEnabled = start</div><div class="line">  stopTimerMenuItem.isEnabled = stop</div><div class="line">  resetTimerMenuItem.isEnabled = reset</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>So that your menus are correctly configured when the app first launches, add this line to the <code>applicationDidFinishLaunching</code> method:</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">enableMenus(start: <span class="literal">true</span>, stop: <span class="literal">false</span>, reset: <span class="literal">false</span>)</div></pre></td></tr></table></figure>
+<p>The buttons and menus needs to be changed whenever a button or menu item action changes the state of the <code>EggTimer</code>. Switch back to <em>ViewController.swift</em> and add this line to the end of each of the 3 button action functions:</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">configureButtonsAndMenus()</div></pre></td></tr></table></figure>
+<p>Build and run the app again and you can see that the buttons enable and disable as expected. Check the menu items; they should mirror the state of the buttons.</p>
+<p><img src="https://koenig-media.raywenderlich.com/uploads/2017/01/ButtonsMenus.png" alt="ButtonsMenus"></p>
+<h2><span id="preferences"> Preferences</span></h2>
+<p>There is really only one big problem left for this app - what if you don’t like your eggs boiled for 6 minutes?</p>
+<p>In Part 2, you designed a Preferences window to allow selection of a different time. This window is controlled by the <code>PrefsViewController</code>, but it needs a model object to handle the data storage and retrieval.</p>
+<p>Preferences are going be stored using <code>UserDefaults</code> which is a key-value way of storing small pieces of data in the Preferences folder in your app’s Container.</p>
+<p>Right-click on the <em>Model</em> group in the <em>Project Navigator</em> and choose <em>New File…</em> Select <em>macOS/Swift File</em>and click <em>Next</em>. Name the file <em>Preferences.swift</em> and click <em>Create</em>. Add this code to the <em>Preferences.swift</em>file:</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Preferences</span> </span>&#123;</div><div class="line"></div><div class="line">  <span class="comment">// 1</span></div><div class="line">  <span class="keyword">var</span> selectedTime: <span class="type">TimeInterval</span> &#123;</div><div class="line">    <span class="keyword">get</span> &#123;</div><div class="line">      <span class="comment">// 2</span></div><div class="line">      <span class="keyword">let</span> savedTime = <span class="type">UserDefaults</span>.standard.double(forKey: <span class="string">"selectedTime"</span>)</div><div class="line">      <span class="keyword">if</span> savedTime &gt; <span class="number">0</span> &#123;</div><div class="line">        <span class="keyword">return</span> savedTime</div><div class="line">      &#125;</div><div class="line">      <span class="comment">// 3</span></div><div class="line">      <span class="keyword">return</span> <span class="number">360</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">set</span> &#123;</div><div class="line">      <span class="comment">// 4</span></div><div class="line">      <span class="type">UserDefaults</span>.standard.<span class="keyword">set</span>(newValue, forKey: <span class="string">"selectedTime"</span>)</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>So what does this code do?</p>
+<ol>
+<li>A computed variable called <code>selectedTime</code> is defined as a <code>TimeInterval</code>.</li>
+<li>When the value of the variable is requested, the <code>UserDefaults</code> singleton is asked for the <code>Double</code> value assigned to the key “selectedTime”. If the value has not been defined, <code>UserDefaults</code> will return zero, but if the value is greater than 0, return that as the value of <code>selectedTime</code>.</li>
+<li>If <code>selectedTime</code> has not been defined, use the default value of 360 (6 minutes).</li>
+<li>Whenever the value of <code>selectedTime</code> is changed, write the new value to <code>UserDefaults</code> with the key “selectedTime”.</li>
+</ol>
+<p>So by using a computed variable with a getter and a setter, the <code>UserDefaults</code> data storage will be handled automatically.</p>
+<p>Now switch the <em>PrefsViewController.swift</em>, where the first task is to update the display to reflect any existing preferences or the defaults.</p>
+<p>First, add this property just below the outlets:</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> prefs = <span class="type">Preferences</span>()</div></pre></td></tr></table></figure>
+<p>Here you create an instance of <code>Preferences</code> so the <code>selectedTime</code> computed variable is accessible.</p>
+<p>Then, add these methods:</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">showExistingPrefs</span><span class="params">()</span></span> &#123;</div><div class="line">  <span class="comment">// 1</span></div><div class="line">  <span class="keyword">let</span> selectedTimeInMinutes = <span class="type">Int</span>(prefs.selectedTime) / <span class="number">60</span></div><div class="line"></div><div class="line">  <span class="comment">// 2</span></div><div class="line">  presetsPopup.selectItem(withTitle: <span class="string">"Custom"</span>)</div><div class="line">  customSlider.isEnabled = <span class="literal">true</span></div><div class="line"></div><div class="line">  <span class="comment">// 3</span></div><div class="line">  <span class="keyword">for</span> item <span class="keyword">in</span> presetsPopup.itemArray &#123;</div><div class="line">    <span class="keyword">if</span> item.tag == selectedTimeInMinutes &#123;</div><div class="line">      presetsPopup.select(item)</div><div class="line">      customSlider.isEnabled = <span class="literal">false</span></div><div class="line">      <span class="keyword">break</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="comment">// 4</span></div><div class="line">  customSlider.integerValue = selectedTimeInMinutes</div><div class="line">  showSliderValueAsText()</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 5</span></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">showSliderValueAsText</span><span class="params">()</span></span> &#123;</div><div class="line">  <span class="keyword">let</span> newTimerDuration = customSlider.integerValue</div><div class="line">  <span class="keyword">let</span> minutesDescription = (newTimerDuration == <span class="number">1</span>) ? <span class="string">"minute"</span> : <span class="string">"minutes"</span></div><div class="line">  customTextField.stringValue = <span class="string">"<span class="subst">\(newTimerDuration)</span> <span class="subst">\(minutesDescription)</span>"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>This looks like a lot of code, so just go through it step by step:</p>
+<ol>
+<li>Ask the prefs object for its <code>selectedTime</code> and convert it from seconds to whole minutes.</li>
+<li>Set the defaults to “Custom” in case no matching preset value is found.</li>
+<li>Loop through the menu items in the <code>presetsPopup</code> checking their tags. Remember in Part 2 how you set the tags to the number of minutes for each option? If a match is found, enable that item and get out of the loop.</li>
+<li>Set the value for the slider and call <code>showSliderValueAsText</code>.</li>
+<li><code>showSliderValueAsText</code> adds “minute” or “minutes” to the number and shows it in the text field.</li>
+</ol>
+<p>Now, add this to <code>viewDidLoad</code>:</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">showExistingPrefs()</div></pre></td></tr></table></figure>
+<p>When the view loads, call the method that shows the preferences in the display. Remember, using the MVC pattern, the <code>Preferences</code> model object has no idea about how or when it might be displayed - that is for the <code>PrefsViewController</code> to manage.</p>
+<p>So now you have the ability to display the set time, but changing the time in the popup doesn’t do anything yet. You need a method that saves the new data and tells anyone who is interested that the data has changed.</p>
+<p>In the <code>EggTimer</code> object, you used the delegate pattern to pass data to whatever needed it. This time (just to be different), you are going to broadcast a <code>Notification</code> when the data changes. Any object that choses can listen for this notification and act on it when received.</p>
+<p>Insert this method into <code>PrefsViewController</code>:</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">saveNewPrefs</span><span class="params">()</span></span> &#123;</div><div class="line">  prefs.selectedTime = customSlider.doubleValue * <span class="number">60</span></div><div class="line">  <span class="type">NotificationCenter</span>.<span class="keyword">default</span>.post(name: <span class="type">Notification</span>.<span class="type">Name</span>(rawValue: <span class="string">"PrefsChanged"</span>),</div><div class="line">                                  object: <span class="literal">nil</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>This gets the data from the custom slider (you will see in a minute that any changes are reflected there). Setting the <code>selectedTime</code> property will automatically save the new data to <code>UserDefaults</code>. Then a notification with the name “PrefsChanged” is posted to the <code>NotificationCenter</code>.</p>
+<p>In a minute, you will see how the <code>ViewController</code> can be set to listen for this <code>Notification</code> and react to it.</p>
+<p>The final step in coding the <code>PrefsViewController</code> is to set the code for the <code>@IBActions</code> you added in Part 2:</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 1</span></div><div class="line"><span class="meta">@IBAction</span> <span class="function"><span class="keyword">func</span> <span class="title">popupValueChanged</span><span class="params">(<span class="number">_</span> sender: NSPopUpButton)</span></span> &#123;</div><div class="line">  <span class="keyword">if</span> sender.selectedItem?.title == <span class="string">"Custom"</span> &#123;</div><div class="line">    customSlider.isEnabled = <span class="literal">true</span></div><div class="line">    <span class="keyword">return</span></div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">let</span> newTimerDuration = sender.selectedTag()</div><div class="line">  customSlider.integerValue = newTimerDuration</div><div class="line">  showSliderValueAsText()</div><div class="line">  customSlider.isEnabled = <span class="literal">false</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 2</span></div><div class="line"><span class="meta">@IBAction</span> <span class="function"><span class="keyword">func</span> <span class="title">sliderValueChanged</span><span class="params">(<span class="number">_</span> sender: NSSlider)</span></span> &#123;</div><div class="line">  showSliderValueAsText()</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 3</span></div><div class="line"><span class="meta">@IBAction</span> <span class="function"><span class="keyword">func</span> <span class="title">cancelButtonClicked</span><span class="params">(<span class="number">_</span> sender: Any)</span></span> &#123;</div><div class="line">  view.window?.close()</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 4</span></div><div class="line"><span class="meta">@IBAction</span> <span class="function"><span class="keyword">func</span> <span class="title">okButtonClicked</span><span class="params">(<span class="number">_</span> sender: Any)</span></span> &#123;</div><div class="line">  saveNewPrefs()</div><div class="line">  view.window?.close()</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ol>
+<li>When a new item is chosen from the popup, check to see if it is the Custom menu item. If so, enable the slider and get out. If not, use the tag to get the number of minutes, use them to set the slider value and text and disable the slider.</li>
+<li>Whenever the slider changes, update the text.</li>
+<li>Clicking Cancel just closes the window but does not save the changes.</li>
+<li>Clicking OK calls <code>saveNewPrefs</code> first and then closes the window.</li>
+</ol>
+<p>Build and run the app now and go to <em>Preferences</em>. Try choosing different options in the popup - notice how the slider and text change to match. Choose Custom and pick your own time. Click <em>OK</em>, then come back to <em>Preferences</em> and confirm that your chosen time is still displayed.</p>
+<p>Now try quitting the app and restarting. Go back to <em>Preferences</em> and see that it has saved your setting.</p>
+<p><img src="https://koenig-media.raywenderlich.com/uploads/2017/01/PrefsChanges-1.png" alt="PrefsChanges"></p>
+<h2><span id="implementing-selected-preferences"> Implementing Selected Preferences</span></h2>
+<p>The Preferences window is looking good - saving and restoring your selected time as expected. But when you go back to the main window, you are still getting a 6 minute egg! :[</p>
+<p>So you need to edit <em>ViewController.swift</em> to use the stored value for the timing and to listen for the Notification of change so the timer can be changed or reset.</p>
+<p>Add this extension to <em>ViewController.swift</em> outside any existing class definition or extension - it groups all the preferences functionality into a separate package for neater code:</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">extension</span> <span class="title">ViewController</span> </span>&#123;</div><div class="line"></div><div class="line">  <span class="comment">// MARK: - Preferences</span></div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">func</span> <span class="title">setupPrefs</span><span class="params">()</span></span> &#123;</div><div class="line">    updateDisplay(<span class="keyword">for</span>: prefs.selectedTime)</div><div class="line"></div><div class="line">    <span class="keyword">let</span> notificationName = <span class="type">Notification</span>.<span class="type">Name</span>(rawValue: <span class="string">"PrefsChanged"</span>)</div><div class="line">    <span class="type">NotificationCenter</span>.<span class="keyword">default</span>.addObserver(forName: notificationName,</div><div class="line">                                           object: <span class="literal">nil</span>, queue: <span class="literal">nil</span>) &#123;</div><div class="line">      (notification) <span class="keyword">in</span></div><div class="line">      <span class="keyword">self</span>.updateFromPrefs()</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">func</span> <span class="title">updateFromPrefs</span><span class="params">()</span></span> &#123;</div><div class="line">    <span class="keyword">self</span>.eggTimer.duration = <span class="keyword">self</span>.prefs.selectedTime</div><div class="line">    <span class="keyword">self</span>.resetButtonClicked(<span class="keyword">self</span>)</div><div class="line">  &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>This will give errors, because <code>ViewController</code> has no object called <code>prefs</code>. In the main <code>ViewController</code> class definition, where you defined the <code>eggTimer</code> property, add this line:</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> prefs = <span class="type">Preferences</span>()</div></pre></td></tr></table></figure>
+<p>Now <code>PrefsViewController</code> has a prefs object and so does <code>ViewController</code> - is this a problem? No, for a couple of reasons.</p>
+<ol>
+<li><code>Preferences</code> is a struct, so it is value-based not reference-based. Each View Controller gets its own copy.</li>
+<li>The <code>Preferences</code> struct interacts with <code>UserDefaults</code> through a singleton, so both copies are using the same <code>UserDefaults</code> and getting the same data.</li>
+</ol>
+<p>At the end of the ViewController <code>viewDidLoad</code> function, add this call which will set up the <code>Preferences</code>connection:</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">setupPrefs()</div></pre></td></tr></table></figure>
+<p>There is one final set of edits needed. Earlier, you were using hard-coded values for timings - 360 seconds or 6 minutes. Now that <code>ViewController</code> has access to <code>Preferences</code>, you want to change these hard-coded 360’s to <code>prefs.selectedTime</code>.</p>
+<p>Search for 360 in <em>ViewController.swift</em> and change each one to <code>prefs.selectedTime</code> - you should be able to find 3 of them.</p>
+<p>Build and run the app. If you have changed your preferred egg time earlier, the time remaining will display whatever you chose. Go to <em>Preferences</em>, chose a different time and click <em>OK</em> - your new time will immediately be shown as <code>ViewController</code> receives the <code>Notification</code>.</p>
+<p><img src="https://koenig-media.raywenderlich.com/uploads/2017/01/PrefsUpdating.png" alt="PrefsUpdating"></p>
+<p>Start the timer, then go to <em>Preferences</em>. The countdown continues in the back window. Change your egg timing and click <em>OK</em>. The timer applies your new time, but stops the timer and resets the counter. This is OK, I suppose, but it would be better if the app warned you this was going to happen. How about adding a dialog that asks if that is really what you want to do?</p>
+<p>In the ViewController extension that deals with Preferences, add this function:</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">checkForResetAfterPrefsChange</span><span class="params">()</span></span> &#123;</div><div class="line">  <span class="keyword">if</span> eggTimer.isStopped || eggTimer.isPaused &#123;</div><div class="line">    <span class="comment">// 1</span></div><div class="line">    updateFromPrefs()</div><div class="line">  &#125; <span class="keyword">else</span> &#123;</div><div class="line">    <span class="comment">// 2</span></div><div class="line">    <span class="keyword">let</span> alert = <span class="type">NSAlert</span>()</div><div class="line">    alert.messageText = <span class="string">"Reset timer with the new settings?"</span></div><div class="line">    alert.informativeText = <span class="string">"This will stop your current timer!"</span></div><div class="line">    alert.alertStyle = .warning</div><div class="line"></div><div class="line">    <span class="comment">// 3</span></div><div class="line">    alert.addButton(withTitle: <span class="string">"Reset"</span>)</div><div class="line">    alert.addButton(withTitle: <span class="string">"Cancel"</span>)</div><div class="line"></div><div class="line">    <span class="comment">// 4</span></div><div class="line">    <span class="keyword">let</span> response = alert.runModal()</div><div class="line">    <span class="keyword">if</span> response == <span class="type">NSAlertFirstButtonReturn</span> &#123;</div><div class="line">      <span class="keyword">self</span>.updateFromPrefs()</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>So what’s going on here?</p>
+<ol>
+<li>If the timer is stopped or paused, just do the reset without asking.</li>
+<li>Create an <code>NSAlert</code> which is the class that displays a dialog box. Configure its text and style.</li>
+<li>Add 2 buttons: Reset &amp; Cancel. They will appear from right to left in the order you add them and the first one will be the default.</li>
+<li>Show the alert as a modal dialog and wait for the answer. Check if the user clicked the first button (Reset) and reset the timer if so.</li>
+</ol>
+<p>In the <code>setupPrefs</code> method, change the line <code>self.updateFromPrefs()</code> to:</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">self</span>.checkForResetAfterPrefsChange()</div></pre></td></tr></table></figure>
+<p>Build and run the app, start the timer, go to <em>Preferences</em>, change the time and click <em>OK</em>. You will see the dialog and get the choice of resetting or not.</p>
+<p><img src="https://koenig-media.raywenderlich.com/uploads/2017/01/Dialog.png" alt="Dialog"></p>
+<h2><span id="sound"> Sound</span></h2>
+<p>The only part of the app that we haven’t covered so far is the sound. An egg timer isn’t an egg timer if is doesn’t go DINGGGGG!.</p>
+<p>In part 2, you downloaded a folder of assets for the app. Most of them were images and you have already used them, but there was also a sound file: <em>ding.mp3</em>. If you need to download it again, here is a link to the <a href="https://koenig-media.raywenderlich.com/uploads/2017/02/ding.mp3.zip" target="_blank" rel="external">sound file</a> on its own.</p>
+<p>Drag the <em>ding.mp3</em> file into the <em>Project Navigator</em> inside the <em>EggTimer</em> group - just under <em>Main.storyboard</em>seems a logical place for it. Make sure that <em>Copy items if needed</em> is checked and that the EggTimer target is checked. Then click <em>Finish</em>.</p>
+<p><img src="https://koenig-media.raywenderlich.com/uploads/2017/01/AddFile.png" alt="AddFile"></p>
+<p>To play a sound, you need to use the <code>AVFoundation</code> library. The <code>ViewController</code> will be playing the sound when the <code>EggTimer</code> tells its delegate that the timer has finished, so switch to <em>ViewController.swift</em>. At the top, you will see where the <code>Cocoa</code> library is imported.</p>
+<p>Just below that line, add this:</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> AVFoundation</div></pre></td></tr></table></figure>
+<p><code>ViewController</code> will need a player to play the sound file, so add this to its properties:</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> soundPlayer: <span class="type">AVAudioPlayer</span>?</div></pre></td></tr></table></figure>
+<p>It seems like a good idea to make a separate extension to <code>ViewController</code> to hold the sound-related functions, so add this to <em>ViewController.swift</em>, outside any existing definition or extension:</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">extension</span> <span class="title">ViewController</span> </span>&#123;</div><div class="line"></div><div class="line">  <span class="comment">// MARK: - Sound</span></div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">func</span> <span class="title">prepareSound</span><span class="params">()</span></span> &#123;</div><div class="line">    <span class="keyword">guard</span> <span class="keyword">let</span> audioFileUrl = <span class="type">Bundle</span>.main.url(forResource: <span class="string">"ding"</span>,</div><div class="line">                                             withExtension: <span class="string">"mp3"</span>) <span class="keyword">else</span> &#123;</div><div class="line">      <span class="keyword">return</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">do</span> &#123;</div><div class="line">      soundPlayer = <span class="keyword">try</span> <span class="type">AVAudioPlayer</span>(contentsOf: audioFileUrl)</div><div class="line">      soundPlayer?.prepareToPlay()</div><div class="line">    &#125; <span class="keyword">catch</span> &#123;</div><div class="line">      <span class="built_in">print</span>(<span class="string">"Sound player not available: <span class="subst">\(error)</span>"</span>)</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">func</span> <span class="title">playSound</span><span class="params">()</span></span> &#123;</div><div class="line">    soundPlayer?.play()</div><div class="line">  &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><code>prepareSound</code> is doing most of the work here - it first checks to see whether the ding.mp3 file is available in the app bundle. If the file is there, it tries to initialize an <code>AVAudioPlayer</code> with the sound file URL and prepares it to play. This pre-buffers the sound file so it can play immediately when needed.</p>
+<p><code>playSound</code> just sends a play message to the player if it exists, but if <code>prepareSound</code> has failed, <code>soundPlayer</code> will be nil so this will do nothing.</p>
+<p>The sound only needs to be prepared once the Start button is clicked, so insert this line at the end of <code>startButtonClicked</code>:</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">prepareSound()</div></pre></td></tr></table></figure>
+<p>And in <em>timerHasFinished</em> in the <em>EggTimerProtocol</em> extension, add this:</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">playSound()</div></pre></td></tr></table></figure>
+<p>Build and run the app, choose a conveniently short time for your egg and start the timer. Did you hear the ding when the timer ended?</p>
+<p><img src="https://koenig-media.raywenderlich.com/uploads/2017/01/Ding.png" alt="Ding"></p>
+<h2><span id="where-to-go-from-here"> Where to Go From Here?</span></h2>
+<p><a href="https://videos.raywenderlich.com/courses" target="_blank" rel="external"><img src="https://koenig-assets.raywenderlich.com/wp-content/themes/raywenderlich/images/global/video-yeti@2x.png" alt="yeti holding videos">Want to learn even faster? Save time with ourvideo courses</a></p>
+<p>You can download the <a href="https://koenig-media.raywenderlich.com/uploads/2017/02/EggTimer-Final2.zip" target="_blank" rel="external">completed project</a> here.</p>
+<p>This macOS development tutorial introductory series has given you a basic level of knowledge to get started with macOS apps–but there’s so much more to learn!</p>
+<p>Apple has some great <a href="https://developer.apple.com/library/content/navigation/#section=Platforms&amp;topic=macOS" target="_blank" rel="external">documentation</a> covering all aspects of macOS development.</p>
+<p>I also highly recommend checking out the other macOS tutorials at <a href="https://www.raywenderlich.com/category/macos" target="_blank" rel="external">raywenderlich.com</a>.</p>
+<p>If you have any questions or comments, please join the forum discussion below!</p>
+
+          <hr/>
+          <div class="p-state"><blockquote>
+            <p>当前链接：<a href="https://ziionote.github.io/posts/开发/macOS-Development-for-Beginners-Part-3/">https://ziionote.github.io/posts/开发/macOS-Development-for-Beginners-Part-3/</a></p>
+          </blockquote></div>
+          <div class="m-pagination">
+<p>继续阅读：<a href="/posts/《汉语学习》笔记/汉语学习手记/">汉语学习手记</a></p>
+<p>回顾前篇：<a href="/posts/开发/macOS-Development-for-Beginners-Part-2/">macOS Development for Beginners: Part 2</a></p>
+<p>返回首页：<a href="/">语宙心星</a></p>
+          </div>
+        </div>
+      </article>
+      <div class="m-section m-share"></div>
+      <div class="m-section m-comment">
+          <div class="comments-wrap tabs" id="commenttabs">
+            <ul class="nav-tabs">
+              <li class="tab"><a href="#welcomcomments_wrap">欢迎评论！</a></li>
+              <li class="tab active"><a href="#valinecomments_wrap">Valine评论</a></li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane" id="welcomcomments_wrap"><div id="welcomcomments"><p>欢迎进行评论😆。</p></div></div>
+              <div class="tab-pane active" id="valinecomments_wrap"><div id="valinecomments"></div></div>
+            </div>
+          </div>
+        </div>
+      <div class="m-section m-related"></div>
+      <footer class="m-section m-footer"></footer>
+    </main>
+
+  </div>
+  <div class="l-ctrl" :class="ctrlClassObject" v-on:click="doOpenAside" id="l-ctrl">
+
+    <div class="b-ctrl">
+      <div class="m-ctrl"></div>
+    </div>
+
+  </div>
+</div>
+<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+<script>
+
+const layoutApp = new Vue({
+  delimiters: ['${', '}'],
+  el: '#l-viewport',
+  data: function () {
+    // var x = navigator;
+    // var y = returnCitySN;
+    return {
+      // browser: x,
+      // citysn: y,
+      asideIsOpen: false,
+      scrollAfterTop: false,
+      scrolledDown: false,
+      scrolledUp: false,
+    }
+  },
+  computed: {
+    browser: function () {
+      return { navigator }
+    },
+    citysn: function () {
+      return { returnCitySN }
+    },
+    sideClassObject: function () {
+      return {
+        'z-open': this.asideIsOpen,
+      }
+    },
+    pageClassObject: function () {
+      return {
+        'z-moved': this.asideIsOpen,
+      }
+    },
+    ctrlClassObject: function () {
+      return {
+        'z-hidden': this.asideIsOpen,
+      }
+    },
+    titlebarClassObject: function () {
+      return {
+        'z-nottop': this.scrollAfterTop,
+        'z-show': this.scrolledDown,
+      }
+    }
+  },
+  methods: {
+    doCloseAside: function (event) {
+      this.asideIsOpen = false;
+    },
+    doOpenAside: function (event) {
+      this.asideIsOpen = (this.asideIsOpen)?false:true;
+    },
+    handleScroll () {
+      var scrollTop = document.querySelector('.l-pagewrap').scrollTop
+      var offsetTop = document.querySelector('.b-printarea').offsetTop
+      if (scrollTop > offsetTop) {
+        this.scrollAfterTop = true
+      } else {
+        this.scrollAfterTop = false
+      }
+      if (this.lastScroll && scrollTop > this.lastScroll) {
+        this.scrolledDown = false
+        this.scrolledUp = true
+        // console.log('scrolling up');
+      } else if (this.lastScroll && scrollTop < this.lastScroll) {
+        this.scrolledDown = true
+        this.scrolledUp = false
+        // console.log('scrolling down');
+      }
+      this.lastScroll = scrollTop
+    }
+  },
+  mounted () {
+    document.querySelector('.l-pagewrap').addEventListener('scroll', this.handleScroll)
+  },
+  destroyed () {
+    document.querySelector('.l-pagewrap').removeEventListener('scroll', this.handleScroll)
+  }
+})
+
+</script>
+<script src="/js/s-gentoc.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html class="theme-docapp" lang="zh-Hans">
+<head>
+<title>课程实况-知性会话_基于知识图谱的人机对话系统方法与实践 | 语宙心星</title>
+<!-- META -->
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="theme-color" content="#fff" />
+<!-- LINK -->
+<link rel="shortcut icon" href="/favicon.png" type="image/x-icon"/>
+<link rel="icon" sizes="any" mask="" href="/favicon.png"/>
+<!-- STYLE -->
+<link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/Han/3.2.7/han.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+<!-- SCRIPT -->
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script type="text/javascript" src="/js/smoothscroll.js"></script>
+<!-- END -->
+
+</head>
+<body>
+<div class="l-viewport" id="l-viewport">
+  <div class="l-side" :class="sideClassObject" id="l-side">
+
+    <aside class="b-sidebar">
+      <div class="m-logoandsearch">
+        <a class="p-logoarea" href="/" title="关于语言与心智的文章收集站"><span class="u-sitename">语宙心星</span></a>
+        <p class="p-description" title="关于语言与心智的文章收集站">探索语言与心智的奥秘</p>
+        <div class="p-searchbox" role="search">
+          <form id="u-searchform" class="u-searchform" action="http://www.baidu.com/s?ie=utf-8" method="get" target="_blank">
+            <input id="u-searchbox" class="u-searchbox" type="text" name="q" placeholder="Search">
+            <input type="hidden" name="check_keywords" value="yes">
+            <input type="hidden" name="area" value="default">
+          </form>
+        </div>
+      </div>
+
+      <nav class="m-nav" v-on:click="doCloseAside">
+        <div class="p-catnav">
+          <p class="u-navcaption">《现代汉语》沈阳 郭锐</p>
+          <ul class="u-navlist">
+            <li class="u-navitem">
+              <a href="/posts/modern-chinese-0/">现代汉语-〇-目录、参考文献等</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/modern-chinese-1/">现代汉语-一-总论</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/modern-chinese-3/">现代汉语-三-词汇</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/modern-chinese-4-1/">现代汉语-四-语法-上</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/《现代汉语》沈阳 郭锐/《现代汉语·词汇》纲要/">《现代汉语·词汇》纲要</a>
+            </li>
+          </ul>
+          <p class="u-navcaption">《语法讲义》朱德熙</p>
+          <ul class="u-navlist">
+            <li class="u-navitem">
+              <a href="/posts/chinese-grammar-handouts-0/">语法讲义（目录、索引等）</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/chinese-grammar-handouts-1/">语法讲义（上）</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/chinese-grammar-handouts-2/">语法讲义（中）</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/chinese-grammar-handouts-3/">语法讲义（下）</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/chinese-grammar-answers/">语法答问</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/notes-on-chinese-grammar-handouts/">语法讲义 笔记</a>
+            </li>
+          </ul>
+          <p class="u-navcaption">《语言学纲要》叶蜚声 徐通锵</p>
+          <ul class="u-navlist">
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-meta/">元信息</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-0/">导言</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-1/">第一章　语言的功能</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-2/">第二章　语言是符号系统</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-3/">第三章　语音和音系</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-4/">第四章　语法</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-5/">第五章　语义和语用</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-6/">第六章　文字</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-7/">第七章　语言演变与语言分化</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-8/">第八章　语言的接触</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-9/">第九章　语言系统的演变</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+  </div>
+  <div class="l-pagewrap" :class="pageClassObject" v-on:click="doCloseAside" id="l-pagewrap">
+
+    <div class="b-titlebar" :class="titlebarClassObject">
+      <div class="m-titlebar">
+        <a class="p-logoarea" href="/"><img class="u-logo" src="/logo.svg" alt="语宙心星"><span class="u-sitename">语宙心星</span></a>
+      </div>
+    </div>
+
+
+    <main class="b-printarea">
+      <header class="m-header"></header>
+      <article class="m-article">
+        <div class="p-meta">
+          <span class="u-post-title">课程实况-知性会话_基于知识图谱的人机对话系统方法与实践</span>
+          <span class="u-post-metaspan u-post-author">SunCH</span>
+          <a class="u-post-metaspan u-post-site" href="/">语宙心星</a>
+          <span class="u-post-metaspan u-post-date" title="2018-08-23 00:00:00">08月23日</span>
+          
+        </div>
+        <div class="p-write" id="post-content">
+<ul>
+<li>
+<p>系统消息 <code>19:51:29</code><br>
+正在加入直播互动</p>
+</li>
+<li>
+<p>系统消息 <code>19:51:30</code><br>
+现在允许聊天</p>
+</li>
+<li>
+<p>系统消息 <code>19:51:30</code><br>
+现在允许聊天</p>
+</li>
+<li>
+<p>李同 <code>19:51:30</code><br>
+老师好</p>
+</li>
+<li>
+<p>刘升平 <code>19:51:30</code><br>
+你好 😉</p>
+</li>
+<li>
+<p>chenjian <code>19:51:30</code><br>
+老刘 还是老样子呀</p>
+</li>
+<li>
+<p>邓兴旺 <code>19:51:30</code><br>
+老师好</p>
+</li>
+<li>
+<p>chenjian <code>19:51:30</code><br>
+这是在公司呢还是 家里</p>
+</li>
+<li>
+<p>刘升平 <code>19:51:30</code><br>
+公司</p>
+</li>
+<li>
+<p>chenjian <code>19:51:33</code><br>
+没想到你会在csdn上课</p>
+</li>
+<li>
+<p>刘升平 <code>19:52:31</code><br>
+没有想不到，只有做不到 ；-）</p>
+</li>
+<li>
+<p>chenjian <code>19:53:00</code><br>
+什么时候把科大讯飞干趴</p>
+</li>
+<li>
+<p>刘升平 <code>19:53:26</code><br>
+共同进步</p>
+</li>
+<li>
+<p>chenjian <code>19:53:31</code><br>
+哈哈</p>
+</li>
+<li>
+<p>钟文杰 <code>19:53:32</code><br>
+哈哈哈</p>
+</li>
+<li>
+<p>钟文杰 <code>19:54:33</code><br>
+可以刷火箭🚀嘛</p>
+</li>
+<li>
+<p>李孟霖 <code>19:55:41</code><br>
+大佬好</p>
+</li>
+<li>
+<p>Elena <code>19:55:47</code><br>
+<img src="https://static.gensee.com/webcast/static/emotion/emotion.laugh.gif" alt="img"></p>
+</li>
+<li>
+<p>温枫杰 <code>19:55:52</code><br>
+迁移学习和这个有相关嘛</p>
+</li>
+<li>
+<p>婧芯 <code>19:55:53</code><br>
+PPT及源码可以分享吗？</p>
+</li>
+<li>
+<p>明臻 <code>19:56:03</code><br>
+请问有PC端观看的网址吗</p>
+</li>
+<li>
+<p>鲁家南 <code>19:56:04</code><br>
+各位大佬好 我这次进来就是看大家评论的的</p>
+</li>
+<li>
+<p>李孟霖 <code>19:56:21</code><br>
+PPT及源码可以分享吗？＋１</p>
+</li>
+<li>
+<p>刘升平 <code>19:57:13</code><br>
+和迁移学习无关</p>
+</li>
+<li>
+<p>刘升平 <code>19:57:21</code><br>
+没有源代码</p>
+</li>
+<li>
+<p>刘升平 <code>19:57:36</code><br>
+PPT可以分享</p>
+</li>
+<li>
+<p>鲁家南 <code>19:57:52</code><br>
+<img src="https://static.gensee.com/webcast/static/emotion/rose.up.png" alt="img"></p>
+</li>
+<li>
+<p>杨洋 <code>19:57:53</code><br>
+<a href="https://edu.csdn.net/huiyiCourse/attend/847" target="_blank" rel="external">https://edu.csdn.net/huiyiCourse/attend/847</a></p>
+</li>
+<li>
+<p>申彤彤 <code>19:57:56</code><br>
+<img src="https://static.gensee.com/webcast/static/emotion/emotion.gz.gif" alt="img"><img src="https://static.gensee.com/webcast/static/emotion/emotion.qh.gif" alt="img"></p>
+</li>
+<li>
+<p>傅明明 <code>19:58:12</code><br>
+刘老师好</p>
+</li>
+<li>
+<p>海金鑫 <code>19:58:14</code><br>
+分享的ppt怎么获取</p>
+</li>
+<li>
+<p>刘升平 <code>19:58:38</code><br>
+结束后会放出链接</p>
+</li>
+<li>
+<p>海金鑫 <code>19:58:47</code><br>
+谢谢老师</p>
+</li>
+<li>
+<p>大本营小助手 <code>19:58:53</code><br>
+PPT晚点会分享到各个课程交流群里，大家注意查看群信息</p>
+</li>
+<li>
+<p>海金鑫 <code>19:58:55</code><br>
+<img src="https://static.gensee.com/webcast/static/emotion/rose.up.png" alt="img"></p>
+</li>
+<li>
+<p>刘升平 <code>19:58:57</code><br>
+傅明明， 你好</p>
+</li>
+<li>
+<p>wayne <code>19:59:32</code><br>
+开始了</p>
+</li>
+<li>
+<p>傅明明 <code>19:59:54</code><br>
+<img src="https://static.gensee.com/webcast/static/emotion/emotion.gz.gif" alt="img"></p>
+</li>
+<li>
+<p>李孟霖 <code>19:59:57</code><br>
+请问课程群在哪啊，</p>
+</li>
+<li>
+<p>李同 <code>20:00:12</code><br>
+图灵机器人api是不是就是基于知识图谱哒？</p>
+</li>
+<li>
+<p>大本营小助手 <code>20:00:27</code><br>
+公开课开始啦！</p>
+</li>
+<li>
+<p>大本营小助手 <code>20:00:30</code><br>
+欢迎大家参加本次公开课，本次我们邀请到云知声AI Labs 刘老师，为大家带来主题为《 知性会话：基于知识图谱的人机对话系统方法与实践》。</p>
+</li>
+<li>
+<p>alysa <code>20:01:28</code><br>
+开始了么？没有声音？</p>
+</li>
+<li>
+<p>吴晓婷 <code>20:01:49</code><br>
+有声音，</p>
+</li>
+<li>
+<p>大本营小助手 <code>20:01:54</code><br>
+重新打开下试试？看下左下角的小喇叭</p>
+</li>
+<li>
+<p>我 <code>20:03:04</code><br>
+老师您收博士生吗？我是心理学硕士</p>
+</li>
+<li>
+<p>大本营小助手 <code>20:03:33</code><br>
+欢迎大家参加本次公开课，分享进行中，请大家认真听课，结束后会有 10-15 分钟的QA环节，大家可以集中提问。</p>
+</li>
+<li>
+<p>关梦莹 <code>20:07:41</code><br>
+这是只是知识图谱？</p>
+</li>
+<li>
+<p>杨洋 <code>20:08:00</code><br>
+我也是学心理学的</p>
+</li>
+<li>
+<p>陆超红 <code>20:08:01</code><br>
+基于知识图谱的 人机对话，主要在人机对话吧</p>
+</li>
+<li>
+<p>李同 <code>20:10:22</code><br>
+hi，siri</p>
+</li>
+<li>
+<p>张行 <code>20:10:27</code><br>
+百度语言唤醒</p>
+</li>
+<li>
+<p>东山大可 <code>20:11:31</code><br>
+人人对话，科大讯飞和华为云好像都已经支持了</p>
+</li>
+<li>
+<p>郭庆杰 <code>20:11:50</code><br>
+好卡呀，你们卡吗</p>
+</li>
+<li>
+<p>吉利 <code>20:11:55</code><br>
+PPT上这个美女很赞</p>
+</li>
+<li>
+<p>海金鑫 <code>20:13:36</code><br>
+不卡呀</p>
+</li>
+<li>
+<p>大本营小助手 <code>20:13:36</code><br>
+是用手机播放的吗？建议大家在PC端观看，效果会好些</p>
+</li>
+<li>
+<p>zy <code>20:13:46</code><br>
+声音好小</p>
+</li>
+<li>
+<p>李孟霖 <code>20:14:09</code><br>
+戴耳机就行了</p>
+</li>
+<li>
+<p>杨洋 <code>20:14:22</code><br>
+我也是戴的耳机 可以的</p>
+</li>
+<li>
+<p>杨洋 <code>20:14:29</code><br>
+声纹怎么样</p>
+</li>
+<li>
+<p>momo <code>20:14:44</code><br>
+ka</p>
+</li>
+<li>
+<p>李孟霖 <code>20:15:39</code><br>
+哈哈</p>
+</li>
+<li>
+<p>吉利 <code>20:15:47</code><br>
+笑话太冷了</p>
+</li>
+<li>
+<p>HAN <code>20:18:28</code><br>
+好</p>
+</li>
+<li>
+<p>杨洋 <code>20:20:15</code><br>
+知识图……知识库……</p>
+</li>
+<li>
+<p>陈家仑 <code>20:20:56</code><br>
+我高二大学报什么专业是关于AI的？</p>
+</li>
+<li>
+<p>王俊 <code>20:22:20</code><br>
+计算机科学与技术</p>
+</li>
+<li>
+<p>王德君 <code>20:22:52</code><br>
+高二。。</p>
+</li>
+<li>
+<p>王俊 <code>20:22:54</code><br>
+计算机科学与技术</p>
+</li>
+<li>
+<p>杨洋 <code>20:22:58</code><br>
+哈哈 心理学</p>
+</li>
+<li>
+<p>陈家仑 <code>20:23:10</code><br>
+我现在在学C，C对AI的帮助大吗？</p>
+</li>
+<li>
+<p>杨洋 <code>20:23:10</code><br>
+读到博</p>
+</li>
+<li>
+<p>尤学院 <code>20:23:39</code><br>
+白老师 你在吗</p>
+</li>
+<li>
+<p>王俊 <code>20:23:57</code><br>
+学C相当于你学数学的四则运算。</p>
+</li>
+<li>
+<p>陈家仑 <code>20:24:17</code><br>
+哦哦</p>
+</li>
+<li>
+<p>大本营小助手 <code>20:25:40</code><br>
+插播一段广告~</p>
+</li>
+<li>
+<p>大本营小助手 <code>20:25:42</code><br>
+欢迎大家参加本次公开课，本次我们邀请到云知声AI Labs 刘老师，为大家带来主题为《 知性会话：基于知识图谱的人机对话系统方法与实践》。</p>
+</li>
+<li>
+<p>王俊 <code>20:25:50</code><br>
+计算机科学与技术读到博士，10年的时间等着你</p>
+</li>
+<li>
+<p>李孟霖 <code>20:26:29</code><br>
+还是要做一些工程做验证</p>
+</li>
+<li>
+<p>孙洪杰 <code>20:27:03</code><br>
+是项目实战吗？</p>
+</li>
+<li>
+<p>孙洪杰 <code>20:27:09</code><br>
+@大本营小助手</p>
+</li>
+<li>
+<p>牛苗 <code>20:27:14</code><br>
+开学研二的我表示心好累</p>
+</li>
+<li>
+<p>李孟霖 <code>20:27:33</code><br>
+心累没用，还是需要刚代码</p>
+</li>
+<li>
+<p>牛苗 <code>20:28:18</code><br>
+自然语言处理方向有木有</p>
+</li>
+<li>
+<p>李孟霖 <code>20:28:33</code><br>
+有啊</p>
+</li>
+<li>
+<p>牛苗 <code>20:28:59</code><br>
+多多指教</p>
+</li>
+<li>
+<p>陆超红 <code>20:29:03</code><br>
+有</p>
+</li>
+<li>
+<p>牛苗 <code>20:29:15</code><br>
+搞得心累</p>
+</li>
+<li>
+<p>大本营小助手 <code>20:29:25</code><br>
+课程大纲中有介绍哈~</p>
+</li>
+<li>
+<p>大本营小助手 <code>20:29:27</code><br>
+1、语言，知识与人机对话系统综述<br>
+2、知性会话示例分析及应用场景<br>
+3、知性会话关键技术：知识图谱构建，实体发现与链接<br>
+4、知性会话关键技术：话语理解及自然应答生成</p>
+</li>
+<li>
+<p>牛苗 <code>20:29:51</code><br>
+觉得自己理解别人说话都费劲，还要让机器理解</p>
+</li>
+<li>
+<p>孙洪杰 <code>20:30:08</code><br>
+把课程链接发一下</p>
+</li>
+<li>
+<p>海金鑫 <code>20:30:10</code><br>
+这个直播课程多长时间？</p>
+</li>
+<li>
+<p>孙洪杰 <code>20:30:12</code><br>
+可以吗</p>
+</li>
+<li>
+<p>李佳 <code>20:30:32</code><br>
+有ppt吗</p>
+</li>
+<li>
+<p>大本营小助手 <code>20:30:34</code><br>
+45分钟左右</p>
+</li>
+<li>
+<p>大本营小助手 <code>20:30:36</code><br>
+有的</p>
+</li>
+<li>
+<p>海金鑫 <code>20:30:39</code><br>
+ok</p>
+</li>
+<li>
+<p>李佳 <code>20:30:44</code><br>
+在哪儿下载？</p>
+</li>
+<li>
+<p>王唯 <code>20:30:46</code><br>
+后续可以看回播吗？</p>
+</li>
+<li>
+<p>孙洪杰 <code>20:30:56</code><br>
+不会是理论课把</p>
+</li>
+<li>
+<p>大本营小助手 <code>20:30:58</code><br>
+可以看的</p>
+</li>
+<li>
+<p>大本营小助手 <code>20:31:19</code><br>
+PPT晚点会分享到各个课程交流群里，大家注意查看群信息</p>
+</li>
+<li>
+<p>陆超红 <code>20:31:21</code><br>
+上下位关系</p>
+</li>
+<li>
+<p>大本营小助手 <code>20:31:42</code><br>
+想要进交流群的，请添加微信小助手：csdnai，回复：公开课，之后会把大家拉进群的</p>
+</li>
+<li>
+<p>陆超红 <code>20:32:04</code><br>
+ms 的probase 有相关技术</p>
+</li>
+<li>
+<p>大本营小助手 <code>20:32:25</code><br>
+欢迎大家参加本次公开课，分享进行中，结束后会有 10-15 分钟的QA环节，大家可以集中提问。</p>
+</li>
+<li>
+<p>大本营小助手 <code>20:32:29</code><br>
+老师会选出2<sub>3个最佳问题，提出最佳问题的同学们有机会获得CSDN独家特制T恤一件或者技术类书籍一本，欢迎大家认真听课多和老师提问交流</sub></p>
+</li>
+<li>
+<p>弓长张 <code>20:32:48</code><br>
+来了</p>
+</li>
+<li>
+<p>婧芯 <code>20:33:16</code><br>
+今晚全是理论讲解吗？</p>
+</li>
+<li>
+<p>李孟霖 <code>20:33:17</code><br>
+word2vec？</p>
+</li>
+<li>
+<p>陆超红 <code>20:33:38</code><br>
+应该是只介绍概念</p>
+</li>
+<li>
+<p>孙洪杰 <code>20:34:22</code><br>
+不喜欢听概念</p>
+</li>
+<li>
+<p>陆超红 <code>20:35:06</code><br>
+讲技术时间根本不够，一个seq2seq就得花很久</p>
+</li>
+<li>
+<p>吕建新 <code>20:35:19</code><br>
+老师我想问一下，我现在在公司构建电商的知识图谱，但是电商的数据每天都会更新的，有什么好的办法对图谱进行更新吗？而且基于neo4j的图谱如何做知识推理呢？</p>
+</li>
+<li>
+<p>孙洪杰 <code>20:35:22</code><br>
+是的</p>
+</li>
+<li>
+<p>陆超红 <code>20:36:20</code><br>
+刚说seqe2seq，就来了 Orz</p>
+</li>
+<li>
+<p>李孟霖 <code>20:36:42</code><br>
+lda</p>
+</li>
+<li>
+<p>大本营小助手 <code>20:36:46</code><br>
+课程结束后答疑时间，为方便整理问题，请大家按照格式提问，请务必在课程结束之前提问：<br>
+问题1：********<br>
+问题2：********</p>
+</li>
+<li>
+<p>陈 <code>20:37:11</code><br>
+问题1</p>
+</li>
+<li>
+<p>大本营小助手 <code>20:37:23</code><br>
+为了便于老师解答，大家提问的时候要将问题描述仔细，最好是针对本次公开课内容的问题。</p>
+</li>
+<li>
+<p>大本营小助手 <code>20:37:26</code><br>
+吕建新同学的问题已记录~</p>
+</li>
+<li>
+<p>陆超红 <code>20:38:03</code><br>
+问题1：请问刘老师，本体构建的大致方法能简单介绍一下吗</p>
+</li>
+<li>
+<p>陈 <code>20:38:52</code><br>
+问题1:多轮会话中 如何能做到更好与用户互动 和用户形成人性化沟通</p>
+</li>
+<li>
+<p>吴晓婷 <code>20:39:04</code><br>
+问题3：请问多轮对话具体应该如何利用知识图谱呢？问题5：neo4</p>
+</li>
+<li>
+<p>李孟霖 <code>20:39:13</code><br>
+问题6：实体抽取有一个大致的最佳实践吗？</p>
+</li>
+<li>
+<p>吕建新 <code>20:39:56</code><br>
+问题1：老师我想问一下，我现在在公司构建电商的知识图谱，但是电商的数据每天都会更新的，有什么好的办法对图谱进行更新吗？而且基于neo4j的图谱如何做知识推理呢？</p>
+</li>
+<li>
+<p>陆超红 <code>20:40:24</code><br>
+实体抽取 Bi-lstm+CRF</p>
+</li>
+<li>
+<p>孙洪杰 <code>20:40:47</code><br>
+CRF++</p>
+</li>
+<li>
+<p>吴晓婷 <code>20:40:50</code><br>
+是的</p>
+</li>
+<li>
+<p>李孟霖 <code>20:41:11</code><br>
+crf真的无处不在</p>
+</li>
+<li>
+<p>李佳 <code>20:41:14</code><br>
+问题1: 当前谷歌个百度的百科知识图谱已经很完善了，那普通小公司要是做百科问答的话有必要重新抓取百科网站生成知识图谱吗</p>
+</li>
+<li>
+<p>陆超红 <code>20:41:35</code><br>
+小公司做的很多都是 领域知识图谱</p>
+</li>
+<li>
+<p>王唯 <code>20:42:20</code><br>
+没干货</p>
+</li>
+<li>
+<p>李佳 <code>20:42:22</code><br>
+比如说？</p>
+</li>
+<li>
+<p>陆超红 <code>20:42:43</code><br>
+比如说法律法规，医疗 等等</p>
+</li>
+<li>
+<p>李佳 <code>20:43:28</code><br>
+如果我们公司也是做智能音箱呢，百科问答什么的绕不开</p>
+</li>
+<li>
+<p>傅明明 <code>20:45:15</code><br>
+问题2. 假设在已有了知识图谱的情况下，如何把知识图谱这种外部知识有效地融入到基于NN的对话模型当中去？是把实体信息embedding直接输入到网络当中吗？</p>
+</li>
+<li>
+<p>吴晓婷 <code>20:45:49</code><br>
+问题：请问neo4j存储知识图谱在图谱使用上有什么优势呢？比如，自然语言如何转换为neo4</p>
+</li>
+<li>
+<p>冯阳 <code>20:45:50</code><br>
+问题1: 知识图谱还需要语义网的知识吗？构建OWL可还需要很强的领域知识？</p>
+</li>
+<li>
+<p>冯阳 <code>20:45:50</code><br>
+手机看各种卡</p>
+</li>
+<li>
+<p>我 <code>20:45:59</code><br>
+问题1：心理学出身的研究者在NLP学术领域是否有竞争力？对于心理学研究者转入NLP学术圈，您有哪些建议？</p>
+</li>
+<li>
+<p>吴晓婷 <code>20:46:44</code><br>
+问题：请问neo4j存储知识图谱在图谱使用上有什么优势呢？比如，自然语言如何转换为neo4j的查询语言呢？</p>
+</li>
+<li>
+<p>李佳 <code>20:46:50</code><br>
+但是我们公司也是做智能音箱的，百科问答绕不过去啊</p>
+</li>
+<li>
+<p>李佳 <code>20:47:15</code><br>
+@陆</p>
+</li>
+<li>
+<p>李同 <code>20:47:21</code><br>
+问题：现在有没有自动构建知识图谱的算法？</p>
+</li>
+<li>
+<p>李佳 <code>20:47:24</code><br>
+@陆超红</p>
+</li>
+<li>
+<p>李佳 <code>20:47:38</code><br>
+有</p>
+</li>
+<li>
+<p>张征 <code>20:48:04</code><br>
+什么算法，能介绍一下吗</p>
+</li>
+<li>
+<p>我 <code>20:48:35</code><br>
+问题2：通过哪些具体技术能够实现回答“姚明比川普高多少”这样的问题？</p>
+</li>
+<li>
+<p>李佳 <code>20:49:08</code><br>
+<a href="https://mall.jd.com/index-1000090828.html" target="_blank" rel="external">https://mall.jd.com/index-1000090828.html</a></p>
+</li>
+<li>
+<p>冯阳 <code>20:50:38</code><br>
+neo4j 相对于OWL 的优势在于它是属性图，sparkQL的查询推理有很大的性能问题</p>
+</li>
+<li>
+<p>大本营小助手 <code>20:50:59</code><br>
+稍等可以集中向老师砸问题了，前几位同学的问题已记录~</p>
+</li>
+<li>
+<p>李孟霖 <code>20:51:10</code><br>
+秋招了</p>
+</li>
+<li>
+<p>杜利伟 <code>20:51:42</code><br>
+厉害</p>
+</li>
+<li>
+<p>吕建新 <code>20:51:58</code><br>
+我的问题记录了啊 能送我一本书吗 哈哈</p>
+</li>
+<li>
+<p>冯阳 <code>20:52:18</code><br>
+我只想知道为什么现在还要拿语义网构建知识图谱，</p>
+</li>
+<li>
+<p>李孟霖 <code>20:52:52</code><br>
+13亿</p>
+</li>
+<li>
+<p>傅明明 <code>20:53:11</code><br>
+问题：对于垂直领域的知识图谱的构建有什么方法、建议？</p>
+</li>
+<li>
+<p>吕建新 <code>20:53:23</code><br>
+云知声在南京有招聘么</p>
+</li>
+<li>
+<p>李孟霖 <code>20:53:46</code><br>
+<a href="mailto:hr@unisound.com" target="_blank" rel="external">hr@unisound.com</a></p>
+</li>
+<li>
+<p>李志熙 <code>20:54:23</code><br>
+知识图谱可以用基于机器学习模型来生成吗？</p>
+</li>
+<li>
+<p>我 <code>20:54:29</code><br>
+问题3：您的公司有适合心理学硕士的岗位吗？</p>
+</li>
+<li>
+<p>poge <code>20:55:22</code><br>
+视频有回放呢</p>
+</li>
+<li>
+<p>Mike Yang <code>20:55:37</code><br>
+上海有招人不</p>
+</li>
+<li>
+<p>大本营小助手 <code>20:55:51</code><br>
+公开课结束后1-2个工作日上线(轮播)</p>
+</li>
+<li>
+<p>momo <code>20:55:58</code><br>
+在医疗方面构建知识图谱时有没有实体，术语的标准参考吗？</p>
+</li>
+<li>
+<p>李志熙对我说 <code>20:56:13</code><br>
+知识图谱可以用通过大数据，再通过人工智能深度学习模型来自动生成吗？</p>
+</li>
+<li>
+<p>尤学院 <code>20:57:17</code><br>
+问题1：目前的技术能都做几层推理？还是无限的</p>
+</li>
+<li>
+<p>冯阳 <code>20:57:31</code><br>
+中文kgBase有医疗的数据，样例，owl 的</p>
+</li>
+<li>
+<p>张同学 <code>20:57:36</code><br>
+老师您好，请问您们的知识图谱一般用rdf形式还是属性图的表现形式</p>
+</li>
+<li>
+<p>momo <code>20:57:44</code><br>
+参照，归纳</p>
+</li>
+<li>
+<p>张宁 <code>20:58:02</code><br>
+知识图谱可以自维护吗？随着语言交流自己去扩展，而不是人为去更新。</p>
+</li>
+<li>
+<p>大本营小助手 <code>20:58:09</code><br>
+PPT晚点会分享到各个课程交流群里，大家注意查看群信息</p>
+</li>
+<li>
+<p>大本营小助手 <code>20:58:12</code><br>
+想要进交流群的，请添加微信小助手：csdnai，回复：公开课，之后会把大家拉进群的</p>
+</li>
+<li>
+<p>张凯 <code>20:58:27</code><br>
+问题：构建医疗领域知识库图谱中，不同的信源中实体关系不统一，有更好的办法处理吗？</p>
+</li>
+<li>
+<p>momo <code>20:58:54</code><br>
+冯阳 谢谢</p>
+</li>
+<li>
+<p>张宁 <code>20:59:02</code><br>
+知识图谱可以自维护吗？随着对话交流可以自己完善自己，而不是总让人去更新</p>
+</li>
+<li>
+<p>张同学 <code>20:59:10</code><br>
+老师您好，请问您们的知识图谱表现形式是rdf还是属性图？</p>
+</li>
+<li>
+<p>wayne对我说 <code>20:59:25</code><br>
+自动化测试的标准，怎样测量？</p>
+</li>
+<li>
+<p>wayne <code>20:59:36</code><br>
+自动化测试的标准，怎样测量？</p>
+</li>
+<li>
+<p>冯阳 <code>20:59:42</code><br>
+医疗的主要为mesh 主题词表这块，或者pubmesh</p>
+</li>
+<li>
+<p>wayne <code>20:59:52</code><br>
+问题：自动化测试的标准，怎样测量？</p>
+</li>
+<li>
+<p>张同学 <code>21:00:02</code><br>
+老师您好，请问您们的知识图谱表现形式是rdf还是属性图？</p>
+</li>
+<li>
+<p>冯阳 <code>21:00:27</code><br>
+这个搞懂了，就牛逼多了，各种主副题词的搭配，标引</p>
+</li>
+<li>
+<p>陈 <code>21:00:40</code><br>
+是的</p>
+</li>
+<li>
+<p>张同学 <code>21:00:44</code><br>
+老师您好，请问做对话系统使用的知识图谱表现形式是rdf还是属性图？</p>
+</li>
+<li>
+<p>张同学 <code>21:00:59</code><br>
+老师您好，请问您们的知识图谱表现形式是rdf还是属性图？</p>
+</li>
+<li>
+<p>冯阳 <code>21:01:14</code><br>
+必须属性图</p>
+</li>
+<li>
+<p>张同学 <code>21:03:04</code><br>
+老师您好，请问对话系统使用的图谱表现形式是rdf还是属性图？</p>
+</li>
+<li>
+<p>李孟霖 <code>21:03:07</code><br>
+谢谢</p>
+</li>
+<li>
+<p>张同学 <code>21:03:13</code><br>
+谢谢</p>
+</li>
+<li>
+<p>冯阳 <code>21:03:23</code><br>
+所以我不明白大规模的图挖掘用rd能搞动不。sparkQL 的性能问题解决了？？</p>
+</li>
+<li>
+<p>yaoji <code>21:04:06</code><br>
+请问，除了模板方式，主观类的Q如何基于知识图谱生成A，比如 小米手机和苹果手机谁更好？</p>
+</li>
+<li>
+<p>吴泽林 <code>21:07:00</code><br>
+问题跟聊天对不上啊？是坑？</p>
+</li>
+<li>
+<p>刘宝林 <code>21:07:25</code><br>
+知识图谱有想法构建一个抽象世界吗</p>
+</li>
+<li>
+<p>任大侠 <code>21:07:38</code><br>
+问题N：基于知识的方法和统计类的方法需要共融互补，老师有没有典型的合作思路，充分利用基于知识规则方法的稳定可控的同时，又能利用统计自动从有监督的大数据自动抽取模式。老师讲讲可否两者一起NLP的一些经验？</p>
+</li>
+<li>
+<p>我 <code>21:08:27</code><br>
+谢谢~</p>
+</li>
+<li>
+<p>冯阳 <code>21:08:43</code><br>
+你应该先玩玩语义网的东西rdf rdfs owl 各种class， 属性，值，约束，还要规则，推理机，</p>
+</li>
+<li>
+<p>大本营小助手 <code>21:08:45</code><br>
+基本会根据大家提问的时间先后顺序给到老师</p>
+</li>
+<li>
+<p>欧阳敏 <code>21:08:57</code><br>
+问题：哪些院校研究这个？</p>
+</li>
+<li>
+<p>冯阳 <code>21:09:25</code><br>
+用属性图想做约束，自己设计一层弱schema</p>
+</li>
+<li>
+<p>白正朝 <code>21:09:26</code><br>
+问题：在知识图谱的实施上，你们有什么推荐工具或者平台呢?</p>
+</li>
+<li>
+<p>吴泽林 <code>21:09:52</code><br>
+课程后面有录播连接吗？</p>
+</li>
+<li>
+<p>alysa <code>21:10:02</code><br>
+老师，请问一下，如何快速将数据库中结构化知识转为知识图谱呢？</p>
+</li>
+<li>
+<p>刘宝林 <code>21:10:17</code><br>
+我读法律的，现在做算法，准备做网络裁决，有了解吗</p>
+</li>
+<li>
+<p>李佳 <code>21:11:29</code><br>
+有</p>
+</li>
+<li>
+<p>李佳 <code>21:11:51</code><br>
+智能量刑</p>
+</li>
+<li>
+<p>冯阳 <code>21:11:54</code><br>
+我擦，这个最简单了，结构化知识，直接省去了实体抽取，关系抽取，。转换成图数据怼。大规模的挖掘用spark graphx</p>
+</li>
+<li>
+<p>我 <code>21:12:11</code><br>
+哈哈，谢谢。</p>
+</li>
+<li>
+<p>Mike Yang <code>21:12:28</code><br>
+这个有价值，百度搜索上就有这种实时计算的例子（姚明）</p>
+</li>
+<li>
+<p>HAN <code>21:14:18</code><br>
+知识图谱现在主流存储方式有哪些呢</p>
+</li>
+<li>
+<p>王维 <code>21:14:26</code><br>
+老师，目前比较推荐的图数据有哪些？</p>
+</li>
+<li>
+<p>张同学 <code>21:15:36</code><br>
+谢谢老师谢谢老师</p>
+</li>
+<li>
+<p>大本营小助手 <code>21:17:15</code><br>
+大家提出的问题，小助手整理后也会发在群里，大家可以继续讨论。另外老师也会选出本期的优秀提问者，送出定制T恤或者技术图书。提问的同学，可以加小助手微信csdnai进群，了解自己是否获得优秀提问者。关于公开课的其他问题，请反馈给小助手。</p>
+</li>
+<li>
+<p>大本营小助手 <code>21:17:22</code><br>
+鉴于时间关系，刘老师可能无法回答大家接下来的问题了，课后如果有同学提问，我们可以微信上进一步沟通。</p>
+</li>
+<li>
+<p>李孟霖 <code>21:17:23</code><br>
+谢谢老师</p>
+</li>
+<li>
+<p>任大侠 <code>21:17:29</code><br>
+感谢老师</p>
+</li>
+<li>
+<p>大本营小助手 <code>21:17:39</code><br>
+本次公开课到这里就结束了，感谢刘老师的分享，感谢大家积极参与。</p>
+</li>
+<li>
+<p>大本营小助手 <code>21:17:40</code><br>
+课程录播明后天上线，PPT晚点也会发到公开课交流群里。</p>
+</li>
+<li>
+<p>我 <code>21:17:42</code><br>
+谢谢老师~</p>
+</li>
+<li>
+<p>张同学 <code>21:17:42</code><br>
+谢谢老师 很有收获</p>
+</li>
+<li>
+<p>Zhao Jinming <code>21:17:43</code><br>
+谢谢老师</p>
+</li>
+<li>
+<p>李志熙 <code>21:17:44</code><br>
+谢谢老师</p>
+</li>
+<li>
+<p>大本营小助手 <code>21:17:48</code><br>
+划重点！知识图谱专场公开课最后一期将于8月30日20点精彩开讲：《美团大脑：知识图谱的建模方法及其应用”》，讲师：王仲远，美团AI Lab NLP中心负责人、大众点评搜索智能中心负责人。报名地址:<a href="https://edu.csdn.net/huiyiCourse/detail/853" target="_blank" rel="external">https://edu.csdn.net/huiyiCourse/detail/853</a></p>
+</li>
+<li>
+<p>吉利 <code>21:17:48</code><br>
+谢谢。靠谱</p>
+</li>
+<li>
+<p>鲁家南 <code>21:17:48</code><br>
+感谢老师</p>
+</li>
+<li>
+<p>王珍珍 <code>21:17:54</code><br>
+谢谢老师</p>
+</li>
+<li>
+<p>傅明明 <code>21:17:55</code><br>
+谢谢老师的分享<img src="https://static.gensee.com/webcast/static/emotion/emotion.qh.gif" alt="img"></p>
+</li>
+<li>
+<p>张凯 <code>21:17:57</code><br>
+谢谢老师</p>
+</li>
+<li>
+<p>李志熙 <code>21:18:02</code><br>
+虽然我的问题不好！</p>
+</li>
+<li>
+<p>张凯 <code>21:18:06</code><br>
+老师辛苦了</p>
+</li>
+<li>
+<p>汪小牧 <code>21:18:08</code><br>
+谢谢</p>
+</li>
+<li>
+<p>吉利 <code>21:18:09</code><br>
+上海招人？</p>
+</li>
+<li>
+<p>李志熙 <code>21:18:13</code><br>
+谢谢老师！</p>
+</li>
+<li>
+<p>邱君平 <code>21:18:16</code><br>
+谢谢老师</p>
+</li>
+<li>
+<p>刘升平 <code>21:18:18</code><br>
+北京，上海都招人</p>
+</li>
+<li>
+<p>李志熙 <code>21:18:24</code><br>
+<img src="https://static.gensee.com/webcast/static/emotion/emotion.qh.gif" alt="img"></p>
+</li>
+</ul>
+
+          <hr/>
+          <div class="p-state"><blockquote>
+            <p>当前链接：<a href="https://ziionote.github.io/posts/笔记/课程实况-知性会话_基于知识图谱的人机对话系统方法与实践/">https://ziionote.github.io/posts/笔记/课程实况-知性会话_基于知识图谱的人机对话系统方法与实践/</a></p>
+          </blockquote></div>
+          <div class="m-pagination">
+<p>继续阅读：<a href="/posts/意识/朱清时：量子意识，现代科学与佛学的汇合处/">朱清时：量子意识，现代科学与佛学的汇合处</a></p>
+<p>回顾前篇：<a href="/posts/《汉语学习》笔记/汉语学习手记/">汉语学习手记</a></p>
+<p>返回首页：<a href="/">语宙心星</a></p>
+          </div>
+        </div>
+      </article>
+      <div class="m-section m-share"></div>
+      <div class="m-section m-comment">
+          <div class="comments-wrap tabs" id="commenttabs">
+            <ul class="nav-tabs">
+              <li class="tab"><a href="#welcomcomments_wrap">欢迎评论！</a></li>
+              <li class="tab active"><a href="#valinecomments_wrap">Valine评论</a></li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane" id="welcomcomments_wrap"><div id="welcomcomments"><p>欢迎进行评论😆。</p></div></div>
+              <div class="tab-pane active" id="valinecomments_wrap"><div id="valinecomments"></div></div>
+            </div>
+          </div>
+        </div>
+      <div class="m-section m-related"></div>
+      <footer class="m-section m-footer"></footer>
+    </main>
+
+  </div>
+  <div class="l-ctrl" :class="ctrlClassObject" v-on:click="doOpenAside" id="l-ctrl">
+
+    <div class="b-ctrl">
+      <div class="m-ctrl"></div>
+    </div>
+
+  </div>
+</div>
+<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+<script>
+
+const layoutApp = new Vue({
+  delimiters: ['${', '}'],
+  el: '#l-viewport',
+  data: function () {
+    // var x = navigator;
+    // var y = returnCitySN;
+    return {
+      // browser: x,
+      // citysn: y,
+      asideIsOpen: false,
+      scrollAfterTop: false,
+      scrolledDown: false,
+      scrolledUp: false,
+    }
+  },
+  computed: {
+    browser: function () {
+      return { navigator }
+    },
+    citysn: function () {
+      return { returnCitySN }
+    },
+    sideClassObject: function () {
+      return {
+        'z-open': this.asideIsOpen,
+      }
+    },
+    pageClassObject: function () {
+      return {
+        'z-moved': this.asideIsOpen,
+      }
+    },
+    ctrlClassObject: function () {
+      return {
+        'z-hidden': this.asideIsOpen,
+      }
+    },
+    titlebarClassObject: function () {
+      return {
+        'z-nottop': this.scrollAfterTop,
+        'z-show': this.scrolledDown,
+      }
+    }
+  },
+  methods: {
+    doCloseAside: function (event) {
+      this.asideIsOpen = false;
+    },
+    doOpenAside: function (event) {
+      this.asideIsOpen = (this.asideIsOpen)?false:true;
+    },
+    handleScroll () {
+      var scrollTop = document.querySelector('.l-pagewrap').scrollTop
+      var offsetTop = document.querySelector('.b-printarea').offsetTop
+      if (scrollTop > offsetTop) {
+        this.scrollAfterTop = true
+      } else {
+        this.scrollAfterTop = false
+      }
+      if (this.lastScroll && scrollTop > this.lastScroll) {
+        this.scrolledDown = false
+        this.scrolledUp = true
+        // console.log('scrolling up');
+      } else if (this.lastScroll && scrollTop < this.lastScroll) {
+        this.scrolledDown = true
+        this.scrolledUp = false
+        // console.log('scrolling down');
+      }
+      this.lastScroll = scrollTop
+    }
+  },
+  mounted () {
+    document.querySelector('.l-pagewrap').addEventListener('scroll', this.handleScroll)
+  },
+  destroyed () {
+    document.querySelector('.l-pagewrap').removeEventListener('scroll', this.handleScroll)
+  }
+})
+
+</script>
+<script src="/js/s-gentoc.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

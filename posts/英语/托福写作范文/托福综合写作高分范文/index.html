@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html class="theme-docapp" lang="zh-Hans">
+<head>
+<title>托福综合写作高分范文 | 语宙心星</title>
+<!-- META -->
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="theme-color" content="#fff" />
+<!-- LINK -->
+<link rel="shortcut icon" href="/favicon.png" type="image/x-icon"/>
+<link rel="icon" sizes="any" mask="" href="/favicon.png"/>
+<!-- STYLE -->
+<link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/Han/3.2.7/han.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+<!-- SCRIPT -->
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script type="text/javascript" src="/js/smoothscroll.js"></script>
+<!-- END -->
+
+</head>
+<body>
+<div class="l-viewport" id="l-viewport">
+  <div class="l-side" :class="sideClassObject" id="l-side">
+
+    <aside class="b-sidebar">
+      <div class="m-logoandsearch">
+        <a class="p-logoarea" href="/" title="关于语言与心智的文章收集站"><span class="u-sitename">语宙心星</span></a>
+        <p class="p-description" title="关于语言与心智的文章收集站">探索语言与心智的奥秘</p>
+        <div class="p-searchbox" role="search">
+          <form id="u-searchform" class="u-searchform" action="http://www.baidu.com/s?ie=utf-8" method="get" target="_blank">
+            <input id="u-searchbox" class="u-searchbox" type="text" name="q" placeholder="Search">
+            <input type="hidden" name="check_keywords" value="yes">
+            <input type="hidden" name="area" value="default">
+          </form>
+        </div>
+      </div>
+
+      <nav class="m-nav" v-on:click="doCloseAside">
+        <div class="p-catnav">
+          <p class="u-navcaption">《现代汉语》沈阳 郭锐</p>
+          <ul class="u-navlist">
+            <li class="u-navitem">
+              <a href="/posts/modern-chinese-0/">现代汉语-〇-目录、参考文献等</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/modern-chinese-1/">现代汉语-一-总论</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/modern-chinese-3/">现代汉语-三-词汇</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/modern-chinese-4-1/">现代汉语-四-语法-上</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/《现代汉语》沈阳 郭锐/《现代汉语·词汇》纲要/">《现代汉语·词汇》纲要</a>
+            </li>
+          </ul>
+          <p class="u-navcaption">《语法讲义》朱德熙</p>
+          <ul class="u-navlist">
+            <li class="u-navitem">
+              <a href="/posts/chinese-grammar-handouts-0/">语法讲义（目录、索引等）</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/chinese-grammar-handouts-1/">语法讲义（上）</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/chinese-grammar-handouts-2/">语法讲义（中）</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/chinese-grammar-handouts-3/">语法讲义（下）</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/chinese-grammar-answers/">语法答问</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/notes-on-chinese-grammar-handouts/">语法讲义 笔记</a>
+            </li>
+          </ul>
+          <p class="u-navcaption">《语言学纲要》叶蜚声 徐通锵</p>
+          <ul class="u-navlist">
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-meta/">元信息</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-0/">导言</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-1/">第一章　语言的功能</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-2/">第二章　语言是符号系统</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-3/">第三章　语音和音系</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-4/">第四章　语法</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-5/">第五章　语义和语用</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-6/">第六章　文字</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-7/">第七章　语言演变与语言分化</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-8/">第八章　语言的接触</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-9/">第九章　语言系统的演变</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+  </div>
+  <div class="l-pagewrap" :class="pageClassObject" v-on:click="doCloseAside" id="l-pagewrap">
+
+    <div class="b-titlebar" :class="titlebarClassObject">
+      <div class="m-titlebar">
+        <a class="p-logoarea" href="/"><img class="u-logo" src="/logo.svg" alt="语宙心星"><span class="u-sitename">语宙心星</span></a>
+      </div>
+    </div>
+
+
+    <main class="b-printarea">
+      <header class="m-header"></header>
+      <article class="m-article">
+        <div class="p-meta">
+          <span class="u-post-title">托福综合写作高分范文</span>
+          <span class="u-post-metaspan u-post-author">SunCH</span>
+          <a class="u-post-metaspan u-post-site" href="/">语宙心星</a>
+          <span class="u-post-metaspan u-post-date" title="2017-12-27 20:48:42">2017年12月27日</span>
+          
+        </div>
+        <div class="p-write" id="post-content">
+<blockquote>
+<p>本页面由kindle电子书《<a href="https://www.amazon.cn/dp/B00GWD2L7E/ref=sr_1_1_twi_kin_2?ie=UTF8&amp;qid=1514380221&amp;sr=8-1&amp;keywords=%E6%89%98%E7%A6%8F%E9%AB%98%E5%88%86%E8%8C%83%E6%96%87%E5%A4%A7%E5%85%A8" target="_blank" rel="external">托福高分范文大全</a>》转换而成，仅用于个人学习使用，无商业用途。本页面日均访问量极低，基本只有站长自己查阅。如果侵犯了您的权益，请联系我，我将立即删除。</p>
+</blockquote>
+<hr>
+<h2><span id="托福综合写作高分范文"> 托福综合写作高分范文</span></h2>
+<blockquote>
+<h3><span id="writing-based-on-reading-and-listening"> Writing Based on Reading and Listening</span></h3>
+<p><strong>Directions:</strong> For this task, you will read a passage about an academic topic and you will listen to a lecture about the same topic. You may take notes while you read and listen.</p>
+<p>Then you will write a response to a question that asks you about the relationship between the lecture you heard and the reading passage. Try to answer the question as completely as possible using information from the reading passage and the lecture. The question does not ask you to express your personal opinion. You may refer to the reading passage again when you write. You may use your notes to help you answer the question.</p>
+<p>Typically, an effective response will be 150 to 225 words. Your response will be judged on the quality of your writing and on the completeness and accuracy of the content.</p>
+<p>You should allow <strong>3 minutes</strong> to read the passage. Then listen to the lecture. Then allow <strong>20 minutes</strong> to plan and write your response.</p>
+<p>Write your response in the space provided.</p>
+</blockquote>
+<h3><span id="integrated-writing-task-topic-1"> Integrated Writing Task Topic 1</span></h3>
+<h4><span id="reading"> READING</span></h4>
+<p>In the past, it used to be a regular practice for Americans to donate some money to public causes. Nonetheless, the situation has changed now. Charitable giving is no longer as popular as before, and for the following reasons, it will never go up in the future.</p>
+<p>The first reason lies in the diminished need for private charitable giving, because nowadays the national government provides most of the major public services, like feeding the poor, providing health care and assisting the victims of natural disasters. All these functions, which were once performed by the charities, are now in the charge of the government. Such government institutions of social welfare are permanent. Therefore, the lessened need for individual charitable giving will be permanent as well.</p>
+<p>Second, in recent years, there have been highly publicized exposures that the heads of some eminent national charities were receiving salaries and benefits which are as large as, or even larger than the incomes of the leaders of major for-profit corporations. Such huge salaries and expenditures on travel, luxurious offices and advertising considerably cut back the portion of donated money for charitable uses. Understandably, ordinary citizens have been turned off by these excesses and inefficiencies.</p>
+<p>Last, apart from the defects of legitimate charities, the number of fraudulent solicitations by organizations or individuals is on the rise. They merely act in the disguise of charities. As a consequence, people are now becoming skeptical about what are in fact legitimate appeals for support. Naturally potential donators may reduce the amount of their donations. And since the occurrences of charity fraud seem to be increasing, we can expect further declines in charitable giving as the masses are cautiously aware that they face the possibility of being swindled.</p>
+<h4><span id="listening"> LISTENING</span></h4>
+<p><em>Now play Track 1.</em></p>
+<p>Professor:</p>
+<p>There is no denying that charitable giving has declined substantially in the past few years, but we have ample reasons to believe that it will increase before long.</p>
+<p>First, the number of elderly and retired people in our society keeps growing. At present, senior citizens who can’t afford health care often rely on government programs to pay for it. But as the aging population expands, government programs possibly won’t be able to meet the enhanced demand for old-age assistance. And since the need will be on the rise and Americans respond to it, we should expect to see charitable giving go up accordingly.</p>
+<p>The disclosures of poor management at major charities, and people’s anger at it, are actually bringing about significant reforms. This constitutes another reason to be optimistic about the future of charity causes. Excessively-paid leaders have been forced to resign due to the negative publicity. Charities are also cutting down on their expenses and are now subject to closer public scrutiny. As a result, people are regaining confidence that the money they donate will serve for rightful purposes.</p>
+<p>People’s response to charity fraud is also changing. In a short period of time, they may refuse to donate because they doubt whether charities are honest or not. But in the long run, such skepticism makes people careful, not stingy. For instance, many people now decline to give money when asked to do so over the telephone. They insist on receiving documentary evidence before making any donations. Once people have learned the skills to be acquired by wise donators, most of them will be able to guard against charity fraud without stopping their support for public welfare causes.</p>
+<p><em>Question</em></p>
+<p><strong>Summarize the points made in the lecture, being sure to explain how they oppose specific points made in the reading passage.</strong></p>
+<p>You must finish your answer in 20 minutes.</p>
+<p>（lines）</p>
+<h4><span id="范文"> 范文</span></h4>
+<p><mark>The speaker and the author hold divergent attitudes toward</mark> the future of charitable giving. <mark>Through relevant reasons and examples, the lecturer extensively refutes the pessimistic viewpoints stated in the reading material</mark>.</p>
+<p><mark>According to the writer,</mark> people’s decreased interest <mark>is associated with</mark> the shrinking need for individual contributions because of the governmental support. <mark>To rebut this idea, the professor claims that</mark> the population of the elderly is becoming larger and it will be beyond the government’s capability to meet all the demand from the old. <mark>This tendency, contrary to the view in the passage, will</mark> promote the need for charitable donations.</p>
+<p><mark>Second, the passage says that</mark> the supreme salary level of major charity leaders has been widely exposed and resented by the public, <mark>while the lecturer argues that</mark> this may give rise to momentous evolutions. These will renew people’s faith in the charities’ legitimate responsibilities, <mark>which contradicts the point made in the passage</mark>.</p>
+<p><mark>Finally, opposing the author’s belief that</mark> the rampancy of charity fraud will incur greater declines, <mark>the professor contends that</mark> even though people might temporarily reject charitable giving, they will gradually master the techniques of making donations without being cheated. Thus, there will be more and more cautious donators in the future.</p>
+<p>(203 words)</p>
+<h4><span id="参考译文"> 参考译文</span></h4>
+<p><mark>关于</mark>慈善捐助的未来，<mark>演讲者与作者持不同的态度</mark>。<mark>演讲者通过相关的理由和实例全面地反驳了阅读材料所阐述的悲观观点</mark>。</p>
+<p>==作者认为，==人们的兴趣之所以减弱，<mark>是因为</mark>官方支援致使个人捐助的需求量萎缩。==而教授辩驳说，==老龄人口正在增加，政府将无法满足老年人所有的需求。<mark>此趋势会</mark>提高对慈善捐助的需求，<mark>这与文章中的论述相悖</mark>。</p>
+<p>==第二，文章说，==主要慈善机构领导者的极高工资已经被曝光，并且引起了公愤。==而演讲者争辩道，==这会促成重大改革，而改革又将恢复大众对慈善事业合法责任的信任，<mark>从而再次反驳了文章的论点</mark>。</p>
+<p>==最后，作者断定，==慈善欺诈的猖獗会使慈善捐助陷入更严重的低迷。==教授则反驳了此看法，他表示，==尽管人们可能暂时拒绝慈善捐助，但他们会逐渐掌握捐助时避免上当受骗的技巧。于是，未来将出现越来越多小心谨慎的捐助人。</p>
+<h3><span id="integrated-writing-task-topic-2"> Integrated Writing Task Topic 2</span></h3>
+<h4><span id="reading"> READING</span></h4>
+<p>As for those who have travelled all over the world, there will soon be something fresh. Private businesses are developing spacecraft that allows individuals to pay for their own space tours. Thus, a privatized space tourism industry will take shape. At present, it is only the government who is responsible for the travel in space. Shortly, this new industry will bring huge benefits to both science and the public.</p>
+<p>First, space tourism will benefit serious space exploration as it makes spaceflight less expensive. Privatization stimulates competition, which constitutes the greatest motivators to bring down costs. Consequently, the costs of space technology will be lowered rapidly. As a matter of fact, cutting the expenses of space travel will be beneficial to not only space tourists but also scientists, who could utilize private spacecraft to conduct research.</p>
+<p>In addition, privatizing space tours will enhance the rate at which major scientific discoveries are made. So far, the aerospace industry has already sponsored many pioneering scientific research programs, and the rise of private spaceflight enterprises will help the industry grow in size as a whole, thereby employing more scientists. The enlarged recruitment of working scientists means not just the possibility of making more discoveries but also the possibility of making those discoveries faster than before.</p>
+<p>Finally, when space travel is solely provided by the government, its costs are paid for by the entire taxpaying public. However, owing to privatization, these expenses will be covered by the customers of this new industry. The fact that private spaceflight companies will be able to raise funds through ticket sales means that the financial burden on taxpayers will be considerably alleviated.</p>
+<h4><span id="listening"> LISTENING</span></h4>
+<p><em>Now play Track 2.</em></p>
+<p>Professor:</p>
+<p>It seems that in the near future private spaceships will help people realize the dream of going on space tours. Yet will this new industry really bring great benefits to serious science and the general public? I am afraid not.</p>
+<p>First, private space tours, which are priced extremely high, will possibly remain expensive all the time. On the one hand, commercial space travel will require an elaborate space traffic-control system that prevents collisions. Actually, developing and operating such a system will be costly as well. On the other hand, safety is another factor keeping the expenses at a high level, because each new spaceship will have to pass rounds of safety tests, which also tends to be an extraordinarily expensive process. These costs will be reflected in the prices of space tour tickets. As a result, it is impossible to expect space flights to become cheaper speedily.</p>
+<p>Second, regarding the influence produced by private space travel on the rate of scientific discoveries and breakthroughs, I would say it will delay or even prevent them to occur. If the most intelligent engineers working on government space projects are lured away by the high pays offered by private businesses, they might end up working on commercial programs that have no scientific value at all. Thus, serious space research might actually suffer.</p>
+<p>Last, will the taxpaying public be relieved from financial burden? Definitely not! In fact, the so-called private space tourism cannot survive without huge public tax subsidies. Billions upon billions of dollars are needed to construct space stations, space airports and so forth, and private companies are truly incapable of raising such large amounts of money. Therefore, the development of private spaceflight industry will never ease the burden on taxpayers. On the contrary, the public will be paying more taxes to subsidize private space tours.</p>
+<p><em>Question</em></p>
+<p><strong>Summarize the points made in the lecture, being sure to explain how they oppose specific points made in the reading passage.</strong></p>
+<p>You must finish your answer in 20 minutes.</p>
+<p>（lines）</p>
+<h4><span id="范文"> 范文</span></h4>
+<p><mark>The materials focus on</mark> the prospects of privatized space tourism. <mark>The author anticipates that</mark> it will be beneficial to both the scientific field and the masses, <mark>while the speaker presents his opposite thoughts</mark>.</p>
+<p><mark>As the passage declares</mark>, <mark>its first benefit to</mark> aeronautics <mark>is</mark> the reduction on the expenses of space travels. <mark>In contrast, the professor stresses</mark> the impossibility of a price cut because of the complex traffic-control system. Besides, conducting safety tests also demands heavy investment. <mark>Thus, the assumption of the author is severely weakened</mark>.</p>
+<p><mark>Second, the passage maintains that</mark> privatized space tourism will quicken the pace of scientific findings. <mark>Again, this is retorted by the lecture, which asserts that</mark> it actually retards or even obstructs research work due to brain drains. <mark>Obviously, this forms a sharp contradiction against what is stated by the writer</mark>.</p>
+<p><mark>Finally, the author takes it for granted that</mark> people’s tax load will be removed as the private enterprises will cover the costs of spaceflights and raise capital by selling expensive tickets. <mark>Yet the professor insists that</mark> the space industry involves too much money to be afforded by the private businesses alone. People’s tax burden will become heavier, <mark>which completely rejects the opinion shown in the passage</mark>.</p>
+<p>(201 words)</p>
+<h4><span id="参考译文"> 参考译文</span></h4>
+<p><mark>材料主要论述</mark>私有化的太空旅游业的前景。==据作者预测，==它将使科学领域和大众受益，<mark>而演讲者则表达了相反的看法</mark>。</p>
+<p><mark>文章宣称</mark>，降低太空旅行费用<mark>是</mark>私有化给航天业<mark>带来的第一个好处</mark>。<mark>与之相反，教授则强调说</mark>，由于复杂的交通控制系统的存在，价格是不可能下调的。此外，进行安全测试也需要巨额投资。<mark>于是，作者的设想遭到了严重削弱</mark>。</p>
+<p><mark>第二，文章认为</mark>私有化的太空旅游业会加速科学发现的进程。==演讲又反驳道，==由于人才流失，事实上，它将延缓甚至阻碍研究工作的开展。<mark>显然，这与作者的论述形成了尖锐的矛盾</mark>。</p>
+<p>==最后，作者想当然地认为，==由于私人企业将为宇宙航行买单，并通过销售高价票筹集资金，人们的纳税负担会消除。<mark>然而，教授坚持认为</mark>航天业涉及过多的资金，而私人企业无法独自承担这些费用。人们的税负会愈加繁重，<mark>这全然推翻了文章阐明的观点</mark>。</p>
+<h3><span id="integrated-writing-task-topic-3"> Integrated Writing Task Topic 3</span></h3>
+<h4><span id="reading"> READING</span></h4>
+<p>Recently, charges were filed against McDonald’s by some overweight customers, who claimed that they had been made obese by the fast food sold there. Needless to say, these lawsuits could be recognized as invalid for the following reasons.</p>
+<p>First of all, customers have the freedom to decide if they should eat at a certain restaurant. Anyhow, McDonald’s is not a mandatory choice enforced on people. Indeed, nowadays large varieties of restaurants are readily available, suiting the different tastes and likes of the masses. As for those who wish to keep slim, they are blessed with many other dining options which might be healthier.</p>
+<p>Furthermore, McDonald’s has published the nutritional contents of the meals they serve. Thus, before finally making the decision to dine, the customers are supposed to learn the relevant information about the food being prepared by the restaurant. Hence, these customers are not rightfully entitled to complain that they have been misled into eating at McDonald’s.</p>
+<p>Third, it is dangerous for a society to neglect the importance of accountability. Blaming others for one’s own failure may incur bigger losses in the future. Therefore, customers should be fully aware that they themselves have the sole responsibility for what they ought to put in their body. In other words, it is the responsibility of the diners, not that of the restaurant, to maintain a healthy and proper diet.</p>
+<h4><span id="listening"> LISTENING</span></h4>
+<p><em>Now play Track 3.</em></p>
+<p>Professor:</p>
+<p>Well, it is true that people should be accountable for their own behavior. In the mean time, the corporations are also required to undertake their responsibilities. The recent charges against McDonald’s perfectly demonstrate the joint accountability of the entire society. We cannot deny that those fat customers bear some responsibility for their weight problems. However, the idea that McDonald’s is totally blameless is far from reasonable.</p>
+<p>In the first place, many people do have to eat at McDonald’s. As for most ordinary working people in the U.S., McDonald’s is their dietary staple, because the fastest and the cheapest food could be purchased there. The economical and convenient nature of this famous restaurant surely appeals to those who are included in the lower income group. Given this, isn’t it the responsibility of McDonald’s to add some healthy items to the menu?</p>
+<p>Second, McDonald’s is reported to have done a poor job in disclosing nutritional contents of the food. According to an investigative documentary, there have been frequent cases that McDonald’s branches never supply any nutritional information. What’s worse, evidence already shows that McDonald’s even attempts to make the diners addicted through the excessive use of sugar, caffeine and flavors in the food and drinks.</p>
+<p>Undoubtedly, customers must constrain themselves from eating too much food which is generally known to be unhealthy, yet McDonald’s has tried hard to hide the extent to which the food is unhealthy. In this respect, we must say that it also misleads people. No business should be allowed to harm or cheat their customers on purpose.</p>
+<p><em>Question</em></p>
+<p><strong>Summarize the points made in the lecture, being sure to explain how they oppose specific points made in the reading passage.</strong></p>
+<p>You must finish your answer in 20 minutes.</p>
+<p>（lines）</p>
+<h4><span id="范文"> 范文</span></h4>
+<p><mark>The author discusses</mark> a law case suing McDonald’s for making customers overweight and considers this accusation frivolous. <mark>However, the speaker displays a contradictory view that</mark> <mark>the responsibility should be taken over by both sides</mark>.</p>
+<p><mark>First, the passage says that</mark> the customers enjoy the liberty to select whichever place to eat. <mark>But the professor challenges this idea by providing the truth that</mark> McDonald’s is the most desirable restaurant people with lower incomes have to choose. <mark>Thus, contrary to the writer’s notion,</mark> McDonald’s <mark>truly has the duty to</mark> renovate its menus to a healthier level.</p>
+<p><mark>Second, the writer indicates that</mark> McDonald’s has already reminded the diners of the nutritional elements contained in the food. <mark>To render disproof, the lecturer reveals a piece of information about</mark> some branches’ <mark>failure in</mark> noticing the public <mark>and about</mark> their excessive application of unhealthy condiment, <mark>which further refutes the example in the reading</mark>.</p>
+<p><mark>Last, the passage puts all the blame on</mark> the customers, <mark>arguing that</mark> they should <mark>be solely responsible for</mark> their own troubles, <mark>whereas the lecture contends that</mark> McDonald’s deliberately misleads people by covering up the health data of the food. <mark>Consequently, both the</mark> restaurants <mark>and</mark> their customers <mark>are in charge of the</mark> weight <mark>problems, and this overturns the writer’s concept</mark>.</p>
+<p>(205 words)</p>
+<h4><span id="参考译文"> 参考译文</span></h4>
+<p><mark>作者讨论了</mark>一例控告麦当劳导致顾客超重的法律案件，<mark>他认为</mark>此诉讼无法成立。<mark>然而，演讲者表达了与之相悖的观点，在他看来</mark>，<mark>责任应由双方共同承担</mark>。</p>
+<p><mark>首先，文章表示</mark>，顾客享有选择任何就餐地点的自由，<mark>但是，教授反驳了此观点，他提供了一个事实，即</mark>麦当劳是低收入者不得不选择的最理想餐厅。因此，麦当劳<mark>的确有义务</mark>将自己的菜谱革新到更健康的水平，<mark>这与作者的观念相悖</mark>。</p>
+<p><mark>其次，作者表明</mark>，麦当劳已经提醒就餐者所供应食物中含有的营养成分。<mark>为了反驳此观点，演讲者透露</mark>，一些分店<mark>未能</mark>将这些信息通告公众，有的餐厅还过度使用不健康调料，<mark>从而进一步反驳阅读材料中的论据</mark>。</p>
+<p><mark>最后，文章将所有的指责指向</mark>顾客，<mark>认为</mark>他们应当<mark>对</mark>自己遭遇的麻烦<mark>负全部责任</mark>。<mark>而演讲者反驳说</mark>，麦当劳通过隐瞒食物健康数据误导人们。<mark>因此</mark>，餐厅<mark>与</mark>顾客<mark>应当共同对</mark>体重<mark>问题负责</mark>，<mark>而这推翻了作者的观点</mark>。</p>
+<h3><span id="integrated-writing-task-topic-4"> Integrated Writing Task Topic 4</span></h3>
+<h4><span id="reading"> READING</span></h4>
+<p>Although history has left us scare material evidence of the first grain domestication of mankind, there is enough to prove that our ancestors had been searching for ways to plant wild wheat for consistent food supply. Three important discoveries may have resulted in the introduction of bread as the first food made from grain.</p>
+<p>First, ancient people discovered that wheat could be ground into paste. At the beginning, they probably had attempted to chew it raw. Undoubtedly wheat must have been too hard to swallow that way. As time went by, they gradually found out that by crushing it between stones they would not take so much trouble to eat and digest wheat any more. Thus, the origin of the drier wheat flour we consume today could be traced.</p>
+<p>The next breakthrough was the method of baking. Obviously, except fire, no technology is demanded to bake the simplest bread. According to the discovery of the ancient people, after loaves of wheat paste were baked into bread, they could be preserved for a longer period of time than raw seeds. Besides, the nutritional value of wheat could also be better kept in baked bread.</p>
+<p>The third discovery is related with fermentation. Ancient people noticed that when the wheat paste was placed in the open, yeast spores from the air would begin fermenting the wheat. This natural process allowed bubbles to form in the paste, which meant that the baked bread would be lighter in texture and easier to eat.</p>
+<h4><span id="listening"> LISTENING</span></h4>
+<p><em>Now play Track 4.</em></p>
+<p>Professor:</p>
+<p>Based on several discoveries, the writer advocates that bread is the very first grain food ever made by humans. However, an alternative hypothesis has recently been raised, alleging that beer, rather than bread, should be the most primitive grain food. Let’s take a closer look at this issue.</p>
+<p>First, grinding was not the only way to make wheat easier to eat. When kept in moist conditions, it would naturally start sprouting. With young plant splitting the hard seed shell in half, the sprouted wheat was then sweetened and softened, and they also possessed higher nutritional value. In order to discover the usefulness of sprouted wheat, people only had to leave it in the open air. All this probably happened before they found out the method to grind wheat.</p>
+<p>Second, the process of fermentation would turn grain into beer. In fact, as soon as wheat was stored, it might begin to ferment because of the water and yeasts in the air. That is to say, after the wheat sprouted, it would have already started to form bubbles, a typical phenomenon of fermentation. People were likely to notice such a distinct change and experiment by tasting it. Consequently, the first beer was discovered.</p>
+<p>Finally, just suppose that our ancestors were already crushing wheat to paste, the paste would soon begin to ferment with bubbles. Was it possible for ancient people to come up with the idea of using fire before eating it? I fear not. We are surely accustomed to cooking our food today. However, in the prehistoric period, the bright idea of improving food by applying fire was a bit incredible.</p>
+<p><em>Question</em></p>
+<p><strong>Summarize the points made in the lecture, being sure to explain how they oppose specific points made in the reading passage.</strong></p>
+<p>You must finish your answer in 20 minutes.</p>
+<p>（lines）</p>
+<h4><span id="范文"> 范文</span></h4>
+<p><mark>The speaker raises doubts on the writer’s deduction that</mark> bread is the most primitive grain food. <mark>According to the lecture</mark>, the ancestor of grain food should be beer. <mark>This judgment is established on a series of counter evidence</mark>.</p>
+<p><mark>First, the article bases its inference on the discovery that</mark> wheat would become easier to eat after being smashed into paste, <mark>while the lecture argues that</mark> <mark>the same purpose could be achieved by</mark> preserving wheat in a wet place and letting it sprout. Then it was natural for people to leave the sprouted wheat in the open air other than to grind it. <mark>This contradicts the assumption in the passage</mark>.</p>
+<p><mark>Second, the author advocates that</mark> people might have begun to bake the wheat after crushing it. <mark>However, as is rebutted by the speaker,</mark> the fermenting process occurred right after sprouting. <mark>In other words,</mark> beer was likely to be produced before bread, <mark>which objects to what the passage suggests</mark>.</p>
+<p><mark>Finally, the lecture challenges the writer’s supposition that</mark> fermentation guided people to bake the paste. <mark>Obviously, it was impossible</mark> for them to think out the clever method of cooking the paste on fire at once. <mark>Thus,</mark> the origin of grain food <mark>must differ from the conclusion drawn by the writer</mark>.</p>
+<p>(206 words)</p>
+<h4><span id="参考译文"> 参考译文</span></h4>
+<p><mark>作者推断</mark>，面包是最原始的谷类食物，<mark>而演讲者对此提出了质疑</mark>。<mark>据演讲所述</mark>，谷类食品的始祖可能是啤酒，<mark>此判断是建立在一系列反驳论据的基础之上的</mark>。</p>
+<p><mark>首先，文章的推论以一个发现为依据，即</mark>小麦在被捣碎成糊状之后更容易食用。<mark>而演讲辩驳说</mark>，通过将小麦储存在潮湿环境中使其发芽，<mark>也可以达到同样的目的</mark>。随后人们会自然而然地将发芽的小麦露天置放，而并非将其碾碎，<mark>这与文章中的设想相矛盾</mark>。</p>
+<p><mark>第二，作者认为</mark>人们可能在碾碎小麦之后就开始烘烤。<mark>然而，演讲者辩驳道</mark>，发酵过程在发芽后会立刻发生，<mark>换句话说</mark>，啤酒可能先于面包被制造出来，<mark>于是反驳了文章的说法</mark>。</p>
+<p><mark>最后，据作者推测</mark>，发酵引导人们烘烤小麦糊，<mark>但是演讲推翻了这个论断</mark>。<mark>很显然</mark>，他们是<mark>不可能</mark>立即想出将小麦糊在火上烹制这个巧妙方法的。<mark>因此</mark>，谷类食物的起源<mark>应该与作者得出的结论不同</mark>。</p>
+<h3><span id="integrated-writing-task-topic-5"> Integrated Writing Task Topic 5</span></h3>
+<h4><span id="reading"> READING</span></h4>
+<p>Owing to the development of international trade over the past five decades, the swapping of species between different regions has been sped up. However, for several reasons, some researchers claimed that importing species might produce more negative effects.</p>
+<p>First, there exists the possibility that species introduced from other places may be destructive to native species. Being stronger to compete for food and accommodation, certain foreign species would decrease or eliminate the population of indigenous species. For instance, in North America, the number of freshwater creatures, including frogs, mussels and salamanders, has slumped sharply due to the invasion of alien species. Some of them even die out.</p>
+<p>Second, the introduced species can also disturb the ecological balance of a region and negatively change the way its ecosystem functions. Take the cane toads imported into Florida as an example. Because Florida was short of suitable predators, the destructive behavior of these alien animals disrupted the delicate ecosystem there. At last, they displaced most of the younger species, such as oak toads and the southern toads, leading to the loss of biodiversity in this area. Thus, local people and other species in Florida suffered.</p>
+<p>Finally, the introduction of species will impose financial burden on the region. As a matter of fact, the thriving of many imported species does great harm to their new surroundings and large sums of money is required to remedy the damage. For example, the extremely invasive mesquites were imported from the Mexican desert to Africa. Due to their fast growth, the indigenous plant species higher in economic value were crowded out. Hence, the local government had to spend extra money in removing some of these alien trees.</p>
+<h4><span id="listening"> LISTENING</span></h4>
+<p><em>Now play Track 5.</em></p>
+<p>Professor:</p>
+<p>The booming global trade has indeed helped more and more regions in the world to import plants and animals from abroad. Yet will the introduced species really have such destructive impacts as were pointed out by some researchers? In fact, I don’t think so.</p>
+<p>First, seldom do the imported species post a threat to native species. Undeniably, some of the foreign species truly possess stronger competitive power, but they never eliminate the population of the indigenous species. The drop in the numbers of freshwater animals like mussels and salamanders in North America mostly attributed to serious pollution and infectious diseases. Besides, no concrete evidence has been offered to indicate that it was the alien species that caused the extinction of some home species.</p>
+<p>Second, it is unfair to say that introduced species always do harm to the ecological conditions of a place. Although cane toads had some negative effects on Florida, they are only an exception. In most cases, the benefits of imported species far outweigh the risks. To illustrate, under good control, importing living organisms might diversify the agricultural base, provide recreation, and supply research opportunities. Thus, the environment can actually be better managed.</p>
+<p>Last, introducing new species to a region may not impose heavy burden on its economy. As a matter of fact, the imported mesquite trees have grown densely in the African deserts and many nesting birds and animals rely on them for shelter and food. Moreover, these trees can be used for firewood and lumber, and are also useful in agriculture. To some extent, they have brought economic gains to the local citizens.</p>
+<p><em>Question</em></p>
+<p><strong>Summarize the points made in the lecture, being sure to explain how they oppose specific points made in the reading passage.</strong></p>
+<p>You must finish your answer in 20 minutes.</p>
+<p>（lines）</p>
+<h4><span id="范文"> 范文</span></h4>
+<p><mark>The passage concentrates on</mark> the side effects of importing species overseas. <mark>But the lecturer demonstrates his disagreement, arguing that</mark> the merits of this practice far exceed its disadvantages.</p>
+<p><mark>First of all, the writer claims that</mark> local species may be harmed by the extremely competitive species imported from other places. <mark>Nevertheless, the professor firmly opposes the standpoint that</mark> it is the alien species that lead to the extinction of native ones. <mark>In fact,</mark> there are other more direct causes like pollution and communicable diseases, <mark>thereupon overthrowing the notion of the passage</mark>.</p>
+<p><mark>Second, the writer regards</mark> foreign species <mark>as</mark> a hazard to the ecological environment <mark>by citing</mark> the destructive cane toads, <mark>while the lecture refutes this false impression and clarifies the truth that</mark> <mark>it is merely an exceptional circumstance</mark>. <mark>Through enumerating their favorable influences on</mark> agriculture, entertainment and research, <mark>the professor contends that</mark> the ecosystem can actually be improved by introduced species.</p>
+<p><mark>Third, as the author puts it,</mark> importing species from outside will add economical burden to the region. <mark>The passage describes how</mark> the aggressive mesquites forced the government to consume large sums of money. <mark>However, the lecturer presents his disapproval by explaining how</mark> mesquites benefit home species and help local people make profits.</p>
+<p>(202 words)</p>
+<h4><span id="参考译文"> 参考译文</span></h4>
+<p>文章着重谈论从国外引进物种所产生的负面影响。但是演讲者并不赞同，他认为此举措的优点远远超过其缺点。</p>
+<p>首先，作者声称，本地物种会遭受竞争力极强的外来物种的伤害，并且是它们导致了当地物种的灭绝。然而，教授坚决反对此观点。其实，是诸如污染和传染病之类更直接的因素导致了物种的灭绝。因而，文章的主张被推翻。</p>
+<p>其次，作者将外来物种看作对生态环境的威胁之一，并引证了有破坏力的甘蔗蟾蜍。而演讲反驳了此错误想法，并澄清了事实，即甘蔗蟾蜍仅仅是一个例外而已。通过列举进口物种对农业、娱乐业和研究产生的利好影响，教授认为，生态系统实际上被引进物种改善了。</p>
+<p>第三，在作者看来，从外地引进物种会增加该地区的经济负担。文章描述了侵占欲强的豆科灌木是如何迫使当地政府耗费大量资金的。然而，演讲者对此并不认同，他阐明了豆科灌木是如何使当地物种受益并帮助当地人盈利的。</p>
+<h3><span id="integrated-writing-task-topic-6"> Integrated Writing Task Topic 6</span></h3>
+<h4><span id="reading"> READING</span></h4>
+<p>The world could never forget Marco Polo, a Venetian merchant explorer whose pioneering journey inspired Christopher Columbus to discover America. In the famous book entitled <em>The Travels of Marco Polo</em>, records of his tours around the globe could be found. However, in recent years some people have cast doubts on whether he really came to China or not.</p>
+<p>To begin with, Marco Polo never mentioned any Chinese or Mongolian place names in the book. As for a person who was assumed to have lived in China for 17 years, this is incredible. Actually, all the related information concerning locations and directions about China is in Persian and correspond to what has been used by Rashid alDin, a major chronicler of the Mongol time and also Polo’s contemporary. Such an obvious neglect simply falsifies the idea of his being a traveler to China.</p>
+<p>Besides, as a person who is a supposed to have visited the interior parts of China, it is strange that the book fails to offer any reference to the popular hobbies and cultural practices of the ancient Chinese. To further illustrate, Marco Polo never mentioned a word about the Chinese love of tea and the teahouses located almost everywhere around that time, which no traveler would possibly omit. This omission could easily lead to people’s suspicion about the credibility of the book.</p>
+<p>Last, going though the original Chinese and Mongolian chronicles, we could trace no evidence that Polo once served as the governor of Yang Zhou, and worked for the court of Kublai Khan, the great Mongol ruler. But the book claimed that these were honorary posts bestowed upon him. Clearly, Marco Polo must have never really been to China and accepted any Chinese official title.</p>
+<h4><span id="listening"> LISTENING</span></h4>
+<p><em>Now play Track 6.</em></p>
+<p>Professor:</p>
+<p>Has the Venetian Traveler Marco Polo truly spent so many years in China? In spite of the writer’s suspicion on the credibility of The Travels of Marco Polo, I would say these doubtful thoughts never convince me.</p>
+<p>First, although Marco Polo never embodies any Chinese or Mongolian place names and most of those appearing in the book are of a Persian origin, we must be reminded that Persian was the major language used in trade between Asia and Europe during Yuan Dynasty. Thereafter, it would be absolutely reasonable for Marco Polo to quote China’s place names from the Persian sources.</p>
+<p>Second, speaking of Marco Polo’s omission of the popularity of tea and teahouses in China, this does not necessarily overturn the fact that he once stayed in China. In effect, it was largely in the southern part of China that tea culture was extremely popular. During that period, people in the north had not yet shown much interest in tea drinking. We all know that Marco Polo spent most of the 17 years in northern China. Therefore, it would be natural if he skipped tea in his book,</p>
+<p>Finally, having no sign of Marco Polo’s name in ancient Chinese documents, again, does not mean that he was never appointed as governor of Yang Zhou, or he never served at the court of the Mongol ruler. Possibly, Marco Polo was referred to by another name which cannot be recognized by modern scholars. As a matter of fact, the official chronicles of court in pre-modern China sometimes did not disclose people’s real names. It is also likely that the part that records Marco Polo’s post might have been lost.</p>
+<p><em>Question</em></p>
+<p><strong>Summarize the points made in the lecture, being sure to explain how they oppose specific points made in the reading passage.</strong></p>
+<p>You must finish your answer in 20 minutes.</p>
+<p>（lines）</p>
+<h4><span id="范文"> 范文</span></h4>
+<p><mark>The author exhibits his suspicion on</mark> the authenticity of Marco Polo’s book, <mark>of which the speaker disapproves.</mark> <mark>In the lecture, he aims to prove that the article is filled with errors.</mark></p>
+<p><mark>First, the passage brings up</mark> Marco Polo’s omission of Chinese place names, <mark>claiming that</mark> relevant details were copied from other works. <mark>To rebut this point, the professor emphasizes the</mark> historical <mark>fact that</mark> Persian used to be the most frequently-used language in international trade. <mark>Consequently, it is understandable for</mark> Marco Polo <mark>to</mark> quote place names in Persian.</p>
+<p><mark>The second problem noted by the writer is that</mark> the book records nothing about the wide-spread cultural phenomenon then, especially people’s passion for tea. <mark>However, the professor says that</mark> tea was popular only in southern China, not in the north where Polo stayed. <mark>This constitutes an effective counterargument against what the passage sets forth.</mark></p>
+<p><mark>Finally, the article questions why</mark> <mark>no chronicle evidence is available to verify</mark> Marco Polo’s job positions in China. <mark>Challenging this doubt, the lecturer suggests that</mark> his name might have been transferred into a different one. <mark>It is also likely that</mark> the ancient government concealed some real names in the legal documents or the related records were missing. <mark>These all refute the writer’s suspicion.</mark></p>
+<p>(205 words)</p>
+<h4><span id="参考译文"> 参考译文</span></h4>
+<p><mark>作者表达了对</mark>马可·波罗著作真实性<mark>的怀疑</mark>，<mark>对此，演讲者表示反对</mark>。<mark>在演讲中，他试图证明文章充满了错误。</mark></p>
+<p><mark>首先，文章提出，<mark>马可·波罗省略了中国地名，且相关内容是从其他资源摘抄而来的。<mark>为了反驳此观点，教授强调了一个</mark>历史</mark>事实，即</mark>波斯语曾经是国际贸易中最常用的语言，<mark>因此，<mark>马可·波罗引用波斯语地名</mark>是可以理解的</mark>。</p>
+<p>==作者注意到的第二个问题是，==此书并未记录当时盛行的文化现象，尤其未提及人们对茶文化的热情。==然而，教授表示，==茶仅仅在中国南方颇受欢迎，而在马可·波罗居住的北方并非如此。<mark>这就对文章的论述进行了有效的反驳。</mark></p>
+<p><mark>最后，因</mark><mark>无法找到任何证明</mark>马可·波罗曾在中国任职的历史记载，==文章提出了质疑。====而演讲者推翻了这个疑问，他解释说，==马可·波罗的名字也许在史料中被更改。==此外，==古代政府也可能在其法律文件中隐藏了某些真名，或者相关的记录遭到遗失。<mark>这些都反驳了作者的怀疑。</mark></p>
+<h3><span id="integrated-writing-task-topic-7"> Integrated Writing Task Topic 7</span></h3>
+<h4><span id="reading"> READING</span></h4>
+<p>Over the 20th Century, wilderness management has experienced remarkable advancement, partly owing to the effective practice of fire suppression. In most cases, aircrafts are used to monitor forests for small brushfires. Meanwhile, with the help of huge amounts of water and sophisticated chemical fire extinguishers, the spread of fires could be well prevented.</p>
+<p>Factually, there are multiple purposes of reducing the destruction caused by forest fires. One of them is simply to improve the health of trees and make them live longer. For instance, in some parts of hickory and oak forest on the Eastern Seaboard, fire suppression has allowed the maturation of so many trees that the dense treetops form a gigantic canopy.</p>
+<p>Besides, evidence of the healthful influence of fire suppression could also be found closer to the ground. When forest fires are restrained, vines and low bushes, which would have been burnt out, can flourish. In fact, fires do harm to plant life in another way that seems more indirect. Certain chemical tests on areas recently attacked by forest fires indicate that the overall amount of nutrients in the soil is decreased by burning. If fires are suppressed, such a decrease will be prevented so that ferns, wildflowers and herbs can grow without disturbance.</p>
+<p>Finally, the fire-preventing measure also benefits wildlife. With its efficient implementation, a huge variety of animals in the western oak forest, ranging from small insects and birds to large deer and bears, are not killed by fires. As a result, their population can be tremendously enlarged. To illustrate, the total number of deer inhabiting here has increased notably.</p>
+<h4><span id="listening"> LISTENING</span></h4>
+<p><em>Now play Track 7.</em></p>
+<p>Professor:</p>
+<p>As forest fires were generally considered to be rather destructive, people responsible for wilderness management have made great efforts to put them under control. However, it turns out that instead of protesting the forests, fire suppression may produce negative impacts on them in the long run.</p>
+<p>Let’s begin with the light problems. We all know that the health of oaks can never do without the assimilation of enough sunlight. If some trees have become overly thick, little light will reach the forest floor. Yet young oaks badly need light in order to grow properly. It is due to the lack of light that new oaks aren’t maturing fast enough to replace older ones. What’s worse, other tree species that don’t require so much light, such as maples, might be invading oak forests and competing for resource.</p>
+<p>Additionally, competition problems exist closer to the ground as well. In the past, forest fires, both natural and artificial, used to burn off some of the ground-level plants before they grow into huge thickets. Without the disturbance of fires, now these plants may run wild over the forest floor. Needless to say, such a situation also means that it is exceptionally difficult for young trees and other native plants to live longer and stronger.</p>
+<p>Next, we come to the increase in the number of deer. Although this partially results from the effective prevention of forest fires and partially from limitations on hunting, there is one thing that should not be neglected, that is, deer enjoy eating the leaves off oak saplings. Therefore, if an oak seedling does manage to get a good start, despite the lack of light and competitions from other plants, it is likely to be killed with its leaves being eaten by the deer.</p>
+<p><em>Question</em></p>
+<p><strong>Summarize the points made in the lecture, being sure to explain how they oppose specific points made in the reading passage.</strong></p>
+<p>You must finish your answer in 20 minutes.</p>
+<p>（lines）</p>
+<h4><span id="范文"> 范文</span></h4>
+<p><mark>This set of materials focus on the debate over</mark> <mark>the effects of</mark> fire suppression. <mark>The lecturer presents the contradictory idea that</mark> <mark>this measure may not be as beneficial as the writer conceives.</mark></p>
+<p><mark>First, the passage stresses its effectiveness in</mark> making trees live better. <mark>Conversely, the speaker argues that</mark> the overgrowth of older trees will hinder enough sunlight from reaching young plants and interrupt their maturation. <mark>Therefore, instead of</mark> invigorating the forest, fire suppression <mark>will</mark> undermine the health of trees, <mark>which rebuts the writer’s point.</mark></p>
+<p><mark>Second, the passage owes</mark> the flourishing of lower-height plants <mark>to</mark> fire elimination. <mark>In the author’s opinion,</mark> without the damage of burning, nutrients in the soil will be better preserved. <mark>Nonetheless, such a conception is opposed by the professor, who believes that</mark> the abandoned growth of ground-level plants will disturb the growth of young trees due to intensified competition.</p>
+<p><mark>Third, as is asserted by the author,</mark> thanks to fire suppression, the population of animals inhabiting the forest will rise. <mark>He moves on to underline</mark> the increased number of deer. <mark>But the lecturer demonstrates a different attitude with concrete evidence that</mark> more and more young saplings of oaks have been eaten by deer. <mark>This</mark> sad <mark>fact retorts the positive view in the passage.</mark></p>
+<p>(205 words)</p>
+<h4><span id="参考译文"> 参考译文</span></h4>
+<p><mark>阅读与听力材料围绕</mark>森林灭火的效果<mark>展开辩论</mark>。<mark>演讲者认为</mark>，<mark>此项举措并非如作者设想的那么有益。</mark></p>
+<p>==首先，文章强调，==灭火行动使树木更好地生长。<mark>恰恰相反，演讲者则认为</mark>年老树木的过度繁茂会阻碍充足日光照射到年幼树苗，从而影响其发育。<mark>因此，<mark>灭火</mark>不会</mark>使森林充满生机，<mark>而会</mark>危害树木的健康，<mark>这反驳了作者的观点。</mark></p>
+<p><mark>第二，文章将</mark>低矮植物的繁盛<mark>归功于</mark>灭火举措。==在作者看来，==由于没有了燃烧的破坏，土壤中的营养成分得到了更好的保持。==但是，此观念遭到了教授的反驳，他认为，==因为竞争加剧，近地面植物的无节制滋蔓会干扰小树苗的成长。</p>
+<p><mark>第三，据作者论述，<mark>灭火行动使居住在森林中的动物数量上升，<mark>他进而以</mark>鹿的数量增长</mark>为例</mark>。<mark>但是，演讲者持截然不同的态度，他表明，<mark>越来越多的橡树幼苗遭到了鹿的吞噬，<mark>这个</mark>悲哀的</mark>论据推翻了文章的积极观点。</mark></p>
+<h3><span id="integrated-writing-task-topic-8"> Integrated Writing Task Topic 8</span></h3>
+<h4><span id="reading"> READING</span></h4>
+<p>How could birds fly back home over a long distance without getting lost? Such a mysterious subject has aroused attention from scientists around the world. So far three commonly accepted theories are available to answer this question.</p>
+<p>The first theory has to do with the sun and the star. Birds are supposed to navigate by using them as compasses. In fact, birds possess the ability to sense time and locate the sun. For instance, if they head west at noon time, they would know that the sun must be on their left and that they are on the right track. As the constant fixture in the night sky, stars also give effective guidance. To illustrate, the change of star pattern instructs the birds that they must shift their direction. Apparently, the sun and the star can be of great help to the migration of birds.</p>
+<p>Second, while flying lower, the birds could navigate through the observation of different landmarks. According to the discovery of scientists, when strong winds forced birds off their flight path along a river, they could redirect themselves with the help of that landmark. Additionally, during their journey, birds would deliberately avoid such dangerous areas as deserts. The topographical cues they often use may include rivers, mountain ranges, coastlines and even skyscrapers.</p>
+<p>Another theory of birds’ navigation lies in their sense of the magnetic field on earth. Researchers have noticed the existence of tiny iron oxide crystals in the skin lining of the upper beak of pigeons. This magnetic sensor enables pigeons to read the magnetic field and plot their flight route. In order to prove such a special ability of birds, scientists attached small magnets to the beaks of pigeons. Later they discovered that these magnets really interrupted these pigeons’ sense of navigation. Then we may conclude that birds can find directions depending on the magnetic compass within their body.</p>
+<h4><span id="listening"> LISTENING</span></h4>
+<p><em>Now play Track 8.</em></p>
+<p>Professor:</p>
+<p>Well, the three theories elaborated by the author appear to be reasonable in the abstract. However, on second thought, I doubt if they could fully explain how birds navigate over thousands of miles to return home.</p>
+<p>First, the theory of the sun compass reveals an obvious flaw: if birds navigate by referring to the sun, what can they do at night? As is widely known, some bird species are capable of orienting themselves during night time. Therefore, this supposition is problematic. Speaking of the star-navigation theory, we must be aware that it is dubious as well. Actually only one kind of birds, Indigo Buntings, have been confirmed to navigate with the help of the stars. As for other species, no concrete evidence is available at present.</p>
+<p>Second, undeniably, birds might take advantage of the landmarks to find directions. Nonetheless, this only happens on condition that they have flied along the same path before. If not, any torrential features would be helpless to them. However, it turns out that birds are able to find their way on the journey to a completely strange environment, which exposes a fault in the landmark theory.</p>
+<p>Then we come to the idea of magnetic navigation. Common knowledge tells us that even if birds do have a magnetic senor in their body, they can only identify two directions on earth: the south and the north. Yet it is far from enough to lead a bird to its specific destination that may be located in a complex terrain. Under these circumstances, humans with advanced navigation devices might have difficulty reaching a location, but birds normally can do that with ease. Thus, the magnetic theory also seems unconvincing.</p>
+<p><em>Question</em></p>
+<p><strong>Summarize the points made in the lecture, being sure to explain how they oppose specific points made in the reading passage.</strong></p>
+<p>You must finish your answer in 20 minutes.</p>
+<p>（lines）</p>
+<h4><span id="范文"> 范文</span></h4>
+<p><mark>The writer elaborates three theories about</mark> birds, <mark>attempting to solve the mystery how</mark> they navigate over a long distance. <mark>Nevertheless, the lecturer confutes the author’s explanations and labels them as feeble.</mark></p>
+<p><mark>First, the passage says that</mark> birds sense directions with the sun and the star. <mark>To prove the fragility of this theory, the speaker raises the point that</mark> they cannot navigate at night when the sun has set. <mark>As for the supposition about</mark> birds’ following the star pattern, <mark>it is also retorted in the lecture because</mark> only one species is known to possess that ability.</p>
+<p><mark>The second theory describes</mark> birds’ finding their way by using geographical marks. <mark>The lecturer argues that</mark> <mark>this assumption is only valid if</mark> they have covered the same route previously. <mark>Yet in most cases,</mark> birds could easily orient themselves on the initial voyage, <mark>which contradicts the view held by the writer.</mark></p>
+<p><mark>Last, the passage infers that</mark> navigation of birds also relies on the magnetic senor in their body, <mark>whereas the lecture rebuts this theory by notifying that</mark> only two directions could be distinguished with the sensor. <mark>However,</mark> the target places birds can reach are normally situated in complex areas, <mark>and this further refutes what is expressed in the passage.</mark></p>
+<p>(203 words)</p>
+<h4><span id="参考译文"> 参考译文</span></h4>
+<p><mark>作者详细阐述了有关</mark>鸟类<mark>的三个理论</mark>，<mark>试图解答</mark>它们如何实现长距离飞行。<mark>然而，演讲者反驳了作者的解释，他认为这些理论是很难成立的。</mark></p>
+<p>==首先，文章说，==鸟类利用太阳和星星识别方向。<mark>为了证明这个理论的薄弱，演讲者指出，<mark>它们无法在日落后的夜晚飞行。<mark>对于</mark>鸟类依照星斗变换模式飞行</mark>的设想，演讲同样进行了辩驳，因为</mark>只有一种鸟被确认拥有那种能力。</p>
+<p><mark>第二个理论描述了</mark>鸟类通过使用地理标志找到方向。<mark>演讲者表示</mark>，<mark>只有当</mark>它们以前飞越过相同的路线<mark>时这个假设才能成立</mark>，==而大多数情况下，==鸟类在首次飞行时就可以辨别方向，<mark>这与作者所持的观点相悖。</mark></p>
+<p>==最后，根据文章的推断，==鸟类的飞行还依赖其体内的磁场感应器官，<mark>而演讲反驳了此理论，因为</mark>磁场感应仅能识别两个方向。==但是，==鸟类能够飞抵的目的地通常位于复杂的区域，<mark>这进一步推翻了文章的论述。</mark></p>
+<h3><span id="integrated-writing-task-topic-9"> Integrated Writing Task Topic 9</span></h3>
+<h4><span id="reading"> READING</span></h4>
+<p>Once upon a time, Easter Island, a small and remote island in the Pacific Ocean, used to be the cradle of a flourishing culture. However, around 600 years ago, or 1500 A. D., its society suddenly fell into decay. History shows us that such events are normally incurred by outsiders’ impacts. Thereafter, we may discover some facts about the decline of Easter Island’s society which could be explained by a hypothesis of a foreign invasion.</p>
+<p>The first of these facts is related to trees. Many Pacific island societies have managed to choose an ecologically balanced way of living by using, rather than overexploiting, such natural resources as trees. Thus, they mostly remain lush, but Easter Island is an exception. Although it was once densely forested, most of the trees here had disappeared by about 600 years ago. Environmental destruction like this has often been caused by invaders, who would exhaust an area’s natural resources without any concerns for its future.</p>
+<p>Moreover, the idea of an invasion could also be supported by the facts about the large stone statues on Easter Island. There are as many as 900 of these statuses, among which the tallest stands 20 meters tall. Apparently, the island society attached great importance to their production. Nonetheless, about the same time that it became deforested, the natives stopped making these statues. Without doubt, an invasion would help explain the reason why this traditional practice of Easter Island came to a sudden end.</p>
+<p>Finally, a new religion called the “Birdman” worship was developed on Easter Island when other changes were taking place. So far we cannot find any convincing proof about the existence of this religion before 1500 A. D., which indicates that “Birdman” worship may have been introduced by foreign invaders.</p>
+<h4><span id="listening"> LISTENING</span></h4>
+<p><em>Now play Track 9.</em></p>
+<p>Professor:</p>
+<p>What is discussed in the article sounds reasonable theoretically, yet all the concrete evidence points to the internal causes of the decline of Easter Island’s culture 600 years ago. It is the lack of self-sustaining foresight that brings a native culture to a tragic end.</p>
+<p>First, before 1500, Easter Island’s society used to be prosperous enough to invest heavily on the construction of huge statues, which were recognized as the symbol of status. Thus, different communities on the island began to compete as to who could establish the most and the biggest statues. Here we come to the problem of trees: archaeological records demonstrate that the inhabitants moved the statues into position by using tree logs. Consequently, with the erecting of more and more statues, an increasing number of trees had to be cut down. At last, all the trees were depleted 600 years ago.</p>
+<p>Needless to say, once there were no more trees left, no longer could the natives make fishing rafts. Naturally, in no way could they catch fish at sea. As their life necessities became extremely limited, the islanders could never afford the time and energy to produce huge statues. In addition, without the help the tree logs, they were incapable of moving the statues away. Hence, the building of statues suddenly stopped.</p>
+<p>Understandably, when life became a struggle for survival, the natives might lose confidence in their old gods, who wouldn’t seem to be blessing them any more. Thereafter, it would not be surprising for the islanders choose to develop a new religion, in the hope that a different god would ensure them an easier life.</p>
+<p><em>Question</em></p>
+<p><strong>Summarize the points made in the lecture, being sure to explain how they oppose specific points made in the reading passage.</strong></p>
+<p>You must finish your answer in 20 minutes.</p>
+<p>（lines）</p>
+<h4><span id="范文"> 范文</span></h4>
+<p><mark>The writer holds that</mark> an alien invasion caused the abrupt social decay of Easter Island. <mark>This hypothesis is retorted by the speaker, who believes that</mark> the decline must be the aftermath of shortsightedness.</p>
+<p><mark>To begin with, the passage claims that</mark> trees on the island disappeared because of the environmental damage done by the invaders. <mark>Such a unilateral idea is challenged by the professor’s counterargument that</mark> the loss of trees resulted from the islanders’ frenzy statue competition. The more statues they built, the more trees had to be cut and in the end all the trees were gone.</p>
+<p><mark>Second, the writer attributes</mark> the sudden stop of statue construction <mark>to</mark> foreign invasion. <mark>The professor, however, argues that</mark> local inhabitants themselves ceased to erect statues, <mark>because</mark> they even had no trees to make fishing boats for food. <mark>Meanwhile,</mark> they were also incapable of pulling down the old statues. <mark>This contradicts what is discussed in the passage.</mark></p>
+<p><mark>Finally, in the writer’s opinion,</mark> “Birdman” Worship was probably introduced by the invaders. <mark>Refuting this faulty standpoint, the lecturer contends that</mark> the deteriorating living conditions made native people lose trust in their former gods <mark>and thus</mark> they started to adopt a different religion to pray for a good change.</p>
+<p>(202 words)</p>
+<h4><span id="参考译文"> 参考译文</span></h4>
+<p>作者认为是外来入侵导致了伊斯特岛社会的突然衰败，这个假说遭到了演讲者的反驳，他认为其衰落是缺乏远见的后果。</p>
+<p>首先，文章指出，岛上的树木是由于侵略者对环境的破坏而消失的。这个片面的想法被教授的驳论推翻，他表示，树木的消失归因于岛上居民疯狂的雕像筑造竞赛。他们建成的雕像越多，砍伐的树木也会越多，最后，所有的树都被砍伐一空。</p>
+<p>第二，作者称，外来侵略致使雕像建造工程突然终止。然而，教授反驳道，是当地居民停止树立雕像的，因为他们甚至已经没有树木去打造渔船获取食物。与此同时，他们也无法将旧雕塑拆除。这与文章的论断相矛盾。</p>
+<p>最后，据作者推断，“鸟人”崇拜也许是由入侵者带来的。而演讲者反驳了这个错误的观点，他表示，日益恶化的生存条件使居民对以前的神灵失去了信任。因此，他们开始接纳不同的宗教以祈祷能有好的转变。</p>
+<h3><span id="integrated-writing-task-topic-10"> Integrated Writing Task Topic 10</span></h3>
+<h4><span id="reading"> READING</span></h4>
+<p>Online eBooks constitute one of the largest reading sources nowadays. Although they are in some respects similar to the traditional printed books, any internet user can distribute his new book on the internet or make an editorial change in an existing one. As a consequence, many eBooks are authored by unidentified writers in the cyber space. This idea might sound attractive, yet online eBooks have several distinct problems that make them far less valuable than paper-based books.</p>
+<p>First, authors of eBooks may lack academic credentials, thereby making their works partially informed at best and downright inaccurate in many cases. Traditional books are mostly written by knowledgeable experts who adhere to standards of academic rigor that non-specialists can never really achieve.</p>
+<p>Second, even if the content of eBooks is correct, their communal nature gives unscrupulous users or hackers the opportunity to fabricate, delete, and corrupt some details in the books. Once such changes are made, unsuspecting readers are usually unable to tell that the original text has been tampered with. This will never happen to traditional books.</p>
+<p>Third, online eBooks may overly focus on trivial or popular topics, thus leading to a false impression of what is important and what is not. A reader might discover in an eBook that a vital scientific breakthrough receives the same attention as an entertainment show. By contrast, traditional books provide a reasonable view of what topics to include or exclude and contains a sense of proportion that online “democratic” eBooks do not.</p>
+<h4><span id="listening"> LISTENING</span></h4>
+<p><em>Now play Track 10.</em></p>
+<p>Professor:</p>
+<p>Online eBooks will possibly never be perfect, but that’s a small price to pay for what it does offer. The criticisms in the reading passage are largely the result of prejudice against and ignorance about how far online eBooks have come.</p>
+<p>First, errors. It’s hardly a fair criticism that online eBooks have errors. As a matter of fact, traditional books have never been thoroughly accurate. If you are looking for a book which is totally free of any minor mistakes, you are not going to find it, online or offline. The real point is that faults discovered in an eBook can be easily corrected without delay. But as for the printed and bound books, the errors remain for decades.</p>
+<p>Second, the hacking problem. Many eBook writers have recognized the importance of protecting their works from malicious hackers. One strategy they have started adopting is to put all their writings in a read-only format before they go public. Such a format forbids anybody to make changes to the original text and helps keep the details within the eBooks reliable and intact. Another strategy that’s being used is to have special editors whose task is to monitor all the vicious changes taking place and eliminate them in time.</p>
+<p>Third, what’s worth learning about? The problem for traditional books is that they have limited space, so the writers have to decide what’s important and what’s not. Unfortunately, in practice, their judgments and decisions may not reflect the vast range of interests that people truly have. But space is definitely not an issue for online eBooks. There can be a wide variety of subjects that accurately reflect the great diversity of the users’ interests. Evidently, the diversity of topics that online eBooks offer is one of their biggest advantages.</p>
+<p><em>Question</em></p>
+<p><strong>Summarize the points made in the lecture, being sure to explain how they oppose specific points made in the reading passage.</strong></p>
+<p>You must finish your answer in 20 minutes.</p>
+<p>（lines）</p>
+<h4><span id="范文"> 范文</span></h4>
+<p><mark>The reading passage centers on the writer’s complaints against</mark> online eBooks. <mark>However, the speaker,</mark> who recognizes their value, <mark>presents his refutation in the lecture.</mark></p>
+<p><mark>First, the passage mentions</mark> the errors in cyber-based eBooks, <mark>while the lecture points out that</mark> it is inevitable for any type of books to make mistakes. <mark>The professor maintains that</mark> flaws found in eBooks could be corrected timely, but those existing in printed versions may be inerasable for long. <mark>Thus, the first criticism against</mark> eBooks <mark>is overturned.</mark></p>
+<p><mark>To dispute the</mark> hacking <mark>issue put forward by the writer, the lecturer indicates that</mark> <mark>feasible measures could be taken to</mark> bring online resources under protection, <mark>such as</mark> utilizing the read-only format and asking special editors to monitor ill-intentioned changes. <mark>Consequently,</mark> eBook authors can well prevent hacker attacks <mark>and this further retorts the author’s claim.</mark></p>
+<p><mark>Last, in opposition to the writer’s judgment that</mark> online eBooks lack in a sense of proportion, <mark>the professor lays emphasis on</mark> the limited space of traditional books. The limitation makes it impossible for them to reflect people’s wide range of preferences. <mark>On the contrary, thanks to</mark> the broader space available in the cyber world, a larger variety of topics are provided <mark>so as to</mark> satisfy the users’ diversified interests.</p>
+<p>(204 words)</p>
+<h4><span id="参考译文"> 参考译文</span></h4>
+<p><mark>阅读材料以作者对</mark>网络电子书<mark>的不满为中心展开论述</mark>。<mark>然而，演讲者</mark>认可了这类书籍的价值，并<mark>在演讲中进行了辩驳。</mark></p>
+<p><mark>首先，文章提及了</mark>网络电子书中存在的错误，==而演讲指出，==犯错对于任何形式的图书而言都是不可避免的。<mark>教授表示，<mark>电子书中的错误可以得到及时的更正，而印刷版本中的错误却长期无法消除。<mark>于是，对</mark>电子书</mark>的第一个指责被推翻。</mark></p>
+<p><mark>为了反驳作者提出的</mark>黑客<mark>问题，演讲者表明</mark>，<mark>可以采取行之有效的措施</mark>保护网络资源，<mark>如</mark>应用只读格式，以及让专门的编辑对恶意篡改行为进行监控。==这样，==电子书作者就能很好地预防黑客袭击，<mark>这进一步驳倒了作者的主张。</mark></p>
+<p>==最后，据作者论断，==网络电子书缺乏比例意识。<mark>为了推翻这个观点，教授强调，<mark>传统书籍的空间局限性使其无法反映出人们广泛的爱好。<mark>与之相反，由于</mark>网络世界拥有更宽阔的空间，更多种类的话题可以提供给读者</mark>以</mark>满足其各异的兴趣。</p>
+
+          <hr/>
+          <div class="p-state"><blockquote>
+            <p>当前链接：<a href="https://ziionote.github.io/posts/英语/托福写作范文/托福综合写作高分范文/">https://ziionote.github.io/posts/英语/托福写作范文/托福综合写作高分范文/</a></p>
+          </blockquote></div>
+          <div class="m-pagination">
+<p>继续阅读：<a href="/posts/英语/托福写作范文/托福高分范文经验/">托福高分范文经验</a></p>
+<p>回顾前篇：<a href="/posts/英语/英语备考/考博单词公开课-赵亮-新东方/">考博单词公开课笔记（赵亮，新东方）</a></p>
+<p>返回首页：<a href="/">语宙心星</a></p>
+          </div>
+          <hr/>
+          <div class="p-tails">
+            本文标签：<ul class="u-post-tag-list"><li class="u-post-tag-list-item"><a class="u-post-tag-list-link" href="/tags/TOEFL/">TOEFL</a></li><li class="u-post-tag-list-item"><a class="u-post-tag-list-link" href="/tags/英语写作范文/">英语写作范文</a></li></ul>
+          </div>
+        </div>
+      </article>
+      <div class="m-section m-share"></div>
+      <div class="m-section m-comment">
+          <div class="comments-wrap tabs" id="commenttabs">
+            <ul class="nav-tabs">
+              <li class="tab"><a href="#welcomcomments_wrap">欢迎评论！</a></li>
+              <li class="tab active"><a href="#valinecomments_wrap">Valine评论</a></li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane" id="welcomcomments_wrap"><div id="welcomcomments"><p>欢迎进行评论😆。</p></div></div>
+              <div class="tab-pane active" id="valinecomments_wrap"><div id="valinecomments"></div></div>
+            </div>
+          </div>
+        </div>
+      <div class="m-section m-related"></div>
+      <footer class="m-section m-footer"></footer>
+    </main>
+
+  </div>
+  <div class="l-ctrl" :class="ctrlClassObject" v-on:click="doOpenAside" id="l-ctrl">
+
+    <div class="b-ctrl">
+      <div class="m-ctrl"></div>
+    </div>
+
+  </div>
+</div>
+<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+<script>
+
+const layoutApp = new Vue({
+  delimiters: ['${', '}'],
+  el: '#l-viewport',
+  data: function () {
+    // var x = navigator;
+    // var y = returnCitySN;
+    return {
+      // browser: x,
+      // citysn: y,
+      asideIsOpen: false,
+      scrollAfterTop: false,
+      scrolledDown: false,
+      scrolledUp: false,
+    }
+  },
+  computed: {
+    browser: function () {
+      return { navigator }
+    },
+    citysn: function () {
+      return { returnCitySN }
+    },
+    sideClassObject: function () {
+      return {
+        'z-open': this.asideIsOpen,
+      }
+    },
+    pageClassObject: function () {
+      return {
+        'z-moved': this.asideIsOpen,
+      }
+    },
+    ctrlClassObject: function () {
+      return {
+        'z-hidden': this.asideIsOpen,
+      }
+    },
+    titlebarClassObject: function () {
+      return {
+        'z-nottop': this.scrollAfterTop,
+        'z-show': this.scrolledDown,
+      }
+    }
+  },
+  methods: {
+    doCloseAside: function (event) {
+      this.asideIsOpen = false;
+    },
+    doOpenAside: function (event) {
+      this.asideIsOpen = (this.asideIsOpen)?false:true;
+    },
+    handleScroll () {
+      var scrollTop = document.querySelector('.l-pagewrap').scrollTop
+      var offsetTop = document.querySelector('.b-printarea').offsetTop
+      if (scrollTop > offsetTop) {
+        this.scrollAfterTop = true
+      } else {
+        this.scrollAfterTop = false
+      }
+      if (this.lastScroll && scrollTop > this.lastScroll) {
+        this.scrolledDown = false
+        this.scrolledUp = true
+        // console.log('scrolling up');
+      } else if (this.lastScroll && scrollTop < this.lastScroll) {
+        this.scrolledDown = true
+        this.scrolledUp = false
+        // console.log('scrolling down');
+      }
+      this.lastScroll = scrollTop
+    }
+  },
+  mounted () {
+    document.querySelector('.l-pagewrap').addEventListener('scroll', this.handleScroll)
+  },
+  destroyed () {
+    document.querySelector('.l-pagewrap').removeEventListener('scroll', this.handleScroll)
+  }
+})
+
+</script>
+<script src="/js/s-gentoc.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

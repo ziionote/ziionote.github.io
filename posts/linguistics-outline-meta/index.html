@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html class="theme-docapp" lang="zh-Hans">
+<head>
+<title>元信息 | 语宙心星</title>
+<!-- META -->
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="theme-color" content="#fff" />
+<!-- LINK -->
+<link rel="shortcut icon" href="/favicon.png" type="image/x-icon"/>
+<link rel="icon" sizes="any" mask="" href="/favicon.png"/>
+<!-- STYLE -->
+<link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/Han/3.2.7/han.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+<!-- SCRIPT -->
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script type="text/javascript" src="/js/smoothscroll.js"></script>
+<!-- END -->
+
+</head>
+<body>
+<div class="l-viewport" id="l-viewport">
+  <div class="l-side" :class="sideClassObject" id="l-side">
+
+    <aside class="b-sidebar">
+      <div class="m-logoandsearch">
+        <a class="p-logoarea" href="/" title="关于语言与心智的文章收集站"><span class="u-sitename">语宙心星</span></a>
+        <p class="p-description" title="关于语言与心智的文章收集站">探索语言与心智的奥秘</p>
+        <div class="p-searchbox" role="search">
+          <form id="u-searchform" class="u-searchform" action="http://www.baidu.com/s?ie=utf-8" method="get" target="_blank">
+            <input id="u-searchbox" class="u-searchbox" type="text" name="q" placeholder="Search">
+            <input type="hidden" name="check_keywords" value="yes">
+            <input type="hidden" name="area" value="default">
+          </form>
+        </div>
+      </div>
+
+      <nav class="m-nav" v-on:click="doCloseAside">
+        <div class="p-catnav">
+          <p class="u-navcaption">《现代汉语》沈阳 郭锐</p>
+          <ul class="u-navlist">
+            <li class="u-navitem">
+              <a href="/posts/modern-chinese-0/">现代汉语-〇-目录、参考文献等</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/modern-chinese-1/">现代汉语-一-总论</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/modern-chinese-3/">现代汉语-三-词汇</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/modern-chinese-4-1/">现代汉语-四-语法-上</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/《现代汉语》沈阳 郭锐/《现代汉语·词汇》纲要/">《现代汉语·词汇》纲要</a>
+            </li>
+          </ul>
+          <p class="u-navcaption">《语法讲义》朱德熙</p>
+          <ul class="u-navlist">
+            <li class="u-navitem">
+              <a href="/posts/chinese-grammar-handouts-0/">语法讲义（目录、索引等）</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/chinese-grammar-handouts-1/">语法讲义（上）</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/chinese-grammar-handouts-2/">语法讲义（中）</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/chinese-grammar-handouts-3/">语法讲义（下）</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/chinese-grammar-answers/">语法答问</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/notes-on-chinese-grammar-handouts/">语法讲义 笔记</a>
+            </li>
+          </ul>
+          <p class="u-navcaption">《语言学纲要》叶蜚声 徐通锵</p>
+          <ul class="u-navlist">
+            <li class="u-navitem z-current">
+              <a href="/posts/linguistics-outline-meta/">元信息</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-0/">导言</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-1/">第一章　语言的功能</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-2/">第二章　语言是符号系统</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-3/">第三章　语音和音系</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-4/">第四章　语法</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-5/">第五章　语义和语用</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-6/">第六章　文字</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-7/">第七章　语言演变与语言分化</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-8/">第八章　语言的接触</a>
+            </li>
+            <li class="u-navitem">
+              <a href="/posts/linguistics-outline-9/">第九章　语言系统的演变</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+  </div>
+  <div class="l-pagewrap" :class="pageClassObject" v-on:click="doCloseAside" id="l-pagewrap">
+
+    <div class="b-titlebar" :class="titlebarClassObject">
+      <div class="m-titlebar">
+        <a class="p-logoarea" href="/"><img class="u-logo" src="/logo.svg" alt="语宙心星"><span class="u-sitename">语宙心星</span></a>
+      </div>
+    </div>
+
+
+    <main class="b-printarea">
+      <header class="m-header"></header>
+      <article class="m-article">
+        <div class="p-meta">
+          <span class="u-post-title">元信息</span>
+          <span class="u-post-metaspan u-post-author">SunCH</span>
+          <a class="u-post-metaspan u-post-site" href="/">语宙心星</a>
+          <span class="u-post-metaspan u-post-date" title="2018-10-01 00:00:00">10月01日</span>
+          
+        </div>
+        <div class="p-write" id="post-content">
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line">图书在版编目（CIP）数据</div><div class="line"></div><div class="line">语言学纲要（修订版）／叶蜚声，徐通锵著；王洪君，李娟修订．—北京：北京大学出版社，2010.1</div><div class="line">（博雅语言学教材系列）</div><div class="line">ISBN 978-7-301-16310-8</div><div class="line"></div><div class="line">Ⅰ．语…　Ⅱ．①叶…②徐…③王…④李…　Ⅲ．语言学—教材　Ⅳ．H0</div><div class="line"></div><div class="line">中国版本图书馆CIP数据核字（2009）第222757号</div><div class="line"></div><div class="line">书　　　名：语言学纲要（修订版）</div><div class="line"></div><div class="line">著作责任者：叶蜚声　徐通锵　著</div><div class="line"></div><div class="line">王洪君　李　娟　修订</div><div class="line"></div><div class="line">责 任 编 辑：李　凌　白　雪</div><div class="line"></div><div class="line">标 准 书 号：ISBN 978-7-301-16310-8/H·2392</div><div class="line"></div><div class="line">出 版 发 行：北京大学出版社</div><div class="line"></div><div class="line">地　　　址：北京市海淀区成府路205号　100871</div><div class="line"></div><div class="line">网　　　址：http://www.pup.cn</div><div class="line"></div><div class="line">电 子 邮 箱：zpup@pup.pku.edu.cn</div><div class="line"></div><div class="line">电　　　话：邮购部 62752015　发行部 62750672　编辑部 62753334　出版部 62754962</div><div class="line"></div><div class="line">印　刷　者：三河市北燕印装有限公司</div><div class="line"></div><div class="line">经　销　者：新华书店</div><div class="line"></div><div class="line">650毫米×980毫米　16开本　18.25印张　270千字</div><div class="line"></div><div class="line">1981年10月第1版　1991年5月第2版</div><div class="line">1997年4月第3版　2010年1月第4版</div><div class="line">2011年8月第7次印刷</div><div class="line"></div><div class="line">定　　　价：23.00元</div><div class="line"></div><div class="line">未经许可，不得以任何方式复制或抄袭本书之部分或全部内容。</div><div class="line">版权所有，侵权必究　　举报电话：010—62752024</div><div class="line">电子邮箱：fd@pup.pku.edu.cn</div></pre></td></tr></table></figure>
+<h2><span id="修订版序"> 修订版序</span></h2>
+<p>叶蜚声、徐通锵二位先生编写的《语言学纲要》已出版发行多年，多次再版。全书清晰严谨的理论构架、精当而全面的内容选择、深入浅出的阐述方式，都深受读者的欢迎。</p>
+<p>为了及时反映学科的发展，教育部规定，上世纪出版的高校教材在新的世纪必须进行修订。根据这一精神，本次修订在内容上有所扩充，同时努力在整体上保持原书的特色：大的章节没有变动，大的理论框架也没有改变，修订内容力求与原书有机地统一成整体。</p>
+<p>全书修订主要包括三个方面：（一）补充新的研究内容；（二）对于已有的概念或观点增加例证和解释说明；（三）个别观点和材料的修正。</p>
+<p>主要补充了哪些新内容呢？最近半个世纪语言学有许多新进展，我们认为，其最主要的进展表现在语义与语用、语言接触、文字与语言的关系这几个领域，它们代表了语言学发展的趋势：对语言的理解从封闭的静态的系统转向了开放的动态的系统。因此，语言与外界经验世界的关系、语言与所在社会的关系、语言与语言使用者的关系、语言与文字的关系正在得到越来越多的重视：结构主义只谈形式不谈意义的禁锢被突破，句法语义范畴、语用范畴成为语言学功能派和形式派共同关注的重点。历史语言学只研究语言内部演变的桎梏被突破，多种语言或语言的不同变体在不同社会环境下彼此接触的不同类型及其与语言变迁的关系成为新的研究热点。在新的信息时代，文字对于知识积累的重要性日益凸显，文字与语言的关系需要新的阐述。因此，本次修订主要集中在以上几个方面。另外，考虑到形式语言学更适合于专书式系统介绍，本次修订基本未涉及形式语言学的成果，特别是他们的形式化描写手段。</p>
+<p>本次修订由李娟负责导言和第一、二、四、五章，王洪君负责第三、六、七、八、九章，并负责全书的统稿。统稿过程中两人共同对第五章进行了反复多次的修改。各章所做主要修订，请参看“修订版各章主要的修订说明”。</p>
+<p>修订本初稿曾蒙教研室同仁陈保亚、叶文曦、董秀芳、汪锋提出宝贵意见，语音和音系一章蒙孔江平、王韫佳指正多处。语言学博士生乐耀、李榕细细通读了全稿并改正多处文字，语音学硕士生吴君如协助制作了有关语图，香港浸会大学黄良喜和深圳大学梁源提供了发音部位示意图。责任编辑李凌、白雪认真细致的工作，保证了书稿排印的质量。在此谨对他们表示衷心的感谢。</p>
+<p>徐先生临走前的托付一直是我们修订的主要动力，谨以本次修订献给培育我们的叶蜚声先生、徐通锵先生。</p>
+<p>王洪君　李娟</p>
+<p>2009 年 9 月 13 日</p>
+<h2><span id="重印说明"> 重印说明</span></h2>
+<p>这次趁新排重印之机，我们除了改正原书中的一些错漏之外，对有些不确切的提法（如“思维的全人类性”之类）也作了一些补正和调整。</p>
+<p>作　者</p>
+<p>1996年12月</p>
+<h2><span id="修订说明"> 修订说明</span></h2>
+<p>本书出版以来，不少兄弟院校采用作为教材或参考书，也陆续有同志来信表示鼓励，提出意见或讨论问题。现在国家教育委员会把本书列为高等学校文科教材，我们趁再版的机会对全书作了一次修订，除了订正原书的疏漏和排印错误以外，还调整了一些章节的内容，有的作了改写。我们感谢陈松岑、贾彦德、索振羽三位同志，他们根据在北大的授课情况，提供了很多宝贵的意见。我们也要感谢四川阿坝师专的林向荣同志，他提供的当地“土汉语”的情况为本书关于混合语的分析补充了新的重要材料。我们希望通过这次修订，使本书的质量能在初版的基础上有所提高。欢迎同志们继续提出批评和指正。</p>
+<p>作　者</p>
+<p>1985年12月</p>
+<h2><span id="序"> 序</span></h2>
+<p>最近两年，我们给北京大学中文系汉语专业一年级学生和西语、东语、俄语各系一、二年级学生讲授“语言学概论”，试用了新编的讲义。这本书是在总结试用经验的基础上，对讲义进行全面的补充修订而写成的教材。汉语专业有一系列语言学方面的课程，“语言学概论”是其中的先行课，它的任务是阐明语言学的基本理论和基本概念，为学习各门语言课程提供必要的理论知识，也为以后学习语言理论课程打下基础。在外语系各专业，“语言学概论”是唯一的一门语言学基础理论课，它要求在阐述理论问题的同时，注意联系外语教学的实际。本书以中文系的要求为主，兼顾外语系的需要。这是一本教材，有一定的深度，我们大体上以北京大学中文系汉语专业一年级学生在教师的指导下能够理解的程度作为掌握的标准。有些章节的内容偏深、偏难（如第三章第二节“音质的音响分析”），教学中可酌情安排。本书也可供语言学爱好者自学之用。</p>
+<p>语言学是一门既古老而又年轻的学科。推动语言学前进的传统的动力是语言的教学和运用。最近几十年来，现代科学技术的发展需要利用语言学的成果，同时也向语言研究提供新的材科、观点和方法。语言学在这股新的力量的推动下，进入了迅速发展的轨道。从50年代末期开始，语言学理论出现了剧烈的震荡，各种学说竞相争鸣。在这种背景之下，我国语言学界也活跃起来，汉语研究，特别是现代汉语的研究，取得了一些扎实的进展。语言学的这些新进展，当然应该在本书中有所反映。我们参考了国内外新出版的一些专著、教材，对各种新的学说、理论采取客观、谨慎的态度，不尚新异，不拘一家，选择切实可靠的论点编入教材。贯串全书的语言结构的总框架是瑞士语言学家德·索绪尔在本世纪初阐述的组合关系和聚合关系。经过半个多世纪的语言研究实践的检验，这种框架是比较稳妥、可靠的，至少用来组织和安排各种语言现象，使之各得其所，是比较合适的。在联系汉语和汉语研究的实际方面，我们也作了一些努力，我们想在上述几方面对“语言学概论”教材的改革作一点尝试。</p>
+<p>本书在编写过程中承石安石、王福堂、王理嘉、陆俭明、符淮青、裘锡圭、侯学超、郭锡良、蒋绍愚诸同志分别审阅有关章节，胡双宝同志通读了全稿，他们都提出了很好的批评和修改意见。初稿完成后又承王力、岑麒祥、朱德熙诸师审阅、指导。对各位老师和同志们的关怀和帮助，十分感激，谨此致谢。</p>
+<p>这是一本概述语言的各个方面规律的基本理论著作，涉及的问题很多，加之我们水平有限，因而在论点和材料的取舍、组织、阐述、评价等方面肯定有错漏片面的地方，渴望读者批评指正。</p>
+<p>作　者</p>
+<p>1980年11月</p>
+<h2><span id="目-录"> 目　录</span></h2>
+<p><code>[TOC]</code></p>
+<p>【<code>![语言学纲要封面1]()</code>】</p>
+<h2><span id="修订版各章主要修订说明"> 修订版各章主要修订说明</span></h2>
+<p>导言部分，在“语言学的研究对象和性质”一节，对于语言学的历史发展过程稍加扩展说明，以从历史发展的角度说明学科研究对象的确定和学科基本性质的形成。在“语言学在科学体系中的地位”一节，对语言学和人文科学的密切关系稍加说明，旨在通过介绍语言现象的特殊性和语言学发展过程中与其他学科的相关性说明语言学学科的地位和发展趋势。</p>
+<p>第一章原版题目为“语言的社会功能”，考虑到思维功能并不是社会功能，现改为“语言的功能”，以涵盖社会功能和思维功能两节。因本章介绍语言的功能方面的属性，尚未涉及语言的形式结构研究，所以把“语言和说话”一小节挪至第二章第一节。</p>
+<p>第二章“语言是符号系统”，主要的改动是根据认知语言学的研究成果对语言符号性质的示意图做了部分改动，把现实现象分为心理现实和客观现实，对于心理现实和客观现实的相互关系、心理现实和符号意义的相互关系重新做了阐述。</p>
+<p>第三章原版题目“语音”，现改为“语音和音系”，以强调本章涉及语音学和音系学两个部分。本章的主要改动，一是根据国际语音学会近年来颁布的国际音标表和音系学近二十年来关于区别特征的研究成果，调整了原版的部分音标和发音学术语；二是增加介绍了汉语层级性韵律单位及其与语法语义的关系。</p>
+<p>第四章“语法”，主要的改动有四处。一是增加了各级语法单位的定义和说明，其中对句子的定义采用了基于语言人际交流功能的句法范畴表达这一新的角度；二是更加强调了词法与句法的区分和词法中屈折与派生的区分，并调整了部分术语以期与当前国际学界的通行术语一致；三是根据近年来类型学研究的新成果，在“语法范畴”一节新增了许多介绍；四是递归性一节中删除了无限加合式扩展的内容。</p>
+<p>第五章原版题目“词义”，现改为“语义和语用”。该章是本次修订增补最多的一章。除了在“词义的各种关系”一节，增加“词义上下位关系”和“语义特征和语义场”两小节外，最主要的补充是增加了两节，分别介绍句子这一层级的语义——“句义”与涉及言语交际和语篇的“语用”。“句义”一节包括句义与语法形式的关系（第一小节“词语的搭配和词义在句义中的实现”）、句义与人类经验的关系（第二小节“句子的语义结构和人类经验的映像”）句义与说话人和交际现场的关系（第三小节“句法语义范畴和属于说话者的人类经验映像”），并在第四小节简单梳理了“句子真值”、“蕴涵”、“预设”等语义学、语用学中的重要概念。新增的“语用”一节，采用了原版第三节第二小节“词义和环境”和第三小节“言内意外”的部分内容，但从语用学的视角进行了重新说明。该节的主要的特点，是跳出词汇和句子的局限，从篇章出发，从说话人的交际目的和对听话人的关照出发观察语言现象。除语境义和言内意外两小节外，还比较详细地介绍了“话题与说明”（第二小节）、“焦点和预设”（第三小节）和“言语行为”（第五小节）等重要概念。</p>
+<p>第六章“文字和书面语”，对文字的定义有所修订，主要强调文字是“用书写/视觉形式对语言进行再编码的符号系统”。作为语言的再编码系统，文字的层级单位与语言的层级单位并不一一对应。但文字系统必有一级单位对应语言系统的一级音义结合的符号单位，以达到二者的接换。而该级文字单位一定由最小的文字单位“字符”组合而成。从文字的这一基本性质出发，本章对于文字的共时分类和历时发展，对于不同文字共时和历时发展的比较，对于汉字的特点和人类文字的共性，给予了贯通一致的分析。</p>
+<p>第七章“语言演变与语言分化”，更明确地把该章作为修订版历史语言学部分（七、八、九三章）的总论。修订基本保持了原版内容，但更加强调了历史语言学部分的总线索是区分语言系统自身的演变（第九章）和不同语言系统的接触（第八章）两个方面。历史语言学近几十年的研究表明，通用语等高层语言对地方土语的影响属于“语言接触”的范畴，因此本次修订把原版第三节“语言的统一”中的相关内容挪到了“语言的接触”一章。</p>
+<p>第八章“语言的接触”，增加第一节“社会接触与语言接触”，以总论语言接触的原因、性质和主要类型。之后的章节基本保留了原书本章中有关借词、语言融合（为避免误解，术语改用更加明确的“语言替换”）、洋泾浜、克里奥耳和上一章“语言的统一”一节中的部分内容。主要的修订一是补充专节介绍了语言联盟及系统感染、通用语影响造成的方言层次等重要的接触类型，二是以接触方式、接触密切程度为线索，以接触结果为纲调整了有关论述。</p>
+<p>第九章“语言系统的演变”，除增加了对结构重新分析和语法化两种语法演变方式的介绍外，基本保持了原版的内容。</p>
+<p>王洪君　李娟</p>
+<p>2009年9月13日</p>
+
+          <hr/>
+          <div class="p-state"><blockquote>
+            <p>当前链接：<a href="https://ziionote.github.io/posts/linguistics-outline-meta/">https://ziionote.github.io/posts/linguistics-outline-meta/</a></p>
+          </blockquote></div>
+          <div class="m-pagination">
+<p>继续阅读：<a href="/posts/linguistics-outline-0/">导言</a></p>
+<p>回顾前篇：<a href="/posts/chinese-grammar-answers/">语法答问</a></p>
+<p>返回首页：<a href="/">语宙心星</a></p>
+          </div>
+        </div>
+      </article>
+      <div class="m-section m-share"></div>
+      <div class="m-section m-comment">
+          <div class="comments-wrap tabs" id="commenttabs">
+            <ul class="nav-tabs">
+              <li class="tab"><a href="#welcomcomments_wrap">欢迎评论！</a></li>
+              <li class="tab active"><a href="#valinecomments_wrap">Valine评论</a></li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane" id="welcomcomments_wrap"><div id="welcomcomments"><p>欢迎进行评论😆。</p></div></div>
+              <div class="tab-pane active" id="valinecomments_wrap"><div id="valinecomments"></div></div>
+            </div>
+          </div>
+        </div>
+      <div class="m-section m-related"></div>
+      <footer class="m-section m-footer"></footer>
+    </main>
+
+  </div>
+  <div class="l-ctrl" :class="ctrlClassObject" v-on:click="doOpenAside" id="l-ctrl">
+
+    <div class="b-ctrl">
+      <div class="m-ctrl"></div>
+    </div>
+
+  </div>
+</div>
+<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+<script>
+
+const layoutApp = new Vue({
+  delimiters: ['${', '}'],
+  el: '#l-viewport',
+  data: function () {
+    // var x = navigator;
+    // var y = returnCitySN;
+    return {
+      // browser: x,
+      // citysn: y,
+      asideIsOpen: false,
+      scrollAfterTop: false,
+      scrolledDown: false,
+      scrolledUp: false,
+    }
+  },
+  computed: {
+    browser: function () {
+      return { navigator }
+    },
+    citysn: function () {
+      return { returnCitySN }
+    },
+    sideClassObject: function () {
+      return {
+        'z-open': this.asideIsOpen,
+      }
+    },
+    pageClassObject: function () {
+      return {
+        'z-moved': this.asideIsOpen,
+      }
+    },
+    ctrlClassObject: function () {
+      return {
+        'z-hidden': this.asideIsOpen,
+      }
+    },
+    titlebarClassObject: function () {
+      return {
+        'z-nottop': this.scrollAfterTop,
+        'z-show': this.scrolledDown,
+      }
+    }
+  },
+  methods: {
+    doCloseAside: function (event) {
+      this.asideIsOpen = false;
+    },
+    doOpenAside: function (event) {
+      this.asideIsOpen = (this.asideIsOpen)?false:true;
+    },
+    handleScroll () {
+      var scrollTop = document.querySelector('.l-pagewrap').scrollTop
+      var offsetTop = document.querySelector('.b-printarea').offsetTop
+      if (scrollTop > offsetTop) {
+        this.scrollAfterTop = true
+      } else {
+        this.scrollAfterTop = false
+      }
+      if (this.lastScroll && scrollTop > this.lastScroll) {
+        this.scrolledDown = false
+        this.scrolledUp = true
+        // console.log('scrolling up');
+      } else if (this.lastScroll && scrollTop < this.lastScroll) {
+        this.scrolledDown = true
+        this.scrolledUp = false
+        // console.log('scrolling down');
+      }
+      this.lastScroll = scrollTop
+    }
+  },
+  mounted () {
+    document.querySelector('.l-pagewrap').addEventListener('scroll', this.handleScroll)
+  },
+  destroyed () {
+    document.querySelector('.l-pagewrap').removeEventListener('scroll', this.handleScroll)
+  }
+})
+
+</script>
+<script src="/js/s-gentoc.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
